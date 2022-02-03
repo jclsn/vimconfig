@@ -3,7 +3,7 @@ set encoding=utf-8
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('/home/jan/.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " Fugitive
 Plug 'tpope/vim-fugitive'
@@ -303,12 +303,12 @@ nnoremap <leader>hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") 
 " ++++++++++++++++++++++++************************
 "               Source large configurations
 " ++++++++++++++++++++++++************************
-"so /home/jan/.vim/ultisnipsrc.vim
-"so /home/jan/.vim/ycmrc.vim
-"so /home/jan/.vim/vimtexrc.vim
-so /home/jan/.vim/vimspectorrc.vim
-so /home/jan/.vim/fugitiverc.vim
-so /home/jan/.vim/cocrc.vim
+"so ~/.vim/ultisnipsrc.vim
+"so ~/.vim/ycmrc.vim
+"so ~/.vim/vimtexrc.vim
+so ~/.vim/vimspectorrc.vim
+so ~/.vim/fugitiverc.vim
+so ~/.vim/cocrc.vim
 
 
 "hi Comment guifg=gray ctermbg=None ctermfg=gray
