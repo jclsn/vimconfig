@@ -56,14 +56,14 @@ Plug 'mileszs/ack.vim'
 Plug 'tibabit/vim-templates'
 
 " C++ file generation
-Plug 'coldspark29/h2cppx-vim'
+Plug 'jclsn/h2cppx-vim'
 Plug 'tenfyzhong/vim-gencode-cpp'
 
 " Tabular plugin
 Plug 'godlygeek/tabular'
 
 " Auto-closing for brackets etc.
-Plug 'coldspark29/vim-PairTools'
+Plug 'jclsn/vim-PairTools'
 
 " Fuzzy finder
 Plug 'bfrg/vim-fzy'
