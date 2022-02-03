@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+!.vimrc
+!*.vim
+!.json
+!autoload/plug.vim
+!templates
