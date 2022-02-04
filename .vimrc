@@ -100,10 +100,12 @@ Plug 'junegunn/fzf.vim'
 " Yocto stuff
 Plug 'kergoth/vim-bitbake'
 
+" Startify
+Plug 'mhinz/vim-startify'
+
 " ************* Look and feel *************
 
 " Colorschemes
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'gosukiwi/vim-atom-dark'
@@ -114,19 +116,9 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
 Plug 'Heorhiy/VisualStudioDark.vim'
 Plug 'dim13/smyck.vim'
-Plug 'Drogglbecher/vim-moonscape'
-Plug 'dracula/vim'
 Plug 'kristiandupont/shades-of-teal'
 Plug 'jnurmine/Zenburn'
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'sonph/onehalf', {'rtp': 'vim'}
-Plug 'altercation/vim-colors-solarized'
-Plug 'rakr/vim-one'
-Plug 'endel/vim-github-colorscheme'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
-Plug 'danilo-augusto/vim-afterglow'
-Plug 'gkapfham/vim-vitamin-onec'
-Plug 'fneu/breezy'
 Plug 'pineapplegiant/spaceduck'
 
 " Add icons to plugins
