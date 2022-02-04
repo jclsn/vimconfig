@@ -232,7 +232,7 @@ let g:tmpl_author_name = 'Jan Claussen'
 
 if has('nvim')
 tnoremap <esc> <C-\><C-n>
-nmap <leader>tt :sp <CR> :term<CR> :res 20 <CR> i
+nmap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
 else
 nmap <leader>tt :ter<CR>
 endif
