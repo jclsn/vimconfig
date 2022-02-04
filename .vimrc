@@ -68,7 +68,7 @@ Plug 'coldspark29/h2cppx-vim'
 Plug 'godlygeek/tabular'
 
 " Auto-closing for brackets etc.
-Plug 'coldspark29/vim-PairTools'
+Plug 'jclsn/vim-PairTools'
 
 " Fuzzy finder
 Plug 'bfrg/vim-fzy'
