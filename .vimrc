@@ -127,7 +127,6 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'gkapfham/vim-vitamin-onec'
 Plug 'fneu/breezy'
-Plug 'KeitaNakamura/neodark.vim'
 Plug 'pineapplegiant/spaceduck'
 
 " Add icons to plugins
