@@ -68,7 +68,7 @@ Plug 'coldspark29/h2cppx-vim'
 Plug 'godlygeek/tabular'
 
 " Auto-closing for brackets etc.
-Plug 'jclsn/vim-PairTools'
+Plug 'git@github.com:jclsn/vim-PairTools.git'
 
 " Fuzzy finder
 Plug 'bfrg/vim-fzy'
@@ -379,5 +379,4 @@ let g:strip_whitespace_confirm=0
 so ~/.vim/vimspectorrc.vim
 so ~/.vim/fugitiverc.vim
 so ~/.vim/cocrc.vim
-
 
