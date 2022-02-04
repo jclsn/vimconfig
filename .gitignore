@@ -3,6 +3,6 @@
 !.gitignore
 !.vimrc
 !*.vim
-!.json
+!*.json
 !autoload/plug.vim
 !templates
