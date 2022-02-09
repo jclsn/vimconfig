@@ -17,7 +17,6 @@ nnoremap <Leader>ct :!ctags -R .<CR><CR>
 " ++++++++++++++++++++++++************************
 nmap <silent> <Leader>s <Plug>SearchNormal
 vmap <silent> <Leader>s <Plug>SearchVisual
-
 if has('nvim')
 tnoremap <esc> <C-\><C-n>
 nmap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
@@ -39,4 +38,6 @@ nmap <C-n> :NERDTreeToggle<CR>
 map <F2> :call CurtineIncSw()<CR>
 nnoremap <leader>as :Disassemble
 nnoremap <Leader>pp :H2cppxAuto<CR>
-
+nmap !silent <Plug>TransposeCharacters xp
+			\:call repeat#set("\<Plug>TransposeCharacters")<CR>
+nmap ü <Plug>TransposeCharacters

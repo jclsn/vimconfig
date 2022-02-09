@@ -2,14 +2,25 @@
 if has("autocmd")
 
 	" Autosource files on saving
-	autocmd bufwritepost .vimrc source $MYVIMRC
-	autocmd bufwritepost ~/*.vim source $MYVIMRC
-	autocmd bufwritepost fugitiverc.vim source ~/.vim/fugitiverc.vim
+	"autocmd bufwritepost .vimrc source $MYVIMRC
+	autocmd bufwritepost abolish.vim source ~/.vim/after/plugin/abolish.vim
+	autocmd bufwritepost autocommands.vim source ~/.vim/autocommands.vim
 	autocmd bufwritepost cocrc.vim source ~/.vim/cocrc.vim
 	autocmd bufwritepost coc-settings.json source ~/.vim/coc-settings.json
-	autocmd bufwritepost ycmrc.vim source ~/.vim/ycmrc.vim
+	autocmd bufwritepost ctags.vim source ~/.vim/ctags.vim
+	autocmd bufwritepost folds.vim source ~/.vim/folds.vim
+	autocmd bufwritepost fugitiverc.vim source ~/.vim/fugitiverc.vim
+	autocmd bufwritepost kitty.vim source ~/.vim/kitty.vim
+	autocmd bufwritepost lsp-config.vim source ~/.vim/lsp-config.vim
+	autocmd bufwritepost miscellaneous.vim source ~/.vim/miscellaneous.vim
+	autocmd bufwritepost pluginlist.vim source ~/.vim/pluginlist.vim
+	autocmd bufwritepost remaps.vim source ~/.vim/remaps.vim
+	autocmd bufwritepost themeconfig.vim source ~/.vim/themeconfig.vim
+	autocmd bufwritepost ultisnipsrc.vim source ~/.vim/ultisnipsrc.vim
+	autocmd bufwritepost urlhandler.vim source ~/.vim/urlhandler.vim
 	autocmd bufwritepost vimspectorrc.vim source ~/.vim/vimspectorrc.vim
-	autocmd bufwritepost abolish.vim source ~/.vim/after/plugin/abolish.vim
+	autocmd bufwritepost vimtexrc.vim source ~/.vim/vimtexrc.vim
+	autocmd bufwritepost ycmrc.vim source ~/.vim/ycmrc.vim
 
 	" Run prettier when saving typescipt files
 	autocmd bufwritepost *.ts :Prettier <CR>
