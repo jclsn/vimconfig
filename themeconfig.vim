@@ -25,15 +25,15 @@ set signcolumn=auto
 "hi airline_a guibg=NONE ctermbg=NONE
 
 ""Force comment color
-"hi Comment guifg=#686f9a ctermfg=141
-"hi LineNr guifg=#686f9a ctermfg=141
-"hi DiffAdd guibg=NONE ctermfg=NONE
-"hi DiffChange guibg=NONE ctermbg=NONE
-"hi DiffDelete guibg=NONE ctermbg=NONE
-"hi DiffText guibg=NONE ctermbg=NONE
-"hi SignColumn guibg=NONE ctermbg=NONE
+hi Comment guifg=#484f7a ctermfg=141
+hi LineNr guifg=#484f7a ctermfg=141
+hi DiffAdd guibg=NONE ctermfg=NONE
+hi DiffChange guibg=NONE ctermbg=NONE
+hi DiffDelete guibg=NONE ctermbg=NONE
+hi DiffText guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
 
-"hi Directory guifg=#686f9a ctermfg=141
+"hi Directory guifg=#484f7a ctermfg=141
 "hi folded ctermbg=none ctermfg=gray
 
 "Force gray folds
@@ -41,9 +41,9 @@ set signcolumn=auto
 "hi folded ctermbg=none ctermfg=gray
 
 " Correct Airline theme for Spaceduck
-let s:inactive1 = [ "#686f9a", "#16172d", 234, 234 ]
-let s:inactive2 = [ "#686f9a", "#16172d", 234, 234 ]
-let s:inactive3 = [ "#686f9a", "#16172d", 234, 234 ]
+let s:inactive1 = [ "#484f7a", "#16172d", 234, 234 ]
+let s:inactive2 = [ "#484f7a", "#16172d", 234, 234 ]
+let s:inactive3 = [ "#484f7a", "#16172d", 234, 234 ]
 
 
 
