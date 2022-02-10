@@ -7,7 +7,7 @@ let g:airline_powerline_fonts = 1
 colorscheme spaceduck
 set background=dark
 set termguicolors
-" set signcolumn=yes
+set signcolumn=auto
 
 "autocmd BufEnter * if getbufvar(bufnr('%'), '&buftype') == "term" | colorscheme default | endif
 
