@@ -18,11 +18,11 @@ nnoremap <Leader>ct :!ctags -R .<CR><CR>
 nmap <silent> <Leader>s <Plug>SearchNormal
 vmap <silent> <Leader>s <Plug>SearchVisual
 if has('nvim')
-tnoremap <esc> <C-\><C-n>
-nmap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
+	tnoremap <esc> <C-\><C-n>
+	nmap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
 else
-set termwinsize=20x0
-nmap <leader>tt :ter<CR>
+	set termwinsize=20x0
+	nmap <leader>tt :ter<CR>
 endif
 nmap <leader>rt :RainbowToggle<CR>
 nmap <leader>cl :ColorToggle<CR>
