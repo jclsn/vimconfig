@@ -1,4 +1,4 @@
-nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gc :Git commit -v -q<CR>
 nnoremap <leader>ga :Git add .
 nnoremap <leader>gt :Git commit -v -q %<CR>
