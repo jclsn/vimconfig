@@ -18,9 +18,9 @@ set mouse=a
 set splitbelow
 
 if has ('nvim')
-	set undodir=/home/jan/.config/nvim/undodir
+	set undodir=~/.config/nvim/undodir
 else
-	set undodir=/home/jan/.vim/undodir
+	set undodir=~/.vim/undodir
 endif
 
 " Cursor settings

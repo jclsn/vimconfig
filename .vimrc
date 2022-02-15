@@ -7,12 +7,13 @@ call plug#end()
 " ++++++++++++++++++++++++************************
 "						User
 " ++++++++++++++++++++++++************************
-let g:tmpl_author_email = 'jan.claussen10@web.de'
+let g:tmpl_author_email = 'claussen.j@eppendorf.de'
 let g:tmpl_author_name = 'Jan Claussen'
 
 " ++++++++++++++++++++++++***********************_
 "               Source large configurations
 " ++++++++++++++++++++++++************************
+so ~/.vim/remaps.vim
 "so ~/.vim/ultisnipsrc.vim
 "so ~/.vim/ycmrc.vim
 "so ~/.vim/vimtexrc.vim
@@ -21,7 +22,6 @@ so ~/.vim/fugitiverc.vim
 so ~/.vim/cocrc.vim
 so ~/.vim/autocommands.vim
 so ~/.vim/ctags.vim
-so ~/.vim/remaps.vim
 so ~/.vim/urlhandler.vim
 "so ~/.vim/kitty.vim
 so ~/.vim/folds.vim

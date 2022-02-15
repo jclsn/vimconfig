@@ -6,7 +6,6 @@ if has("autocmd")
 	autocmd bufwritepost abolish.vim source ~/.vim/after/plugin/abolish.vim
 	autocmd bufwritepost autocommands.vim source ~/.vim/autocommands.vim
 	autocmd bufwritepost cocrc.vim source ~/.vim/cocrc.vim
-	autocmd bufwritepost coc-settings.json source ~/.vim/coc-settings.json
 	autocmd bufwritepost ctags.vim source ~/.vim/ctags.vim
 	autocmd bufwritepost folds.vim source ~/.vim/folds.vim
 	autocmd bufwritepost fugitiverc.vim source ~/.vim/fugitiverc.vim

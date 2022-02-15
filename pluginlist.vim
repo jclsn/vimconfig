@@ -131,4 +131,3 @@ Plug 'frazrepo/vim-rainbow'
 "Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
 
-
