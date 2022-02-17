@@ -65,8 +65,8 @@ Plug 'godlygeek/tabular'
 " Auto-closing for brackets etc.
 Plug 'git@github.com:jclsn/vim-PairTools.git'
 
-" Fuzzy finder
 Plug 'bfrg/vim-fzy'
+Plug 'bfrg/vim-cpp-modern'
 
 " Browser search
 Plug 'voldikss/vim-browser-search'
