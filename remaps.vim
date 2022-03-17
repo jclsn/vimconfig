@@ -21,7 +21,7 @@ if has('nvim')
 	tnoremap <esc> <C-\><C-n>
 	nmap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
 else
-	set termwinsize=20x0
+	set termwinsize=20*0
 	nmap <leader>tt :ter<CR>
 endif
 nmap <leader>rt :RainbowToggle<CR>
@@ -41,3 +41,4 @@ nnoremap <Leader>pp :H2cppxAuto<CR>
 nmap !silent <Plug>TransposeCharacters xp
 			\:call repeat#set("\<Plug>TransposeCharacters")<CR>
 nmap ü <Plug>TransposeCharacters
+

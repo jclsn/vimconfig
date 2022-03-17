@@ -78,7 +78,7 @@ Plug 'TamaMcGlinn/vim-gerritbrowse'
 "Plug 'jupyter-vim/jupyter-vim'
 "Plug 'szymonmaszke/vimpyter'
 
-Plug 'https://gitlab.com/mcepl/vim-diff_navigator'
+Plug 'git@gitlab.com:mcepl/vim-diff_navigator.git'
 
 " Show trailing whitespaces
 Plug 'ntpeters/vim-better-whitespace'
@@ -130,4 +130,7 @@ Plug 'frazrepo/vim-rainbow'
 " Color color codes
 "Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
+
+Plug 'ellisonleao/glow.nvim'
+Plug 'jclsn/glow.vim'
 
