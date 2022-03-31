@@ -172,6 +172,7 @@ highlight CocErrorSign ctermfg=160 guifg=#ff0000
 highlight CocWarningSign ctermfg=220 guifg=#fff000
 
 let g:coc_global_extensions = [
+                        \       'coc-sh',
                         \       'coc-clangd',
                         \       'coc-cmake',
                         \       'coc-git',
@@ -180,5 +181,6 @@ let g:coc_global_extensions = [
                         \       'coc-metals',
                         \       'coc-python',
                         \       'coc-tsserver',
+                        \       'coc-vimlsp',
                         \       'coc-yaml',
                         \       ]

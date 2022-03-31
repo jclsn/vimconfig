@@ -59,11 +59,6 @@
             "rootPatterns": ["build.sbt"],
             "filetypes": ["scala", "sbt"]
         },
-        "efm": {
-            "command": "efm-langserver",
-            "args": [],
-            "filetypes": ["vim", "eruby", "markdown"]
-        },
         "dockerfile": {
             "command": "docker-langserver",
             "filetypes": ["dockerfile"],
