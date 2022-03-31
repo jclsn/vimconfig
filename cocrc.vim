@@ -170,4 +170,14 @@ let g:coc_default_semantic_highlight_groups = 0
 highlight CocErrorHighlight cterm=underline
 highlight CocErrorSign ctermfg=160 guifg=#ff0000
 highlight CocWarningSign ctermfg=220 guifg=#fff000
-"+
+
+let g:coc_global_extensions = [
+                        \       'coc-clangd',
+                        \       'coc-cmake',
+                        \       'coc-git',
+                        \       'coc-html',
+                        \       'coc-json',
+                        \       'coc-metals',
+                        \       'coc-python',
+                        \       'coc-tsserver',
+                        \       ]
