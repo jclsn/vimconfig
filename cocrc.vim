@@ -180,4 +180,5 @@ let g:coc_global_extensions = [
                         \       'coc-metals',
                         \       'coc-python',
                         \       'coc-tsserver',
+                        \       'coc-yaml',
                         \       ]
