@@ -50,6 +50,7 @@ Plug 'godlygeek/tabular'										" Tabular plugin
 Plug 'git@github.com:jclsn/vim-PairTools.git'				    " Auto-closing for brackets etc.
 Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
+Plug 'm-pilia/vim-pkgbuild'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
