@@ -179,7 +179,7 @@ let g:coc_global_extensions = [
                         \       'coc-html',
                         \       'coc-json',
                         \       'coc-metals',
-                        \       'coc-python',
+                        \       'coc-pyright',
                         \       'coc-tsserver',
                         \       'coc-vimlsp',
                         \       'coc-yaml',
