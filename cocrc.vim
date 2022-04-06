@@ -173,6 +173,7 @@ highlight CocWarningSign ctermfg=220 guifg=#fff000
 
 let g:coc_global_extensions = [
                         \       'coc-sh',
+                        \       'coc-snippets',
                         \       'coc-clangd',
                         \       'coc-cmake',
                         \       'coc-git',

@@ -5,10 +5,9 @@ Plug 'SirVer/ultisnips'
 
 " ################# Code completion engines #################
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-snippets'
-"Plug 'bstaletic/YouCompleteMe'
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-"Plug 'romainl/vim-qf'
+" Plug 'bstaletic/YouCompleteMe'
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+" Plug 'romainl/vim-qf'
 
 " ################# Debugger plugin #################
 Plug 'puremourning/vimspector'
