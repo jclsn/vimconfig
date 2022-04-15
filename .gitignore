@@ -6,3 +6,4 @@
 !*.json
 !autoload/plug.vim
 !templates
+!README.md
