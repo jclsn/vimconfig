@@ -112,7 +112,7 @@ Plug 'AnthonyDiGirolamo/airline-themes'
 Plug 'frazrepo/vim-rainbow'
 
 " Color color codes
-"Plug 'chrisbra/Colorizer'
+Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
 
 Plug 'ellisonleao/glow.nvim'

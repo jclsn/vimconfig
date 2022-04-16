@@ -20,6 +20,8 @@ set splitbelow
 set noscrollbind
 set nocursorbind
 set backspace=indent,eol,start
+set incsearch
+
 
 if has ('nvim')
     set undodir=/home/claussenj/.config/nvim/undodir
@@ -52,4 +54,5 @@ function s:KittyScrollback(topline, curline, curcol)
     let cmd = printf('normal! %sGzt%sG%s|', a:topline, a:curline, a:curcol)
     call timer_start(0, {-> execute(cmd)})
 endfunction
+
 

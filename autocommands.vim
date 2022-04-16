@@ -35,6 +35,8 @@ if has("autocmd")
 	au BufReadPost *.inc set syntax=config
 	au BufReadPost *.bb* set syntax=config
 
+	"au BufReadPost * :ColorHighlight<CR>
+
 	" Run retab on saving files
 	"autocmd bufwritepost *.c,*.cpp retab
 
@@ -44,4 +46,11 @@ if has("autocmd")
 
 endif
 
+augroup vimrc-incsearch-highlight
+    autocmd!
+    autocmd CmdlineEnter [:%] :set hlsearch
+    autocmd CmdlineLeave [:%] :set nohlsearch
+    autocmd CmdlineEnter /,\? :set hlsearch
+    autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
 
