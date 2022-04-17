@@ -46,10 +46,9 @@ if has("autocmd")
 
 endif
 
+" Stop highlighting after search has finished
 augroup vimrc-incsearch-highlight
     autocmd!
-    autocmd CmdlineEnter [:%] :set hlsearch
-    autocmd CmdlineLeave [:%] :set nohlsearch
     autocmd CmdlineEnter /,\? :set hlsearch
     autocmd CmdlineLeave /,\? :set nohlsearch
 augroup END
