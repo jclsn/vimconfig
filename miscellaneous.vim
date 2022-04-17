@@ -24,9 +24,9 @@ set incsearch
 
 
 if has ('nvim')
-    set undodir=/home/claussenj/.config/nvim/undodir
+    set undodir=~/.config/nvim/undodir
 else
-    set undodir=/home/claussenj/.vim/undodir
+    set undodir=~/.vim/undodir
 endif
 
 " Cursor settings
@@ -54,5 +54,3 @@ function s:KittyScrollback(topline, curline, curcol)
     let cmd = printf('normal! %sGzt%sG%s|', a:topline, a:curline, a:curcol)
     call timer_start(0, {-> execute(cmd)})
 endfunction
-
-
