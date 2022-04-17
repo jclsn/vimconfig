@@ -179,6 +179,8 @@ let g:coc_global_extensions = [
                         \       'coc-git',
                         \       'coc-html',
                         \       'coc-json',
+                        \       'coc-lua',
+                        \       'coc-markdownlint',
                         \       'coc-metals',
                         \       'coc-pyright',
                         \       'coc-tsserver',
