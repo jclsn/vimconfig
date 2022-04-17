@@ -50,6 +50,7 @@ Plug 'git@github.com:jclsn/vim-PairTools.git'				    " Auto-closing for brackets
 Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
 Plug 'm-pilia/vim-pkgbuild'
+Plug 'markonm/traces.vim'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
