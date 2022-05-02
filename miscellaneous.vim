@@ -30,8 +30,9 @@ else
 endif
 
 " Cursor settings
-let &t_SI = "\<Esc>]50;CursorShape=1;BlinkingCursorEnabled=0\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0;BlinkingCursorEnabled=0\x7"
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
 
 let g:better_whitespace_ctermcolor='gray'
 let g:better_whitespace_guicolor='gray'
@@ -54,3 +55,5 @@ function s:KittyScrollback(topline, curline, curcol)
     let cmd = printf('normal! %sGzt%sG%s|', a:topline, a:curline, a:curcol)
     call timer_start(0, {-> execute(cmd)})
 endfunction
+
+
