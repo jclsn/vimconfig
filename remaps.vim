@@ -42,3 +42,8 @@ nmap !silent <Plug>TransposeCharacters xp
 			\:call repeat#set("\<Plug>TransposeCharacters")<CR>
 nmap ü <Plug>TransposeCharacters
 
+command! -nargs=? -complete=help H help <args> <bar> wincmd L
+cnoremap h<space>  H<space>
+" nnoremap <buffer> K K :wincmd L <CR>
+" setl keywordprg=:vertical\ help
+augroup vimrc_config | autocmd! | autocmd FileType vim setlocal keywordprg=vertical\ help | augroup END
