@@ -38,6 +38,8 @@ Plug 'bigfish/vim-stylelint'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'ambv/black'
 Plug 'vim-autoformat/vim-autoformat'
+Plug 'zeekay/vim-beautify'
+Plug 'rhysd/vim-clang-format'
 
 " ################## Tools #############################
 
