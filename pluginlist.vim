@@ -77,6 +77,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+"Plug 'github/copilot.vim'
 
 " Extend matching to more types than brackets
 Plug 'adelarsq/vim-matchit'
