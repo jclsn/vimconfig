@@ -56,4 +56,3 @@ function s:KittyScrollback(topline, curline, curcol)
     call timer_start(0, {-> execute(cmd)})
 endfunction
 
-
