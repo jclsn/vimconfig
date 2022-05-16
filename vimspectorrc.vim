@@ -11,8 +11,7 @@ nnoremap <Leader>dr :VimspectorReset<CR>
 nnoremap <Leader>dd <Plug>VimspectorContinue
 nnoremap <Leader>ds <Plug>VimspectorStop
 nnoremap <Leader>dp <Plug>VimspectorPause
-nnoremap <Leader>dt <Plug>VimspectorToggleBreakpoint
-nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+nnoremap <Leader>db <Plug>VimspectorToggleBreakpoint
 nnoremap <Leader>df <Plug>VimspectorAddFunctionBreakpoint
 
 nnoremap <Leader>dj <Plug>VimspectorStepOver
