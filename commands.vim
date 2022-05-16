@@ -8,6 +8,8 @@ function AnonymizeFunction()
     :%s/vti1/my-machine/g
     :%s/vti2/my-machine/g
     :%s/claussenj/user/g
+    :%s/libepgateway/libcustom1/g
+    :%s/epsettingsmanger/settingsmanager/g
 endfunction
 
 command Anonymize silent! call AnonymizeFunction()
