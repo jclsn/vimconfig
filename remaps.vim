@@ -24,28 +24,28 @@ else
 	set termwinsize=20*0
 	nmap <leader>tt :ter<CR>
 endif
-nmap <leader>rt :RainbowToggle<CR>
-nmap <leader>cl :ColorToggle<CR>
-nmap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
-nmap <leader>ll :set rnu! <CR>
-nmap <leader>cc :colorscheme
-nmap <leader>rb :RainbowToggle <CR>
-nmap <C-p>   :AirlineTheme random<CR>
-nmap <leader>dt :windo diffthis <CR>
-nmap <leader>do :windo diffoff <CR>
-nmap <leader>f :Files<CR>
-nmap <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>rt :RainbowToggle<CR>
+nnoremap <leader>cl :ColorToggle<CR>
+nnoremap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
+nnoremap <leader>ll :set rnu! <CR>
+nnoremap <leader>cc :colorscheme
+nnoremap <leader>rb :RainbowToggle <CR>
+nnoremap <C-p>   :AirlineTheme random<CR>
+nnoremap <leader>dt :windo diffthis <CR>
+nnoremap <leader>do :windo diffoff <CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 map <F2> :call CurtineIncSw()<CR>
 nnoremap <leader>as :Disassemble
 nnoremap <Leader>pp :H2cppxAuto<CR>
 nmap !silent <Plug>TransposeCharacters xp
 			\:call repeat#set("\<Plug>TransposeCharacters")<CR>
 nmap ü <Plug>TransposeCharacters
+nnoremap <leader>cm :CMake<CR>
 
 
 
 command! -nargs=? -complete=help H help <args> <bar> wincmd L
-cnoremap h<space>  H<space>
 " nnoremap <buffer> K K :wincmd L <CR>
 " setl keywordprg=:vertical\ help
 augroup vimrc_config | autocmd! | autocmd FileType vim setlocal keywordprg=vertical\ help | augroup END
