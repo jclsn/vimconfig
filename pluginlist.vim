@@ -28,7 +28,7 @@ Plug 'pulkomandy/c.vim'											" Better C syntax highlighting
 Plug 'coldspark29/h2cppx-vim'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
-Plug 'jalcine/cmake.vim'
+Plug 'vhdirk/vim-cmake'
 
 " ------------ Latex ------------
 Plug 'lervag/vimtex'
@@ -54,6 +54,7 @@ Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
 Plug 'm-pilia/vim-pkgbuild'
 Plug 'markonm/traces.vim'
+Plug 'jupyter-vim/jupyter-vim'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
