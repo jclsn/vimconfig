@@ -12,6 +12,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " ################# Debugger plugin #################
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim'
+" Plug 'mg979/tasks.vim'
 
 " ################# PROGRAMMING LANGUAGES ####################
 
