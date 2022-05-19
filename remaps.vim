@@ -63,3 +63,5 @@ endfunc
 " Open selected text in man pages
 noremap <leader>m <Plug>(Vman)
 vnoremap <leader>m :call man#get_page('vertical',   GetSelectedText())<CR>
+
+
