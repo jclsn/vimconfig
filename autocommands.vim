@@ -54,7 +54,7 @@ augroup vimrc-incsearch-highlight
     autocmd CmdlineLeave /,\? :set nohlsearch
 augroup END
 
-autocmd FileType c ClangFormatAutoEnable
-autocmd FileType h ClangFormatAutoEnable
-autocmd FileType cpp ClangFormatAutoEnable
-autocmd FileType hpp ClangFormatAutoEnable
+" autocmd FileType c ClangFormatAutoEnable
+" autocmd FileType h ClangFormatAutoEnable
+" autocmd FileType cpp ClangFormatAutoEnable
+" autocmd FileType hpp ClangFormatAutoEnable
