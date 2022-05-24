@@ -67,3 +67,6 @@ vnoremap <leader>m :call man#get_page('vertical',   GetSelectedText())<CR>
 " Easily shift lines up and down
 nnoremap - ddp
 nnoremap _ ddkP
+
+" Easily delete lines in insert mode
+inoremap <c-d> <esc>ddi
