@@ -8,8 +8,8 @@ colorscheme onedark
 set background=dark
 set termguicolors
 set signcolumn=auto
-source /home/claussenj/.vim/plugged/onedark.vim/colors/onedark.vim
 
+source ~/.vim/plugged/onedark.vim/colors/onedark.vim
 
 "autocmd BufEnter * if getbufvar(bufnr('%'), '&buftype') == "term" | colorscheme default | endif
 
