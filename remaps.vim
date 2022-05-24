@@ -74,3 +74,12 @@ inoremap <c-d> <esc>ddi
 " Easily convert words to uppercase
 inoremap <c-u> <esc>viw~<esc>ea
 nnoremap <c-u> viw~<esc>e
+
+" Quick editing of config files
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>er :vsplit ~/.vim/remaps.vim<cr>
+nnoremap <leader>em :vsplit ~/.vim/miscellaneous.vim<cr>
+nnoremap <leader>ep :vsplit ~/.vim/pluginlist.vim<cr>
+nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<cr>
+nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
+nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<cr>
