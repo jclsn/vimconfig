@@ -59,21 +59,15 @@ func! GetSelectedText()
   return result
 endfunc
 
-
 " Open selected text in man pages
 noremap <leader>m <Plug>(Vman)
 vnoremap <leader>m :call man#get_page('vertical',   GetSelectedText())<CR>
-
-" Easily shift lines up and down
-nnoremap - ddp
-nnoremap _ ddkP
 
 " Easily delete LINES IN INSERT MODE
 inoremap <c-d> <esc>ddi
 
 " Easily convert words to uppercase
-inoremap <c-u> <esc>viw~<esc>ea
-nnoremap <c-u> viw~<esc>e
+inoremap <c-u> <esc>viw~<esc>ea nnoremap <c-u> viw~<esc>e
 
 " Quick editing of config files
 nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
@@ -84,3 +78,38 @@ nnoremap <leader>ep :vsplit ~/.vim/pluginlist.vim<cr>
 nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<cr>
 nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
 nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<cr>
+
+
+" Swap lines beautifully
+
+function! s:swap_lines(n1, n2)
+    let line1 = getline(a:n1)
+    let line2 = getline(a:n2)
+    call setline(a:n1, line2)
+    call setline(a:n2, line1)
+endfunction
+
+function! s:swap_up()
+    let n = line('.')
+    if n == 1
+        return
+    endif
+
+    call s:swap_lines(n, n - 1)
+    exec n - 1
+endfunction
+
+function! s:swap_down()
+    let n = line('.')
+    if n == line('$')
+        return
+    endif
+
+    call s:swap_lines(n, n + 1)
+    exec n + 1
+endfunction
+
+noremap - :call <SID>swap_up()<CR>
+noremap _ :call <SID>swap_down()<CR>
+noremap <C-k> :call <SID>swap_up()<CR>
+noremap <C-j> :call <SID>swap_down()<CR>
