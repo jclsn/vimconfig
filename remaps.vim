@@ -109,8 +109,6 @@ function! s:swap_down()
     exec n + 1
 endfunction
 
-nnoremap - :call <SID>swap_up()<CR>
-nnoremap _ :call <SID>swap_down()<CR>
 nnoremap <C-k> :call <SID>swap_up()<CR>
 nnoremap <C-j> :call <SID>swap_down()<CR>
 
