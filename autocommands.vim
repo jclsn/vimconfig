@@ -58,3 +58,9 @@ augroup END
 " autocmd FileType h ClangFormatAutoEnable
 " autocmd FileType cpp ClangFormatAutoEnable
 " autocmd FileType hpp ClangFormatAutoEnable
+
+
+" JSON settings
+au FileType json set filetype=jsonc
+au FileType json RainbowLoad
+au FileType jsonc RainbowLoad
