@@ -64,4 +64,6 @@ endfunc
 noremap <leader>m <Plug>(Vman)
 vnoremap <leader>m :call man#get_page('vertical',   GetSelectedText())<CR>
 
-
+" Easily shift lines up and down
+nnoremap - ddp
+nnoremap _ ddkP
