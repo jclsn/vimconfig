@@ -56,4 +56,4 @@ function s:KittyScrollback(topline, curline, curcol)
     call timer_start(0, {-> execute(cmd)})
 endfunction
 
-"let g:asyncrun_open = 6
+let g:asyncrun_open = 6
