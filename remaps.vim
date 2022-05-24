@@ -109,7 +109,21 @@ function! s:swap_down()
     exec n + 1
 endfunction
 
-noremap - :call <SID>swap_up()<CR>
-noremap _ :call <SID>swap_down()<CR>
-noremap <C-k> :call <SID>swap_up()<CR>
-noremap <C-j> :call <SID>swap_down()<CR>
+nnoremap - :call <SID>swap_up()<CR>
+nnoremap _ :call <SID>swap_down()<CR>
+nnoremap <C-k> :call <SID>swap_up()<CR>
+nnoremap <C-j> :call <SID>swap_down()<CR>
+
+" Move visual blocks in all directions
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+vnoremap <C-h> <gv
+vnoremap <C-l> >gv
+
+
+
+
+
+
+
+
