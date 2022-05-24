@@ -121,10 +121,6 @@ vnoremap <C-k> :m '<-2<CR>gv
 vnoremap <C-h> <gv
 vnoremap <C-l> >gv
 
-
-
-
-
-
-
-
+"Easily add quotes
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
