@@ -7,22 +7,22 @@ let mapleader = " "
 " ++++++++++++++++++++++++************************
 "               ctags mappings
 " ++++++++++++++++++++++++************************
-nmap <leader>l <C-]>
-nmap <leader>h <C-t>
-nmap <leader>t :e #<CR>
+nnoremap <leader>l <C-]>
+nnoremap <leader>h <C-t>
+nnoremap <leader>t :e #<CR>
 nnoremap <Leader>ct :!ctags -R .<CR><CR>
 
 " ++++++++++++++++++++++++************************
 "               Browser search mappings
 " ++++++++++++++++++++++++************************
-nmap <silent> <Leader>s <Plug>SearchNormal
-vmap <silent> <Leader>s <Plug>SearchVisual
+nnoremap <silent> <Leader>s <Plug>SearchNormal
+vnoremap <silent> <Leader>s <Plug>SearchVisual
 if has('nvim')
 	tnoremap <esc> <C-\><C-n>
-	nmap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
+	nnoremap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
 else
 	set termwinsize=20*0
-	nmap <leader>tt :ter<CR>
+	nnoremap <leader>tt :ter<CR>
 endif
 nnoremap <leader>rt :RainbowToggle<CR>
 nnoremap <leader>cl :ColorToggle<CR>
@@ -35,12 +35,12 @@ nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
-map <F2> :call CurtineIncSw()<CR>
+nnoremap <F2> :call CurtineIncSw()<CR>
 nnoremap <leader>as :Disassemble
 nnoremap <Leader>pp :H2cppxAuto<CR>
-nmap !silent <Plug>TransposeCharacters xp
+nnoremap !silent <Plug>TransposeCharacters xp
 			\:call repeat#set("\<Plug>TransposeCharacters")<CR>
-nmap ü <Plug>TransposeCharacters
+nnoremap ü <Plug>TransposeCharacters
 
 nnoremap <leader>cm :CMake<CR>
 
