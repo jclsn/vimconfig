@@ -152,7 +152,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Show all diagnostics.
 nnoremap <silent><nowait> <leader>dg  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+"nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
