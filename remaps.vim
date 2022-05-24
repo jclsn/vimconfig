@@ -68,5 +68,9 @@ vnoremap <leader>m :call man#get_page('vertical',   GetSelectedText())<CR>
 nnoremap - ddp
 nnoremap _ ddkP
 
-" Easily delete lines in insert mode
+" Easily delete LINES IN INSERT MODE
 inoremap <c-d> <esc>ddi
+
+" Easily convert words to uppercase
+inoremap <c-u> <esc>viw~<esc>ea
+nnoremap <c-u> viw~<esc>e
