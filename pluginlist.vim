@@ -29,7 +29,8 @@ Plug 'pulkomandy/c.vim'											" Better C syntax highlighting
 
 " ------------- C++ --------------
 Plug 'coldspark29/h2cppx-vim'
-Plug 'bfrg/vim-cpp-modern'
+"Plug 'bfrg/vim-cpp-modern'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
 Plug 'vhdirk/vim-cmake'
 
