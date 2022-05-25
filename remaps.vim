@@ -15,15 +15,16 @@ nnoremap <Leader>ct :!ctags -R .<CR><CR>
 " ++++++++++++++++++++++++************************
 "               Browser search mappings
 " ++++++++++++++++++++++++************************
-nnoremap <silent> <Leader>s <Plug>SearchNormal
-vnoremap <silent> <Leader>s <Plug>SearchVisual
+nmap <silent> <Leader>s <Plug>SearchNormal
+vmap <silent> <Leader>s <Plug>SearchVisual
+
 if has('nvim')
 	tnoremap <esc> <C-\><C-n>
-	nnoremap <leader>tt :sp <CR> :term<CR> :res 20 <CR> :set nonu<CR> :set nornu<CR> i
+	nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
 else
-	set termwinsize=20*0
-	nnoremap <leader>tt :ter<CR>
+	nmap <leader>tt :ter<CR>
 endif
+
 nnoremap <leader>rt :RainbowToggle<CR>
 nnoremap <leader>cl :ColorToggle<CR>
 nnoremap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
