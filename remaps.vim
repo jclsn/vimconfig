@@ -112,6 +112,8 @@ endfunction
 
 nnoremap <C-k> :call <SID>swap_up()<CR>
 nnoremap <C-j> :call <SID>swap_down()<CR>
+nnoremap <C-h> <<
+nnoremap <C-l> >>
 
 " Move visual blocks in all directions
 vnoremap <C-j> :m '>+1<CR>gv
