@@ -91,6 +91,7 @@ Plug 'adelarsq/vim-matchit'
 Plug 'deepredsky/vim-jira'
 Plug 'TamaMcGlinn/vim-gerritbrowse'							    " Gerrit browser plugin
 Plug 'git@github.com:jclsn/vim-bitbake.git'
+Plug 'sblumentritt/bitbake.vim'
 
 " ############# Look and feel ###############
 
