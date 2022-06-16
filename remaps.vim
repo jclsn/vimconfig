@@ -31,10 +31,9 @@ nnoremap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
 nnoremap <leader>ll :set rnu! <CR>
 nnoremap <leader>cc :colorscheme
 nnoremap <leader>rb :RainbowToggle <CR>
-nnoremap <C-p>   :AirlineTheme random<CR>
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>fi :Files<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <F2> :call CurtineIncSw()<CR>
 nnoremap <leader>as :Disassemble
@@ -125,3 +124,7 @@ vnoremap <C-l> >gv
 "Easily add quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+
+" Open Copilot panel
+inoremap <C-p> <esc>:Copilot panel <CR>
+nnoremap <C-p> :Copilot panel <CR>
