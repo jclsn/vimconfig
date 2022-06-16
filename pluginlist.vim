@@ -82,7 +82,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-"Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 
 " Extend matching to more types than brackets
 Plug 'adelarsq/vim-matchit'
@@ -91,7 +91,6 @@ Plug 'adelarsq/vim-matchit'
 Plug 'deepredsky/vim-jira'
 Plug 'TamaMcGlinn/vim-gerritbrowse'							    " Gerrit browser plugin
 Plug 'git@github.com:jclsn/vim-bitbake.git'
-Plug 'sblumentritt/bitbake.vim'
 
 " ############# Look and feel ###############
 
