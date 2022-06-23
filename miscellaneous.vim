@@ -21,6 +21,7 @@ set noscrollbind
 set nocursorbind
 set backspace=indent,eol,start
 set incsearch
+set scrolloff=5
 
 
 if has ('nvim')
