@@ -15,8 +15,8 @@ let g:tmpl_author_name = 'Jan Claussen'
 " ++++++++++++++++++++++++************************
 "so ~/.vim/ultisnipsrc.vim
 "so ~/.vim/ycmrc.vim
-"so ~/.vim/vimtexrc.vim
 so ~/.vim/remaps.vim
+so ~/.vim/vimtexrc.vim
 so ~/.vim/vimspectorrc.vim
 so ~/.vim/fugitiverc.vim
 so ~/.vim/cocrc.vim
