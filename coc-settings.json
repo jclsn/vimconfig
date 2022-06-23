@@ -30,6 +30,7 @@
     "diagnostic.errorSign": "",
     "diagnostic.warningSign": "",
 
-    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "html"]
+    "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "html"],
 
+    "rust-analyzer.enable": true
    }
