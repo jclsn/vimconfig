@@ -8,7 +8,8 @@ function! HandleURL()
     echo "No URI found in line."
   endif
 endfunction
-nmap <leader>u :call HandleURL()<CR>
+nnoremap <leader>u :call HandleURL()<CR>
+
 
 
 
