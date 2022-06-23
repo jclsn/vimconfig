@@ -37,6 +37,9 @@ Plug 'vhdirk/vim-cmake'
 " ------------ Latex ------------
 Plug 'lervag/vimtex'
 
+" ------------ Rust ------------
+Plug 'mattn/webapi-vim'
+
 " ################## Code Formatting ####################
 
 Plug 'bigfish/vim-stylelint'
