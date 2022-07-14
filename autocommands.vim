@@ -34,6 +34,7 @@ if has("autocmd")
 	au BufReadPost *.bbclass set syntax=python
 	au BufReadPost *.scr set syntax=bash
 
+	au BufReadPost *.rs nnoremap <S-CR> :RustRun <CR>
 	"au BufReadPost * :ColorHighlight<CR>
 
 	" Run retab on saving files
@@ -62,3 +63,4 @@ augroup END
 au FileType json set filetype=jsonc
 au FileType json RainbowLoad
 au FileType jsonc RainbowLoad
+

@@ -128,3 +128,7 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 " Open Copilot panel
 inoremap <C-p> <esc>:Copilot panel <CR>
 nnoremap <C-p> :Copilot panel <CR>
+
+" Rust
+"
+nnoremap <leader> ru :RustRun <CR>
