@@ -27,6 +27,5 @@ so ~/.vim/urlhandler.vim
 so ~/.vim/folds.vim
 so ~/.vim/miscellaneous.vim
 so ~/.vim/themeconfig.vim
-so ~/.vim/jiravim.vim
 so ~/.vim/commands.vim
 so ~/.vim/abbreviations.vim
