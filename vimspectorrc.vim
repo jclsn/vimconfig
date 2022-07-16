@@ -5,7 +5,7 @@ nnoremap <silent><F3> :MaximizerToggle<CR>
 vnoremap <silent><F3> :MaximizerToggle<CR>gv
 inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 
-"nnoremap <F4> :VimspectorReset<CR>
+nnoremap <F4> :VimspectorReset<CR>
 "nnoremap <Leader>dr :VimspectorReset<CR>
 "
 "nnoremap <Leader>dd <Plug>VimspectorContinue
