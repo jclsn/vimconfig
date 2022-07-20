@@ -33,6 +33,7 @@ if has("autocmd")
 	au BufReadPost *.its set syntax=dts
 	au BufReadPost *.bbclass set syntax=python
 	au BufReadPost *.scr set syntax=bash
+	au BufReadPost *_defconfig set syntax=config
 
 	au BufReadPost *.rs nnoremap <S-CR> :RustRun <CR>
 	"au BufReadPost * :ColorHighlight<CR>
