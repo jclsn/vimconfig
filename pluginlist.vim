@@ -1,6 +1,6 @@
 " ################# Code snippets #################
 Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 "Plug 'ervandew/supertab'
 
 " ################# Code completion engines #################
