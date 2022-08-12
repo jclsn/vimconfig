@@ -85,7 +85,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'github/copilot.vim'
+if has("nvim")
+	Plug 'github/copilot.vim'
+endif
 
 " Extend matching to more types than brackets
 Plug 'adelarsq/vim-matchit'
