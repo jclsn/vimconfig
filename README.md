@@ -25,7 +25,7 @@ sudo cp ~/.vim/.vimrc /root/.vimrc
 and explicitly add the user directory path (exchange **_user_** with you username)
 
 ```bash
-sudo sed -e 's|~|/home/user|g' /root/.vimrc
+sudo sed -i 's|~|/home/user|g' /root/.vimrc
 ```
 
 Then install vim-plug as root:
