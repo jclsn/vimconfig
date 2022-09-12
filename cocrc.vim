@@ -164,6 +164,7 @@ let g:coc_global_extensions = [
                         \       'coc-markdownlint',
                         \       'coc-metals',
                         \       'coc-pyright',
+                        \       'coc-prettier',
                         \       'coc-rust-analyzer',
                         \       'coc-sh',
                         \       'coc-snippets',
