@@ -51,7 +51,7 @@ Plug 'rhysd/vim-clang-format'
 
 " ################## Tools #############################
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }			" NERDTree explorer
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }			" NERDTree explorer
 Plug 'vim-utils/vim-man'										" man.vim Plugin
 Plug 'mileszs/ack.vim'											" Ack search plugin
 Plug 'jclsn/vim-templates'								    " Templates plugin
