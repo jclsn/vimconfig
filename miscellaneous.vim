@@ -23,17 +23,11 @@ set backspace=indent,eol,start
 set incsearch
 set scrolloff=5
 
-
 if has ('nvim')
     set undodir=~/.config/nvim/undodir
 else
     set undodir=~/.vim/undodir
 endif
-
-" Cursor settings
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
 
 let g:better_whitespace_ctermcolor='gray'
 let g:better_whitespace_guicolor='gray'
@@ -58,3 +52,12 @@ function s:KittyScrollback(topline, curline, curcol)
 endfunction
 
 let g:asyncrun_open = 6
+
+if exists('$TMUX')
+	let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+	let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+else
+	let &t_SI = "\e[5 q"
+	let &t_EI = "\e[2 q"
+endif
+
