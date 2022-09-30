@@ -114,6 +114,8 @@ Plug 'kristiandupont/shades-of-teal'
 Plug 'morhetz/gruvbox'
 Plug 'pineapplegiant/spaceduck'
 Plug 'tomasiser/vim-code-dark'
+Plug 'lifepillar/vim-solarized8'
+Plug 'haishanh/night-owl.vim'
 
 " Add icons to plugins
 Plug 'ryanoasis/vim-devicons'
