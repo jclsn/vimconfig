@@ -23,7 +23,7 @@ if has("autocmd")
 	autocmd bufwritepost ycmrc.vim source ~/.vim/ycmrc.vim
 
 	" Autoformatting
-	autocmd bufwritepost *.ts :Prettier <CR>
+	" autocmd bufwritepost *.ts :Prettier <CR>
 	"autocmd bufwritepost *.py :Black <CR>
 
 	" Manually load syntax highlighting for some file extensions
