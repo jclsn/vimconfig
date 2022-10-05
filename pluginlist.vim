@@ -24,6 +24,7 @@ Plug 'yegappan/disassemble'
 
 " -------------- C --------------
 Plug 'pulkomandy/c.vim'											" Better C syntax highlighting
+Plug 'vim-scripts/CRefVim'
 "Plug 'WolfgangMehner/c-support'
 "Plug 'vim-scripts/ifdef-highlighting'
 
@@ -134,4 +135,3 @@ Plug 'ap/vim-css-color'
 
 Plug 'ellisonleao/glow.nvim'
 Plug 'jclsn/glow.vim'
-
