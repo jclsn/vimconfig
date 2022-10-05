@@ -63,6 +63,7 @@ Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
 Plug 'm-pilia/vim-pkgbuild'
 Plug 'markonm/traces.vim'
 Plug 'wgwoods/vim-systemd-syntax'
+Plug 'KabbAmine/zeavim.vim'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

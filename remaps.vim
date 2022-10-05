@@ -129,5 +129,9 @@ inoremap <C-p> <esc>:Copilot panel <CR>
 nnoremap <C-p> :Copilot panel <CR>
 
 " Rust
+nnoremap <leader>ru :RustRun <CR>
+
+" Documentation
+nnoremap <leader>z :Zeavim! <CR>
 "
-nnoremap <leader> ru :RustRun <CR>
+
