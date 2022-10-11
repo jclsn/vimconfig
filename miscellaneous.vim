@@ -61,3 +61,18 @@ else
 	let &t_EI = "\e[2 q"
 endif
 
+
+let todoKeywords = [
+			\ "Note",
+			\ "note",
+			\ "Notes",
+			\ "notes",
+			\ "Todo",
+			\ "ToDo",
+			\ "todo",
+			\ "FixMe",
+			\ "Fixme",
+			\ "fixme",
+			\ ]
+
+

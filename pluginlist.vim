@@ -135,4 +135,4 @@ Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
 
 Plug 'ellisonleao/glow.nvim'
-Plug 'jclsn/glow.vim'
+Plug 'jclsn/more-todos.vim'
