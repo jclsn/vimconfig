@@ -16,3 +16,4 @@ endfunction
 
 command Anonymize silent! call AnonymizeFunction()
 
+command DeleteChinese :g/[^\x00-\x7f]/d
