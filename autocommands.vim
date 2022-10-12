@@ -64,4 +64,5 @@ augroup END
 au FileType json set filetype=jsonc
 au FileType json RainbowLoad
 au FileType jsonc RainbowLoad
+au FileType cpp RainbowLoad
 
