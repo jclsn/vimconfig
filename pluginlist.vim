@@ -75,7 +75,6 @@ Plug 'voldikss/vim-browser-search'							    " Browser search
 Plug 'mhinz/vim-startify'
 
 " Render markdown files
-Plug 'ellisonleao/glow.nvim'
 Plug 'jclsn/glow.vim'
 
 " Tim Pope's plugins
@@ -87,9 +86,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-if has("nvim")
-	Plug 'github/copilot.vim'
-endif
+Plug 'github/copilot.vim'
 
 " Extend matching to more types than brackets
 Plug 'adelarsq/vim-matchit'
@@ -134,5 +131,4 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
 
-Plug 'ellisonleao/glow.nvim'
 Plug 'jclsn/more-todos.vim'
