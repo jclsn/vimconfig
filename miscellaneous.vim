@@ -35,22 +35,6 @@ let g:better_whitespace_enabled=0
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
 
-command -bar -nargs=+ KittyScrollback call s:KittyScrollback(<f-args>)
-
-function s:KittyScrollback(topline, curline, curcol)
-    " let us quit with a single keypress
-    nnoremap <silent> q :<C-U>quitall!<CR>
-    nnoremap <silent> i :<C-U>quitall!<CR>
-    set laststatus=0
-    set nonu
-    set nornu
-    set clipboard=autoselect,unnamedplus,exclude:cons\|linux
-
-    " preserve cursor position
-    let cmd = printf('normal! %sGzt%sG%s|', a:topline, a:curline, a:curcol)
-    call timer_start(0, {-> execute(cmd)})
-endfunction
-
 let g:asyncrun_open = 6
 
 if exists('$TMUX')
@@ -75,4 +59,28 @@ let todoKeywords = [
 			\ "fixme",
 			\ ]
 
+
+" command -bar -nargs=+ KittyScrollback call s:KittyScrollback(<f-args>)
+
+" function s:KittyScrollback(topline, curline, curcol)
+"     " let us quit with a single keypress
+"     nnoremap <silent> q :<C-U>quitall!<CR>
+"     nnoremap <silent> i :<C-U>quitall!<CR>
+"     set laststatus=0
+"     set nonu
+"     set nornu
+"     set clipboard=autoselect,unnamedplus,exclude:cons\|linux
+
+"     " preserve cursor position
+"     let cmd = printf('normal! %sGzt%sG%s|', a:topline, a:curline, a:curcol)
+"     call timer_start(0, {-> execute(cmd)})
+" endfunction
+
+source ~/.vim/kitty_scrollback.vim
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
