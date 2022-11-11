@@ -5,13 +5,14 @@
 
 function AnonymizeFunction()
     :%s/eppendorf/custom/g
+    :%s/ep-eaf-//g
+    :%s/meta-eaf/meta-custom/g
+    :%s/eaf/project/g
     :%s/vti1/my-machine/g
     :%s/vti2/my-machine/g
     :%s/claussenj/user/g
     :%s/libepgateway/libcustom1/g
     :%s/epsettingsmanager/settingsmanager/g
-    :%s/meta-eaf/meta-custom/g
-    :%s/ep-eaf-//g
 endfunction
 
 command Anonymize silent! call AnonymizeFunction()
