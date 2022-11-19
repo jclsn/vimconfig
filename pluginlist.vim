@@ -4,7 +4,7 @@ Plug 'honza/vim-snippets'
 "Plug 'ervandew/supertab'
 
 " ################# Code completion engines #################
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'bstaletic/YouCompleteMe'
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 " Plug 'romainl/vim-qf'
