@@ -60,22 +60,6 @@ let todoKeywords = [
 			\ ]
 
 
-" command -bar -nargs=+ KittyScrollback call s:KittyScrollback(<f-args>)
-
-" function s:KittyScrollback(topline, curline, curcol)
-"     " let us quit with a single keypress
-"     nnoremap <silent> q :<C-U>quitall!<CR>
-"     nnoremap <silent> i :<C-U>quitall!<CR>
-"     set laststatus=0
-"     set nonu
-"     set nornu
-"     set clipboard=autoselect,unnamedplus,exclude:cons\|linux
-
-"     " preserve cursor position
-"     let cmd = printf('normal! %sGzt%sG%s|', a:topline, a:curline, a:curcol)
-"     call timer_start(0, {-> execute(cmd)})
-" endfunction
-
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"

@@ -31,9 +31,10 @@ if has("autocmd")
 	au BufReadPost *.patch set ft=diff
 	au BufReadPost *.conf set ft=conf
 	au BufReadPost *.its set syntax=dts
-	au BufReadPost *.bbclass set syntax=python
+	au BufReadPost *.bbclass set syntax=bitbake
 	au BufReadPost *.scr set syntax=bash
 	au BufReadPost *_defconfig set syntax=config
+	au BufReadPost *.S set filetype=asm
 
 	au BufReadPost *.rs nnoremap <S-CR> :RustRun <CR>
 	"au BufReadPost * :ColorHighlight<CR>
