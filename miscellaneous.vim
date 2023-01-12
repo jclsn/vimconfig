@@ -47,13 +47,16 @@ endif
 
 
 let todoKeywords = [
+			\ "NOTE",
 			\ "Note",
 			\ "note",
+			\ "NOTES",
 			\ "Notes",
 			\ "notes",
 			\ "Todo",
 			\ "ToDo",
 			\ "todo",
+			\ "FIXME",
 			\ "FixMe",
 			\ "Fixme",
 			\ "fixme",

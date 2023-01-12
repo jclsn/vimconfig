@@ -162,15 +162,11 @@ let g:coc_global_extensions = [
                         \       'coc-json',
                         \       'coc-lua',
                         \       'coc-markdownlint',
-                        \       'coc-metals',
                         \       'coc-pyright',
                         \       'coc-prettier',
-                        \       'coc-rust-analyzer',
                         \       'coc-sh',
                         \       'coc-snippets',
-                        \       'coc-tsserver',
                         \       'coc-vimlsp',
-                        \       'coc-vimtex',
                         \       'coc-yaml',
                         \       ]
 

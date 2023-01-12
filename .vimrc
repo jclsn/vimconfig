@@ -13,10 +13,10 @@ let g:tmpl_author_name = 'Jan Claussen'
 " ++++++++++++++++++++++++***********************_
 "               Source large configurations
 " ++++++++++++++++++++++++************************
-"so ~/.vim/ultisnipsrc.vim
-"so ~/.vim/ycmrc.vim
+so ~/.vim/ultisnipsrc.vim
+so ~/.vim/ycmrc.vim
 so ~/.vim/remaps.vim
-so ~/.vim/vimtexrc.vim
+" so ~/.vim/vimtexrc.vim
 so ~/.vim/vimspectorrc.vim
 so ~/.vim/fugitiverc.vim
 so ~/.vim/cocrc.vim
@@ -29,4 +29,5 @@ so ~/.vim/miscellaneous.vim
 so ~/.vim/themeconfig.vim
 so ~/.vim/commands.vim
 so ~/.vim/abbreviations.vim
+
 

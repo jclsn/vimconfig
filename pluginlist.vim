@@ -36,10 +36,10 @@ Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers 
 Plug 'vhdirk/vim-cmake'
 
 " ------------ Latex ------------
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 " ------------ Rust ------------
-Plug 'mattn/webapi-vim'
+" Plug 'mattn/webapi-vim'
 
 " ################## Code Formatting ####################
 
@@ -86,14 +86,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 " Extend matching to more types than brackets
 Plug 'adelarsq/vim-matchit'
 
 " Work
-Plug 'deepredsky/vim-jira'
-Plug 'TamaMcGlinn/vim-gerritbrowse'							    " Gerrit browser plugin
 Plug 'git@github.com:jclsn/vim-bitbake.git'
 
 " ############# Look and feel ###############
