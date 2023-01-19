@@ -41,5 +41,7 @@
 			"command": "asm-lsp",
 			"filetypes": ["asm", "s", "S"]
 		}
-	}
+	},
+
+	"inlayHint.display": false
 }

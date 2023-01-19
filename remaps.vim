@@ -42,6 +42,7 @@ nnoremap !silent <Plug>TransposeCharacters xp
 nnoremap ü <Plug>TransposeCharacters
 
 nnoremap <leader>cm :CMake<CR>
+nnoremap <leader>ih :CocCommand document.toggleInlayHint<CR>
 
 
 
