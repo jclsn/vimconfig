@@ -11,6 +11,7 @@ nnoremap <leader>l <C-]>
 nnoremap <leader>h <C-t>
 nnoremap <leader>t :e #<CR>
 nnoremap <Leader>ct :!ctags -R .<CR><CR>
+nnoremap <Leader>L :Csc<CR>
 
 " ++++++++++++++++++++++++************************
 "               Browser search mappings
