@@ -23,6 +23,7 @@ set backspace=indent,eol,start
 set incsearch
 set scrolloff=5
 set cscopetag
+set cursorline
 
 if has ('nvim')
     set undodir=~/.config/nvim/undodir
