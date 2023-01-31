@@ -53,6 +53,9 @@ Plug 'rhysd/vim-clang-format'
 " ################## Tools #############################
 
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }			" NERDTree explorer
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-utils/vim-man'										" man.vim Plugin
 Plug 'mileszs/ack.vim'											" Ack search plugin
 Plug 'jclsn/vim-templates'								    " Templates plugin
@@ -114,8 +117,6 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'lifepillar/vim-solarized8'
 Plug 'haishanh/night-owl.vim'
 
-" Add icons to plugins
-Plug 'ryanoasis/vim-devicons'
 
 " Airline bar and themes
 Plug 'vim-airline/vim-airline'
