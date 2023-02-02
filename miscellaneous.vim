@@ -24,6 +24,10 @@ set incsearch
 set scrolloff=5
 set cscopetag
 set cursorline
+set foldmethod=syntax
+set foldnestmax=1
+set foldlevel=0
+set foldenable
 
 if has ('nvim')
     set undodir=~/.config/nvim/undodir
