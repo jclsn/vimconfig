@@ -37,8 +37,6 @@
 
   "rust-analyzer.enable": true,
 
-  "clangd.fallbackFlags": ["-std=c++17"],
-
   "languageserver": {
     "asm-lsp": {
       "command": "asm-lsp",
