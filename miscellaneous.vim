@@ -28,6 +28,7 @@ set foldmethod=syntax
 set foldnestmax=1
 set foldlevel=0
 set foldenable
+set noautochdir
 
 if has ('nvim')
     set undodir=~/.config/nvim/undodir
