@@ -6,7 +6,7 @@ set relativenumber
 set tabstop=4 shiftwidth=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 set undofile   " Maintain undo history between sessions
 set shell=zsh
 set ttimeoutlen=0
