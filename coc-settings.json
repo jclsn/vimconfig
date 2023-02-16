@@ -32,7 +32,6 @@
   "diagnostic.warningSign": "",
 
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "~/.local/bin/black",
   // "coc.preferences.formatOnSave": true,
 
   "rust-analyzer.enable": true,

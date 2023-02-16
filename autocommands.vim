@@ -26,7 +26,7 @@ if has("autocmd")
 	" autocmd bufwritepost *.ts :Prettier <CR>
 	"autocmd bufwritepost *.py :Black <CR>
 
-	autocmd BufWritePost *.py call CocAction('format')
+	" autocmd BufWritePost *.py call CocAction('format')
 	" Manually load syntax highlighting for some file extensions
 	"
 	au BufReadPost *.patch set ft=diff
