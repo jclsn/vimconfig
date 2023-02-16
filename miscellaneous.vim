@@ -39,7 +39,7 @@ endif
 let g:better_whitespace_ctermcolor='gray'
 let g:better_whitespace_guicolor='gray'
 let g:better_whitespace_enabled=0
-let g:strip_whitespace_on_save=1
+let g:strip_whitespace_on_save=0
 let g:strip_whitespace_confirm=0
 
 let g:asyncrun_open = 6
