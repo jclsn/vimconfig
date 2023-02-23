@@ -29,12 +29,14 @@ set foldnestmax=1
 set foldlevel=0
 set foldenable
 set noautochdir
+set list
+set listchars=tab:▸·,eol:¬
 
 if has ('nvim')
     set undodir=~/.config/nvim/undodir
 else
-    set undodir=~/.vim/undodir
-endif
+	set undodir=~/.vim/undodir
+end
 
 let g:better_whitespace_ctermcolor='gray'
 let g:better_whitespace_guicolor='gray'
