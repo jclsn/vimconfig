@@ -4,15 +4,14 @@
 " Description   : Custom commands
 
 function AnonymizeFunction()
-    :%s/eppendorf/custom/g
-    :%s/ep-eaf-//g
-    :%s/meta-eaf/meta-custom/g
-    :%s/eaf/project/g
-    :%s/vti1/my-machine/g
-    :%s/vti2/my-machine/g
-    :%s/claussenj/user/g
-    :%s/libepgateway/libcustom1/g
-    :%s/epsettingsmanager/settingsmanager/g
+    :%s/jan/user/g
+    :%s/AERQ In Seat Display Proto B (DT)/Module B/g
+    :%s/AERQ/Somecompany/g
+    :%s/aerq/somecompany/g
+    :%s/ISD/Device/g
+    :%s/isd/device/g
+    :%s/In Seat Display/Device/g
+    :%s/in seat display/device/g
 endfunction
 
 command Anonymize silent! call AnonymizeFunction()
