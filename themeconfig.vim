@@ -29,6 +29,7 @@ set signcolumn=auto
 """Force comment color
 hi Comment guifg=#484f7a ctermfg=141
 hi LineNr guifg=#484f7a ctermfg=141
+hi SpecialKey guifg=#484f7a ctermfg=141
 hi DiffAdd guibg=NONE ctermfg=NONE
 hi DiffChange guibg=NONE ctermbg=NONE
 hi DiffDelete guibg=NONE ctermbg=NONE
