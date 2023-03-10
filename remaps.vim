@@ -34,7 +34,7 @@ nnoremap <leader>rb :RainbowToggle <CR>
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
 nnoremap <leader>fi :Files<CR>
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :Fern . -drawer -keep -toggle<CR>
 nnoremap <F2> :call CurtineIncSw()<CR>
 nnoremap <leader>as :Disassemble
 nnoremap <Leader>pp :H2cppxAuto<CR>
