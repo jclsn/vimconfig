@@ -51,10 +51,16 @@ Plug 'zeekay/vim-beautify'
 Plug 'rhysd/vim-clang-format'
 
 " ################## Tools #############################
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/glyph-palette.vim'
+Plug 'lambdalisue/fern-mapping-git.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/glyph-palette.vim'
+Plug 'lambdalisue/fern-hijack.vim'
+Plug 'csch0/vim-startify-renderer-nerdfont'
 
-Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }			" NERDTree explorer
-Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-utils/vim-man'										" man.vim Plugin
 Plug 'mileszs/ack.vim'											" Ack search plugin
