@@ -10,6 +10,15 @@ augroup my-glyph-palette
   autocmd! *
   autocmd FileType fern call glyph_palette#apply()
   autocmd FileType nerdtree,startify call glyph_palette#apply()
+
+  hi GlyphPaletteDirectory guifg=#00a3cc ctermfg=38
 augroup END
 
+" Disable line numbers
+augroup FernGroup
+  autocmd FileType fern setlocal nornu | setlocal nonu
+augroup END
+
+function! s:init_fern() abort
+endfunction
 
