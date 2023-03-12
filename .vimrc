@@ -7,7 +7,7 @@ call plug#end()
 " ++++++++++++++++++++++++************************
 "						User
 " ++++++++++++++++++++++++************************
-let g:tmpl_author_email = 'claussen.j@eppendorf.de'
+let g:tmpl_author_email = 'jan.claussen10@web.de'
 let g:tmpl_author_name = 'Jan Claussen'
 
 " ++++++++++++++++++++++++***********************_
