@@ -3,6 +3,7 @@
 " ++++++++++++++++++++++++************************
 nnoremap <SPACE> <Nop>
 let mapleader = " "
+let maplocalleader = "-"
 
 " ++++++++++++++++++++++++************************
 "               ctags mappings
