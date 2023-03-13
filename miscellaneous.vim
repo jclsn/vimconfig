@@ -29,7 +29,7 @@ set foldnestmax=1
 set foldlevel=0
 set foldenable
 set noautochdir
-set list
+set nolist
 set listchars=tab:▸·,eol:¬
 
 if has ('nvim')
