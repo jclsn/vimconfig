@@ -22,4 +22,4 @@ augroup END
 function! s:init_fern() abort
 endfunction
 
-autocmd BufWritePost *  ++nested :FernDo  e! -drawer
+autocmd BufWritePost *  ++nested :FernDo e -drawer
