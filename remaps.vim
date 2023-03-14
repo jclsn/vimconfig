@@ -138,3 +138,6 @@ nnoremap <leader>ru :RustRun <CR>
 nnoremap <leader>z :Zeavim! <CR>
 "
 
+" Change word under cursor to random number 
+nnoremap <leader>r ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<cr><esc>
+" nnoremap <silent> <leader>r ciw<CR>=call printf('%02d', min(60, max(0, str2nr(getreg('.')) + 1)))<CR>
