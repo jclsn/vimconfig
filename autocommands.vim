@@ -8,6 +8,7 @@ if has("autocmd")
 	autocmd bufwritepost cocrc.vim source ~/.vim/cocrc.vim
 	autocmd bufwritepost commands.vim source ~/.vim/commands.vim
 	autocmd bufwritepost ctags.vim source ~/.vim/ctags.vim
+	autocmd bufwritepost fernrc.vim source ~/.vim/fernrc.vim
 	autocmd bufwritepost folds.vim source ~/.vim/folds.vim
 	autocmd bufwritepost fugitiverc.vim source ~/.vim/fugitiverc.vim
 	autocmd bufwritepost kitty.vim source ~/.vim/kitty.vim
@@ -36,7 +37,6 @@ if has("autocmd")
 	au BufReadPost *.scr set syntax=bash
 	au BufReadPost *_defconfig set syntax=config
 	au BufReadPost *.S set filetype=asm
-
 	au BufReadPost *.rs nnoremap <S-CR> :RustRun <CR>
 	"au BufReadPost * :ColorHighlight<CR>
 
