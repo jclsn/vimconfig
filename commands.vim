@@ -28,4 +28,7 @@ command! Csc call Csc()
 
 cs add cscope.out
 
+nnoremap <leader>r ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<cr><esc>
+
+
 
