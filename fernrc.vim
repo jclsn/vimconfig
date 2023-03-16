@@ -26,3 +26,9 @@ autocmd BufWritePost *  ++nested :FernDo e -drawer
 if has_key(plugs, 'vim-fugitive')
 	autocmd User FugitiveCommit ++nested :FernDo e -drawer
 endif
+
+command! -nargs=1 Fernssh call FernSSH(<q-args>)
+
+function! FernSSH(path)
+	exe ':Fern -drawer ssh://' . a:path
+endfunction
