@@ -17,8 +17,8 @@ nnoremap <Leader>L :Csc<CR>
 " ++++++++++++++++++++++++************************
 "               Browser search mappings
 " ++++++++++++++++++++++++************************
-nmap <silent> <Leader>se <Plug>SearchNormal<CR>
-vmap <silent> <Leader>se <Plug>SearchVisual<CR>
+nmap <silent> <Leader>w <Plug>SearchNormal<CR>
+vmap <silent> <Leader>w <Plug>SearchVisual<CR>
 
 if has('nvim')
 	tnoremap <esc> <C-\><C-n>
