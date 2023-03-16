@@ -81,6 +81,7 @@ nnoremap <leader>ep :vsplit ~/.vim/pluginlist.vim<cr>
 nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<cr>
 nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
 nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<cr>
+nnoremap <leader>ef :vsplit ~/.vim/fernrc.vim<cr>
 
 
 " Swap lines beautifully
