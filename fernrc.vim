@@ -16,10 +16,13 @@ augroup END
 
 " Disable line numbers
 augroup FernGroup
+  autocmd! *
   autocmd FileType fern setlocal nornu | setlocal nonu
+  autocmd FileType fern call s:init_fern()
 augroup END
 
 function! s:init_fern() abort
+  nnoremap <buffer> <LeftRelease> <Plug>(fern-action-open-or-expand)
 endfunction
 
 autocmd BufWritePost *  ++nested :FernDo e -drawer
@@ -27,8 +30,3 @@ if has_key(plugs, 'vim-fugitive')
 	autocmd User FugitiveCommit ++nested :FernDo e -drawer
 endif
 
-command! -nargs=1 Fernssh call FernSSH(<q-args>)
-
-function! FernSSH(path)
-	exe ':Fern -drawer ssh://' . a:path
-endfunction
