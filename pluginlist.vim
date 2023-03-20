@@ -58,7 +58,6 @@ Plug 'lambdalisue/fern-mapping-git.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/fern-hijack.vim'
-Plug 'lambdalisue/fern-ssh'
 Plug 'csch0/vim-startify-renderer-nerdfont'
 
 Plug 'ryanoasis/vim-devicons'
