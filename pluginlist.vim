@@ -136,4 +136,5 @@ Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
 
 Plug 'jclsn/more-todos.vim'
+Plug 'jclsn/h2cppx-vim'
 Plug '0xStabby/chatgpt-vim'
