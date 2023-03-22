@@ -18,7 +18,7 @@ command Anonymize silent! call AnonymizeFunction()
 command DeleteChinese :g/[^\x00-\x7f]/d
 command Glog :Git log --oneline -500
 command ShowTrailingWhitespace :match ExtraWhitespace /\s\+$/
-
+command! -nargs=? CMake CMakeGenerate <q-args>
 
 
 function! Csc()

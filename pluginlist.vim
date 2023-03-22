@@ -24,7 +24,6 @@ Plug 'yegappan/disassemble'
 
 " -------------- C --------------
 Plug 'pulkomandy/c.vim'											" Better C syntax highlighting
-Plug 'vim-scripts/CRefVim'
 "Plug 'WolfgangMehner/c-support'
 "Plug 'vim-scripts/ifdef-highlighting'
 
@@ -32,7 +31,7 @@ Plug 'vim-scripts/CRefVim'
 "Plug 'bfrg/vim-cpp-modern'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
-Plug 'vhdirk/vim-cmake'
+Plug 'cdelledonne/vim-cmake'
 
 " ------------ Latex ------------
 " Plug 'lervag/vimtex'
