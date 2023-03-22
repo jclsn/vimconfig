@@ -30,5 +30,6 @@ so ~/.vim/themeconfig.vim
 so ~/.vim/commands.vim
 so ~/.vim/abbreviations.vim
 so ~/.vim/fernrc.vim
+so ~/.vim/cmakerc.vim
 
 

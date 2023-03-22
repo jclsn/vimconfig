@@ -43,10 +43,11 @@ nnoremap !silent <Plug>TransposeCharacters xp
 			\:call repeat#set("\<Plug>TransposeCharacters")<CR>
 nnoremap ü <Plug>TransposeCharacters
 
-nnoremap <leader>cm :CMake<CR>
 nnoremap <leader>ih :CocCommand document.toggleInlayHint<CR>
 
-
+nnoremap <leader>cg :CMakeGenerate<CR>
+nnoremap <leader>cb :CMakeBuild<CR>
+nnoremap <leader>cc :CMakeClose<CR>
 
 command! -nargs=? -complete=help H help <args> <bar> wincmd L
 " nnoremap <buffer> K K :wincmd L <CR>
