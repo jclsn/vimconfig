@@ -26,7 +26,4 @@ function! s:init_fern() abort
 endfunction
 
 autocmd BufWritePost *  ++nested :FernDo e -drawer
-if has_key(plugs, 'vim-fugitive')
-	autocmd User FugitiveCommit ++nested :FernDo e -drawer
-endif
 
