@@ -1,1 +1,1 @@
-let g:cmake_default_config='build'
+let g:cmake_default_config='Debug'
