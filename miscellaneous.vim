@@ -30,6 +30,7 @@ set foldlevel=0
 set noautochdir
 set nolist
 set listchars=tab:▸·,eol:¬
+set exrc
 
 if has ('nvim')
     set undodir=~/.config/nvim/undodir
