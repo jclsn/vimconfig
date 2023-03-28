@@ -27,7 +27,6 @@ set cursorline
 set foldmethod=syntax
 set foldnestmax=1
 set foldlevel=0
-set foldenable
 set noautochdir
 set nolist
 set listchars=tab:▸·,eol:¬
