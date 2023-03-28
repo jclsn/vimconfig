@@ -21,6 +21,7 @@ Plug 'zeekay/vim-beautify'
 
 " ################# Debugging #################
 Plug 'puremourning/vimspector'
+Plug 'jclsn/vimspector-templates'
 Plug 'szw/vim-maximizer'
 
 " ############# Look and feel ###############
