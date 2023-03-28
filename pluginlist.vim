@@ -21,14 +21,12 @@ Plug 'zeekay/vim-beautify'
 
 " ################# Debugging #################
 Plug 'puremourning/vimspector'
-Plug 'jclsn/vimspector-templates'
 Plug 'szw/vim-maximizer'
 
 " ############# Look and feel ###############
 
 " Syntax 
 Plug 'frazrepo/vim-rainbow'
-Plug 'git@github.com:jclsn/vim-bitbake.git'
 Plug 'm-pilia/vim-pkgbuild'
 Plug 'wgwoods/vim-systemd-syntax'
 
@@ -60,12 +58,6 @@ Plug 'ap/vim-css-color'
 
 
 " ################## Miscellaneous #############################
-
-" My plugins
-Plug 'jclsn/glow.vim'
-Plug 'jclsn/h2cppx-vim'
-Plug 'jclsn/more-todos.vim'
-Plug 'jclsn/vim-templates'								    " Templates plugin
 
 
 " ################# PROGRAMMING LANGUAGES ####################
@@ -110,7 +102,6 @@ Plug 'lambdalisue/nerdfont.vim'
 " Other
 Plug '0xStabby/chatgpt-vim'
 Plug 'adelarsq/vim-matchit'
-Plug 'git@github.com:jclsn/vim-PairTools.git'				    " Auto-closing for brackets etc.
 Plug 'godlygeek/tabular'										" Tabular plugin
 Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'markonm/traces.vim'
@@ -143,3 +134,11 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
+" My plugins
+Plug 'git@github.com:jclsn/glow.vim'
+Plug 'git@github.com:jclsn/h2cppx-vim'
+Plug 'git@github.com:jclsn/more-todos.vim'
+Plug 'git@github.com:jclsn/vim-PairTools.git'				    " Auto-closing for brackets etc.
+Plug 'git@github.com:jclsn/vim-bitbake.git'
+Plug 'git@github.com:jclsn/vim-templates'								    " Templates plugin
+Plug 'git@github.com:jclsn/vimspector-templates'
