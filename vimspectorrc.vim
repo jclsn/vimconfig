@@ -48,9 +48,9 @@ autocmd User VimspectorJumpedToFrame normal zz
  endfunction
 
 let g:vimspector_sign_priority = {
-  \    'vimspectorBP':         998,
-  \    'vimspectorBPCond':     997,
-  \    'vimspectorBPLog':      996,
-  \    'vimspectorBPDisabled': 995,
+  \    'vimspectorBP':         3,
+  \    'vimspectorBPCond':     2,
+  \    'vimspectorBPLog':      2,
+  \    'vimspectorBPDisabled': 1,
   \    'vimspectorPC':         999,
   \ }
