@@ -126,6 +126,7 @@ Plug 'haishanh/night-owl.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'AnthonyDiGirolamo/airline-themes'
+Plug 'Roy-Orbison/airline-colour-splits'
 
 " Add multiple colors for brackets
 Plug 'frazrepo/vim-rainbow'
