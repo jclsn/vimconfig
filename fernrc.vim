@@ -25,5 +25,8 @@ function! s:init_fern() abort
   nnoremap <buffer> <LeftRelease> <Plug>(fern-action-open-or-expand)
 endfunction
 
-autocmd BufWritePost *  ++nested :FernDo e -drawer
+autocmd BufWritePost *  ++nested :FernDo e -drawer -stay
 
+if has_key(plugs, 'vim-fugitive')
+	autocmd User FugitiveCommit ++nested :FernDo e -drawer -stay
+endif
