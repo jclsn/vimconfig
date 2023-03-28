@@ -34,4 +34,10 @@ autocmd User VimspectorJumpedToFrame normal zz
    call vimspector#AddWatch(word)
  endfunction
 
-
+let g:vimspector_sign_priority = {
+  \    'vimspectorBP':         998,
+  \    'vimspectorBPCond':     997,
+  \    'vimspectorBPLog':      996,
+  \    'vimspectorBPDisabled': 995,
+  \    'vimspectorPC':         999,
+  \ }
