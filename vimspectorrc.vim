@@ -26,7 +26,20 @@ nnoremap <F4> :VimspectorReset<CR>
 
 nnoremap <leader>da :call AddToWatch()<CR>
 
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+"let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+nmap <F5>         <Plug>VimspectorContinue
+nmap <S-F5>       <Plug>VimspectorStop
+nmap <C-S-F5>     <Plug>VimspectorRestart
+nmap <F6>         <Plug>VimspectorPause
+nmap <F8>         <Plug>VimspectorJumpToNextBreakpoint
+nmap <S-F8>       <Plug>VimspectorJumpToPreviousBreakpoint
+nmap <F9>         <Plug>VimspectorToggleBreakpoint
+nmap <S-F9>       <Plug>VimspectorAddFunctionBreakpoint
+nmap <F10>        <Plug>VimspectorStepOver
+nmap <F11>        <Plug>VimspectorStepInto
+nmap <S-F11>      <Plug>VimspectorStepOut
+nmap <M-8>        <Plug>VimspectorDisassemble
+
 
 autocmd User VimspectorJumpedToFrame normal zz
  func! AddToWatch()
