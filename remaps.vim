@@ -63,8 +63,8 @@ func! GetSelectedText()
 endfunc
 
 " Open selected text in man pages
-noremap <leader>m <Plug>(Vman)
-vnoremap <leader>m :call man#get_page('vertical',   GetSelectedText())<CR>
+noremap <leader>m <Plug>(Man)
+vnoremap <leader>m :call man#get_page('horizontal',   GetSelectedText())<CR>
 
 " Easily delete LINES IN INSERT MODE
 inoremap <c-d> <esc>ddi
