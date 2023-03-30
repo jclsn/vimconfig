@@ -75,7 +75,7 @@ Plug 'pulkomandy/c.vim'											" Better C syntax highlighting
 "Plug 'bfrg/vim-cpp-modern'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
-Plug 'cdelledonne/vim-cmake'
+Plug 'ReverentEngineer/vim-cmake'
 
 " ------------ Latex ------------
 " Plug 'lervag/vimtex'
