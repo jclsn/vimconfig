@@ -45,6 +45,8 @@ let g:strip_whitespace_on_save=0
 let g:strip_whitespace_confirm=0
 
 let g:asyncrun_open = 6
+let g:startify_change_to_dir = 0
+
 
 if exists('$TMUX')
 	let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
