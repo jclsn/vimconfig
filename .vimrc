@@ -25,11 +25,11 @@ so ~/.vim/ctags.vim
 so ~/.vim/urlhandler.vim
 "so ~/.vim/kitty.vim
 so ~/.vim/folds.vim
-so ~/.vim/miscellaneous.vim
-so ~/.vim/themeconfig.vim
 so ~/.vim/commands.vim
 so ~/.vim/abbreviations.vim
 so ~/.vim/fernrc.vim
 so ~/.vim/cmakerc.vim
 
-
+" Always apply these settings last
+so ~/.vim/themeconfig.vim
+so ~/.vim/miscellaneous.vim
