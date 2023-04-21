@@ -6,7 +6,7 @@ set relativenumber
 set tabstop=4 shiftwidth=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set smarttab
 set undofile   " Maintain undo history between sessions
 set shell=zsh
 set ttimeoutlen=0
@@ -33,9 +33,9 @@ set listchars=tab:▸·,eol:¬
 set exrc
 
 if has ('nvim')
-    set undodir=~/.config/nvim/undodir
+	set undodir=~/.config/nvim/undodir
 else
-    set undodir=~/.vim/undodir
+	set undodir=~/.vim/undodir
 endi
 
 let g:better_whitespace_ctermcolor='gray'
@@ -75,8 +75,8 @@ let todoKeywords = [
 
 
 if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	set termguicolors
 endif
 
