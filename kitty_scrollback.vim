@@ -23,9 +23,9 @@ set termwinscroll=100000
 command -bar -nargs=+ KittyScrollback KittyScrollback(<f-args>)
 
 def KittyScrollback(topline: string, curline: string, curcol: string)
-    # let us quit with a single keypress
-        # preserve cursor position
-
+	# let us quit with a single keypress
+	# preserve cursor position
+	
 	var input_line_nr = str2nr(topline)
 	var cursor_line = str2nr(curline)
 	var cursor_column = str2nr(curcol)
