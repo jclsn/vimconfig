@@ -32,9 +32,7 @@
   "diagnostic.warningSign": "",
 
   "python.formatting.provider": "black",
-  // "coc.preferences.formatOnSave": true,
-
-  "rust-analyzer.enable": true,
+  "coc.preferences.formatOnSave": false,
 
   "languageserver": {
     "asm-lsp": {
@@ -44,7 +42,7 @@
   },
 
   "inlayHint.display": false,
-  "clangd.compilationDatabaseCandidates": [ "build", "Debug", "Release"],
+  "clangd.compilationDatabaseCandidates": ["build", "Debug", "Release"],
 
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.variableTypes": false
