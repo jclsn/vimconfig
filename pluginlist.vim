@@ -43,7 +43,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
-Plug 'pineapplegiant/spaceduck'
+Plug 'jclsn/spaceduck', { 'branch': 'dev' }
 Plug 'tomasiser/vim-code-dark'
 
 " Airline bar and themes
