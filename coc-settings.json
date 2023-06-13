@@ -42,7 +42,7 @@
   },
 
   "inlayHint.display": false,
-  "clangd.compilationDatabaseCandidates": ["build", "Debug", "Release"],
+  "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
 
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.variableTypes": false
