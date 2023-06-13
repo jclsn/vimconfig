@@ -12,7 +12,7 @@ nnoremap <leader>l <C-]>
 nnoremap <leader>h <C-t>
 nnoremap <leader>t :e #<CR>
 nnoremap <Leader>ct :!ctags -R .<CR><CR>
-nnoremap <Leader>L :Csc<CR>
+nnoremap <Leader>L :cs find s <C-R>=expand("<cword>")<CR><CR>
 
 " ++++++++++++++++++++++++************************
 "               Browser search mappings
