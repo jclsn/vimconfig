@@ -11,10 +11,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ################## Code Formatting ####################
 
-Plug 'ambv/black'
+Plug 'ambv/black', { 'for': [ 'python' ] }
 Plug 'bigfish/vim-stylelint'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'rhysd/vim-clang-format'
+Plug 'rhysd/vim-clang-format', { 'for': ['c', 'cpp'] }
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'zeekay/vim-beautify'
 
@@ -59,23 +59,24 @@ Plug 'ap/vim-css-color'
 
 " ################## Miscellaneous #############################
 
+Plug 'jasonccox/vim-wayland-clipboard'
 
 " ################# PROGRAMMING LANGUAGES ####################
 
 " ----------- Assembly --------------
-Plug 'wsdjeg/vim-assembly'
+Plug 'wsdjeg/vim-assembly', { 'for': ['agc', 'S', 'X68'] }
 Plug 'yegappan/disassemble'
 
 " -------------- C --------------
-Plug 'pulkomandy/c.vim'											" Better C syntax highlighting
+Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }											
 "Plug 'WolfgangMehner/c-support'
 "Plug 'vim-scripts/ifdef-highlighting'
 "
 " ------------- C++ --------------
 "Plug 'bfrg/vim-cpp-modern'
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
-Plug 'ReverentEngineer/vim-cmake'
+Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
 " ------------ Latex ------------
 " Plug 'lervag/vimtex'
@@ -86,8 +87,8 @@ Plug 'ReverentEngineer/vim-cmake'
 " ################## Tools #############################
 
 " Docs
-Plug 'vim-utils/vim-man'										" man.vim Plugin
-Plug 'KabbAmine/zeavim.vim'
+Plug 'vim-utils/vim-man', { 'on': 'Man' }										" man.vim Plugin
+Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
 
 " Fern
 Plug 'lambdalisue/fern.vim'
@@ -107,11 +108,6 @@ Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'											" Ack search plugin
 Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
-
-" Tasks
-Plug 'skywind3000/asynctasks.vim'
-Plug 'skywind3000/asyncrun.vim'
-"Plug 'mg979/tasks.vim'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -135,10 +131,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 " My plugins
-Plug 'git@github.com:jclsn/glow.vim'
-Plug 'git@github.com:jclsn/h2cppx-vim'
+Plug 'git@github.com:jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
+Plug 'git@github.com:jclsn/h2cppx-vim', { 'for': ['c', 'cpp'] }
 Plug 'git@github.com:jclsn/more-todos.vim'
 Plug 'git@github.com:jclsn/vim-PairTools.git'				    " Auto-closing for brackets etc.
-Plug 'git@github.com:jclsn/vim-bitbake.git'
+Plug 'git@github.com:jclsn/vim-bitbake.git', { 'for': ['bitbake'] }
 Plug 'git@github.com:jclsn/vim-templates'								    " Templates plugin
 Plug 'git@github.com:jclsn/vimspector-templates'
