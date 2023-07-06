@@ -3,9 +3,9 @@
 " ++++++++++++++++++++++++************************
 set number
 set relativenumber
-set tabstop=4 shiftwidth=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=8 shiftwidth=8
+set softtabstop=8
+set shiftwidth=8
 set smarttab
 set undofile   " Maintain undo history between sessions
 set shell=zsh
