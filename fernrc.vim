@@ -23,6 +23,8 @@ augroup END
 
 function! s:init_fern() abort
 	nnoremap <buffer> <LeftRelease> <Plug>(fern-action-open-or-expand)
+	nnoremap <buffer> <leader>l <Plug>(fern-action-git-unstage)
+	nnoremap <buffer> <leader>h <Plug>(fern-action-git-stage)
 endfunction
 
 autocmd BufWritePost *  ++nested :FernDo e -drawer -stay
