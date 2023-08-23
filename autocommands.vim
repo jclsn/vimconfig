@@ -46,7 +46,7 @@ if has("autocmd")
 
 	" Activate Prettier plugin for various file extensions
 	"let g:prettier#autoformat = 0
-	autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+	" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 endif
 
