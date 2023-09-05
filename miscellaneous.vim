@@ -22,7 +22,9 @@ set nocursorbind
 set backspace=indent,eol,start
 set incsearch
 set scrolloff=5
+set tags=./tags;,tags;./.tags;,.tags;
 set nocscopetag
+cs add .cscope.out
 cs add cscope.out
 set cursorline
 set foldmethod=syntax
