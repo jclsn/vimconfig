@@ -29,6 +29,7 @@ Plug 'szw/vim-maximizer'
 Plug 'frazrepo/vim-rainbow'
 Plug 'm-pilia/vim-pkgbuild'
 Plug 'wgwoods/vim-systemd-syntax'
+Plug 'westeri/asl-vim'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
