@@ -3,6 +3,7 @@
 " ++++++++++++++++++++++++************************
 set number
 set relativenumber
+set signcolumn=yes
 set tabstop=8 shiftwidth=8
 set softtabstop=8
 set shiftwidth=8
