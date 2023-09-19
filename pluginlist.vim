@@ -137,6 +137,6 @@ Plug 'git@github.com:jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
 Plug 'git@github.com:jclsn/h2cppx-vim', { 'for': ['c', 'cpp'] }
 Plug 'git@github.com:jclsn/more-todos.vim'
 Plug 'git@github.com:jclsn/vim-PairTools.git'				    " Auto-closing for brackets etc.
-Plug 'git@github.com:jclsn/vim-bitbake.git', { 'for': ['bitbake'] }
+Plug 'git@github.com:jclsn/vim-bitbake.git'
 Plug 'git@github.com:jclsn/vim-templates'								    " Templates plugin
 Plug 'git@github.com:jclsn/vimspector-templates'
