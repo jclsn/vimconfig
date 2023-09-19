@@ -28,8 +28,8 @@
     "default": "\uf29c"
   },
 
-  "diagnostic.errorSign": "",
-  "diagnostic.warningSign": "",
+  "diagnostic.errorSign": "❗",
+  "diagnostic.warningSign": "💡",
 
   "python.formatting.provider": "black",
   "coc.preferences.formatOnSave": false,
