@@ -48,6 +48,7 @@ nnoremap <leader>ih :CocCommand document.toggleInlayHint<CR>
 nnoremap <leader>cg :CMakeGenerate<CR>
 nnoremap <leader>cb :CMakeBuild<CR>
 nnoremap <leader>cc :CMakeClose<CR>
+nnoremap <leader>ma :Make<CR>
 
 command! -nargs=? -complete=help H help <args> <bar> wincmd L
 " nnoremap <buffer> K K :wincmd L <CR>
