@@ -110,6 +110,7 @@ Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'											" Ack search plugin
 Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
+Plug 'junegunn/vim-peekaboo'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
