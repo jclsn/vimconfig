@@ -36,6 +36,8 @@ set nolist
 set listchars=tab:▸·,eol:¬
 set exrc
 
+let g:pairtools_samplefile_path='~/.vim/plugged/vim-PairTools/ftplugin'
+
 if has ('nvim')
 	set undodir=~/.config/nvim/undodir
 else
