@@ -62,6 +62,7 @@ Plug 'ap/vim-css-color'
 
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'andrewstuart/vim-kubernetes'
+Plug 'pseewald/vim-anyfold'
 
 " ################# PROGRAMMING LANGUAGES ####################
 
