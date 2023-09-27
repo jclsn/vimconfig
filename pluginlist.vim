@@ -86,6 +86,7 @@ Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
 " ------------ Rust ------------
 " Plug 'mattn/webapi-vim'
+Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
 " ################## Tools #############################
 
