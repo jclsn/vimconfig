@@ -49,11 +49,11 @@ autocmd User VimspectorJumpedToFrame normal zz
  endfunction
 
 let g:vimspector_sign_priority = {
-  \    'vimspectorBP':         3,
-  \    'vimspectorBPCond':     2,
-  \    'vimspectorBPLog':      2,
-  \    'vimspectorBPDisabled': 1,
-  \    'vimspectorPC':         999,
+  \    'vimspectorBP':         101,
+  \    'vimspectorBPCond':     102,
+  \    'vimspectorBPLog':      103,
+  \    'vimspectorBPDisabled': 104,
+  \    'vimspectorPC':         105,
   \ }
 
 " Creates a function to run :Make
