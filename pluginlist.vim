@@ -2,7 +2,6 @@
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips'
 "Plug 'ervandew/supertab'
 "Plug 'bstaletic/YouCompleteMe'
 "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
