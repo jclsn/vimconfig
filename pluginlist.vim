@@ -6,6 +6,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'bstaletic/YouCompleteMe'
 "Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 "Plug 'romainl/vim-qf'
+Plug 'Exafunction/codeium.vim'
 
 
 " ################## Code Formatting ####################
