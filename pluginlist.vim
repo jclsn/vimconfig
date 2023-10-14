@@ -2,10 +2,6 @@
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'ervandew/supertab'
-"Plug 'bstaletic/YouCompleteMe'
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-"Plug 'romainl/vim-qf'
 Plug 'Exafunction/codeium.vim'
 
 
@@ -23,8 +19,9 @@ Plug 'zeekay/vim-beautify'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 
-" ############# Look and feel ###############
 
+" ############# Look and feel ###############
+"
 " Syntax 
 Plug 'frazrepo/vim-rainbow'
 Plug 'm-pilia/vim-pkgbuild'
@@ -72,17 +69,11 @@ Plug 'yegappan/disassemble'
 
 " -------------- C --------------
 Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }											
-"Plug 'WolfgangMehner/c-support'
-"Plug 'vim-scripts/ifdef-highlighting'
-"
-" ------------- C++ --------------
-"Plug 'bfrg/vim-cpp-modern'
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
-Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
-" ------------ Latex ------------
-" Plug 'lervag/vimtex'
+" ------------- C++ --------------
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
+Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
 " ------------ Rust ------------
 " Plug 'mattn/webapi-vim'
