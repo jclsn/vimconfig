@@ -23,7 +23,7 @@ Plug 'szw/vim-maximizer'
 " ############# Look and feel ###############
 "
 " Syntax 
-Plug 'frazrepo/vim-rainbow'
+Plug 'luochen1990/rainbow'
 Plug 'm-pilia/vim-pkgbuild'
 Plug 'wgwoods/vim-systemd-syntax'
 Plug 'westeri/asl-vim'
