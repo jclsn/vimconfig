@@ -50,6 +50,10 @@ let s:inactive2 = [ "#484f7a", "#16172d", 234, 234 ]
 let s:inactive1 = [ "#484f7a", "#16172d", 234, 234 ]
 let s:inactive3 = [ "#484f7a", "#16172d", 234, 234 ]
 
+" Indents
+let g:indentLine_char = '▏'
+let g:indentLine_enabled = 0
+
 " Rainbow configuration
 let g:rainbow_active = 1
 let g:rainbow_conf = {
