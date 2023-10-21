@@ -6,25 +6,34 @@ vnoremap <silent><F3> :MaximizerToggle<CR>gv
 inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
 
 nnoremap <F4> :VimspectorReset<CR>
-"nnoremap <Leader>dr :VimspectorReset<CR>
+
+"nnoremap <LocalLeader>dr :VimspectorReset<CR>
+"nnoremap <LocalLeader>dd <Plug>VimspectorContinue
+"nnoremap <LocalLeader>ds <Plug>VimspectorStop
+"nnoremap <LocalLeader>dp <Plug>VimspectorPause
+"nnoremap <LocalLeader>db <Plug>VimspectorToggleBreakpoint
+"nnoremap <LocalLeader>df <Plug>VimspectorAddFunctionBreakpoint
 "
-"nnoremap <Leader>dd <Plug>VimspectorContinue
-"nnoremap <Leader>ds <Plug>VimspectorStop
-"nnoremap <Leader>dp <Plug>VimspectorPause
-"nnoremap <Leader>db <Plug>VimspectorToggleBreakpoint
-"nnoremap <Leader>df <Plug>VimspectorAddFunctionBreakpoint
-"
-"nnoremap <Leader>dj <Plug>VimspectorStepOver
+"nnoremap <LocalLeader>dj <Plug>VimspectorStepOver
 "nnoremap <F10>      <Plug>VimspectorStepOver
 "
-"nnoremap <Leader>dl <Plug>VimspectorStepInto
+"nnoremap <LocalLeader>dl <Plug>VimspectorStepInto
 "nnoremap <F11>      <Plug>VimspectorStepInto
 "
-"nnoremap <Leader>dh <Plug>VimspectorStepOut
+"nnoremap <LocalLeader>dh <Plug>VimspectorStepOut
 "nnoremap <S-F11>    <Plug>VimspectorStepOut
 
 
-nnoremap <leader>da :call AddToWatch()<CR>
+nmap <LocalLeader>da :call AddToWatch()<CR>
+" for normal mode - the word under the cursor
+nmap <LocalLeader>di <Plug>VimspectorBalloonEval
+" " for visual mode, the visually selected text
+xmap <LocalLeader>di <Plug>VimspectorBalloonEval
+
+nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
+nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
+nmap <LocalLeader>B     <Plug>VimspectorBreakpoints
+nmap <LocalLeader>D     <Plug>VimspectorDisassemble
 
 "let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 nmap <F5>         <Plug>VimspectorContinue
