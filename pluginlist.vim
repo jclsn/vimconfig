@@ -54,6 +54,9 @@ Plug 'Roy-Orbison/airline-colour-splits'
 Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
 
+" Indents
+Plug 'Yggdroot/indentLine'
+
 
 " ################## Miscellaneous #############################
 
