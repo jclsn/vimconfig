@@ -71,10 +71,6 @@ vnoremap <leader>m :call man#get_page('horizontal',   GetSelectedText())<CR>
 " Easily delete LINES IN INSERT MODE
 inoremap <c-d> <esc>ddi
 
-" Easily convert words to uppercase
-inoremap <c-u> <esc>viw~<esc>ea nnoremap <c-u> viw~<esc>e
-nnoremap <c-u> viw~
-
 " Quick editing of config files
 nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
