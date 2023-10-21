@@ -39,11 +39,6 @@ nnoremap <silent> <C-n> :Fern . -drawer -toggle<CR>
 nnoremap <F2> :call CurtineIncSw()<CR>
 nnoremap <leader>as :Disassemble
 nnoremap <Leader>pp :H2cppxAuto<CR>
-nnoremap !silent <Plug>TransposeCharacters xp
-			\:call repeat#set("\<Plug>TransposeCharacters")<CR>
-nnoremap ü <Plug>TransposeCharacters
-
-nnoremap <leader>ih :CocCommand document.toggleInlayHint<CR>
 
 nnoremap <leader>cg :CMakeGenerate<CR>
 nnoremap <leader>cb :CMakeBuild<CR>
