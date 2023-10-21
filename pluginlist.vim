@@ -63,10 +63,6 @@ Plug 'pseewald/vim-anyfold'
 
 " ################# PROGRAMMING LANGUAGES ####################
 
-" ----------- Assembly --------------
-Plug 'wsdjeg/vim-assembly', { 'for': ['agc', 'S', 'X68'] }
-Plug 'yegappan/disassemble'
-
 " -------------- C --------------
 Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }											
 Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
