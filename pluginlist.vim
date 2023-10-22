@@ -76,6 +76,7 @@ Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
 " ------------- Python --------------
 Plug 'jupyter-vim/jupyter-vim'
+Plug 'goerz/jupytext.vim'
 
 " ------------ Rust ------------
 " Plug 'mattn/webapi-vim'
