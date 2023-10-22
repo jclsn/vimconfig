@@ -86,3 +86,8 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
+if has('nvim')
+    let g:python3_host_prog = '/usr/bin/python3'
+else
+    set pyxversion=3
+endif
