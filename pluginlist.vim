@@ -74,6 +74,9 @@ Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers 
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
+" ------------- Python --------------
+Plug 'jupyter-vim/jupyter-vim'
+
 " ------------ Rust ------------
 " Plug 'mattn/webapi-vim'
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }

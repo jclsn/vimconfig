@@ -45,5 +45,6 @@
   "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
 
   "pyright.inlayHints.functionReturnTypes": false,
-  "pyright.inlayHints.variableTypes": false
+  "pyright.inlayHints.variableTypes": false,
+  "snippets.ultisnips.pythonPrompt": false
 }
