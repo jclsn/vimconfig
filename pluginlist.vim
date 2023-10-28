@@ -100,7 +100,7 @@ Plug 'lambdalisue/nerdfont.vim'
 
 " Other
 Plug '0xStabby/chatgpt-vim'
-Plug 'adelarsq/vim-matchit'
+Plug 'chrisbra/matchit'
 Plug 'godlygeek/tabular'										" Tabular plugin
 Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'markonm/traces.vim'
