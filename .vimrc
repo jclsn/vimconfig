@@ -27,6 +27,7 @@ so ~/.vim/commands.vim
 so ~/.vim/abbreviations.vim
 so ~/.vim/fernrc.vim
 so ~/.vim/cmakerc.vim
+so ~/.vim/zeavimrc.vim
 
 " Always apply these settings last
 so ~/.vim/themeconfig.vim
