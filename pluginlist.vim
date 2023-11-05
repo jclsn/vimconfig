@@ -107,6 +107,7 @@ Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'											" Ack search plugin
 Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
 Plug 'junegunn/vim-peekaboo'
+Plug 'jpalardy/vim-slime'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
