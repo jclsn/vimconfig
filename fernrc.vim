@@ -25,6 +25,9 @@ function! s:init_fern() abort
 	nnoremap <buffer> <LeftRelease> <Plug>(fern-action-open-or-expand)
 	nnoremap <buffer> <leader>l <Plug>(fern-action-git-unstage)
 	nnoremap <buffer> <leader>h <Plug>(fern-action-git-stage)
+	nnoremap <buffer> s <Plug>(fern-action-open:split)
+	nnoremap <buffer> v <Plug>(fern-action-open:side)
+
 endfunction
 
 autocmd BufWritePost *  ++nested :FernDo e -drawer -stay
