@@ -43,6 +43,9 @@
   // Clang settings
   "inlayHint.display": false,
   "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
+  "clangd.arguments": [
+    "--clang-tidy"
+  ],
 
   // Python settings
   "python.formatting.provider": "black",
