@@ -31,7 +31,6 @@
   "diagnostic.errorSign": "❗",
   "diagnostic.warningSign": "💡",
 
-  "python.formatting.provider": "black",
   "coc.preferences.formatOnSave": false,
 
   "languageserver": {
@@ -41,11 +40,15 @@
     }
   },
 
+  // Clang settings
   "inlayHint.display": false,
   "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
 
+  // Python settings
+  "python.formatting.provider": "black",
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.variableTypes": false,
   "snippets.ultisnips.pythonPrompt": false,
-  "python.analysis.useLibraryCodeForTypes": false
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.typeCheckingMode": "basic"
 }
