@@ -46,5 +46,6 @@
 
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.variableTypes": false,
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "python.analysis.useLibraryCodeForTypes": false
 }
