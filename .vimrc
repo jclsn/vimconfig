@@ -1,7 +1,7 @@
 set encoding=utf-8
 
 call plug#begin('~/.vim/plugged')
-so ~/.vim/pluginlist.vim
+	so ~/.vim/pluginlist.vim
 call plug#end()
 
 " ++++++++++++++++++++++++************************
