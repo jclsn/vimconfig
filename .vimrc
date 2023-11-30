@@ -49,6 +49,9 @@ endif
 if has_key(plugs, 'vim-slime')
 	so ~/.vim/slimerc.vim
 endif
+if has_key(plugs, 'rainbow')
+	so ~/.vim/rainbowrc.vim
+endif
 
 " Always apply these settings last
 so ~/.vim/themeconfig.vim
