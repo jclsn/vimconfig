@@ -1,7 +1,6 @@
 " Author        : Jan Claussen
 " Created       : 10/03/2023
-" License       : MIT
-" Description   :
+" License       : MIT " Description   :
 "
 
 let g:fern#renderer = "nerdfont"
@@ -30,8 +29,20 @@ function! s:init_fern() abort
 
 endfunction
 
-autocmd BufWritePost *  ++nested :FernDo e -drawer -stay
+function UpdateIfTerm()
+    const bufnr = str2nr(expand('<abuf>'))
+    if getbufvar(bufnr, '&buftype') != 'terminal'
+        return
+    endif
+	exec 'FernDo e -drawer -stay'
+endfunction
 
+" Update the fern buffer under a set of conditions
+autocmd BufWritePost * ++nested :FernDo e -drawer -stay
 if has_key(plugs, 'vim-fugitive')
 	autocmd User FugitiveCommit ++nested :FernDo e -drawer -stay
 endif
+augroup FernUpdateGroup
+	autocmd!
+	autocmd BufWipeOut * ++nested call UpdateIfTerm()
+augroup END
