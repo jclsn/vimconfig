@@ -92,9 +92,6 @@ else
     set pyxversion=3
 endif
 
-let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name": "default", "target_pane": "{right-of}"}
-
 if $TERM == 'screen-256color' " or w/e your TERM is in tmux
 	  exec "set <S-F11>=\<Esc>[23;2~"
 endif

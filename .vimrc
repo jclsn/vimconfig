@@ -37,6 +37,9 @@ endif
 if has_key(plugs, 'zeavim.vim')
 	so ~/.vim/zeavimrc.vim
 endif
+if has_key(plugs, 'vim-slime')
+	so ~/.vim/slimerc.vim
+endif
 
 so ~/.vim/remaps.vim
 so ~/.vim/autocommands.vim
