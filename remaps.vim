@@ -35,7 +35,6 @@ nnoremap <leader>rb :RainbowToggle <CR>
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
 nnoremap <leader>fi :Files<CR>
-nnoremap <silent> <C-n> :Fern . -drawer -toggle<CR>
 nnoremap <F2> :call CurtineIncSw()<CR>
 nnoremap <Leader>pp :H2cppxAuto<CR>
 
@@ -129,5 +128,5 @@ nnoremap <C-p> :Copilot panel <CR>
 nnoremap <leader>ru :RustRun <CR>
 
 " Change word under cursor to random number 
-nnoremap <leader>r ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<cr><esc>
+nnoremap <leader>rnd ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<cr><esc>
 " nnoremap <silent> <leader>r ciw<CR>=call printf('%02d', min(60, max(0, str2nr(getreg('.')) + 1)))<CR>
