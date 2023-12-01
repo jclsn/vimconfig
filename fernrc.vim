@@ -5,6 +5,8 @@
 
 let g:fern#renderer = "nerdfont"
 
+nnoremap <silent> <C-n> :Fern . -drawer -toggle<CR>
+
 augroup my-glyph-palette
 	autocmd! *
 	autocmd FileType fern call glyph_palette#apply()
@@ -26,7 +28,6 @@ function! s:init_fern() abort
 	nnoremap <buffer> <leader>h <Plug>(fern-action-git-stage)
 	nnoremap <buffer> s <Plug>(fern-action-open:split)
 	nnoremap <buffer> v <Plug>(fern-action-open:side)
-
 endfunction
 
 function UpdateIfTerm()
