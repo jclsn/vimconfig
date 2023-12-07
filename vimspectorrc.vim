@@ -24,7 +24,7 @@ nnoremap <F4> :VimspectorReset<CR>
 "nnoremap <S-F11>    <Plug>VimspectorStepOut
 
 
-nmap <LocalLeader>da :call AddToWatch()<CR>
+nmap <LocalLeader>wa :call AddToWatch()<CR>
 " for normal mode - the word under the cursor
 nmap <LocalLeader>di <Plug>VimspectorBalloonEval
 " " for visual mode, the visually selected text
