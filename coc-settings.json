@@ -37,7 +37,11 @@
     "asm-lsp": {
       "command": "asm-lsp",
       "filetypes": ["asm", "s", "S"]
-    }
+    },
+    "bitbake": {
+      "command": "bitbake-language-server",
+      "filetypes": ["bitbake"]
+    },
   },
 
   // Clang settings
