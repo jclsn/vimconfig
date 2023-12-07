@@ -13,6 +13,15 @@ let g:tmpl_author_name = 'Jan Claussen'
 " ++++++++++++++++++++++++***********************_
 "               Source large configurations
 " ++++++++++++++++++++++++************************
+
+so ~/.vim/remaps.vim
+so ~/.vim/autocommands.vim
+so ~/.vim/ctags.vim
+so ~/.vim/urlhandler.vim
+so ~/.vim/folds.vim
+so ~/.vim/commands.vim
+so ~/.vim/abbreviations.vim
+
 if has_key(plugs, 'ultisnips')
 	so ~/.vim/ultisnipsrc.vim
 endif
@@ -40,14 +49,6 @@ endif
 if has_key(plugs, 'vim-slime')
 	so ~/.vim/slimerc.vim
 endif
-
-so ~/.vim/remaps.vim
-so ~/.vim/autocommands.vim
-so ~/.vim/ctags.vim
-so ~/.vim/urlhandler.vim
-so ~/.vim/folds.vim
-so ~/.vim/commands.vim
-so ~/.vim/abbreviations.vim
 
 " Always apply these settings last
 so ~/.vim/themeconfig.vim
