@@ -1,11 +1,5 @@
-" Author        : Jan Claussen
-" Created       : 08/04/2022
-" License       : MIT
-" Description   : Custom commands
-
 function AnonymizeFunction()
 	:%s/jan/user/g
-	:%s/AERQ In Seat Display Proto B (DT)/Module B/g
 	:%s/AERQ/Somecompany/g
 	:%s/aerq/somecompany/g
 	:%s/ISD/Device/g
