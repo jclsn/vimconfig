@@ -23,9 +23,6 @@ so ~/.vim/folds.vim
 so ~/.vim/commands.vim
 so ~/.vim/abbreviations.vim
 
-if has_key(plugs, 'ultisnips')
-	so ~/.vim/ultisnipsrc.vim
-endif
 if has_key(plugs, 'codeium.vim')
 	so ~/.vim/codeiumrc.vim
 endif
