@@ -94,7 +94,6 @@ Plug 'lambdalisue/fern-hijack.vim', {'frozen': 1}
 Plug 'lambdalisue/fern-mapping-git.vim', {'frozen': 1}
 Plug 'lambdalisue/fern-renderer-nerdfont.vim', {'frozen': 1}
 Plug 'lambdalisue/glyph-palette.vim', {'frozen': 1}
-Plug 'lambdalisue/glyph-palette.vim', {'frozen': 1}
 Plug 'lambdalisue/nerdfont.vim', {'frozen': 1}
 
 " Other
