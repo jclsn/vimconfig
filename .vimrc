@@ -14,6 +14,7 @@ let g:tmpl_author_name = 'Jan Claussen'
 "               Source large configurations
 " ++++++++++++++++++++++++************************
 
+so ~/.vim/pastes.vim
 so ~/.vim/remaps.vim
 so ~/.vim/autocommands.vim
 so ~/.vim/ctags.vim
