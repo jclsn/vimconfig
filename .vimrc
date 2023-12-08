@@ -21,7 +21,6 @@ so ~/.vim/ctags.vim
 so ~/.vim/urlhandler.vim
 so ~/.vim/folds.vim
 so ~/.vim/commands.vim
-so ~/.vim/abbreviations.vim
 
 if has_key(plugs, 'codeium.vim')
 	so ~/.vim/codeiumrc.vim
