@@ -1,17 +1,11 @@
 " ++++++++++++++++++++++++************************
 "                       Theme settings
 " ++++++++++++++++++++++++************************
-"let g:airline_theme="spaceduck"
 let g:airline_powerline_fonts = 1
-"let g:rainbow_active = 1
 colorscheme spaceduck
 set background=dark
 set termguicolors
 set signcolumn=auto
-
-"source ~/.vim/plugged/onedark.vim/colors/onedark.vim
-
-"autocmd BufEnter * if getbufvar(bufnr('%'), '&buftype') == "term" | colorscheme default | endif
 
 "Force transparent background
 "hi Normal guibg=NONE ctermbg=NONE"
