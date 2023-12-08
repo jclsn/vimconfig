@@ -17,7 +17,6 @@ let g:tmpl_author_name = 'Jan Claussen'
 so ~/.vim/pastes.vim
 so ~/.vim/remaps.vim
 so ~/.vim/autocommands.vim
-so ~/.vim/ctags.vim
 so ~/.vim/urlhandler.vim
 so ~/.vim/folds.vim
 so ~/.vim/commands.vim
