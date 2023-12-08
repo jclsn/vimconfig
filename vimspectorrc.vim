@@ -1,38 +1,27 @@
+let g:vimspector_install_gadgets = [ 
+	\ 'debugpy', 
+	\ 'vscode-cpptools', 
+	\ 'CodeLLDB', 
+	\ 'vscode-bash-debug'
+\ ]
 
-let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools',]
-
-nnoremap <silent><F3> :MaximizerToggle<CR>
-vnoremap <silent><F3> :MaximizerToggle<CR>gv
-inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
-
+" Quit Vimspector
 nnoremap <F4> :VimspectorReset<CR>
 
-"nnoremap <LocalLeader>dr :VimspectorReset<CR>
-"nnoremap <LocalLeader>dd <Plug>VimspectorContinue
-"nnoremap <LocalLeader>ds <Plug>VimspectorStop
-"nnoremap <LocalLeader>dp <Plug>VimspectorPause
-"nnoremap <LocalLeader>db <Plug>VimspectorToggleBreakpoint
-"nnoremap <LocalLeader>df <Plug>VimspectorAddFunctionBreakpoint
-"
-"nnoremap <LocalLeader>dj <Plug>VimspectorStepOver
-"nnoremap <F10>      <Plug>VimspectorStepOver
-"
-"nnoremap <LocalLeader>dl <Plug>VimspectorStepInto
-"nnoremap <F11>      <Plug>VimspectorStepInto
-"
-"nnoremap <LocalLeader>dh <Plug>VimspectorStepOut
-"nnoremap <S-F11>    <Plug>VimspectorStepOut
-
-
+" Watches
 nmap <LocalLeader>wa :call AddToWatch()<CR>
-" for normal mode - the word under the cursor
-nmap <LocalLeader>di <Plug>VimspectorBalloonEval
-" " for visual mode, the visually selected text
-xmap <LocalLeader>di <Plug>VimspectorBalloonEval
+" Peak watch
+nmap <LocalLeader>K <Plug>VimspectorBalloonEval
+xmap <LocalLeader>K <Plug>VimspectorBalloonEval
 
+" Move up/down in the current call stack
 nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
 nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
+
+" Show breakpoints
 nmap <LocalLeader>B     <Plug>VimspectorBreakpoints
+
+" Disassemble
 nmap <LocalLeader>D     <Plug>VimspectorDisassemble
 
 "let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
@@ -49,7 +38,6 @@ nmap <F11>        <Plug>VimspectorStepInto
 nmap <F12>        :Debug<CR>
 nmap <S-F11>      <Plug>VimspectorStepOut
 nmap <M-8>        <Plug>VimspectorDisassemble
-
 
 autocmd User VimspectorJumpedToFrame normal zz
  func! AddToWatch()
@@ -82,4 +70,3 @@ endfunction
 
 " Finally, create a :Debug command to run all the above
 command! Debug call RebuildAndDebug()
-
