@@ -1,4 +1,3 @@
-
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -68,7 +67,7 @@ Plug 'pseewald/vim-anyfold'
 
 " -------------- C --------------
 Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }											
-Plug 'ericcurtin/CurtineIncSw.vim'							    " Toggle between .c and .h buffers with F2
+Plug 'ericcurtin/CurtineIncSw.vim'
 
 " ------------- C++ --------------
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
@@ -78,13 +77,12 @@ Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 Plug 'JuliaEditorSupport/julia-vim'
 
 " ------------ Rust ------------
-" Plug 'mattn/webapi-vim'
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
 " ################## Tools #############################
 
 " Docs
-Plug 'vim-utils/vim-man', { 'on': 'Man' }										" man.vim Plugin
+Plug 'vim-utils/vim-man', { 'on': 'Man' }
 Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
 
 " Fern
@@ -99,11 +97,11 @@ Plug 'lambdalisue/nerdfont.vim', {'frozen': 1}
 " Other
 Plug '0xStabby/chatgpt-vim'
 Plug 'chrisbra/matchit'
-Plug 'godlygeek/tabular'										" Tabular plugin
+Plug 'godlygeek/tabular'
 Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'markonm/traces.vim'
-Plug 'mileszs/ack.vim'											" Ack search plugin
-Plug 'ntpeters/vim-better-whitespace'						    " Show trailing whitespaces
+Plug 'mileszs/ack.vim'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/vim-peekaboo'
 Plug 'jpalardy/vim-slime'
 
@@ -111,7 +109,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'bfrg/vim-fzy'
-Plug 'voldikss/vim-browser-search'							    " Browser search
+Plug 'voldikss/vim-browser-search'
 
 " Startify
 Plug 'mhinz/vim-startify'
@@ -132,7 +130,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'git@github.com:jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
 Plug 'git@github.com:jclsn/h2cppx-vim', { 'for': ['c', 'cpp'] }
 Plug 'git@github.com:jclsn/more-todos.vim'
-Plug 'git@github.com:jclsn/vim-PairTools.git'				    " Auto-closing for brackets etc.
+Plug 'git@github.com:jclsn/vim-PairTools.git'
 Plug 'git@github.com:jclsn/vim-bitbake.git'
-Plug 'git@github.com:jclsn/vim-templates'								    " Templates plugin
+Plug 'git@github.com:jclsn/vim-templates'
 Plug 'git@github.com:jclsn/vimspector-templates'
