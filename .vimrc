@@ -32,6 +32,9 @@ endif
 if has_key(plugs, 'coc.nvim')
 	so ~/.vim/cocrc.vim
 endif
+if has_key(plugs, 'YouCompleteMe')
+	so ~/.vim/ycmrc.vim
+endif
 if has_key(plugs, 'fern.vim')
 	so ~/.vim/fernrc.vim
 endif
