@@ -29,8 +29,8 @@ cs add .cscope.out
 cs add cscope.out
 set cursorline
 set foldmethod=syntax
-set foldnestmax=1
-set foldlevel=0
+set foldnestmax=99
+set foldlevel=99
 set noautochdir
 set nolist
 set listchars=tab:▸·,eol:¬
