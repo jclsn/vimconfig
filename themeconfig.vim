@@ -47,3 +47,7 @@ let s:inactive3 = [ "#484f7a", "#16172d", 234, 234 ]
 " Indents
 let g:indentLine_char = '▏'
 let g:indentLine_enabled = 0
+
+if has_key(plugs, 'fern.vim')
+	hi GlyphPaletteDirectory guifg=#00a3cc ctermfg=38
+endif
