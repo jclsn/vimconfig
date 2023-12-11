@@ -86,13 +86,13 @@ Plug 'vim-utils/vim-man', { 'on': 'Man' }
 Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
 
 " Fern
-Plug 'lambdalisue/fern.vim', {'frozen': 1} 
-Plug 'lambdalisue/fern-git-status.vim', {'frozen': 1}
-Plug 'lambdalisue/fern-hijack.vim', {'frozen': 1}
-Plug 'lambdalisue/fern-mapping-git.vim', {'frozen': 1}
-Plug 'lambdalisue/fern-renderer-nerdfont.vim', {'frozen': 1}
-Plug 'lambdalisue/glyph-palette.vim', {'frozen': 1}
-Plug 'lambdalisue/nerdfont.vim', {'frozen': 1}
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/fern-hijack.vim'
+Plug 'lambdalisue/fern-mapping-git.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/glyph-palette.vim'
+Plug 'lambdalisue/nerdfont.vim'
 
 " Other
 Plug '0xStabby/chatgpt-vim'
