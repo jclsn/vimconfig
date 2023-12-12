@@ -5,7 +5,6 @@ let g:airline_powerline_fonts = 1
 colorscheme spaceduck
 set background=dark
 set termguicolors
-set signcolumn=auto
 
 "Force transparent background
 "hi Normal guibg=NONE ctermbg=NONE"
