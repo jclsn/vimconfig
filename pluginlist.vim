@@ -1,6 +1,7 @@
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'SirVer/ultisnips'
 " Plug 'ycm-core/YouCompleteMe'
 Plug 'Exafunction/codeium.vim'
 
