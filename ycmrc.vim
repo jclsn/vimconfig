@@ -1,3 +1,5 @@
+set signcolumn=yes
+
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_max_diagnostics_to_display = 0
 let g:ycm_clangd_binary_path='/usr/bin/clangd'
