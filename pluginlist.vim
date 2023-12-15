@@ -28,6 +28,7 @@ Plug 'luochen1990/rainbow'
 Plug 'm-pilia/vim-pkgbuild'
 Plug 'wgwoods/vim-systemd-syntax'
 Plug 'westeri/asl-vim'
+Plug 'sheerun/vim-polyglot'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
