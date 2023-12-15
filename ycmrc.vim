@@ -18,6 +18,10 @@ let g:force_preview_popup=1
 let g:ycm_show_detailed_diag_in_popup = 1
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_add_preview_to_completeopt="popup"
+try
+  set completepopup=height:10,width:60,highlight:Pmenu,border:off,align:menu
+catch /.*/
+endtry
 
 nnoremap <leader>qf :YcmCompleter FixIt<CR>
 nnoremap gd :YcmCompleter GoToDeclaration<CR>
