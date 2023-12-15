@@ -32,6 +32,9 @@ endif
 if has_key(plugs, 'coc.nvim')
 	so ~/.vim/cocrc.vim
 endif
+if has_key(plugs, 'lsp')
+	so ~/.vim/lsp.vim
+endif
 if has_key(plugs, 'YouCompleteMe')
 	so ~/.vim/ycmrc.vim
 endif
@@ -54,3 +57,5 @@ endif
 " Always apply these settings last
 so ~/.vim/themeconfig.vim
 so ~/.vim/miscellaneous.vim
+
+

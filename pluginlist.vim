@@ -3,6 +3,7 @@ Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'SirVer/ultisnips'
 " Plug 'ycm-core/YouCompleteMe'
+" Plug 'yegappan/lsp'
 Plug 'Exafunction/codeium.vim'
 
 
