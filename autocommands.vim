@@ -13,7 +13,7 @@ if has("autocmd")
 	autocmd bufwritepost folds.vim source ~/.vim/folds.vim
 	autocmd bufwritepost fugitiverc.vim source ~/.vim/fugitiverc.vim
 	autocmd bufwritepost kitty.vim source ~/.vim/kitty.vim
-	autocmd bufwritepost lsp-config.vim source ~/.vim/lsp-config.vim
+	autocmd bufwritepost lsp.vim source ~/.vim/lsp.vim
 	autocmd bufwritepost miscellaneous.vim source ~/.vim/miscellaneous.vim
 	autocmd bufwritepost pluginlist.vim source ~/.vim/pluginlist.vim
 	autocmd bufwritepost remaps.vim source ~/.vim/remaps.vim
