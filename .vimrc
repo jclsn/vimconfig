@@ -53,6 +53,9 @@ endif
 if has_key(plugs, 'rainbow')
 	so ~/.vim/rainbowrc.vim
 endif
+if has_key(plugs, 'git-lens.vim')
+	so ~/.vim/git-lens.vim
+endif
 
 " Always apply these settings last
 so ~/.vim/themeconfig.vim
