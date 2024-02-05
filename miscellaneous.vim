@@ -1,13 +1,12 @@
 " ++++++++++++++++++++++++************************
 "                Miscellaneous settings
 " ++++++++++++++++++++++++************************
+"
+source ~/.vim/kernel-style.vim
+
 set number
 set relativenumber
 set signcolumn=yes
-set tabstop=8 shiftwidth=8
-set softtabstop=8
-set shiftwidth=8
-set smarttab
 set undofile   " Maintain undo history between sessions
 set shell=zsh
 set ttimeoutlen=0
@@ -20,7 +19,6 @@ set mouse=a
 set splitbelow
 set noscrollbind
 set nocursorbind
-set backspace=indent,eol,start
 set incsearch
 set scrolloff=5
 set tags=./tags;,tags;./.tags;,.tags;
@@ -35,6 +33,7 @@ set noautochdir
 set nolist
 set listchars=tab:▸·,eol:¬
 set exrc
+
 
 let g:pairtools_samplefile_path='~/.vim/plugged/vim-PairTools/ftplugin'
 
