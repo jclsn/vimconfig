@@ -30,7 +30,8 @@ endif
 nnoremap <leader>rt :RainbowToggle<CR>
 nnoremap <leader>cl :ColorToggle<CR>
 nnoremap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
-nnoremap <leader>ll :set rnu! <CR>
+nnoremap <leader>nn :set rnu! <CR>
+nnoremap <leader>ll :set list! <CR>
 nnoremap <leader>rb :RainbowToggle <CR>
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
