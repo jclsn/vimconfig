@@ -65,6 +65,10 @@ vnoremap <leader>m :call man#get_page('horizontal',   GetSelectedText())<CR>
 " Easily delete LINES IN INSERT MODE
 inoremap <c-d> <esc>ddi
 
+" Easily convert words to uppercase
+nnoremap <c-u> viw~<esc>e
+inoremap <c-u> <esc>viw~<esc>ea
+
 " Quick editing of config files
 nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -77,9 +81,7 @@ nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<cr>
 nnoremap <leader>ef :vsplit ~/.vim/fernrc.vim<cr>
 nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<cr>
 
-
 " Swap lines beautifully
-
 function! s:swap_lines(n1, n2)
     let line1 = getline(a:n1)
     let line2 = getline(a:n2)
@@ -106,6 +108,7 @@ function! s:swap_down()
     call s:swap_lines(n, n + 1)
     exec n + 1
 endfunction
+
 
 nnoremap <C-k> :call <SID>swap_up()<CR>
 nnoremap <C-j> :call <SID>swap_down()<CR>
