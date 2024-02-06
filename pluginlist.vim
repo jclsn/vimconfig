@@ -44,6 +44,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 Plug 'jclsn/spaceduck', { 'branch': 'dev' }
 Plug 'tomasiser/vim-code-dark'
+Plug 'vv9k/vim-github-dark'
 
 " Airline bar and themes
 Plug 'vim-airline/vim-airline'
