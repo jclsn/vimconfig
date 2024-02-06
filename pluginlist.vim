@@ -8,7 +8,6 @@ Plug 'Exafunction/codeium.vim'
 
 
 " ################## Code Formatting ####################
-
 Plug 'ambv/black', { 'for': [ 'python' ] }
 Plug 'bigfish/vim-stylelint'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -23,7 +22,6 @@ Plug 'szw/vim-maximizer'
 
 
 " ############# Look and feel ###############
-"
 " Syntax 
 Plug 'luochen1990/rainbow'
 Plug 'm-pilia/vim-pkgbuild'
@@ -62,15 +60,15 @@ Plug 'Yggdroot/indentLine'
 
 
 " ################## Miscellaneous #############################
-
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'pseewald/vim-anyfold'
 
+
 " ################# PROGRAMMING LANGUAGES ####################
 
 " -------------- C --------------
-Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }											
+Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'
 
 " ------------- C++ --------------
@@ -84,7 +82,6 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
 " ################## Tools #############################
-
 " Docs
 Plug 'vim-utils/vim-man', { 'on': 'Man' }
 Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
