@@ -100,13 +100,17 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug '0xStabby/chatgpt-vim'
 Plug 'chrisbra/matchit'
 Plug 'godlygeek/tabular'
-Plug 'https://gitlab.com/mcepl/vim-diff_navigator.git'
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/vim-peekaboo'
 Plug 'jpalardy/vim-slime'
 Plug 'Eliot00/git-lens.vim'
+
+" Vim scripts
+Plug 'vim-scripts/ConflictMotions'
+Plug 'vim-scripts/CountJump'
+Plug 'vim-scripts/ingo-library'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
