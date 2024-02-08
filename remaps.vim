@@ -80,6 +80,7 @@ nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
 nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<cr>
 nnoremap <leader>ef :vsplit ~/.vim/fernrc.vim<cr>
 nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<cr>
+nnoremap <leader>ed :vsplit ~/.vim/vimspectorrc.vim<cr>
 
 " Swap lines beautifully
 function! s:swap_lines(n1, n2)
