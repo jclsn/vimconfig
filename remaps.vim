@@ -12,7 +12,6 @@ let maplocalleader = "-"
 nnoremap <leader>l <C-]>
 nnoremap <leader>h <C-t>
 nnoremap <leader>t :e #<CR>
-nnoremap <Leader>ct :!ctags -R .<CR><CR>
 nnoremap <Leader>L :cs find s <C-R>=expand("<cword>")<CR><CR>
 
 
@@ -47,6 +46,7 @@ nnoremap <leader>ru :RustRun <CR>
 " ++++++++++++++++++++++++************************
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
+autocmd FileType diff nnoremap <leader>ct :ConflictTake<CR>
 
 
 " ++++++++++++++++++++++++************************
