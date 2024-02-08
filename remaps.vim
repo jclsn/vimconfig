@@ -1,9 +1,10 @@
 " ++++++++++++++++++++++++************************
-"                    Remap leader key
+"               Remap leader key
 " ++++++++++++++++++++++++************************
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 let maplocalleader = "-"
+
 
 " ++++++++++++++++++++++++************************
 "               ctags mappings
@@ -14,12 +15,17 @@ nnoremap <leader>t :e #<CR>
 nnoremap <Leader>ct :!ctags -R .<CR><CR>
 nnoremap <Leader>L :cs find s <C-R>=expand("<cword>")<CR><CR>
 
+
 " ++++++++++++++++++++++++************************
 "               Browser search mappings
 " ++++++++++++++++++++++++************************
 nmap <silent> <Leader>w <Plug>SearchNormal<CR>
 vmap <silent> <Leader>w <Plug>SearchVisual<CR>
 
+
+" ++++++++++++++++++++++++************************
+"               Terminal mappings
+" ++++++++++++++++++++++++************************
 if has('nvim')
 	tnoremap <esc> <C-\><C-n>
 	nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
@@ -27,29 +33,25 @@ else
 	nmap <leader>tt :ter<CR>
 endif
 
-nnoremap <leader>rt :RainbowToggle<CR>
-nnoremap <leader>cl :ColorToggle<CR>
-nnoremap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
-nnoremap <leader>nn :set rnu! <CR>
-nnoremap <leader>ll :set list! <CR>
-nnoremap <leader>rb :RainbowToggle <CR>
+
+" ++++++++++++++++++++++++************************
+"               Build mappings
+" ++++++++++++++++++++++++************************
+nnoremap <leader>cm :CMake<CR>
+nnoremap <leader>ma :Make<CR>
+nnoremap <leader>ru :RustRun <CR>
+
+
+" ++++++++++++++++++++++++************************
+"               Diff mappings
+" ++++++++++++++++++++++++************************
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
-nnoremap <leader>fi :Files<CR>
-nnoremap <F2> :call CurtineIncSw()<CR>
-nnoremap <Leader>pp :H2cppxAuto<CR>
-
-nnoremap <leader>cg :CMakeGenerate<CR>
-nnoremap <leader>cb :CMakeBuild<CR>
-nnoremap <leader>cc :CMakeClose<CR>
-nnoremap <leader>ma :Make<CR>
-
-command! -nargs=? -complete=help H help <args> <bar> wincmd L
-" nnoremap <buffer> K K :wincmd L <CR>
-" setl keywordprg=:vertical\ help
-augroup vimrc_config | autocmd! | autocmd FileType vim setlocal keywordprg=vertical\ help | augroup END
 
 
+" ++++++++++++++++++++++++************************
+"               Man mappings
+" ++++++++++++++++++++++++************************
 func! GetSelectedText()
   normal gv"xy
   let result = getreg("x")
@@ -57,11 +59,14 @@ func! GetSelectedText()
   return result
 endfunc
 
-" Open selected text in man pages
 nnoremap <leader>m <Plug>(Man)
 nnoremap <leader>v <Plug>(Vman)
 vnoremap <leader>m :call man#get_page('horizontal',   GetSelectedText())<CR>
 
+
+" ++++++++++++++++++++++++************************
+"       Learn vimscript the hard way mappings
+" ++++++++++++++++++++++++************************
 " Easily delete LINES IN INSERT MODE
 inoremap <c-d> <esc>ddi
 
@@ -110,7 +115,6 @@ function! s:swap_down()
     exec n + 1
 endfunction
 
-
 nnoremap <C-k> :call <SID>swap_up()<CR>
 nnoremap <C-j> :call <SID>swap_down()<CR>
 nnoremap <C-h> <<
@@ -126,19 +130,41 @@ vnoremap <C-l> >gv
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
-" Open Copilot panel
-inoremap <C-p> <esc>:Copilot panel <CR>
-nnoremap <C-p> :Copilot panel <CR>
 
-" Rust
-nnoremap <leader>ru :RustRun <CR>
+" ++++++++++++++++++++++++************************
+"               Miscellaneous mappings
+" ++++++++++++++++++++++++************************
+nnoremap <leader>rt :RainbowToggle<CR>
+nnoremap <leader>cl :ColorToggle<CR>
+nnoremap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
+nnoremap <leader>nn :set rnu! <CR>
+nnoremap <leader>ll :set list! <CR>
+nnoremap <leader>rb :RainbowToggle <CR>
+nnoremap <leader>fi :Files<CR>
+nnoremap <F2> :call CurtineIncSw()<CR>
+nnoremap <Leader>pp :H2cppxAuto<CR>
 
 " Change word under cursor to random number 
-nnoremap <leader>rnd ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<cr><esc>
-" nnoremap <silent> <leader>r ciw<CR>=call printf('%02d', min(60, max(0, str2nr(getreg('.')) + 1)))<CR>
+nnoremap <leader>rnd ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<CR><esc>
 
 " Maximizer
 nnoremap <silent><F3> :MaximizerToggle<CR>
 vnoremap <silent><F3> :MaximizerToggle<CR>gv
 inoremap <silent><F3> <C-o>:MaximizerToggle<CR>
+
+
+" ++++++++++++++++++++++++************************
+"          Quick editing of config files
+" ++++++++++++++++++++++++************************
+nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<CR>
+nnoremap <leader>ec :vsplit ~/.vim/commands.vim<CR>
+nnoremap <leader>ed :vsplit ~/.vim/vimspectorrc.vim<CR>
+nnoremap <leader>ef :vsplit ~/.vim/fernrc.vim<CR>
+nnoremap <leader>em :vsplit ~/.vim/miscellaneous.vim<CR>
+nnoremap <leader>ep :vsplit ~/.vim/pluginlist.vim<CR>
+nnoremap <leader>er :vsplit ~/.vim/remaps.vim<CR>
+nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<CR>
+
 
