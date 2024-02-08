@@ -38,7 +38,6 @@ if has("autocmd")
 	au BufReadPost *.scr set syntax=bash
 	au BufReadPost *_defconfig set syntax=config
 	au BufReadPost *.S set filetype=asm
-	au BufReadPost *.rs nnoremap <S-CR> :RustRun <CR>
 	"au BufReadPost * :ColorHighlight<CR>
 
 	" Run retab on saving files

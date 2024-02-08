@@ -36,9 +36,11 @@ endif
 " ++++++++++++++++++++++++************************
 "               Build mappings
 " ++++++++++++++++++++++++************************
-nnoremap <leader>cm :CMake<CR>
-nnoremap <leader>ma :Make<CR>
-nnoremap <leader>ru :RustRun <CR>
+au FileType c nnoremap <leader>cm :CMake<CR>
+au FileType cpp nnoremap <leader>cm :CMake<CR>
+au FileType c nnoremap <leader>ma :Make<CR>
+au FileType cpp nnoremap <leader>ma :Make<CR>
+au FileType rust nnoremap <leader>ru :RustRun <CR>
 
 
 " ++++++++++++++++++++++++************************
