@@ -48,7 +48,7 @@ au FileType rust nnoremap <leader>ru :RustRun <CR>
 " ++++++++++++++++++++++++************************
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
-autocmd FileType diff nnoremap <leader>ct :ConflictTake<CR>
+au FileType diff nnoremap <leader>ct :ConflictTake<CR>
 
 
 " ++++++++++++++++++++++++************************
