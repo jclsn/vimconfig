@@ -6,7 +6,7 @@ let g:vimspector_install_gadgets = [
 \ ]
 
 " Quit Vimspector
-nnoremap <F4> :VimspectorReset<CR>
+nnoremap <F4> :call vimspector#Reset( { 'interactive': v:false } )<CR>
 
 " Watches
 nmap <LocalLeader>wa :call AddToWatch()<CR>
