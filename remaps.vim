@@ -169,4 +169,4 @@ nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<CR>
 
-
+ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
