@@ -42,6 +42,7 @@ au FileType c nnoremap <leader>ma :Make<CR>
 au FileType cpp nnoremap <leader>ma :Make<CR>
 au FileType rust nnoremap <leader>ru :RustRun <CR>
 
+nnoremap <leader>as :Disassemble
 
 " ++++++++++++++++++++++++************************
 "               Diff mappings

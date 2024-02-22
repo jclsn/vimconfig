@@ -35,6 +35,8 @@ set listchars=tab:▸·,eol:¬
 set exrc
 
 let g:c_syntax_for_h=1
+let g:asmsyntax = 'nasm'
+let filetype_asm = 'nasm'
 
 let g:pairtools_samplefile_path='~/.vim/plugged/vim-PairTools/ftplugin'
 
