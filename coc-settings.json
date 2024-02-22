@@ -36,7 +36,7 @@
   "languageserver": {
     "asm-lsp": {
       "command": "asm-lsp",
-      "filetypes": ["asm", "s", "S"]
+      "filetypes": ["asm", "s", "S", "assembly", "nasm"]
     },
     "bitbake": {
       "command": "bitbake-language-server",

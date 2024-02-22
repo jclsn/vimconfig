@@ -37,7 +37,14 @@ if has("autocmd")
 	au BufReadPost *.bbclass set syntax=bitbake
 	au BufReadPost *.scr set syntax=bash
 	au BufReadPost *_defconfig set syntax=config
-	au BufReadPost *.S set filetype=asm
+	au BufReadPost *.h set filetype=c
+	au BufRead,BufNewFile *.asm set filetype=nasm
+	au BufRead,BufNewFile *.S set filetype=nasm
+	au BufRead,BufNewFile *.agc set filetype=nasm
+	au BufRead,BufNewFile *.ags set filetype=nasm
+	au BufRead,BufNewFile *.argus set filetype=nasm
+	au BufRead,BufNewFile *.binsource set filetype=nasm
+	au BufRead,BufNewFile *.X68 set filetype=nasm
 	"au BufReadPost * :ColorHighlight<CR>
 
 	" Run retab on saving files

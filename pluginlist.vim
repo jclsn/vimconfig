@@ -68,6 +68,9 @@ Plug 'pseewald/vim-anyfold'
 
 " ################# PROGRAMMING LANGUAGES ####################
 
+" ----------- Assembly --------------
+Plug 'yegappan/disassemble'
+
 " -------------- C --------------
 Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'
