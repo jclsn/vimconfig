@@ -162,6 +162,7 @@ highlight CocWarningSign ctermfg=220 guifg=#fff000
 let g:coc_global_extensions = [
 \       'coc-clangd',
 \       'coc-cmake',
+\       'coc-diagnostic',
 \       'coc-git',
 \       'coc-html',
 \       'coc-json',
