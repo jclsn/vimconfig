@@ -30,6 +30,7 @@
 
   "diagnostic.errorSign": "❗",
   "diagnostic.warningSign": "💡",
+  "diagnostic.infoSign": "💡",
 
   "coc.preferences.formatOnSave": false,
 
