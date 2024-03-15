@@ -59,5 +59,19 @@
   "pyright.inlayHints.variableTypes": false,
   "snippets.ultisnips.pythonPrompt": false,
   "python.analysis.useLibraryCodeForTypes": true,
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+  
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint",
+    "markdown": [ "write-good", "markdownlint" ],
+    "sh": "shellcheck",
+    "yaml": [ "yamllint" ],
+    "cmake": [ "cmake-lint", "cmakelint" ],
+    "systemd": "systemd-analyze",
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+     "sh": "shfmt",
+     "cmake": "cmake-format",
+  }
 }
+
