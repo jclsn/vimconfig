@@ -6,38 +6,22 @@ let g:vimspector_install_gadgets = [
 \ ]
 
 " Quit Vimspector
-nnoremap <F4> :call vimspector#Reset( { 'interactive': v:false } )<CR>
-
+nnoremap <LocalLeader>q :call vimspector#Reset( { 'interactive': v:false } )<CR>
 " Watches
-nmap <LocalLeader>wa :call AddToWatch()<CR>
-" Peak watch
-nmap <LocalLeader>K <Plug>VimspectorBalloonEval
-xmap <LocalLeader>K <Plug>VimspectorBalloonEval
-
+nnoremap <LocalLeader>wa :call AddToWatch()<CR>
 " Move up/down in the current call stack
-nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
-nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
+nnoremap <S-F11> <Plug>VimspectorUpFrame
+nnoremap <S-F12> <Plug>VimspectorDownFrame
+" Open breakpoint or disassembly windows
+nnoremap <LocalLeader>B     <Plug>VimspectorBreakpoints
+nnoremap <LocalLeader>D     <Plug>VimspectorDisassemble
+" Evaluate under cursor
+nnoremap <LocalLeader>K <Plug>VimspectorBalloonEval
+xnoremap <LocalLeader>K <Plug>VimspectorBalloonEval
+" Run make and start debugger
+nnoremap <S-F5>> :RebuildAndDebug<CR>
 
-" Show breakpoints
-nmap <LocalLeader>B     <Plug>VimspectorBreakpoints
-
-" Disassemble
-nmap <LocalLeader>D     <Plug>VimspectorDisassemble
-
-"let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-nmap <F5>         <Plug>VimspectorContinue
-nmap <S-F5>       <Plug>VimspectorStop
-nmap <C-S-F5>     <Plug>VimspectorRestart
-nmap <F6>         <Plug>VimspectorPause
-nmap <F8>         <Plug>VimspectorJumpToNextBreakpoint
-nmap <S-F8>       <Plug>VimspectorJumpToPreviousBreakpoint
-nmap <F9>         <Plug>VimspectorToggleBreakpoint
-nmap <S-F9>       <Plug>VimspectorAddFunctionBreakpoint
-nmap <F10>        <Plug>VimspectorStepOver
-nmap <F11>        <Plug>VimspectorStepInto
-nmap <F12>        :Debug<CR>
-nmap <S-F11>      <Plug>VimspectorStepOut
-nmap <M-8>        <Plug>VimspectorDisassemble
+let g:vimspector_enable_mappings = 'HUMAN'
 
 autocmd User VimspectorJumpedToFrame normal zz
  func! AddToWatch()
@@ -68,5 +52,5 @@ function! RunVimspectorIfBuilt()
   endif
 endfunction
 
-" Finally, create a :Debug command to run all the above
-command! Debug call RebuildAndDebug()
+" Finally, create a :RebuildAndDebug command to run all the above
+command! RebuildAndDebug call RebuildAndDebug()
