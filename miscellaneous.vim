@@ -22,13 +22,6 @@ set nocursorbind
 set incsearch
 set scrolloff=5
 set tags=./tags;,tags;./.tags;,.tags;
-set nocscopetag
-if filereadable(".cscope.out")
-	cs add .cscope.out
-endif
-if filereadable("cscope.out")
-	cs add cscope.out
-endif
 set cursorline
 set foldmethod=syntax
 set foldnestmax=99
