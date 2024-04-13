@@ -45,8 +45,9 @@
     },
   },
 
-  // Clang settings
   "inlayHint.display": false,
+
+  // Clangd settings
   "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
   "clangd.arguments": [
     "--background-index",
@@ -61,6 +62,7 @@
   "python.analysis.useLibraryCodeForTypes": true,
   "python.analysis.typeCheckingMode": "basic",
   
+  // coc-diagnostic settings
   "diagnostic-languageserver.filetypes": {
     "vim": "vint",
     "markdown": [ "write-good", "markdownlint" ],
