@@ -23,13 +23,13 @@ let lspOpts = #{
         \   omniComplete: v:null,
         \   outlineOnRight: v:false,
         \   outlineWinSize: 20,
-        \   semanticHighlight: v:true,
+        \   semanticHighlight: v:false,
         \   showDiagInBalloon: v:false,
         \   showDiagInPopup: v:true,
         \   showDiagOnStatusLine: v:false,
         \   showDiagWithSign: v:true,
         \   showDiagWithVirtualText: v:false,
-        \   showInlayHints: v:true,
+        \   showInlayHints: v:false,
         \   showSignature: v:true,
         \   snippetSupport: v:false,
         \   ultisnipsSupport: v:true,
@@ -82,4 +82,6 @@ let lspServers = [
 
 autocmd VimEnter * call LspAddServer(lspServers)
 
-
+inoremap <expr> <TAB> pumvisible() ? "\<cr>" : "\<TAB>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
