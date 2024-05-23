@@ -56,6 +56,7 @@ let g:startify_change_to_dir = 0
 if exists('$TMUX')
 	let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
 	let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+	let &t_SI = "\e[5 q" | let &t_EI = "\e[2 q"
 else
 	let &t_SI = "\e[5 q"
 	let &t_EI = "\e[2 q"
