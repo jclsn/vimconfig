@@ -2,6 +2,9 @@
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'SirVer/ultisnips'
+" Plug 'hrsh7th/vim-vsnip'
+" Plug 'hrsh7th/vim-vsnip-integ'
+" Plug 'rafamadriz/friendly-snippets'
 " Plug 'ycm-core/YouCompleteMe'
 " Plug 'yegappan/lsp'
 Plug 'Exafunction/codeium.vim'
