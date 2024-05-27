@@ -85,16 +85,14 @@ let lspServers = [
 	\              'cpp', 
 	\              'go', 
 	\              'html', 
-	\              'iac', 
 	\              'java',
 	\              'javascript', 
 	\              'php', 
 	\              'python',
+	\              'terraform', 
 	\              'xml'],
 	\   path: '/usr/bin/sonarlint-ls',
 	\   args: [
-	\          '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000,quiet=y',
-	\          '-Dsonarlint.telemetry.disabled=true',
 	\          '-stdio', 
 	\          '-analyzers', 
 	\          '/usr/share/java/sonarlint-ls/analyzers/sonarcfamily.jar',
@@ -110,8 +108,13 @@ let lspServers = [
 	\          '/usr/share/java/sonarlint-ls/analyzers/sonarxml.jar',
 	\   ],
 	\   debug: v:true,
+	\   syncInit: v:true,
+	\   initializationOptions: #{
+	\     sonarlint: #{
+	\       pathToCompileCommands: "./build/compile_commands.json" 
+	\     }
+	\   }
 	\ },
-	\
 	\ #{name: 'vimls',
 	\   filetype: 'vim',
 	\   path: '/usr/bin/vim-language-server',
