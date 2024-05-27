@@ -90,7 +90,7 @@ Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
 " ################## Tools #############################
 " Docs
-Plug 'jclsn/vim-man', { 'on': 'Man', 'branch': 'fix/issue-51-last-character-of-line-is-wrapped' }
+Plug 'jclsn/vim-man', { 'on': 'Man' }
 Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
 
 " Fern
