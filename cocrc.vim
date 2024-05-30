@@ -42,8 +42,8 @@ inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nmap <leader>ke <Plug>(coc-diagnostic-prev)
-nmap <leader>je <Plug>(coc-diagnostic-next)
+nmap <leader>pe <Plug>(coc-diagnostic-prev)
+nmap <leader>ne <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)

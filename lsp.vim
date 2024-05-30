@@ -130,6 +130,6 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 nmap <leader>qf :LspCodeAction 1<CR>
 nmap <silent>[g :LspDiagPrev<CR>
 nmap <silent>]g :LspDiagNext<CR>
-nmap <leader>ke :LspDiagPrev<CR>
-nmap <leader>je :LspDiagNext<CR>
+nmap <leader>pe :LspDiagPrev<CR>
+nmap <leader>ne :LspDiagNext<CR>
 
