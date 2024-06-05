@@ -6,3 +6,5 @@
 !*.json
 !templates
 !README.md
+
+fugitive-gitlab.vim
