@@ -70,7 +70,8 @@ let lspServers = [
 	\   workspaceConfig: #{
 	\     python: #{
 	\       pythonPath: '/usr/bin/python3.11'
-	\   }}
+	\     }
+	\   }
 	\ },
 	\
 	\ #{name: 'rustanalyzer',
@@ -109,11 +110,24 @@ let lspServers = [
 	\   ],
 	\   debug: v:true,
 	\   syncInit: v:true,
-	\   initializationOptions: #{
+	\   workspaceConfig: #{
 	\     sonarlint: #{
-	\       pathToCompileCommands: "./build/compile_commands.json" 
+	\       pathToCompileCommands: "${workspaceFolder}/build/compile_commands.json" 
 	\     }
-	\   }
+	\   },
+        \   initializationOptions: #{
+        \     productKey: 'vscode',
+        \     telemetryStorage: '~/.vim-playground/telemetry/sonarlint_usage',
+        \     productName: 'SonarLint VSCode',
+        \     showVerboseLogs: v:true,
+        \     platform: 'linux',
+        \     architecture: 'x64',
+        \     additionalAttributes: #{
+        \       vscode: #{
+        \         isTelemetryEnabled: v:false,
+        \       },
+        \     },
+	\   },
 	\ },
 	\ #{name: 'vimls',
 	\   filetype: 'vim',
