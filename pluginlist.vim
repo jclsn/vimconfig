@@ -102,7 +102,6 @@ Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
 
 " Other
-Plug '0xStabby/chatgpt-vim'
 Plug 'chrisbra/matchit'
 Plug 'godlygeek/tabular'
 Plug 'markonm/traces.vim'
