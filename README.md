@@ -4,7 +4,7 @@
 
 ```bash
 git clone git@github.com:jclsn/vimconfig.git ~/.vim
-ln -s ~/.vim/.vimrc ~/.vimrc
+ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
 ## Install vim-plug
@@ -19,7 +19,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 Copy `.vimrc` to `/root/.vimrc`
 
 ```bash
-sudo cp ~/.vim/.vimrc /root/.vimrc
+sudo cp ~/.vim/vimrc /root/.vimrc
 ```
 
 and explicitly add the user directory path (exchange **_user_** with you username)

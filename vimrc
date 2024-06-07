@@ -20,9 +20,6 @@ so ~/.vim/autocommands.vim
 so ~/.vim/folds.vim
 so ~/.vim/commands.vim
 
-if has_key(plugs, 'codeium.vim')
-	so ~/.vim/codeiumrc.vim
-endif
 if has_key(plugs, 'vimspector')
 	so ~/.vim/vimspectorrc.vim
 endif
