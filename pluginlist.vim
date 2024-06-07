@@ -127,7 +127,7 @@ Plug 'mhinz/vim-startify'
 " Tim Pope's plugins
 " Plug 'github/copilot.vim'
 Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-characterize' " test
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'

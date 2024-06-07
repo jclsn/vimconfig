@@ -23,9 +23,6 @@ so ~/.vim/commands.vim
 if has_key(plugs, 'vimspector')
 	so ~/.vim/vimspectorrc.vim
 endif
-if has_key(plugs, 'vim-fugitive')
-	so ~/.vim/fugitiverc.vim
-endif
 if has_key(plugs, 'coc.nvim')
 	so ~/.vim/cocrc.vim
 endif
@@ -49,6 +46,9 @@ if has_key(plugs, 'rainbow')
 endif
 if has_key(plugs, 'git-lens.vim')
 	so ~/.vim/git-lens.vim
+endif
+if has_key(plugs, 'vim-fugitive')
+	so ~/.vim/fugitiverc.vim
 endif
 if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('~/.vim/fugitive-gitlab.vim'))
 	so ~/.vim/fugitive-gitlab.vim
