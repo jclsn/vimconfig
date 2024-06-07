@@ -35,9 +35,6 @@ endif
 if has_key(plugs, 'lsp')
 	so ~/.vim/lsp.vim
 endif
-if has_key(plugs, 'YouCompleteMe')
-	so ~/.vim/ycmrc.vim
-endif
 if has_key(plugs, 'fern.vim')
 	so ~/.vim/fernrc.vim
 endif
@@ -59,7 +56,6 @@ endif
 if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('~/.vim/fugitive-gitlab.vim'))
 	so ~/.vim/fugitive-gitlab.vim
 endif
-
 
 " Always apply these settings last
 so ~/.vim/themeconfig.vim
