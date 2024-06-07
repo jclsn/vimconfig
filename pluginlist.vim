@@ -6,7 +6,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
 " Plug 'yegappan/lsp'
-Plug 'Exafunction/codeium.vim'
 
 
 " ################## Code Formatting ####################

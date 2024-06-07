@@ -2,6 +2,7 @@
 
 !.gitignore
 !.vimrc
+!vimrc
 !*.vim
 !*.json
 !templates
