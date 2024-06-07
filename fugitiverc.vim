@@ -13,3 +13,18 @@ nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Git push<CR>
 nnoremap <leader>gpl :Git pull<CR>
+
+function! s:BlameToggle() abort
+  let found = 0
+  for winnr in range(1, winnr('$'))
+    if getbufvar(winbufnr(winnr), '&filetype') ==# 'fugitiveblame'
+      exe winnr . 'close'
+      let found = 1
+    endif
+  endfor
+  if !found
+    Git blame
+  endif
+endfunction
+
+nnoremap <silent> <C-b> :call <SID>BlameToggle()<CR>
