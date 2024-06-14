@@ -129,6 +129,9 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
+" Add a command to render OpenAPI specs
+command -nargs=0 Swagger :CocCommand swagger.render
+
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
@@ -177,6 +180,7 @@ let g:coc_global_extensions = [
 \       'coc-sh',
 \       'coc-snippets',
 \       'coc-sonarlint',
+\       'coc-swagger',
 \       'coc-tsserver',
 \       'coc-vimlsp',
 \       'coc-yaml',
