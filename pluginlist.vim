@@ -29,6 +29,7 @@ Plug 'm-pilia/vim-pkgbuild'
 Plug 'wgwoods/vim-systemd-syntax'
 Plug 'westeri/asl-vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'martinlroth/vim-devicetree'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
