@@ -43,6 +43,10 @@
       "command": "bitbake-language-server",
       "filetypes": ["bitbake"]
     },
+    "ginko_ls": {
+      "command": "ginko_ls",
+      "filetypes": ["dts"]
+    }
   },
 
   "inlayHint.display": false,
