@@ -109,6 +109,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/vim-peekaboo'
 Plug 'jpalardy/vim-slime'
 Plug 'Eliot00/git-lens.vim'
+Plug 'airblade/vim-gitgutter'
 
 " Vim scripts
 Plug 'vim-scripts/ConflictMotions'
