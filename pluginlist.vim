@@ -89,7 +89,7 @@ Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
 " ################## Tools #############################
 " Docs
-Plug 'jclsn/vim-man', { 'on': 'Man' }
+Plug 'jclsn/vim-man', { 'on': ['Man', 'Vman'] }
 Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
 
 " Fern
