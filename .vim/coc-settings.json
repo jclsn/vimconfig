@@ -1,0 +1,20 @@
+{
+  "cSpell.words": [
+    "bitbake",
+    "clangd",
+    "cmake",
+    "cmakelint",
+    "ginko",
+    "ls",
+    "markdownlint",
+    "nasm",
+    "pyright",
+    "shellcheck",
+    "shfmt",
+    "sonarlint",
+    "struct",
+    "ufacd",
+    "ultisnips",
+    "vint"
+  ]
+}

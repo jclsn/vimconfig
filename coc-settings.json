@@ -81,6 +81,40 @@
   },
 
   "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
-  "sonarlint.notifyMissingCompileCommands": false
+  "sonarlint.notifyMissingCompileCommands": false,
+
+  "cSpellExt.enableDictionaries": ["german"],
+  "cSpell.language": "en,de",
+  "cSpell.userWords": [
+    "aerq",
+    "bbappend",
+    "bitbake",
+    "chronyd",
+    "clangd",
+    "cmake",
+    "cmakelint",
+    "emdev",
+    "emdev",
+    "ginko",
+    "github",
+    "githubusercontent",
+    "ledctl",
+    "lros",
+    "ls",
+    "markdownlint",
+    "nasm",
+    "overtemperature",
+    "pyright",
+    "shellcheck",
+    "shfmt",
+    "sonarlint",
+    "struct",
+    "timesync",
+    "timesyncd",
+    "ufacd",
+    "ultisnips",
+    "vint",
+    "visualstudio"
+  ],
 }
 
