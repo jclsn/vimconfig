@@ -31,20 +31,21 @@ if has("autocmd")
 	" autocmd BufWritePost *.py call CocAction('format')
 	" Manually load syntax highlighting for some file extensions
 	"
-	au BufReadPost *.patch set ft=diff
-	au BufReadPost *.conf set ft=conf
-	au BufReadPost *.its set syntax=dts
-	au BufReadPost *.bbclass set syntax=bitbake
-	au BufReadPost *.scr set syntax=bash
-	au BufReadPost *_defconfig set syntax=config
-	au BufReadPost *.h set filetype=c
-	au BufRead,BufNewFile *.asm set filetype=nasm
-	au BufRead,BufNewFile *.S set filetype=nasm
-	au BufRead,BufNewFile *.agc set filetype=nasm
-	au BufRead,BufNewFile *.ags set filetype=nasm
-	au BufRead,BufNewFile *.argus set filetype=nasm
-	au BufRead,BufNewFile *.binsource set filetype=nasm
-	au BufRead,BufNewFile *.X68 set filetype=nasm
+	au BufReadPost *.patch setlocal ft=diff
+	au BufReadPost *.conf setlocal ft=conf
+	au BufReadPost *.its setlocal syntax=dts
+	au BufReadPost *.bb setlocal noexpandtab shiftwidth=8 softtabstop=8
+	au BufReadPost *.bbclass setlocal syntax=bitbake noexpandtab shiftwidth=8 softtabstop=8
+	au BufReadPost *.scr setlocal syntax=bash
+	au BufReadPost *_defconfig setlocal syntax=config
+	au BufReadPost *.h setlocal filetype=c
+	au BufRead,BufNewFile *.asm setlocal filetype=nasm
+	au BufRead,BufNewFile *.S setlocal filetype=nasm
+	au BufRead,BufNewFile *.agc setlocal filetype=nasm
+	au BufRead,BufNewFile *.ags setlocal filetype=nasm
+	au BufRead,BufNewFile *.argus setlocal filetype=nasm
+	au BufRead,BufNewFile *.binsource setlocal filetype=nasm
+	au BufRead,BufNewFile *.X68 setlocal filetype=nasm
 	"au BufReadPost * :ColorHighlight<CR>
 
 	" Run retab on saving files
