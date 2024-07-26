@@ -86,8 +86,24 @@
   "cSpellExt.enableDictionaries": ["german"],
   "cSpell.language": "en,de",
   "cSpell.userWords": [
+    "aerq",
+    "bbappend",
+    "bootloader",
+    "chrony",
+    "chronyd",
+    "configurability",
+    "emdev",
+    "lros",
+    "openembedded",
+    "packageconfig",
     "ptmux",
-    "startify"
+    "snmp",
+    "startify",
+    "subconfig",
+    "timedatectl",
+    "timedated",
+    "timesync",
+    "timesyncd"
   ],
 }
 
