@@ -28,3 +28,5 @@ function! s:BlameToggle() abort
 endfunction
 
 nnoremap <silent> <C-b> :call <SID>BlameToggle()<CR>
+
+command Glog :Gclog -1000
