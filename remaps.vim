@@ -167,4 +167,7 @@ nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<CR>
 
+nnoremap <C-down> :cnext<CR>
+nnoremap <C-up> :cprevious<CR>
+
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
