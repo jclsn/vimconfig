@@ -87,6 +87,7 @@
   "cSpell.language": "en,de",
   "cSpell.userWords": [
     "aerq",
+    "auto",
     "bbappend",
     "bootloader",
     "chrony",
@@ -95,6 +96,7 @@
     "chronyd",
     "configurability",
     "cpputest",
+    "cppx",
     "cygwin",
     "emdev",
     "hardknott",
@@ -110,6 +112,7 @@
     "pragprog",
     "ptmux",
     "rtcautotrim",
+    "rtcsync",
     "snmp",
     "startify",
     "subconfig",
@@ -118,8 +121,10 @@
     "timedated",
     "timesync",
     "timesyncd",
-    "toolset"
+    "toolset",
     "trimrtc",
+    "vimspectorrc",
+    "ycmrc",
     "yocto"
   ],
 }
