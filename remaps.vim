@@ -120,7 +120,7 @@ endfunction
 
 function ActivateBlockNavigation()
 	" Don't activate in these filetypes
-	if &ft =~ 'git'
+	if &ft =~ 'git|qf'
 		return
 	endif
 	nnoremap <silent> <C-k> :call <SID>swap_up()<CR>
@@ -141,6 +141,8 @@ autocmd filetype * call ActivateBlockNavigation()
 if has_key(plugs, 'vim-unimpaired')
 	autocmd filetype git nnoremap <buffer> <silent> <C-j> :cnext<CR>
 	autocmd filetype git nnoremap <buffer> <silent> <C-k> :cprevious<CR>
+	autocmd filetype qf nnoremap <buffer> <silent> <C-j> :cnext<CR>
+	autocmd filetype qf nnoremap <buffer> <silent> <C-k> :cprevious<CR>
 endif
 
 "Easily add quotes
