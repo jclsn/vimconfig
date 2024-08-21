@@ -139,8 +139,8 @@ autocmd filetype * call ActivateBlockNavigation()
 
 " Use same mapping as navigation in the quickfix list
 if has_key(plugs, 'vim-unimpaired')
-	autocmd filetype git nnoremap <silent> <C-j> :cnext<CR>
-	autocmd filetype git nnoremap <silent> <C-k> :cprevious<CR>
+	autocmd filetype git nnoremap <buffer> <silent> <C-j> :cnext<CR>
+	autocmd filetype git nnoremap <buffer> <silent> <C-k> :cprevious<CR>
 endif
 
 "Easily add quotes
