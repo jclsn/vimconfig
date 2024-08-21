@@ -118,16 +118,30 @@ function! s:swap_down()
     exec n + 1
 endfunction
 
-nnoremap <C-k> :call <SID>swap_up()<CR>
-nnoremap <C-j> :call <SID>swap_down()<CR>
-nnoremap <C-h> <<
-nnoremap <C-l> >>
+function ActivateBlockNavigation()
+	" Don't activate in these filetypes
+	if &ft =~ 'git'
+		return
+	endif
+	nnoremap <silent> <C-k> :call <SID>swap_up()<CR>
+	nnoremap <silent> <C-j> :call <SID>swap_down()<CR>
+	nnoremap <silent> <C-h> <<
+	nnoremap <silent> <C-l> >>
 
-" Move visual blocks in all directions
-vnoremap <C-j> :m '>+1<CR>gv
-vnoremap <C-k> :m '<-2<CR>gv
-vnoremap <C-h> <gv
-vnoremap <C-l> >gv
+	" Move visual blocks in all directions
+	vnoremap <silent> <C-j> :m '>+1<CR>gv
+	vnoremap <silent> <C-k> :m '<-2<CR>gv
+	vnoremap <silent> <C-h> <gv
+	vnoremap <silent> <C-l> >gv
+endfun 
+
+autocmd filetype * call ActivateBlockNavigation()
+
+" Use same mapping as navigation in the quickfix list
+if has_key(plugs, 'vim-unimpaired')
+	autocmd filetype git nnoremap <silent> <C-j> :cnext<CR>
+	autocmd filetype git nnoremap <silent> <C-k> :cprevious<CR>
+endif
 
 "Easily add quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
@@ -166,8 +180,5 @@ nnoremap <leader>er :vsplit ~/.vim/remaps.vim<CR>
 nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<CR>
-
-nnoremap <C-down> :cnext<CR>
-nnoremap <C-up> :cprevious<CR>
 
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
