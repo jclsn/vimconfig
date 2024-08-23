@@ -113,6 +113,7 @@
     "mylong",
     "networkd",
     "openembedded",
+    "overtemp",
     "packageconfig",
     "packagegroup",
     "packagegroups",
@@ -125,6 +126,7 @@
     "ssd",
     "ssds",
     "startify",
+    "subcomponent",
     "subconfig",
     "sysclock",
     "sysfs",
@@ -134,6 +136,7 @@
     "timesyncd",
     "toolset",
     "trimrtc",
+    "undertemp",
     "vimspectorrc",
     "ycmrc",
     "yocto"
