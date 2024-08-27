@@ -29,4 +29,5 @@ endfunction
 
 nnoremap <silent> <C-b> :call <SID>BlameToggle()<CR>
 
-command Glog :Gclog -1000
+command Glog :Git log --oneline --decorate --graph -500 
+command Greview :Gclog @ ^!
