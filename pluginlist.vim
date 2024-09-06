@@ -30,6 +30,7 @@ Plug 'wgwoods/vim-systemd-syntax'
 Plug 'westeri/asl-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'martinlroth/vim-devicetree'
+Plug 'habamax/vim-rst'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
