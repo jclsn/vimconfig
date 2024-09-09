@@ -39,13 +39,6 @@ if has("autocmd")
 	au BufReadPost *.scr setlocal syntax=bash
 	au BufReadPost *_defconfig setlocal syntax=config
 	au BufReadPost *.h setlocal filetype=c
-	au BufRead,BufNewFile *.asm setlocal filetype=nasm
-	au BufRead,BufNewFile *.S setlocal filetype=nasm
-	au BufRead,BufNewFile *.agc setlocal filetype=nasm
-	au BufRead,BufNewFile *.ags setlocal filetype=nasm
-	au BufRead,BufNewFile *.argus setlocal filetype=nasm
-	au BufRead,BufNewFile *.binsource setlocal filetype=nasm
-	au BufRead,BufNewFile *.X68 setlocal filetype=nasm
 	"au BufReadPost * :ColorHighlight<CR>
 
 	" Run retab on saving files
