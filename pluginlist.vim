@@ -67,6 +67,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'pseewald/vim-anyfold'
+Plug 'psliwka/vim-smoothie'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
