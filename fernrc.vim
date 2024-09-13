@@ -7,11 +7,13 @@ let g:fern#renderer = "nerdfont"
 
 nnoremap <silent> <C-n> :Fern . -drawer -toggle<CR>
 
+if has_key(plugs, 'glyph-palette.vim')
 augroup my-glyph-palette
 	autocmd! *
 	autocmd FileType fern call glyph_palette#apply()
 	autocmd FileType nerdtree,startify call glyph_palette#apply()
 augroup END
+endif
 
 " Disable line numbers
 augroup FernGroup
@@ -45,3 +47,11 @@ augroup FernUpdateGroup
 	autocmd!
 	autocmd BufWipeOut * ++nested call UpdateIfTerm()
 augroup END
+
+if has_key(plugs, 'fern-git-status.vim')
+" Improve drawer performance u
+let g:fern_git_status#disable_ignored = 1
+" let g:fern_git_status#disable_untracked = 1
+" let g:fern_git_status#disable_submodules = 1
+" let g:fern_git_status#disable_directories = 1
+endif
