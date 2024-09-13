@@ -160,6 +160,7 @@
     "rtcsync",
     "smartmontools",
     "snmp",
+    "spinup",
     "srcu",
     "ssd",
     "ssds",
