@@ -27,7 +27,7 @@ function! s:BlameToggle() abort
   endif
 endfunction
 
-nnoremap <silent> <C-b> :call <SID>BlameToggle()<CR>
+nnoremap <silent> <leader>bl :call <SID>BlameToggle()<CR>
 
 command Glog :Git log --oneline --decorate --graph -500 
 command Greview :Gclog @ ^!
