@@ -50,6 +50,9 @@ endif
 if has_key(plugs, 'vim-fugitive')
 	so ~/.vim/fugitiverc.vim
 endif
+if has_key(plugs, 'vim-doge')
+	so ~/.vim/dogerc.vim
+endif
 if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('~/.vim/fugitive-gitlab.vim'))
 	so ~/.vim/fugitive-gitlab.vim
 endif
