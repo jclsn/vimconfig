@@ -173,6 +173,7 @@
     "irqsave",
     "is",
     "jgade",
+    "jochen",
     "kahlert",
     "kallsyms",
     "kbdiacr",
@@ -291,6 +292,7 @@
     "sysclock",
     "sysfs",
     "tabsz",
+    "technik",
     "test",
     "tfree",
     "timedatectl",
@@ -324,5 +326,6 @@
     "yocto",
     "zeavimrc"
   ],
+  "sonarlint.ls.javaHome": "/home/vboxuser/.config/coc/extensions/coc-sonarlint-data/jdk-17.0.8/javajre-linux-64/jre",
 }
 
