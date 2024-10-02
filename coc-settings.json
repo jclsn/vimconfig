@@ -80,6 +80,7 @@
      "cmake": "cmake-format",
   },
 
+  "sonarlint.ls.javaHome": "/usr/lib/jvm/default-runtime",
   "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
   "sonarlint.notifyMissingCompileCommands": false,
 
@@ -327,6 +328,7 @@
     "mylong",
     "mylène",
     "mymodule",
+    "mystr",
     "mytask",
     "n'th",
     "neoclide",
@@ -477,6 +479,5 @@
     "zeavim",
     "zeavimrc"
   ],
-  "sonarlint.ls.javaHome": "/home/vboxuser/.config/coc/extensions/coc-sonarlint-data/jdk-17.0.8/javajre-linux-64/jre",
 }
 
