@@ -57,6 +57,6 @@ let g:fern_git_status#disable_ignored = 1
 endif
 
 let hide_dirs  = '^\%(\node_modules\)$'  " here you write the dir names
-let hide_files = '\%(\.o$\|\.mod$\)\+'    " here you write the file names
+let hide_files = '\%(\.o$\|\.mod$\|\.d$\)\+'    " here you write the file names
 
 let g:fern#default_exclude = hide_dirs . '\|' . hide_files  " here you exclude them
