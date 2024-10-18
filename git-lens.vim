@@ -1,7 +1,7 @@
 vim9script
 
 command GitLensToggle :call ToggleGitLens()
-nnoremap <leader>le :call ToggleGitLens()<CR>
+nnoremap <silent> <leader>le :call ToggleGitLens()<CR>
 
 g:GIT_LENS_CONFIG = {
     blame_prefix: '    ',
