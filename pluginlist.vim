@@ -80,6 +80,7 @@ Plug 'yegappan/disassemble'
 " -------------- C --------------
 Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'
+Plug 'vim-scripts/ifdef-highlighting'
 
 " ------------- C++ --------------
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
