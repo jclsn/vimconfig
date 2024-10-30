@@ -51,6 +51,10 @@
 
   "inlayHint.display": false,
 
+  "[rust][c][cpp]": {
+	  "semanticTokens.enable": true,
+  },
+
   // Clangd settings
   "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
   "clangd.arguments": [
@@ -108,6 +112,7 @@
     "btns",
     "busid",
     "button",
+    "c",
     "cache",
     "calib",
     "call",
@@ -119,6 +124,7 @@
     "chrony's",
     "chronyc",
     "chronyd",
+    "client",
     "clin",
     "cmakerc",
     "cocrc",
@@ -146,6 +152,7 @@
     "diacr",
     "dimms",
     "disable",
+    "displink",
     "dmac",
     "dwaxidmac",
     "edev",
@@ -193,6 +200,7 @@
     "hwclock",
     "hwparam",
     "hyst",
+    "i",
     "iamcco",
     "ifdef",
     "improveme",
