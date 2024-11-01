@@ -26,6 +26,7 @@ endif
    
 """Force comment color
 hi Comment guifg=#484f7a ctermfg=141
+hi link CocSemTypeComment CocUnusedHighlight
 hi LineNr guifg=#484f7a ctermfg=141
 hi SpecialKey guibg=NONE ctermbg=NONE guifg=#30365F ctermfg=237
 hi NonText guifg=#30365F ctermfg=234
@@ -54,13 +55,4 @@ let g:indentLine_enabled = 0
 
 if has_key(plugs, 'fern.vim')
 	hi GlyphPaletteDirectory guifg=#00a3cc ctermfg=38
-endif
-
-if has_key(plugs, 'ifdef-highlighting')
-	au FileType c set syntax=c.ifdef
-
-	if has_key(plugs, 'rainbow')
-		au FileType c RainbowToggleOff
-	endif
-	hi link ifdefUndefined Comment
 endif

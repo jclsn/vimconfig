@@ -161,9 +161,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 nnoremap <leader>ih :CocCommand document.toggleInlayHint<CR>
 
 let g:coc_default_semantic_highlight_groups = 0
-highlight CocErrorHighlight cterm=underline
-highlight CocErrorSign ctermfg=160 guifg=#ff0000
-highlight CocWarningSign ctermfg=220 guifg=#fff000
+hi CocErrorHighlight cterm=underline
+hi CocErrorSign ctermfg=160 guifg=#ff0000
+hi CocWarningSign ctermfg=220 guifg=#fff000
+hi link CocSemTypeComment CocUnusedHighlight
 
 let g:coc_global_extensions = [
 \       'coc-clangd',
