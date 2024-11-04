@@ -8,7 +8,15 @@ function AnonymizeFunction()
 	:%s/in seat display/device/g
 endfunction
 
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 command Anonymize silent! call AnonymizeFunction()
 command DeleteChinese :g/[^\x00-\x7f]/d
 command ShowTrailingWhitespace :match ExtraWhitespace /\s\+$/
 command AddToDictionary :CocCommand cSpell.addWordToUserDictionary
+command GetHighlightUnderCursor call SynStack()
