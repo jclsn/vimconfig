@@ -11,6 +11,8 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
+hi link CocSemTypeComment CocUnusedHighlight
+
 "Force transparent background
 "hi Normal guibg=NONE ctermbg=NONE"
 "hi LineNr guibg=NONE ctermbg=NONE"
@@ -25,24 +27,23 @@ endif
 "hi airline_a guibg=NONE ctermbg=NONE
    
 """Force comment color
-hi Comment guifg=#484f7a ctermfg=141
-hi link CocSemTypeComment CocUnusedHighlight
-hi LineNr guifg=#484f7a ctermfg=141
-hi SpecialKey guibg=NONE ctermbg=NONE guifg=#30365F ctermfg=237
-hi NonText guifg=#30365F ctermfg=234
-hi ExtraWhiteSpace guibg=#30365F ctermbg=234
-hi DiffAdd guibg=NONE ctermfg=NONE
-hi DiffChange guibg=NONE ctermbg=NONE
-hi DiffDelete guibg=NONE ctermbg=NONE
-hi DiffText guibg=NONE ctermbg=NONE
-hi SignColumn guibg=NONE ctermbg=NONE
+" hi Comment guifg=#484f7a ctermfg=141
+" hi LineNr guifg=#484f7a ctermfg=141
+" hi SpecialKey guibg=NONE ctermbg=NONE guifg=#30365F ctermfg=237
+" hi NonText guifg=#30365F ctermfg=234
+" hi ExtraWhiteSpace guibg=#30365F ctermbg=234
+" hi DiffAdd guibg=NONE ctermfg=NONE
+" hi DiffChange guibg=NONE ctermbg=NONE
+" hi DiffDelete guibg=NONE ctermbg=NONE
+" hi DiffText guibg=NONE ctermbg=NONE
+" hi SignColumn guibg=NONE ctermbg=NONE
 
-hi Directory guifg=#484f7a ctermfg=141
-hi folded ctermbg=none ctermfg=gray
+" hi Directory guifg=#484f7a ctermfg=141
+" hi folded ctermbg=none ctermfg=gray
    
 ""Force gray folds
-hi Folded ctermbg=None ctermfg=244
-hi folded ctermbg=none ctermfg=gray
+" hi Folded ctermbg=None ctermfg=244
+" hi folded ctermbg=none ctermfg=gray
 
 "" Correct Airline theme for Spaceduck
 let s:inactive2 = [ "#484f7a", "#16172d", 234, 234 ]
