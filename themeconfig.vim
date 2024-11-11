@@ -11,7 +11,13 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
-hi link CocSemTypeComment CocUnusedHighlight
+" Link CoC semantic tokens to unused highlight
+if has_key(plugs, 'coc.nvim')
+	hi link CocSemTypeComment CocUnusedHighlight
+endif
+
+" Use dark gray for tabs and linebreaks
+hi SpecialKey guibg=NONE ctermbg=NONE guifg=#30365F ctermfg=237
 
 "Force transparent background
 "hi Normal guibg=NONE ctermbg=NONE"
@@ -29,7 +35,6 @@ hi link CocSemTypeComment CocUnusedHighlight
 """Force comment color
 " hi Comment guifg=#484f7a ctermfg=141
 " hi LineNr guifg=#484f7a ctermfg=141
-" hi SpecialKey guibg=NONE ctermbg=NONE guifg=#30365F ctermfg=237
 " hi NonText guifg=#30365F ctermfg=234
 " hi ExtraWhiteSpace guibg=#30365F ctermbg=234
 " hi DiffAdd guibg=NONE ctermfg=NONE
