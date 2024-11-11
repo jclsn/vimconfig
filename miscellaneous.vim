@@ -79,6 +79,10 @@ let todoKeywords = [
 			\ "FixMe",
 			\ "Fixme",
 			\ "fixme",
+			\ "IMPROVEME",
+			\ "ImproveMe",
+			\ "Improveme",
+			\ "improveme",
 			\ ]
 
 
