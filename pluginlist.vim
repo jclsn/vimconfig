@@ -18,9 +18,10 @@ Plug 'zeekay/vim-beautify'
 
 
 " ################# Debugging #################
-Plug 'puremourning/vimspector'
+if has('python3')
+	Plug 'puremourning/vimspector'
+endif
 " Plug 'szw/vim-maximizer'
-
 
 " ############# Look and feel ###############
 " Syntax 
