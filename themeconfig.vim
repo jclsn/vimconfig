@@ -50,11 +50,6 @@ hi SpecialKey guibg=NONE ctermbg=NONE guifg=#30365F ctermfg=237
 " hi Folded ctermbg=None ctermfg=244
 " hi folded ctermbg=none ctermfg=gray
 
-"" Correct Airline theme for Spaceduck
-let s:inactive2 = [ "#484f7a", "#16172d", 234, 234 ]
-let s:inactive1 = [ "#484f7a", "#16172d", 234, 234 ]
-let s:inactive3 = [ "#484f7a", "#16172d", 234, 234 ]
-
 " Indents
 let g:indentLine_char = '▏'
 let g:indentLine_enabled = 0
