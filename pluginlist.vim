@@ -71,6 +71,7 @@ Plug 'pseewald/vim-anyfold'
 Plug 'psliwka/vim-smoothie'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'lervag/vimtex'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
