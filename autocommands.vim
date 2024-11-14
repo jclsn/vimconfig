@@ -34,8 +34,6 @@ if has("autocmd")
 	au BufReadPost *.patch setlocal ft=diff
 	au BufReadPost *.conf setlocal ft=conf
 	au BufReadPost *.its setlocal syntax=dts
-	au BufReadPost *.bb setlocal noexpandtab shiftwidth=8 softtabstop=8
-	au BufReadPost *.bbclass setlocal syntax=bitbake noexpandtab shiftwidth=8 softtabstop=8
 	au BufReadPost *.scr setlocal syntax=bash
 	au BufReadPost *_defconfig setlocal syntax=config
 	au BufReadPost *.h setlocal filetype=c

@@ -7,5 +7,6 @@
 !*.json
 !templates
 !README.md
+!ftplugin/
 
 fugitive-gitlab.vim
