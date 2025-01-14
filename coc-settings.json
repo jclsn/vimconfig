@@ -61,7 +61,7 @@
     "--background-index",
     "--clang-tidy",
   ],
-  "clangd.fallbackFlags": [ "-std=c23"],
+  // "clangd.fallbackFlags": [ "-std=c23"],
 
   "coc.source.vimtex.filetypes": ["tex", "plaintex", "latex"],
 
