@@ -53,6 +53,7 @@ Plug 'vv9k/vim-github-dark'
 " Airline bar and themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'Roy-Orbison/airline-colour-splits'
 
 " Color color codes
 Plug 'chrisbra/Colorizer'
