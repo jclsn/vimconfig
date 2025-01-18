@@ -5,6 +5,8 @@ let g:vimspector_install_gadgets = [
 	\ 'vscode-bash-debug'
 \ ]
 
+" let g:vimspector_terminal_minheight = 75
+
 " Quit Vimspector
 nnoremap <LocalLeader>q :call vimspector#Reset( { 'interactive': v:false } )<CR>
 " Watches
@@ -54,3 +56,12 @@ endfunction
 
 " Finally, create a :RebuildAndDebug command to run all the above
 command! RebuildAndDebug call RebuildAndDebug()
+
+if has_key(plugs, 'vim-smoothie')
+	augroup MyVimspectorUICustomisation
+	  autocmd!
+	  autocmd User VimspectorUICreated let g:smoothie_enabled=0
+	  autocmd User VimspectorTerminalOpened let g:smoothie_enabled=0
+	  autocmd User VimspectorDebugEnded let g:smoothie_enabled=1
+	augroup END
+endif
