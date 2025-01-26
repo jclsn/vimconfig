@@ -56,6 +56,9 @@ endif
 if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('~/.vim/fugitive-gitlab.vim'))
 	so ~/.vim/fugitive-gitlab.vim
 endif
+if has_key(plugs, 'vim-gitgutter')
+	so ~/.vim/gitgutterrc.vim
+endif
 
 " Always apply these settings last
 so ~/.vim/themeconfig.vim
