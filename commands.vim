@@ -16,7 +16,7 @@ function! SynStack()
 endfunc
 
 command Anonymize silent! call AnonymizeFunction()
-command DeleteChinese :g/[^\x00-\x7f]/d
+command DeleteNonAscii :g/[^\x00-\x7f]/d
 command ShowTrailingWhitespace :match ExtraWhitespace /\s\+$/
 command AddToDictionary :CocCommand cSpell.addWordToUserDictionary
 command GetHighlightUnderCursor call SynStack()
