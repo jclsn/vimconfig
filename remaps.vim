@@ -9,10 +9,10 @@ let maplocalleader = "-"
 " ++++++++++++++++++++++++************************
 "               ctags mappings
 " ++++++++++++++++++++++++************************
-nnoremap <leader>l <C-]>
-nnoremap <leader>h <C-t>
-nnoremap <leader>t :e #<CR>
-nnoremap <Leader>L :cs find s <C-R>=expand("<cword>")<CR><CR>
+" nnoremap <leader>l <C-]>
+" nnoremap <leader>h <C-t>
+" nnoremap <silent><leader>t :e #<CR>
+" nnoremap <silent><Leader>L :cs find s <C-R>=expand("<cword>")<CR><CR>
 
 
 " ++++++++++++++++++++++++************************
