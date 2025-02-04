@@ -31,3 +31,13 @@ nnoremap <silent> <leader>bl :call <SID>BlameToggle()<CR>
 
 command Glog :Git log --oneline --decorate --graph -500 
 command Greview :Gclog @ ^!
+
+augroup FugitiveGclog
+  autocmd!
+  if (has_key(plugs, "spaceduck"))
+	  autocmd FileType git highlight link diffAdded DiffAdd
+	  autocmd FileType git highlight link diffChanged DiffChange
+	  autocmd FileType git highlight link diffRemoved DiffDelete
+  endif
+augroup END
+
