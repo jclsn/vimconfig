@@ -25,13 +25,47 @@ vmap <silent> <Leader>w <Plug>SearchVisual<CR>
 " ++++++++++++++++++++++++************************
 "               Terminal mappings
 " ++++++++++++++++++++++++************************
+function! SwitchToTerminalBuffer()
+    " Get list of all open buffers
+    let buffers = range(1, bufnr('$'))
+    let terminal_buffers = []
+
+    " Collect only terminal buffers
+    for buf in buffers
+        if getbufvar(buf, "&buftype") == "terminal"
+            call add(terminal_buffers, buf)
+        endif
+    endfor
+
+    " If no terminal buffer is found, show a message and return
+    if empty(terminal_buffers)
+	terminal
+        return
+    endif
+
+    " Cycle through windows and find the first terminal buffer
+    let startwin = winnr()
+    while 1
+        wincmd w
+        if index(terminal_buffers, bufnr('%')) >= 0
+            break
+        endif
+        if winnr() == startwin
+            echom "No terminal buffer found"
+            break
+        endif
+    endwhile
+endfunction
+
 if has('nvim')
 	tnoremap <esc> <C-\><C-n>
 	nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
 else
-	nmap <leader>tt :ter<CR>
+	nnoremap <silent><Leader>tt :call SwitchToTerminalBuffer()<CR>
 endif
 
+
+" Map it to <Leader>t
 
 " ++++++++++++++++++++++++************************
 "               Build mappings
