@@ -66,6 +66,9 @@ endif
 let todoKeywords = [
 			\ "dummy",
 			\ "DUMMY",
+			\ "IMPORTANT NOTE",
+			\ "Important Note",
+			\ "important note",
 			\ "NOTE",
 			\ "Note",
 			\ "note",
