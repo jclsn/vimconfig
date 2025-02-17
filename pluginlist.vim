@@ -87,9 +87,6 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
-" ------------- Julia --------------
-Plug 'JuliaEditorSupport/julia-vim'
-
 " ------------ Rust ------------
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
