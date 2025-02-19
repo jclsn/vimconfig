@@ -10,18 +10,19 @@ set updatetime=0
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <C-j>
-	\ coc#pum#visible() ? coc#pum#next(1):
-	\ CheckBackspace() ? "\<Tab>" :
-	\ coc#refresh()
-inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" Use <C-j> and <C-k> for up and down when completion menu is visible
+inoremap <silent><expr><C-j> coc#pum#visible() ? coc#pum#next(1): coc#refresh()
+inoremap <silent><expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : coc#refresh()
 
-" Make <CR> to accept selected completion item or notify coc.nvim to format
+" Use <C-l> and <C-h> to jump to the next or previous snippet placeholder
+let g:coc_snippet_next = '<C-l>'
+let g:coc_snippet_prev = '<C-h>'
+inoremap <silent> <C-l> <Cmd>call CocActionAsync('snippetNext')<CR>
+inoremap <silent> <C-h> <Cmd>call CocActionAsync('snippetPrevious')<CR>
+
+" Make <TAB> accept selected completion item
 " <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+inoremap <silent><expr><TAB> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
@@ -35,8 +36,6 @@ if has('nvim')
 else
 	inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
-inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -140,23 +139,23 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>di  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>di  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>ex  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <leader>ex  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>cm  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <leader>cm  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <leader>o  :<C-u>CocList outline<cr>
 " Open CocOutline
-nnoremap <silent><nowait> <space>co  :CocOutline<cr>
+nnoremap <silent><nowait> <leader>co  :CocOutline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>sy  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <leader>sy  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent><nowait> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent><nowait> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>re  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>re  :<C-u>CocListResume<CR>
 
 nnoremap <leader>ih :CocCommand document.toggleInlayHint<CR>
 
