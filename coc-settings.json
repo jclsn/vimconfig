@@ -68,8 +68,6 @@
   ],
   // "clangd.fallbackFlags": [ "-std=c23"],
 
-  "coc.source.vimtex.filetypes": ["tex", "plaintex", "latex"],
-
   // Python settings
   "python.formatting.provider": "black",
   "pyright.inlayHints.functionReturnTypes": false,
@@ -92,7 +90,7 @@
      "cmake": "cmake-format",
   },
 
-  "cSpellExt.enableDictionaries": ["german", "russian"],
+  "cSpell.dictionaries": ["german", "russian"],
   "cSpell.language": "en, en-Gb, de, ru",
   "cSpell.userWords": [
     "",
