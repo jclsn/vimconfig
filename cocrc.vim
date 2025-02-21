@@ -180,7 +180,6 @@ let g:coc_global_extensions = [
 \       'coc-pyright',
 \       'coc-sh',
 \       'coc-snippets',
-\       'coc-sonarlint',
 \       'coc-spell-checker',
 \       'coc-swagger',
 \       'coc-tsserver',

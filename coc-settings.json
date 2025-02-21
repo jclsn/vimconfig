@@ -92,11 +92,6 @@
      "cmake": "cmake-format",
   },
 
-  "sonarlint.ls.javaHome": "/usr/lib/jvm/default-runtime",
-  "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
-  "sonarlint.notifyMissingCompileCommands": false,
-  "sonarlint.disableTelemetry": true,
-
   "cSpellExt.enableDictionaries": ["german", "russian"],
   "cSpell.language": "en, en-Gb, de, ru",
   "cSpell.userWords": [
