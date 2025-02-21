@@ -54,10 +54,9 @@
   "inlayHint.display": false,
 
   "[rust][c][cpp]": {
-	  "semanticTokens.enable": true,
+	  "semanticTokens.enable": true
   },
 
-  // Clangd settings
   "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
   "clangd.arguments": [
     "--background-index",
@@ -66,9 +65,7 @@
     "--header-insertion=never",
     "--completion-style=detailed"
   ],
-  // "clangd.fallbackFlags": [ "-std=c23"],
 
-  // Python settings
   "python.formatting.provider": "black",
   "pyright.inlayHints.functionReturnTypes": false,
   "pyright.inlayHints.variableTypes": false,
@@ -76,18 +73,20 @@
   "python.analysis.useLibraryCodeForTypes": true,
   "python.analysis.typeCheckingMode": "basic",
   
-  // coc-diagnostic settings
   "diagnostic-languageserver.filetypes": {
     "vim": "vint",
     "markdown": [ "write-good", "markdownlint" ],
     "sh": "shellcheck",
     "yaml": [ "yamllint" ],
     "cmake": [ "cmake-lint", "cmakelint" ],
-    "systemd": "systemd-analyze",
+    "systemd": "systemd-analyze"
   },
   "diagnostic-languageserver.formatFiletypes": {
      "sh": "shfmt",
-     "cmake": "cmake-format",
+     "cmake": "cmake-format"
   },
+  "cSpell.userWords": [
+    "adiba"
+  ]
 }
 
