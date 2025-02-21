@@ -61,6 +61,7 @@ if has_key(plugs, 'vim-gitgutter')
 endif
 
 " Always apply these settings last
+so ~/.vim/vim9functions.vim
 so ~/.vim/themeconfig.vim
 so ~/.vim/miscellaneous.vim
 
