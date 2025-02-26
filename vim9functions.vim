@@ -24,7 +24,7 @@ def MoveCocWordsToCSpell()
     endif
 
     # Merge words into cSpell.json
-    var add_words_cmd = 'jq --argjson newWords ' .. shellescape(json_encode(words)) ..
+    var add_words_cmd = 'jq --indent 4 --argjson newWords ' .. shellescape(json_encode(words)) ..
         ' ''.words += $newWords | .words |= unique'' ' ..
         shellescape(cspell_json) .. ' > ' .. shellescape(cspell_json .. ".tmp") .. ' && mv ' ..
         shellescape(cspell_json .. ".tmp") .. ' ' .. shellescape(cspell_json)
