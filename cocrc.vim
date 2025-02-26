@@ -22,13 +22,15 @@ inoremap <silent> <C-h> <Cmd>call CocActionAsync('snippetPrevious')<CR>
 
 " Make <TAB> accept selected completion item
 " <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr><TAB> coc#pum#visible() ? coc#pum#confirm()
+inoremap <silent><expr><CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 
 " Use <c-space> to trigger completion.
 if has('nvim')
