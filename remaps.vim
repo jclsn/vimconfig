@@ -214,3 +214,21 @@ nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<CR>
 
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
+
+function! PreserveCursor(cmd)
+    let l:save_pos = getpos(".")  " Save cursor position
+    execute a:cmd
+    call setpos(".", l:save_pos)  " Restore cursor position
+endfunction
+
+" Convert to shared_ptr
+nnoremap <leader>tms :call PreserveCursor('s/\vnew (\w+)\(/std::make_shared<\1>(/')<CR>
+nnoremap <Leader>tsp "zyiw:s/\<\V<C-r>z\>/std::shared_ptr<<C-r>z>/g<CR>
+
+" Convert to unique_ptr
+nnoremap <leader>tmu :call PreserveCursor('s/\vnew (\w+)\(/std::make_unique<\1>(/')<CR>
+nnoremap <Leader>tup "zyiw:s/\<\V<C-r>z\>/std::unique_ptr<<C-r>z>/g<CR>
+
+" Convert to weak_ptr
+nnoremap <leader>tmw :call PreserveCursor('s/\vnew (\w+)\(/std::make_weak<\1>(/')<CR>
+nnoremap <Leader>twp "zyiw:s/\<\V<C-r>z\>/std::weak_ptr<<C-r>z>/g<CR>
