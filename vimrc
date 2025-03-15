@@ -1,4 +1,5 @@
 set encoding=utf-8
+set nocompatible
 
 call plug#begin('~/.vim/plugged')
 	so ~/.vim/pluginlist.vim
