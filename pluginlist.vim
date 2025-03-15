@@ -49,6 +49,7 @@ Plug 'morhetz/gruvbox'
 Plug 'jclsn/spaceduck', { 'branch': 'dev' }
 Plug 'tomasiser/vim-code-dark'
 Plug 'vv9k/vim-github-dark'
+Plug 'EdenEast/nightfox.nvim'
 
 " Airline bar and themes
 Plug 'vim-airline/vim-airline'
@@ -84,7 +85,7 @@ Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'
 
 " ------------- C++ --------------
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
+" Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
 " ------------ Rust ------------
