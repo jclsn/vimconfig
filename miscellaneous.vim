@@ -30,6 +30,7 @@ set noautochdir
 set nolist
 set listchars=tab:▸·,eol:¬
 set exrc
+set nocursorline
 
 let g:c_syntax_for_h=1
 let g:asmsyntax = 'nasm'
