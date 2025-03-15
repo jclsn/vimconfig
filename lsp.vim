@@ -17,7 +17,7 @@ let lspOpts = #{
 	\   ignoreMissingServer: v:false,
 	\   keepFocusInDiags: v:true,
 	\   keepFocusInReferences: v:true,
-	\   completionTextEdit: v:true,
+	\   completionTextEdit: v:false,
 	\   diagVirtualTextAlign: 'above',
 	\   noNewlineInCompletion: v:false,
 	\   omniComplete: v:null,
@@ -81,54 +81,6 @@ let lspServers = [
 	\   syncInit: v:true
 	\ },
 	\
-	\ #{name: 'sonarlint-ls',
-	\   filetype: ['c', 
-	\              'cpp', 
-	\              'go', 
-	\              'html', 
-	\              'java',
-	\              'javascript', 
-	\              'php', 
-	\              'python',
-	\              'terraform', 
-	\              'xml'],
-	\   path: '/usr/bin/sonarlint-ls',
-	\   args: [
-	\          '-stdio', 
-	\          '-analyzers', 
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarcfamily.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonargo.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarhtml.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonariac.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarjava.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarjs.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarlintomnisharp.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarphp.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarpython.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonartext.jar',
-	\          '/usr/share/java/sonarlint-ls/analyzers/sonarxml.jar',
-	\   ],
-	\   debug: v:true,
-	\   syncInit: v:true,
-	\   workspaceConfig: #{
-	\     sonarlint: #{
-	\       pathToCompileCommands: "${workspaceFolder}/build/compile_commands.json" 
-	\     }
-	\   },
-        \   initializationOptions: #{
-        \     productKey: 'vscode',
-        \     telemetryStorage: '~/.vim-playground/telemetry/sonarlint_usage',
-        \     productName: 'SonarLint VSCode',
-        \     showVerboseLogs: v:true,
-        \     platform: 'linux',
-        \     architecture: 'x64',
-        \     additionalAttributes: #{
-        \       vscode: #{
-        \         isTelemetryEnabled: v:false,
-        \       },
-        \     },
-	\   },
-	\ },
 	\ #{name: 'vimls',
 	\   filetype: 'vim',
 	\   path: '/usr/bin/vim-language-server',
