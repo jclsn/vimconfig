@@ -59,7 +59,7 @@
   },
   "inlayHint.display": false,
   "[rust][cpp]": {
-    "semanticTokens.enable": true
+    "semanticTokens.enable": false
   },
   "clangd.compilationDatabaseCandidates": [
     "./",
