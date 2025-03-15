@@ -186,26 +186,3 @@ let g:coc_global_extensions = [
 \       'coc-vimlsp',
 \       'coc-yaml',
 \       ]
-
-let g:coc_global_extensions = [
-\       'coc-clangd',
-\       'coc-cmake',
-\       'coc-diagnostic',
-\       'coc-git',
-\       'coc-go',
-\       'coc-html',
-\       'coc-java',
-\       'coc-json',
-\       'coc-julia',
-\       'coc-lua',
-\       'coc-prettier',
-\       'coc-pyright',
-\       'coc-sh',
-\       'coc-snippets',
-\       'coc-spell-checker',
-\       'coc-swagger',
-\       'coc-tsserver',
-\       'coc-vimlsp',
-\       'coc-yaml',
-\       ]
-
