@@ -69,7 +69,6 @@ Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'pseewald/vim-anyfold'
 Plug 'psliwka/vim-smoothie'
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'preservim/vim-markdown'
 Plug 'lervag/vimtex'
@@ -85,7 +84,6 @@ Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'
 
 " ------------- C++ --------------
-" Plug 'octol/vim-cpp-enhanced-highlight', { 'for': [ 'cpp' ] }
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
 " ------------ Rust ------------
