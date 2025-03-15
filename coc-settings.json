@@ -107,7 +107,6 @@
   "typescript.preferences.includePackageJsonAutoImports": "auto",
   "javascript.suggestionActions.enabled": true,
   "javascript.validate.enable": true,
-
   "cSpell.import": [
     "~/.vim/cSpell.json"
   ]
