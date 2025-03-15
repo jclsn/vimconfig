@@ -58,7 +58,7 @@
     }
   },
   "inlayHint.display": false,
-  "[rust][c][cpp]": {
+  "[rust][cpp]": {
     "semanticTokens.enable": true
   },
   "clangd.compilationDatabaseCandidates": [
@@ -109,5 +109,5 @@
   "javascript.validate.enable": true,
   "cSpell.import": [
     "~/.vim/cSpell.json"
-  ]
+  ],
 }
