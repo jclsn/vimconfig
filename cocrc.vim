@@ -161,10 +161,31 @@ nnoremap <silent><nowait> <leader>re  :<C-u>CocListResume<CR>
 
 nnoremap <leader>ih :CocCommand document.toggleInlayHint<CR>
 
-let g:coc_default_semantic_highlight_groups = 0
 hi CocErrorSign ctermfg=160 guifg=#ff0000
 hi CocWarningSign ctermfg=220 guifg=#fff000
 hi link CocSemTypeComment CocUnusedHighlight
+
+let g:coc_global_extensions = [
+\       'coc-clangd',
+\       'coc-cmake',
+\       'coc-diagnostic',
+\       'coc-git',
+\       'coc-go',
+\       'coc-html',
+\       'coc-java',
+\       'coc-json',
+\       'coc-julia',
+\       'coc-lua',
+\       'coc-prettier',
+\       'coc-pyright',
+\       'coc-sh',
+\       'coc-snippets',
+\       'coc-spell-checker',
+\       'coc-swagger',
+\       'coc-tsserver',
+\       'coc-vimlsp',
+\       'coc-yaml',
+\       ]
 
 let g:coc_global_extensions = [
 \       'coc-clangd',
