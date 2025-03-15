@@ -100,6 +100,14 @@
     "sh": "shfmt",
     "cmake": "cmake-format"
   },
+  "tsserver.enable": true,
+  "tsserver.useLocalTsdk": false,
+  "tsserver.tsconfigPath": "./tsconfig.json",
+  "tsserver.log": "normal",
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "javascript.suggestionActions.enabled": true,
+  "javascript.validate.enable": true,
+
   "cSpell.import": [
     "~/.vim/cSpell.json"
   ]
