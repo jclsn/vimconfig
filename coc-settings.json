@@ -109,5 +109,5 @@
   "javascript.validate.enable": true,
   "cSpell.import": [
     "~/.vim/cSpell.json"
-  ],
+  ]
 }
