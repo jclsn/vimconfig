@@ -60,6 +60,9 @@ endif
 if has_key(plugs, 'vim-gitgutter')
 	so ~/.vim/gitgutterrc.vim
 endif
+if has_key(plugs, 'ConflictMotions')
+	so ~/.vim/conflictmotions.vim
+endif
 
 " Always apply these settings last
 so ~/.vim/vim9functions.vim
