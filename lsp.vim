@@ -81,7 +81,7 @@ let lspServers = [
 	\   args: ['--stdio'],
 	\   workspaceConfig: #{
 	\     python: #{
-	\       pythonPath: '/usr/bin/python3.11'
+	\       pythonPath: '/usr/bin/python'
 	\     }
 	\   }
 	\ },
