@@ -55,7 +55,13 @@ let lspServers = [
 	\ #{name: 'clang',
 	\  filetype: ['c', 'cpp'],
 	\  path: '/usr/bin/clangd',
-	\  args: ['--background-index']
+	\  args: [
+	\		'--background-index',
+	\		'--clang-tidy',
+	\		'--clang-tidy-checks=*',
+	\		'--header-insertion=never',
+	\		'--completion-style=detailed'
+	\  ]
 	\ },
 	\
 	\ #{name: 'bashls',
