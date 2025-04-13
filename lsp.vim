@@ -32,7 +32,7 @@ let lspOpts = #{
 	\   showInlayHints: v:false,
 	\   showSignature: v:true,
 	\   snippetSupport: v:true,
-	\   ultisnipsSupport: v:false,
+	\   ultisnipsSupport: v:true,
 	\   useBufferCompletion: v:false,
 	\   usePopupInCodeAction: v:true,
 	\   useQuickfixForLocations: v:false,
