@@ -117,3 +117,4 @@ nmap <silent>]g :LspDiagNext<CR>
 nmap <leader>pe :LspDiagPrev<CR>
 nmap <leader>ne :LspDiagNext<CR>
 
+command! Format call lsp#lsp#FormatExpr()
