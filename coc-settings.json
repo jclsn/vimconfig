@@ -55,6 +55,12 @@
       "filetypes": [
         "dts"
       ]
+    },
+    "vhdl_ls": {
+      "command": "vhdl_ls",
+      "filetypes": [
+        "vhdl"
+      ]
     }
   },
   "inlayHint.display": false,
