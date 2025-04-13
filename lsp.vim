@@ -20,7 +20,7 @@ let lspOpts = #{
 	\   hideDisabledCodeActions: v:false,
 	\   highlightDiagInline: v:true,
 	\   hoverInPreview: v:true,
-	\   ignoreMissingServer: v:false,
+	\   ignoreMissingServer: v:true,
 	\   keepFocusInDiags: v:true,
 	\   keepFocusInReferences: v:true,
 	\   completionTextEdit: v:false,
