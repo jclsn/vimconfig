@@ -18,6 +18,18 @@ if has_key(plugs, 'coc.nvim')
 	hi CocWarningHighlight cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
 endif
 
+" For some reason LSP highlights have to get changed here
+if has_key(plugs, 'lsp')
+	hi LspDiagInlineError cterm=undercurl ctermul=202 gui=undercurl guisp=#ff5f00
+	hi LspDiagInlineWarning cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
+	hi LspDiagInlineInfo cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
+	hi LspDiagInlineHint cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
+	hi LspDiagVirtualError cterm=undercurl ctermul=202 gui=undercurl guisp=#ff5f00
+	hi LspDiagVirtualWarning cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
+	hi LspDiagVirtualInfo cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
+	hi LspDiagVirtualHint cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
+endif
+
 " Use dark gray for tabs and linebreaks
 hi SpecialKey guibg=NONE ctermbg=NONE guifg=#30365F ctermfg=237
 
