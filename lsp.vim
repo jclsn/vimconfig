@@ -35,8 +35,8 @@ let lspOpts = #{
 	\   ultisnipsSupport: v:true,
 	\   useBufferCompletion: v:false,
 	\   usePopupInCodeAction: v:true,
-	\   useQuickfixForLocations: v:false,
 	\   vsnipSupport: v:true,
+	\   useQuickfixForLocations: v:false,
 	\   bufferCompletionTimeout: 100,
 	\   customCompletionKinds: v:false,
 	\   completionKinds: {}
@@ -85,6 +85,12 @@ let lspServers = [
 	\   filetype: 'vim',
 	\   path: '/usr/bin/vim-language-server',
 	\   args: ['--stdio']
+	\ },
+	\
+	\ #{name: 'vhdl_ls',
+	\   filetype: 'vhdl',
+	\   path: '/usr/bin/vhdl_ls',
+	\   args: []
 	\ }
 	\]
 
