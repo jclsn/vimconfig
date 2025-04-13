@@ -10,6 +10,12 @@ let lspOpts = #{
 	\   diagSignHintText: '💡',
 	\   diagSignInfoText: '💡',
 	\   diagSignWarningText: '💡',
+	\   diagSignPriority: {
+	\       'Error': 100,
+	\       'Warning': 99,
+	\       'Information': 98,
+	\       'Hint': 97
+	\   },
 	\   echoSignature: v:false,
 	\   hideDisabledCodeActions: v:false,
 	\   highlightDiagInline: v:true,
