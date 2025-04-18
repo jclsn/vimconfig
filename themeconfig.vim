@@ -28,6 +28,8 @@ if has_key(plugs, 'lsp')
 	hi LspDiagVirtualWarning cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
 	hi LspDiagVirtualInfo cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
 	hi LspDiagVirtualHint cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
+	hi link LspWriteRef Visual
+	hi link LspReadRef Visual
 endif
 
 " Use dark gray for tabs and linebreaks
