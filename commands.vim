@@ -15,8 +15,14 @@ function! SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+function! SynGroup()
+    let l:s = synID(line('.'), col('.'), 1)
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
+
 command Anonymize silent! call AnonymizeFunction()
 command DeleteNonAscii :g/[^\x00-\x7f]/d
 command ShowTrailingWhitespace :match ExtraWhitespace /\s\+$/
 command AddToDictionary :CocCommand cSpell.addWordToUserDictionary
-command GetHighlightUnderCursor call SynStack()
+command HighlightStack call SynStack()
+command HighlightGroup call SynGroup()
