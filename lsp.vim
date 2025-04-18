@@ -19,7 +19,7 @@ let lspOpts = #{
 	\   echoSignature: v:false,
 	\   hideDisabledCodeActions: v:false,
 	\   highlightDiagInline: v:true,
-	\   hoverInPreview: v:true,
+	\   hoverInPreview: v:false,
 	\   ignoreMissingServer: v:true,
 	\   keepFocusInDiags: v:true,
 	\   keepFocusInReferences: v:true,
