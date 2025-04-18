@@ -116,6 +116,15 @@ nnoremap <silent> <leader>pe :LspDiagPrev<CR>
 nnoremap <silent> <leader>ne :LspDiagNext<CR>
 nnoremap <silent> <leader>pd :LspPeekDeclaration<CR>
 
+function! s:SmartHover() abort
+	let result = execute('LspHover')
+	if result =~ 'Error'
+		call feedkeys('K', 'in')
+	endif
+endfunction
+
+nnoremap <silent> K :call <SID>SmartHover()<CR>
+
 nnoremap <silent> gd :LspGotoDefinition<CR>
 nnoremap <silent> gy :LspGotoTypeDef<CR>
 nnoremap <silent> gi :LspGotoImpl<CR>
