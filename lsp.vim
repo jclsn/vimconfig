@@ -39,7 +39,7 @@ let lspOpts = #{
 	\   showSignature: v:true,
 	\   snippetSupport: v:true,
 	\   ultisnipsSupport: v:true,
-	\   useBufferCompletion: v:false,
+	\   useBufferCompletion: v:true,
 	\   usePopupInCodeAction: v:true,
 	\   vsnipSupport: v:true,
 	\   useQuickfixForLocations: v:false,
@@ -116,5 +116,10 @@ nmap <silent>[g :LspDiagPrev<CR>
 nmap <silent>]g :LspDiagNext<CR>
 nmap <leader>pe :LspDiagPrev<CR>
 nmap <leader>ne :LspDiagNext<CR>
+
+nnoremap <silent> gd :LspGotoDefinition<CR>
+nnoremap <silent> gy :LspGotoTypeDef<CR>
+nnoremap <silent> gi :LspGotoImpl<CR>
+nnoremap <silent> gr :LspGotoDeclaration<CR>
 
 command! Format call lsp#lsp#FormatExpr()
