@@ -133,6 +133,7 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 
 " Add a command to render OpenAPI specs
 command -nargs=0 Swagger :CocCommand swagger.render
+command AddToDictionary :CocCommand cSpell.addWordToUserDictionary
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
