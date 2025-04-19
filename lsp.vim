@@ -52,9 +52,20 @@ autocmd User LspSetup call LspOptionsSet(lspOpts)
 
 let lspServers = [
 	\
-	\ #{name: 'clang',
+	\ #{name: 'bashls',
+	\   filetype: 'sh',
+	\   path: 'bash-language-server',
+	\   args: ['start']
+	\ },
+	\
+	\ #{name: 'bitbake',
+	\   filetype: 'bitbake',
+	\   path: 'bitbake-language-server'
+	\ },
+	\
+	\ #{name: 'clangd',
 	\  filetype: ['c', 'cpp'],
-	\  path: '/usr/bin/clangd',
+	\  path: 'clangd',
 	\  args: [
 	\		'--background-index',
 	\		'--clang-tidy',
@@ -64,20 +75,41 @@ let lspServers = [
 	\  ]
 	\ },
 	\
-	\ #{name: 'bashls',
-	\   filetype: 'sh',
-	\   path: '/usr/bin/bash-language-server',
-	\   args: ['start']
+	\ #{name: 'cmake-language-server',
+	\   filetype: 'cmake',
+	\   path: 'cmake-language-server'
 	\ },
 	\
-	\ #{name: 'bitbake',
-	\   filetype: 'bitbake',
-	\   path: '/usr/bin/bitbake-language-server'
+	\ #{name: 'cspell',
+	\   filetype: [ 'c', 'cpp', 'go', 'rust', 'julia', 'js', 'ts', 'html', 'css', 'json', 'yaml', 'markdown', 'gitcommit'],
+	\   path: 'cspell-lsp',
+	\   args: ['--stdio', '--dictionary', '/home/jan/.vim/cSpell.txt']
+	\ },
+	\
+	\ #{name: 'ginko_ls',
+	\   filetype: 'dts',
+	\   path: 'ginko_ls',
+	\ },
+	\
+	\ #{name: 'julia',
+	\   filetype: 'julia',
+	\   path: 'julia',
+	\   args: ['--startup-file=no', '--history-file=no', '-e', '
+	\       using LanguageServer;
+	\       using Pkg;
+	\       import StaticLint;
+	\       import SymbolServer;
+	\       env_path = dirname(Pkg.Types.Context().env.project_file);
+	\
+	\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
+	\       server.runlinter = true;
+	\       run(server);
+	\  ']
 	\ },
 	\
 	\ #{name: 'pyright',
 	\   filetype: 'python',
-	\   path: '/usr/bin/pyright-langserver',
+	\   path: 'pyright-langserver',
 	\   args: ['--stdio'],
 	\   workspaceConfig: #{
 	\     python: #{
@@ -88,21 +120,27 @@ let lspServers = [
 	\
 	\ #{name: 'rustanalyzer',
 	\   filetype: ['rust'],
-	\   path: '/usr/bin/rust-analyzer',
+	\   path: 'rust-analyzer',
 	\   args: [],
 	\   syncInit: v:true
 	\ },
 	\
 	\ #{name: 'vimls',
 	\   filetype: 'vim',
-	\   path: '/usr/bin/vim-language-server',
+	\   path: 'vim-language-server',
 	\   args: ['--stdio']
 	\ },
 	\
 	\ #{name: 'vhdl_ls',
 	\   filetype: 'vhdl',
-	\   path: '/usr/bin/vhdl_ls',
+	\   path: 'vhdl_ls',
 	\   args: []
+	\ },
+	\
+	\ #{name: 'vscode-json-languageserver',
+	\   filetype: ['json', 'jsonc'],
+	\   path: 'vscode-json-languageserver',
+	\   args: ['--stdio']
 	\ }
 	\]
 
