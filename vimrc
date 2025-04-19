@@ -36,6 +36,9 @@ endif
 if has_key(plugs, 'vim-cmake')
 	so ~/.vim/cmakerc.vim
 endif
+if has_key(plugs, 'vim-qt')
+	so ~/.vim/qt.vim
+endif
 if has_key(plugs, 'zeavim.vim')
 	so ~/.vim/zeavimrc.vim
 endif

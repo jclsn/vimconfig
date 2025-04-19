@@ -85,6 +85,7 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 
 " ------------- C++ --------------
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
+Plug 'cpiger/vim-qt'
 
 " ------------ Rust ------------
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
