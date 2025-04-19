@@ -23,6 +23,5 @@ endfun
 command Anonymize silent! call AnonymizeFunction()
 command DeleteNonAscii :g/[^\x00-\x7f]/d
 command ShowTrailingWhitespace :match ExtraWhitespace /\s\+$/
-command AddToDictionary :CocCommand cSpell.addWordToUserDictionary
 command HighlightStack call SynStack()
 command HighlightGroup call SynGroup()
