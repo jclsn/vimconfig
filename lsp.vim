@@ -111,7 +111,7 @@ autocmd VimEnter * call LspAddServer(lspServers)
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
-nnoremap <leader>qf :LspCodeAction 1<CR>
+nnoremap <leader>qf :LspCodeAction<CR>
 nnoremap <silent> <leader>pe :LspDiagPrev<CR>
 nnoremap <silent> <leader>ne :LspDiagNext<CR>
 nnoremap <silent> <leader>pd :LspPeekDeclaration<CR>
