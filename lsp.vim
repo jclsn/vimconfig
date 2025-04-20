@@ -80,10 +80,18 @@ let lspServers = [
 	\   path: 'cmake-language-server'
 	\ },
 	\
-	\ #{name: 'cspell',
-	\   filetype: [ 'c', 'cpp', 'go', 'rust', 'julia', 'js', 'ts', 'html', 'css', 'json', 'yaml', 'markdown', 'gitcommit'],
-	\   path: 'cspell-lsp',
-	\   args: ['--stdio', '--dictionary', '/home/jan/.vim/cSpell.txt']
+	\ #{name: 'efm-langserver',
+	\   filetype: ['markdown', 'sh', 'json', 'jsonc'],
+	\   path: 'efm-langserver',
+	\   args: [],
+	\	initializationOptions: #{
+	\ 	  documentFormatting: v:true,
+	\ 	  documentRangeFormatting: v:true,
+	\ 	  hover: v:true,
+	\ 	  documentSymbol: v:true,
+	\ 	  codeAction: v:true,
+	\ 	  completion: v:true
+	\	}
 	\ },
 	\
 	\ #{name: 'ginko_ls',
