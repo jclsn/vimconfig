@@ -107,6 +107,12 @@ let lspServers = [
 	\  ']
 	\ },
 	\
+	\ #{name: 'marksman',
+	\   filetype: 'markdown',
+	\   path: 'marksman',
+	\   args: [],
+	\ },
+	\
 	\ #{name: 'pyright',
 	\   filetype: 'python',
 	\   path: 'pyright-langserver',
