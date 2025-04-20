@@ -28,7 +28,7 @@ let lspOpts = #{
 	\   noNewlineInCompletion: v:false,
 	\   omniComplete: v:null,
 	\   outlineOnRight: v:true,
-	\   outlineWinSize: 40,
+	\   outlineWinSize: 50,
 	\   semanticHighlight: v:false,
 	\   showDiagInBalloon: v:false,
 	\   showDiagInPopup: v:true,
