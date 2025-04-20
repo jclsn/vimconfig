@@ -166,7 +166,10 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 nnoremap <leader>qf :LspCodeAction<CR>
 nnoremap <silent> <leader>pe :LspDiagPrev<CR>
 nnoremap <silent> <leader>ne :LspDiagNext<CR>
-nnoremap <silent> <leader>pd :LspPeekDeclaration<CR>
+nnoremap <silent> <leader>pd :LspPeekDefinition<CR>
+nnoremap <silent> <leader>pdc :LspPeekDeclaration<CR>
+nnoremap <silent> <leader>pr :LspPeekReferences<CR>
+nnoremap <silent> <leader>ol :LspOutline<CR>
 
 function! s:SmartHover() abort
 	let result = execute('LspHover')
@@ -176,8 +179,11 @@ function! s:SmartHover() abort
 endfunction
 
 nnoremap <silent> K :call <SID>SmartHover()<CR>
+nnoremap <silent> <RightMouse> :call <SID>SmartHover()<CR>
+nnoremap <silent> <MiddleMouse> :LspPeekDefinition<CR>
 
 nnoremap <silent> gd :LspGotoDefinition<CR>
+nnoremap <silent> <C-.> :LspGotoDefinition<CR>
 nnoremap <silent> gy :LspGotoTypeDef<CR>
 nnoremap <silent> gi :LspGotoImpl<CR>
 nnoremap <silent> gr :LspGotoDeclaration<CR>
