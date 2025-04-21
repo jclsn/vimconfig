@@ -214,3 +214,18 @@ nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<CR>
 
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
+
+function ScrollPopup(up=0)
+  if (len(popup_list()) >= 1)
+    let popid = popup_list()[0]
+    let firstline = popup_getoptions(popid)['firstline']
+    if (a:up)
+      call popup_setoptions(popid, {'firstline': max([1, firstline-1])})
+    else
+      call popup_setoptions(popid, {'firstline': firstline+1})
+    endif
+  endif
+endfunc
+
+nnoremap <silent> ö :call ScrollPopup()<CR>
+nnoremap <silent> ü :call ScrollPopup(1)<CR>
