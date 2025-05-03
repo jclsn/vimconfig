@@ -27,6 +27,7 @@ set foldmethod=syntax
 set foldnestmax=99
 set foldlevel=99
 set noautochdir
+set viewoptions-=curdir
 set nolist
 set listchars=tab:▸·,eol:¬
 set exrc
