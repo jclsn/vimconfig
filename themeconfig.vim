@@ -30,6 +30,12 @@ if has_key(plugs, 'lsp')
 	hi LspDiagVirtualHint cterm=undercurl ctermul=187 gui=undercurl guisp=#d7d7af 
 	hi link LspWriteRef Visual
 	hi link LspReadRef Visual
+
+
+highlight LspHoverPopupHighlight guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
+highlight LspPeekPopupHighlight guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
+highlight LspSymbolMenuPopupHighlight guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
+highlight LspTypeHierarchyPopupHighlight guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
 endif
 
 " Use dark gray for tabs and linebreaks
