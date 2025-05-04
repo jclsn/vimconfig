@@ -1,11 +1,11 @@
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'SirVer/ultisnips'
 " Plug 'hrsh7th/vim-vsnip'
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
-Plug 'yegappan/lsp'
+" Plug 'yegappan/lsp'
 
 
 " ################## Code Formatting ####################
