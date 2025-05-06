@@ -1,0 +1,25 @@
+let cspell =
+			\ #{name: 'cspell',
+			\   filetype: [
+			\	  'c', 
+			\	  'cpp',
+			\	  'json',
+			\	  'vim',
+			\     'css',
+			\     'gitcommit',
+			\     'go', 
+			\     'html', 
+			\     'julia',
+			\     'js',
+			\     'json',
+			\     'markdown',
+			\     'matlab',
+			\     'python',
+			\     'rust', 
+			\     'ts', 
+			\     'vim',
+			\     'yaml',
+			\   ],
+			\   path: '/usr/bin/cspell-lsp',
+			\   args: ['--stdio', '--dictionary', '/home/jan/.vim/cSpell.txt']
+			\ }

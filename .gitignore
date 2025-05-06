@@ -1,12 +1,15 @@
 *
+!*.json
+!*.vim
 
 !.gitignore
 !.vimrc
-!vimrc
-!*.vim
-!*.json
-!templates
 !README.md
+!cSpell.txt
+!templates
+!vimrc
+
 !ftplugin/
+!lsp/
 
 fugitive-gitlab.vim
