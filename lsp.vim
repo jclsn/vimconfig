@@ -23,9 +23,11 @@ let lspOpts = #{
 	\   ignoreMissingServer: v:true,
 	\   keepFocusInDiags: v:true,
 	\   keepFocusInReferences: v:true,
-	\   completionTextEdit: v:false,
+	\   completionTextEdit: v:true,
 	\   diagVirtualTextAlign: 'above',
 	\   noNewlineInCompletion: v:false,
+	\   popupBorder: v:true,
+	\   popupBorderSignatureHelp: v:true,
 	\   omniComplete: v:null,
 	\   outlineOnRight: v:true,
 	\   outlineWinSize: 50,
@@ -34,129 +36,44 @@ let lspOpts = #{
 	\   showDiagInPopup: v:true,
 	\   showDiagOnStatusLine: v:false,
 	\   showDiagWithSign: v:true,
-	\   showDiagWithVirtualText: v:false,
+	\   showDiagWithVirtualText: v:true,
 	\   showInlayHints: v:false,
 	\   showSignature: v:true,
 	\   snippetSupport: v:true,
 	\   ultisnipsSupport: v:true,
 	\   useBufferCompletion: v:true,
 	\   usePopupInCodeAction: v:true,
-	\   vsnipSupport: v:true,
+	\   vsnipSupport: v:false,
 	\   useQuickfixForLocations: v:false,
-	\   bufferCompletionTimeout: 100,
+	\   bufferCompletionTimeout: 1,
 	\   customCompletionKinds: v:false,
-	\   completionKinds: {}
+	\   completionKinds: {},
+	\   filterCompletionDuplicates: v:true,
 	\ }
 
 autocmd User LspSetup call LspOptionsSet(lspOpts)
 
-let lspServers = [
-	\
-	\ #{name: 'bashls',
-	\   filetype: 'sh',
-	\   path: 'bash-language-server',
-	\   args: ['start']
-	\ },
-	\
-	\ #{name: 'bitbake',
-	\   filetype: 'bitbake',
-	\   path: 'bitbake-language-server'
-	\ },
-	\
-	\ #{name: 'clangd',
-	\  filetype: ['c', 'cpp'],
-	\  path: 'clangd',
-	\  args: [
-	\		'--background-index',
-	\		'--clang-tidy',
-	\		'--clang-tidy-checks=*',
-	\		'--header-insertion=never',
-	\		'--completion-style=detailed'
-	\  ]
-	\ },
-	\
-	\ #{name: 'cmake-language-server',
-	\   filetype: 'cmake',
-	\   path: 'cmake-language-server'
-	\ },
-	\
-	\ #{name: 'efm-langserver',
-	\   filetype: ['markdown', 'sh', 'json', 'jsonc'],
-	\   path: 'efm-langserver',
-	\   args: [],
-	\	initializationOptions: #{
-	\ 	  documentFormatting: v:true,
-	\ 	  documentRangeFormatting: v:true,
-	\ 	  hover: v:true,
-	\ 	  documentSymbol: v:true,
-	\ 	  codeAction: v:true,
-	\ 	  completion: v:true
-	\	}
-	\ },
-	\
-	\ #{name: 'ginko_ls',
-	\   filetype: 'dts',
-	\   path: 'ginko_ls',
-	\ },
-	\
-	\ #{name: 'julia',
-	\   filetype: 'julia',
-	\   path: 'julia',
-	\   args: ['--startup-file=no', '--history-file=no', '-e', '
-	\       using LanguageServer;
-	\       using Pkg;
-	\       import StaticLint;
-	\       import SymbolServer;
-	\       env_path = dirname(Pkg.Types.Context().env.project_file);
-	\
-	\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
-	\       server.runlinter = true;
-	\       run(server);
-	\  ']
-	\ },
-	\
-	\ #{name: 'marksman',
-	\   filetype: 'markdown',
-	\   path: 'marksman',
-	\   args: [],
-	\ },
-	\
-	\ #{name: 'pyright',
-	\   filetype: 'python',
-	\   path: 'pyright-langserver',
-	\   args: ['--stdio'],
-	\   workspaceConfig: #{
-	\     python: #{
-	\       pythonPath: '/usr/bin/python'
-	\     }
-	\   }
-	\ },
-	\
-	\ #{name: 'rustanalyzer',
-	\   filetype: ['rust'],
-	\   path: 'rust-analyzer',
-	\   args: [],
-	\   syncInit: v:true
-	\ },
-	\
-	\ #{name: 'vimls',
-	\   filetype: 'vim',
-	\   path: 'vim-language-server',
-	\   args: ['--stdio']
-	\ },
-	\
-	\ #{name: 'vhdl_ls',
-	\   filetype: 'vhdl',
-	\   path: 'vhdl_ls',
-	\   args: []
-	\ },
-	\
-	\ #{name: 'vscode-json-languageserver',
-	\   filetype: ['json', 'jsonc'],
-	\   path: 'vscode-json-languageserver',
-	\   args: ['--stdio']
-	\ }
-	\]
+" Source all language servers
+for file in split(glob('~/.vim/lsp/*.vim'), '\n')
+	execute 'source' fnameescape(file)
+endfor
+
+" Enable language servers
+let lspServers = []
+call add(lspServers, bash)
+call add(lspServers, bitbake)
+call add(lspServers, clangd)
+call add(lspServers, cmake)
+call add(lspServers, efm)
+call add(lspServers, ginko)
+call add(lspServers, json)
+call add(lspServers, julia)
+call add(lspServers, marksman)
+call add(lspServers, pyright)
+call add(lspServers, rustanalyzer)
+" call add(lspServers, sonarlint)
+call add(lspServers, vhdl)
+call add(lspServers, vim)
 
 autocmd VimEnter * call LspAddServer(lspServers)
 
