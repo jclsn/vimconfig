@@ -21,5 +21,7 @@ let cspell =
 			\     'yaml',
 			\   ],
 			\   path: '/usr/bin/cspell-lsp',
-			\   args: ['--stdio', '--dictionary', '/home/jan/.vim/cSpell.txt']
+			\   args: ['--stdio', 
+			\		   '--config', '/home/jan/.vim/cSpell.json',
+			\   ]
 			\ }

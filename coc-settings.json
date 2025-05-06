@@ -33,33 +33,53 @@
   "diagnostic.hintSign": "💡",
   "diagnostic.signPriority": 100,
   "cmake.formatter": "/usr/bin/cmake-format",
-  "cmake.formatter_args": ["-C", "./.cmake-format.yaml"],
+  "cmake.formatter_args": [
+    "-C",
+    "./.cmake-format.yaml"
+  ],
   "cmake.lsp.enable": true,
   "cmake.lsp.serverPath": "/usr/bin/cmake-language-server",
   "coc.preferences.formatOnSave": false,
   "languageserver": {
     "asm-lsp": {
       "command": "asm-lsp",
-      "filetypes": ["asm", "s", "S", "assembly", "nasm"]
+      "filetypes": [
+        "asm",
+        "s",
+        "S",
+        "assembly",
+        "nasm"
+      ]
     },
     "bitbake": {
       "command": "bitbake-language-server",
-      "filetypes": ["bitbake"]
+      "filetypes": [
+        "bitbake"
+      ]
     },
     "ginko_ls": {
       "command": "ginko_ls",
-      "filetypes": ["dts"]
+      "filetypes": [
+        "dts"
+      ]
     },
     "vhdl_ls": {
       "command": "vhdl_ls",
-      "filetypes": ["vhdl"]
+      "filetypes": [
+        "vhdl"
+      ]
     }
   },
   "inlayHint.display": false,
   "[rust][cpp]": {
     "semanticTokens.enable": false
   },
-  "clangd.compilationDatabaseCandidates": ["./", "build", "Debug", "Release"],
+  "clangd.compilationDatabaseCandidates": [
+    "./",
+    "build",
+    "Debug",
+    "Release"
+  ],
   "clangd.arguments": [
     "--background-index",
     "--clang-tidy",
@@ -75,10 +95,18 @@
   "python.analysis.typeCheckingMode": "basic",
   "diagnostic-languageserver.filetypes": {
     "vim": "vint",
-    "markdown": ["write-good", "markdownlint"],
+    "markdown": [
+      "write-good",
+      "markdownlint"
+    ],
     "sh": "shellcheck",
-    "yaml": ["yamllint"],
-    "cmake": ["cmake-lint", "cmakelint"],
+    "yaml": [
+      "yamllint"
+    ],
+    "cmake": [
+      "cmake-lint",
+      "cmakelint"
+    ],
     "systemd": "systemd-analyze"
   },
   "diagnostic-languageserver.formatFiletypes": {
@@ -92,7 +120,9 @@
   "typescript.preferences.includePackageJsonAutoImports": "auto",
   "javascript.suggestionActions.enabled": true,
   "javascript.validate.enable": true,
-  "cSpell.import": ["~/.vim/cSpell.json"],
+  "cSpell.import": [
+    "~/.vim/cSpell.json"
+  ],
   "sonarlint.notifyMissingCompileCommands": false,
   "sonarlint.pathToCompileCommands": "./build/compile_commands.json"
 }
