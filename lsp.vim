@@ -36,7 +36,7 @@ let lspOpts = #{
 	\   showDiagInPopup: v:true,
 	\   showDiagOnStatusLine: v:false,
 	\   showDiagWithSign: v:true,
-	\   showDiagWithVirtualText: v:true,
+	\   showDiagWithVirtualText: v:false,
 	\   showInlayHints: v:false,
 	\   showSignature: v:true,
 	\   snippetSupport: v:true,
@@ -64,7 +64,7 @@ call add(lspServers, bash)
 call add(lspServers, bitbake)
 call add(lspServers, clangd)
 call add(lspServers, cmake)
-" call add(lspServers, cspell)
+call add(lspServers, cspell)
 call add(lspServers, efm)
 call add(lspServers, ginko)
 call add(lspServers, json)
