@@ -99,9 +99,9 @@ endfunction
 nnoremap <silent> K :call <SID>SmartHover()<CR>
 nnoremap <silent> <RightMouse> :call <SID>SmartHover()<CR>
 nnoremap <silent> <MiddleMouse> :LspPeekDefinition<CR>
+nnoremap <silent> <C-.> :LspGotoDefinition<CR>
 
 nnoremap <silent> gd :LspGotoDefinition<CR>
-nnoremap <silent> <C-.> :LspGotoDefinition<CR>
 nnoremap <silent> gy :LspGotoTypeDef<CR>
 nnoremap <silent> gi :LspGotoImpl<CR>
 nnoremap <silent> gr :LspGotoDeclaration<CR>
