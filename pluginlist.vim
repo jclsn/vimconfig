@@ -1,11 +1,11 @@
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'SirVer/ultisnips'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
 " Plug 'hrsh7th/vim-vsnip'
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
-" Plug 'yegappan/lsp'
+Plug 'yegappan/lsp'
 
 
 " ################## Code Formatting ####################
@@ -85,7 +85,6 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 
 " ------------- C++ --------------
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
-Plug 'cpiger/vim-qt'
 
 " ------------ Rust ------------
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
@@ -151,3 +150,4 @@ Plug 'git@github.com:jclsn/vim-PairTools.git'
 Plug 'git@github.com:jclsn/vim-bitbake.git'
 Plug 'git@github.com:jclsn/vim-templates'
 Plug 'git@github.com:jclsn/vimspector-templates'
+Plug 'git@github.com:jclsn/vim-qt'
