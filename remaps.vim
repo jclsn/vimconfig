@@ -205,7 +205,8 @@ nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<CR>
 nnoremap <leader>ec :vsplit ~/.vim/commands.vim<CR>
 nnoremap <leader>ed :vsplit ~/.vim/vimspectorrc.vim<CR>
 nnoremap <leader>ef :vsplit ~/.vim/fernrc.vim<CR>
-nnoremap <leader>el :vsplit ~/.vim/lsp.vim<CR>
+nnoremap <leader>elc :vsplit ~/.vim/lsp.vim<CR>
+nnoremap <leader>elp :vsplit ~/.vim/lsp<CR>
 nnoremap <leader>em :vsplit ~/.vim/miscellaneous.vim<CR>
 nnoremap <leader>ep :vsplit ~/.vim/pluginlist.vim<CR>
 nnoremap <leader>er :vsplit ~/.vim/remaps.vim<CR>
