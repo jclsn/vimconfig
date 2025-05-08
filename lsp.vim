@@ -27,6 +27,7 @@ let lspOpts = #{
 	\   diagVirtualTextAlign: 'above',
 	\   noNewlineInCompletion: v:false,
 	\   popupBorder: v:true,
+	\	popupBorderSignatureHelp: v:true,
 	\   omniComplete: v:null,
 	\   outlineOnRight: v:true,
 	\   outlineWinSize: 50,
