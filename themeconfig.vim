@@ -38,14 +38,8 @@ if has_key(plugs, 'lsp')
 	hi link LspWriteRef Visual
 	hi link LspReadRef Visual
 
-	" hi LspHoverPopup guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
-	" hi LspHoverPopupBorder guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
-	" hi LspPeekPopup guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
-	" hi LspPeekPopupBorder guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
-	" hi LspSymbolMenuPopup guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
-	" hi LspSymbolMenuPopupBorder guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
-	" hi LspTypeHierarchyPopup guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
-	" hi LspTypeHierarchyPopupBorder guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
+	hi LspPopup guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
+	hi LspPopupBorder guibg=NONE ctermbg=NONE guifg=Gray ctermfg=Gray
 	" hi PMenu guibg=NONE ctermbg=NONE
 	" let g:LspSignatureHelpPopupBorder = []
 endif
