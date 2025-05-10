@@ -5,8 +5,6 @@ let clangd =
 			\  args: [
 			\		'--background-index',
 			\		'--clang-tidy',
-			\		'--clang-tidy-checks=*',
-			\		'--header-insertion=never',
 			\		'--completion-style=detailed'
 			\  ]
 			\ }
