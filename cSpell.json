@@ -617,6 +617,7 @@
     "Spontane",
     "QVXY",
     "QWGL",
-    "quintptr"
+    "quintptr",
+    "nvim"
   ]
 }
