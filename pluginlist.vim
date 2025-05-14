@@ -11,7 +11,6 @@ Plug 'yegappan/lsp'
 " ################## Code Formatting ####################
 Plug 'ambv/black', { 'for': [ 'python' ] }
 Plug 'bigfish/vim-stylelint'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'rhysd/vim-clang-format', { 'for': ['c', 'cpp'] }
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'zeekay/vim-beautify'
