@@ -15,7 +15,6 @@ Plug 'rhysd/vim-clang-format', { 'for': ['c', 'cpp'] }
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'zeekay/vim-beautify'
 
-
 " ################# Debugging #################
 if has('python3')
 	Plug 'puremourning/vimspector'
@@ -71,6 +70,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'preservim/vim-markdown'
 Plug 'lervag/vimtex'
+Plug 'gergap/vim-ollama'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
