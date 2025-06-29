@@ -2,13 +2,12 @@
 "                Miscellaneous settings
 " ++++++++++++++++++++++++************************
 "
-source ~/.vim/kernel-style.vim
+source $MYVIMDIR/kernel-style.vim
 
 set number
 set relativenumber
 set signcolumn=yes
 set undofile   " Maintain undo history between sessions
-set shell=zsh
 set ttimeoutlen=0
 set timeoutlen=500
 set noswapfile
@@ -33,16 +32,20 @@ set listchars=tab:▸·,eol:¬
 set exrc
 set nocursorline
 
+if has('unix') && !has('win32')
+	set shell=zsh
+endif
+
 let g:c_syntax_for_h=1
 let g:asmsyntax = 'nasm'
 let filetype_asm = 'nasm'
 
-let g:pairtools_samplefile_path='~/.vim/plugged/vim-PairTools/ftplugin'
+let g:pairtools_samplefile_path='$MYVIMDIR/plugged/vim-PairTools/ftplugin'
 
 if has ('nvim')
 	set undodir=~/.config/nvim/undodir
 else
-	set undodir=~/.vim/undodir
+	set undodir=$MYVIMDIR/undodir
 end
 
 let g:better_whitespace_ctermcolor='gray'
@@ -98,7 +101,9 @@ if exists('+termguicolors')
 endif
 
 if has('nvim')
-    let g:python3_host_prog = '/usr/bin/python3'
+	if has('unix') && !has('win32')
+	    let g:python3_host_prog = '/usr/bin/python3'
+	endif
 else
     set pyxversion=3
 endif
@@ -108,4 +113,6 @@ if $TERM == 'screen-256color' " or w/e your TERM is in tmux
 endif
 
 " Always use make -j$(nproc) when using :make
-let &makeprg = "make -j" . system('nproc')
+if has('unix') && !has('win32')
+	let &makeprg = "make -j" . system('nproc')
+endif
