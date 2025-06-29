@@ -70,7 +70,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'preservim/vim-markdown'
 Plug 'lervag/vimtex'
-Plug 'gergap/vim-ollama'
+"Plug 'gergap/vim-ollama'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
