@@ -116,3 +116,13 @@ endif
 if has('unix') && !has('win32')
 	let &makeprg = "make -j" . system('nproc')
 endif
+
+" Fix cursor on Windows
+if exists('$WT_SESSION') || $TERM_PROGRAM ==# 'Windows_Terminal'
+	"set t_SI=[5 q  " Insert mode: blinking beam
+	"set t_EI=[1 q  " Normal mode: blinking block
+	"set t_SR=[3 q  " Replace mode: blinking underscore
+	let &t_SI = "\e[5 q"
+	let &t_EI = "\e[1 q"
+	let &t_SR = "\e[3 q"
+endif
