@@ -1,8 +1,8 @@
 vim9script
 
 def MoveCocWordsToCSpell()
-    var coc_json = expand("~/.vim/coc-settings.json")
-    var cspell_json = expand("~/.vim/cSpell.json")
+    var coc_json = expand("$MYVIMDIR/coc-settings.json")
+    var cspell_json = expand("$MYVIMDIR/cSpell.json")
 
     # Check if jq is installed
     if system('command -v jq') == ""

@@ -108,17 +108,17 @@ vnoremap <leader>m :call man#get_page('horizontal',   GetSelectedText())<CR>
 inoremap <c-d> <esc>ddi
 
 " Quick editing of config files
-nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
+nnoremap <leader>ec :vsplit $MYVIMDIR/commands.vim<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>er :vsplit ~/.vim/remaps.vim<cr>
-nnoremap <leader>em :vsplit ~/.vim/miscellaneous.vim<cr>
-nnoremap <leader>ep :vsplit ~/.vim/pluginlist.vim<cr>
-nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<cr>
-nnoremap <leader>ec :vsplit ~/.vim/commands.vim<cr>
-nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<cr>
-nnoremap <leader>ef :vsplit ~/.vim/fernrc.vim<cr>
-nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<cr>
-nnoremap <leader>ed :vsplit ~/.vim/vimspectorrc.vim<cr>
+nnoremap <leader>er :vsplit $MYVIMDIR/remaps.vim<cr>
+nnoremap <leader>em :vsplit $MYVIMDIR/miscellaneous.vim<cr>
+nnoremap <leader>ep :vsplit $MYVIMDIR/pluginlist.vim<cr>
+nnoremap <leader>et :vsplit $MYVIMDIR/themeconfig.vim<cr>
+nnoremap <leader>ec :vsplit $MYVIMDIR/commands.vim<cr>
+nnoremap <leader>ea :vsplit $MYVIMDIR/autocommands.vim<cr>
+nnoremap <leader>ef :vsplit $MYVIMDIR/fernrc.vim<cr>
+nnoremap <leader>ey :vsplit $MYVIMDIR/ycmrc.vim<cr>
+nnoremap <leader>ed :vsplit $MYVIMDIR/vimspectorrc.vim<cr>
 
 " Swap lines beautifully
 function! s:swap_lines(n1, n2)
@@ -185,7 +185,7 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 " ++++++++++++++++++++++++************************
 nnoremap <leader>rt :RainbowToggle<CR>
 nnoremap <leader>cl :ColorToggle<CR>
-nnoremap <leader>ab :tabe ~/.vim/after/plugin/abolish.vim <CR>
+nnoremap <leader>ab :tabe $MYVIMDIR/after/plugin/abolish.vim <CR>
 nnoremap <leader>nn :set rnu! <CR>
 nnoremap <leader>ll :set list! <CR>
 nnoremap <leader>rb :RainbowToggle <CR>
@@ -201,18 +201,18 @@ nnoremap <leader>rnd ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)
 " ++++++++++++++++++++++++************************
 "          Quick editing of config files
 " ++++++++++++++++++++++++************************
-nnoremap <leader>ea :vsplit ~/.vim/autocommands.vim<CR>
-nnoremap <leader>ec :vsplit ~/.vim/commands.vim<CR>
-nnoremap <leader>ed :vsplit ~/.vim/vimspectorrc.vim<CR>
-nnoremap <leader>ef :vsplit ~/.vim/fernrc.vim<CR>
-nnoremap <leader>elc :vsplit ~/.vim/lsp.vim<CR>
-nnoremap <leader>elp :vsplit ~/.vim/lsp<CR>
-nnoremap <leader>em :vsplit ~/.vim/miscellaneous.vim<CR>
-nnoremap <leader>ep :vsplit ~/.vim/pluginlist.vim<CR>
-nnoremap <leader>er :vsplit ~/.vim/remaps.vim<CR>
-nnoremap <leader>et :vsplit ~/.vim/themeconfig.vim<CR>
+nnoremap <leader>ea :vsplit $MYVIMDIR/autocommands.vim<CR>
+nnoremap <leader>ec :vsplit $MYVIMDIR/commands.vim<CR>
+nnoremap <leader>ed :vsplit $MYVIMDIR/vimspectorrc.vim<CR>
+nnoremap <leader>ef :vsplit $MYVIMDIR/fernrc.vim<CR>
+nnoremap <leader>elc :vsplit $MYVIMDIR/lsp.vim<CR>
+nnoremap <leader>elp :vsplit $MYVIMDIR/lsp<CR>
+nnoremap <leader>em :vsplit $MYVIMDIR/miscellaneous.vim<CR>
+nnoremap <leader>ep :vsplit $MYVIMDIR/pluginlist.vim<CR>
+nnoremap <leader>er :vsplit $MYVIMDIR/remaps.vim<CR>
+nnoremap <leader>et :vsplit $MYVIMDIR/themeconfig.vim<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>ey :vsplit ~/.vim/ycmrc.vim<CR>
+nnoremap <leader>ey :vsplit $MYVIMDIR/ycmrc.vim<CR>
 
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 

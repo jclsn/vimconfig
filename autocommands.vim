@@ -3,26 +3,26 @@ if has("autocmd")
 
 	" Autosource files on saving
 	"autocmd bufwritepost .vimrc source $MYVIMRC
-	autocmd bufwritepost abolish.vim source ~/.vim/after/plugin/abolish.vim
-	autocmd bufwritepost autocommands.vim source ~/.vim/autocommands.vim
-	autocmd bufwritepost cmakerc.vim source ~/.vim/cmakerc.vim
-	autocmd bufwritepost cocrc.vim source ~/.vim/cocrc.vim
-	autocmd bufwritepost commands.vim source ~/.vim/commands.vim
-	autocmd bufwritepost ctags.vim source ~/.vim/ctags.vim
-	autocmd bufwritepost fernrc.vim source ~/.vim/fernrc.vim
-	autocmd bufwritepost folds.vim source ~/.vim/folds.vim
-	autocmd bufwritepost fugitiverc.vim source ~/.vim/fugitiverc.vim
-	autocmd bufwritepost kitty.vim source ~/.vim/kitty.vim
-	autocmd bufwritepost lsp.vim source ~/.vim/lsp.vim
-	autocmd bufwritepost miscellaneous.vim source ~/.vim/miscellaneous.vim
-	autocmd bufwritepost pluginlist.vim source ~/.vim/pluginlist.vim
-	autocmd bufwritepost remaps.vim source ~/.vim/remaps.vim
-	autocmd bufwritepost themeconfig.vim source ~/.vim/themeconfig.vim
-	autocmd bufwritepost ultisnipsrc.vim source ~/.vim/ultisnipsrc.vim
-	autocmd bufwritepost urlhandler.vim source ~/.vim/urlhandler.vim
-	autocmd bufwritepost vimspectorrc.vim source ~/.vim/vimspectorrc.vim
-	autocmd bufwritepost vimtexrc.vim source ~/.vim/vimtexrc.vim
-	autocmd bufwritepost ycmrc.vim source ~/.vim/ycmrc.vim
+	autocmd bufwritepost abolish.vim source $MYVIMDIR/after/plugin/abolish.vim
+	autocmd bufwritepost autocommands.vim source $MYVIMDIR/autocommands.vim
+	autocmd bufwritepost cmakerc.vim source $MYVIMDIR/cmakerc.vim
+	autocmd bufwritepost cocrc.vim source $MYVIMDIR/cocrc.vim
+	autocmd bufwritepost commands.vim source $MYVIMDIR/commands.vim
+	autocmd bufwritepost ctags.vim source $MYVIMDIR/ctags.vim
+	autocmd bufwritepost fernrc.vim source $MYVIMDIR/fernrc.vim
+	autocmd bufwritepost folds.vim source $MYVIMDIR/folds.vim
+	autocmd bufwritepost fugitiverc.vim source $MYVIMDIR/fugitiverc.vim
+	autocmd bufwritepost kitty.vim source $MYVIMDIR/kitty.vim
+	autocmd bufwritepost lsp.vim source $MYVIMDIR/lsp.vim
+	autocmd bufwritepost miscellaneous.vim source $MYVIMDIR/miscellaneous.vim
+	autocmd bufwritepost pluginlist.vim source $MYVIMDIR/pluginlist.vim
+	autocmd bufwritepost remaps.vim source $MYVIMDIR/remaps.vim
+	autocmd bufwritepost themeconfig.vim source $MYVIMDIR/themeconfig.vim
+	autocmd bufwritepost ultisnipsrc.vim source $MYVIMDIR/ultisnipsrc.vim
+	autocmd bufwritepost urlhandler.vim source $MYVIMDIR/urlhandler.vim
+	autocmd bufwritepost vimspectorrc.vim source $MYVIMDIR/vimspectorrc.vim
+	autocmd bufwritepost vimtexrc.vim source $MYVIMDIR/vimtexrc.vim
+	autocmd bufwritepost ycmrc.vim source $MYVIMDIR/ycmrc.vim
 
 	" Autoformatting
 	" autocmd bufwritepost *.ts :Prettier <CR>

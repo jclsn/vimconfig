@@ -2,7 +2,7 @@ vim9script
 
 set encoding=utf-8
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$MYVIMDIR/plugged')
 Plug 'pineapplegiant/spaceduck'
 Plug 'jasonccox/vim-wayland-clipboard'
 call plug#end()

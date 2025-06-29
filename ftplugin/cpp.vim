@@ -8,4 +8,4 @@ function! PreserveCursor(cmd)
     call setpos(".", l:save_pos)  " Restore cursor position
 endfunction
 
-so ~/.vim/cpp-maps.vim
+so $MYVIMDIR/cpp-maps.vim

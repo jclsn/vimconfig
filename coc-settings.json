@@ -120,7 +120,7 @@
   "javascript.suggestionActions.enabled": true,
   "javascript.validate.enable": true,
   "cSpell.import": [
-    "~/.vim/cSpell.json"
+    "$MYVIMDIR/cSpell.json"
   ],
   "sonarlint.notifyMissingCompileCommands": false,
   "sonarlint.pathToCompileCommands": "./build/compile_commands.json"

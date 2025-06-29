@@ -1,7 +1,7 @@
 set encoding=utf-8
 set nocompatible
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$MYVIMDIR/plugged')
 Plug 'pineapplegiant/spaceduck'
 Plug 'jasonccox/vim-wayland-clipboard'
 call plug#end()
