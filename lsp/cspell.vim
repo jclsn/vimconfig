@@ -22,7 +22,7 @@ let cspell =
 			\   ],
 			\   path: '/usr/bin/cspell-lsp',
 			\   args: ['--stdio', 
-			\          '--sortWords',
-			\          '--config', '/home/jan/.vim/cSpell.json',
+			\		   '--sortWords',
+			\		   '--config', '/home/jan/.vim/cSpell.json',
 			\   ]
 			\ }
