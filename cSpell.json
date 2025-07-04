@@ -626,5 +626,14 @@
     "quintptr",
     "tolower",
     "vepu"
+    "bashls",
+    "cppcoreguidelines",
+    "cword",
+    "elif",
+    "fnameescape",
+    "logid",
+    "nvim",
+    "quintptr",
+    "tolower"
   ]
 }
