@@ -37,17 +37,11 @@ Plug 'ryanoasis/vim-devicons'
 " Colorschemes
 Plug 'Heorhiy/VisualStudioDark.vim'
 Plug 'arcticicestudio/nord-vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'gosukiwi/vim-atom-dark'
-Plug 'jnurmine/Zenburn'
-Plug 'joshdick/onedark.vim'
-Plug 'lifepillar/vim-solarized8'
-Plug 'morhetz/gruvbox'
 Plug 'jclsn/spaceduck', { 'branch': 'dev' }
+Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vv9k/vim-github-dark'
-Plug 'EdenEast/nightfox.nvim'
 
 " Airline bar and themes
 Plug 'vim-airline/vim-airline'
