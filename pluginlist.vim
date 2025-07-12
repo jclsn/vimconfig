@@ -21,6 +21,13 @@ if has('python3')
 endif
 " Plug 'szw/vim-maximizer'
 
+" ################### Git ####################
+Plug 'Eliot00/git-lens.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'shumphrey/fugitive-gitlab.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+
 " ############# Look and feel ###############
 " Syntax 
 Plug 'bfrg/vim-c-cpp-modern'          " Better C++ highlighting
@@ -57,8 +64,6 @@ Plug 'Yggdroot/indentLine'
 
 
 " ################## Miscellaneous #############################
-Plug 'Eliot00/git-lens.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'andrewstuart/vim-kubernetes'
 Plug 'chrisbra/matchit'
 " Plug 'gergap/vim-ollama'
@@ -124,9 +129,6 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize' " test
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fugitive'
-Plug 'shumphrey/fugitive-gitlab.vim'
-Plug 'tpope/vim-git'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
