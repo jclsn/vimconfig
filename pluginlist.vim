@@ -23,13 +23,13 @@ endif
 
 " ############# Look and feel ###############
 " Syntax 
-Plug 'luochen1990/rainbow'
-Plug 'm-pilia/vim-pkgbuild'
-Plug 'wgwoods/vim-systemd-syntax'
-Plug 'westeri/asl-vim'
-Plug 'bfrg/vim-c-cpp-modern'
-Plug 'martinlroth/vim-devicetree'
-Plug 'habamax/vim-rst'
+Plug 'bfrg/vim-c-cpp-modern'          " Better C++ highlighting
+Plug 'habamax/vim-rst'                " reStructuredtext
+Plug 'luochen1990/rainbow'            " Multicolor parentheses and brackets
+Plug 'm-pilia/vim-pkgbuild'           " Arch Linux PKGBUILD
+Plug 'martinlroth/vim-devicetree'     " Linux devicetree
+Plug 'westeri/asl-vim'                " ACPI source language
+Plug 'wgwoods/vim-systemd-syntax'     " Systemd unit files
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
