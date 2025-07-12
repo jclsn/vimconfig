@@ -1,3 +1,5 @@
+set updatetime=100
+
 let g:gitgutter_sign_priority=8
 
 nnoremap ]h <Plug>(GitGutterNextHunk)
