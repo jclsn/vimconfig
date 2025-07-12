@@ -34,6 +34,3 @@ let g:rainbow_conf = {
 au FileType * RainbowToggleOff
 au FileType json RainbowToggleOn
 au FileType jsonc RainbowToggleOn
-au FileType cpp RainbowToggleOn
-
-
