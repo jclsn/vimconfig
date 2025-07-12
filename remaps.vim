@@ -192,7 +192,6 @@ nnoremap <leader>rb :RainbowToggle <CR>
 nnoremap <leader>fi :Files<CR>
 nnoremap <F2> :call CurtineIncSw()<CR>
 nnoremap <Leader>pp :H2cppxAuto<CR>
-nnoremap <leader>ad :AddToDictionary<CR>
 
 " Change word under cursor to random number 
 nnoremap <leader>rnd ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<CR><esc>

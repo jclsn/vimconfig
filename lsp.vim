@@ -89,6 +89,7 @@ nnoremap <silent> <leader>pdc :LspPeekDeclaration<CR>
 nnoremap <silent> <leader>pr :LspPeekReferences<CR>
 nnoremap <silent> <leader>ol :LspOutline<CR>
 nnoremap <silent> <leader>rn :LspRename<CR>
+nnoremap <silent> <leader>ad :LspCodeAction Add to user words in config<CR>
 
 function! s:SmartHover() abort
 	let result = execute('LspHover')
