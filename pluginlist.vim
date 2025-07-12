@@ -57,13 +57,12 @@ Plug 'Yggdroot/indentLine'
 
 
 " ################## Miscellaneous #############################
-Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'andrewstuart/vim-kubernetes'
-Plug 'pseewald/vim-anyfold'
-Plug 'psliwka/vim-smoothie'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
-Plug 'preservim/vim-markdown'
+Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'lervag/vimtex'
+Plug 'preservim/vim-markdown'
+Plug 'psliwka/vim-smoothie'
 "Plug 'gergap/vim-ollama'
 
 
