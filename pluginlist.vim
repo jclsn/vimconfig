@@ -87,11 +87,11 @@ Plug 'jclsn/vim-man', { 'on': ['Man', 'Vman'] }
 Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
 
 " Fern
-Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'lambdalisue/fern-mapping-git.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
 
