@@ -15,11 +15,13 @@ Plug 'rhysd/vim-clang-format', { 'for': ['c', 'cpp'] }
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'zeekay/vim-beautify'
 
+
 " ################# Debugging #################
 if has('python3')
 	Plug 'puremourning/vimspector'
 endif
 " Plug 'szw/vim-maximizer'
+
 
 " ################### Git ####################
 Plug 'Eliot00/git-lens.vim'
@@ -65,9 +67,6 @@ Plug 'Roy-Orbison/airline-colour-splits'
 Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'
 
-" Indents
-Plug 'Yggdroot/indentLine'
-
 
 " ################## Miscellaneous #############################
 Plug 'andrewstuart/vim-kubernetes'
@@ -101,7 +100,9 @@ Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 " ------------ Rust ------------
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
+
 " ################## Tools #############################
+
 " Docs
 Plug 'jclsn/vim-man', { 'on': ['Man', 'Vman'] }
 Plug 'KabbAmine/zeavim.vim', { 'on': 'Zeavim' }
