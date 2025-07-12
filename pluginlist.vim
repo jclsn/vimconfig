@@ -28,6 +28,12 @@ Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 
+" Conflict handling
+Plug 'vim-scripts/ConflictMotions'
+Plug 'vim-scripts/CountJump'       " Dependency for ConflictMotions
+Plug 'vim-scripts/ingo-library'    " Dependency for ConflictMotions
+
+
 " ############# Look and feel ###############
 " Syntax 
 Plug 'bfrg/vim-c-cpp-modern'          " Better C++ highlighting
@@ -108,11 +114,6 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
-
-" Vim scripts
-Plug 'vim-scripts/ConflictMotions'
-Plug 'vim-scripts/CountJump'
-Plug 'vim-scripts/ingo-library'
 
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
