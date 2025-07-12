@@ -25,3 +25,10 @@ command DeleteNonAscii :g/[^\x00-\x7f]/d
 command ShowTrailingWhitespace :match ExtraWhitespace /\s\+$/
 command HighlightStack call SynStack()
 command HighlightGroup call SynGroup()
+
+function! MixxxIssue()
+  let l:issue = expand('<cword>')
+  let l:mixxx_issue_url = "https://github.com/mixxxdj/mixxx/issues/" .. issue
+  silent! call system('xdg-open ' .. shellescape(mixxx_issue_url) .. ' &')
+endfun
+command MixxxIssue call MixxxIssue()
