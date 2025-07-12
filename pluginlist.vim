@@ -57,13 +57,22 @@ Plug 'Yggdroot/indentLine'
 
 
 " ################## Miscellaneous #############################
+Plug 'Eliot00/git-lens.vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'andrewstuart/vim-kubernetes'
+Plug 'chrisbra/matchit'
+" Plug 'gergap/vim-ollama'
+Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'jasonccox/vim-wayland-clipboard'
+Plug 'jpalardy/vim-slime'
+Plug 'junegunn/vim-peekaboo'
 Plug 'lervag/vimtex'
+Plug 'markonm/traces.vim'
+Plug 'mileszs/ack.vim'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'preservim/vim-markdown'
 Plug 'psliwka/vim-smoothie'
-"Plug 'gergap/vim-ollama'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
@@ -94,17 +103,6 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
-
-" Other
-Plug 'chrisbra/matchit'
-Plug 'godlygeek/tabular'
-Plug 'markonm/traces.vim'
-Plug 'mileszs/ack.vim'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'junegunn/vim-peekaboo'
-Plug 'jpalardy/vim-slime'
-Plug 'Eliot00/git-lens.vim'
-Plug 'airblade/vim-gitgutter'
 
 " Vim scripts
 Plug 'vim-scripts/ConflictMotions'
