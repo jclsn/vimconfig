@@ -24,7 +24,6 @@ endif
 
 
 " ################### Git ####################
-Plug 'Eliot00/git-lens.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-fugitive'
@@ -119,7 +118,6 @@ Plug 'lambdalisue/nerdfont.vim'
 " Search engines
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'bfrg/vim-fzy'
 Plug 'voldikss/vim-browser-search'
 
 " Startify
@@ -143,6 +141,15 @@ Plug 'git@github.com:jclsn/more-todos.vim'
 Plug 'git@github.com:jclsn/vim-PairTools.git'
 Plug 'git@github.com:jclsn/vim-bitbake.git'
 Plug 'git@github.com:jclsn/vim-templates'
-Plug 'git@github.com:jclsn/vimspector-templates'
-Plug 'git@github.com:jclsn/vim-qt'
-Plug 'git@github.com:jclsn/pkl-vim'
+" Plug 'git@github.com:jclsn/pkl-vim'
+Plug 'git@github.com:jclsn/pkl-neovim'
+
+
+" ################## vim9script plugins #############################
+if has('vim9script')
+	Plug 'Eliot00/git-lens.vim'
+	Plug 'bfrg/vim-fzy'
+
+	Plug 'git@github.com:jclsn/vim-qt'
+	Plug 'git@github.com:jclsn/vimspector-templates'
+endif
