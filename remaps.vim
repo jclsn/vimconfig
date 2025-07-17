@@ -119,6 +119,8 @@ nnoremap <leader>ea :vsplit $MYVIMDIR/autocommands.vim<cr>
 nnoremap <leader>ef :vsplit $MYVIMDIR/fernrc.vim<cr>
 nnoremap <leader>ey :vsplit $MYVIMDIR/ycmrc.vim<cr>
 nnoremap <leader>ed :vsplit $MYVIMDIR/vimspectorrc.vim<cr>
+nnoremap <leader>el :vsplit $MYVIMDIR/lsp.vim<cr>
+nnoremap <leader>elp :vsplit $MYVIMDIR/lsp<cr>
 
 " Swap lines beautifully
 function! s:swap_lines(n1, n2)
