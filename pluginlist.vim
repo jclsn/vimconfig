@@ -96,6 +96,9 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 " ------------- C++ --------------
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
+" ------------ Julia ---------------
+Plug 'JuliaEditorSupport/julia-vim'
+
 " ------------ Rust ------------
 Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
 
