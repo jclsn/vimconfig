@@ -20,7 +20,7 @@ let cspell =
 			\     'vim',
 			\     'yaml',
 			\   ],
-			\   path: '/usr/bin/cspell-lsp',
+			\   path: 'cspell-lsp',
 			\   args: ['--stdio', 
 			\		   '--sortWords',
 			\		   '--config', '/home/jan/.vim/cSpell.json',
