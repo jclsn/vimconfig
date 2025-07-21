@@ -1,7 +1,7 @@
 let pkl = #{
             \   name: 'pkl',
             \   filetype: ['pkl'],
-            \   path: '/usr/bin/java',
+            \   path: 'java',
             \   args: [
             \     '-jar',
             \     '/usr/local/share/pkl/pkl-lsp.jar',

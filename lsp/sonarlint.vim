@@ -1,7 +1,7 @@
 let sonarlint = #{
             \   name: 'sonarlint-ls',
             \   filetype: ['c', 'cpp'],
-            \   path: '/usr/bin/sonarlint-ls',
+            \   path: 'sonarlint-ls',
             \   args: [
             \     '-stdio',
             \     '-analyzers',
