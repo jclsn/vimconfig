@@ -9,8 +9,21 @@ let julia =
 			\       import SymbolServer;
 			\       env_path = dirname(Pkg.Types.Context().env.project_file);
 			\
-			\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
+			\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "' . getcwd() . '");
 			\       server.runlinter = true;
 			\       run(server);
 			\  ']
+			\ }
+
+let jetls =
+			\ #{name: 'JETLS',
+			\   filetype: 'julia', 
+			\   path: 'julia',
+			\   args: [
+			\       '--sysimage=/home/jan/.julia/dev/JETLS/jetls.so',
+			\       '--startup-file=no', 
+			\       '--history-file=no',
+			\       '--project=/home/jan/.julia/dev/JETLS',
+			\       '/home/jan/.julia/dev/JETLS/runserver.jl' 
+			\   ]
 			\ }
