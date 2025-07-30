@@ -14,6 +14,7 @@ let cspell =
 			\     'json',
 			\     'markdown',
 			\     'matlab',
+			\     'pkl',
 			\     'python',
 			\     'rust', 
 			\     'ts', 
