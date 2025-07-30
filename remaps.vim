@@ -186,7 +186,6 @@ nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 "               Miscellaneous mappings
 " ++++++++++++++++++++++++************************
 nnoremap <leader>rt :RainbowToggle<CR>
-nnoremap <leader>cl :ColorToggle<CR>
 nnoremap <leader>ab :tabe $MYVIMDIR/after/plugin/abolish.vim <CR>
 nnoremap <leader>nn :set rnu! <CR>
 nnoremap <leader>ll :set list! <CR>

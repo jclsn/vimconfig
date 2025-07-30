@@ -92,6 +92,7 @@ nnoremap <silent> <leader>pr :LspPeekReferences<CR>
 nnoremap <silent> <leader>ol :LspOutline<CR>
 nnoremap <silent> <leader>rn :LspRename<CR>
 nnoremap <silent> <leader>ad :LspCodeAction Add<CR>
+nnoremap <leader>cl :LspCodeLens<CR>
 
 function! s:SmartHover() abort
 	let result = execute('LspHover')
