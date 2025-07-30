@@ -63,6 +63,17 @@
         "dts"
       ]
     },
+    "pkl-lsp": {
+      "command": "java",
+      "args": ["-jar", "/usr/local/share/pkl/pkl-lsp.jar"],
+      "filetypes": [
+        "pkl"
+      ],
+      "initializationOptions": {
+        "pkl_cli_path": "/usr/bin/pkl"
+      },
+      "syncInit": true,
+    },
     "vhdl_ls": {
       "command": "vhdl_ls",
       "filetypes": [
