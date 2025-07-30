@@ -1,5 +1,5 @@
 let pkl = #{
-            \   name: 'pkl',
+            \   name: 'pkl-lsp',
             \   filetype: ['pkl'],
             \   path: 'java',
             \   args: [
