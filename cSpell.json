@@ -725,8 +725,12 @@
     "winbufnr",
     "windo",
     "winnr",
+    "xgridcolor",
     "xlabel",
+    "xlabelcolor",
     "Xoshiro",
-    "ylabel"
+    "ygridcolor",
+    "ylabel",
+    "ylabelcolor"
   ]
 }
