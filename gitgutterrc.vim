@@ -6,7 +6,7 @@ nnoremap ]h <Plug>(GitGutterNextHunk)
 nnoremap [h <Plug>(GitGutterPrevHunk)
 nnoremap <leader>nh <Plug>(GitGutterNextHunk)
 nnoremap <leader>ph <Plug>(GitGutterPrevHunk)
-nnoremap <leader>vh <Plug>(GitGutterPrevHunk)
+nnoremap <leader>vh <Plug>(GitGutterPreviewHunk)
 
 nnoremap <leader>sh <Plug>(GitGutterStageHunk)
 
