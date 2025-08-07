@@ -5,7 +5,7 @@ let pyright =
 			\   args: ['--stdio'],
 			\   workspaceConfig: #{
 			\     python: #{
-			\       pythonPath: '/usr/bin/python'
+			\       pythonPath: 'python'
 			\     }
 			\   }
 			\ }
