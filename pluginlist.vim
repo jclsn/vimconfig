@@ -5,7 +5,8 @@ Plug 'SirVer/ultisnips'
 " Plug 'hrsh7th/vim-vsnip'
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
-Plug 'yegappan/lsp'
+" Plug 'yegappan/lsp'
+Plug 'git@github.com:jclsn/lsp', {'branch': 'custom-request-support'}
 
 
 " ################## Code Formatting ####################
@@ -145,7 +146,7 @@ Plug 'git@github.com:jclsn/vim-PairTools.git'
 Plug 'git@github.com:jclsn/vim-bitbake.git'
 Plug 'git@github.com:jclsn/vim-templates'
 " Plug 'git@github.com:jclsn/pkl-vim'
-Plug 'git@github.com:jclsn/pkl-neovim'
+Plug 'git@github.com:jclsn/pkl-neovim', {'branch': 'main'}
 
 
 " ################## vim9script plugins #############################
