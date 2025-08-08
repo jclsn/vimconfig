@@ -706,6 +706,7 @@
     "Spontane",
     "strftime",
     "stridx",
+    "sysimage",
     "tabe",
     "tagfunc",
     "tnoremap",
