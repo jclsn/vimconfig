@@ -45,6 +45,7 @@ Plug 'm-pilia/vim-pkgbuild'           " Arch Linux PKGBUILD
 Plug 'martinlroth/vim-devicetree'     " Linux devicetree
 Plug 'westeri/asl-vim'                " ACPI source language
 Plug 'wgwoods/vim-systemd-syntax'     " Systemd unit files
+Plug 'yuezk/vim-js'                   " Javascript
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
