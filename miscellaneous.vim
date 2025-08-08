@@ -48,9 +48,9 @@ else
 	set undodir=$MYVIMDIR/undodir
 end
 
-let g:better_whitespace_ctermcolor='gray'
-let g:better_whitespace_guicolor='gray'
-let g:better_whitespace_enabled=0
+let g:better_whitespace_ctermcolor=178
+let g:better_whitespace_guicolor='firebrick4'
+let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=0
 let g:strip_whitespace_confirm=0
 
