@@ -64,7 +64,6 @@ call add(lspServers, bash)
 call add(lspServers, bitbake)
 call add(lspServers, clangd)
 call add(lspServers, cmake)
-call add(lspServers, cspell)
 call add(lspServers, efm)
 call add(lspServers, ginko)
 call add(lspServers, json)
@@ -77,6 +76,8 @@ call add(lspServers, rustanalyzer)
 " call add(lspServers, sonarlint)
 call add(lspServers, vhdl)
 call add(lspServers, vim)
+" Always add cspell last
+call add(lspServers, cspell)
 
 autocmd VimEnter * call LspAddServer(lspServers)
 
