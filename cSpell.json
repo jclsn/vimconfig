@@ -718,6 +718,7 @@
     "sendexpr",
     "setbufvar",
     "sigidx",
+    "skipnl",
     "Spontane",
     "strftime",
     "stridx",
