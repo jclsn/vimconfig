@@ -5,8 +5,8 @@ Plug 'SirVer/ultisnips'
 " Plug 'hrsh7th/vim-vsnip'
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
-" Plug 'yegappan/lsp'
-Plug 'git@github.com:jclsn/lsp', {'branch': 'custom-request-support'}
+Plug 'yegappan/lsp'
+" Plug 'git@github.com:jclsn/lsp', {'branch': 'custom-request-support'}
 
 
 " ################## Code Formatting ####################
@@ -84,6 +84,7 @@ Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'preservim/vim-markdown'
 Plug 'psliwka/vim-smoothie'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 
 " ################# PROGRAMMING LANGUAGES ####################
