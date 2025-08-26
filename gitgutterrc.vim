@@ -7,6 +7,7 @@ nnoremap [h <Plug>(GitGutterPrevHunk)
 nnoremap <leader>nh <Plug>(GitGutterNextHunk)
 nnoremap <leader>ph <Plug>(GitGutterPrevHunk)
 nnoremap <leader>vh <Plug>(GitGutterPreviewHunk)
+nnoremap <leader>uh <Plug>(GitGutterUndoHunk)
 
 nnoremap <leader>sh <Plug>(GitGutterStageHunk)
 
