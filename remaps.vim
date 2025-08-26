@@ -121,6 +121,7 @@ nnoremap <leader>ey :vsplit $MYVIMDIR/ycmrc.vim<cr>
 nnoremap <leader>ed :vsplit $MYVIMDIR/vimspectorrc.vim<cr>
 nnoremap <leader>el :vsplit $MYVIMDIR/lsp.vim<cr>
 nnoremap <leader>elp :vsplit $MYVIMDIR/lsp<cr>
+nnoremap <leader>es :vsplit $MYVIMDIR/cSpell.json<cr>
 
 " Swap lines beautifully
 function! s:swap_lines(n1, n2)
@@ -165,7 +166,7 @@ function ActivateBlockNavigation()
 	vnoremap <silent> <C-k> :m '<-2<CR>gv
 	vnoremap <silent> <C-h> <gv
 	vnoremap <silent> <C-l> >gv
-endfun 
+endfun
 
 autocmd filetype * call ActivateBlockNavigation()
 
@@ -194,7 +195,7 @@ nnoremap <leader>fi :Files<CR>
 nnoremap <F2> :call CurtineIncSw()<CR>
 nnoremap <Leader>pp :H2cppxAuto<CR>
 
-" Change word under cursor to random number 
+" Change word under cursor to random number
 nnoremap <leader>rnd ciw<c-r>=system('perl -e "printf(qq[%02d], int(rand(60 - 0)))"')<CR><esc>
 
 
