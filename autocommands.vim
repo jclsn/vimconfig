@@ -63,3 +63,19 @@ augroup END
 
 " JSON settings
 au FileType json set filetype=jsonc
+
+" Deduce header filet type for C/C++
+function! GuessHeaderFiletype()
+  let base = expand('%:r')
+  if filereadable(base . '.cpp') || filereadable(base . '.cc') || filereadable(base . '.cxx')
+    set filetype=cpp
+  elseif filereadable(base . '.c')
+    set filetype=c
+  endif
+endfunction
+
+augroup HeaderGuess
+  autocmd!
+  autocmd BufRead,BufNewFile *.h call GuessHeaderFiletype()
+augroup END
+
