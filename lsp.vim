@@ -31,7 +31,7 @@ let lspOpts = #{
 	\   omniComplete: v:null,
 	\   outlineOnRight: v:true,
 	\   outlineWinSize: 50,
-	\   semanticHighlight: v:false,
+	\   semanticHighlight: v:true,
 	\   showDiagInBalloon: v:false,
 	\   showDiagInPopup: v:true,
 	\   showDiagOnStatusLine: v:false,
