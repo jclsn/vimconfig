@@ -50,6 +50,11 @@ function! s:FindCMakeTarget()
       if len(l:match) > 1
         return l:match[1]
       endif
+    elseif l:line =~? 'project'
+      let l:match = matchlist(l:line, 'project\s*(\s*\([A-Za-z0-9_.-]\+\)')
+      if len(l:match) > 1
+        return l:match[1]
+      endif
     endif
   endfor
   return ''
