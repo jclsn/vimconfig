@@ -37,7 +37,7 @@ Plug 'vim-scripts/ingo-library'    " Dependency for ConflictMotions
 
 
 " ############# Look and feel ###############
-" Syntax 
+" Syntax
 Plug 'bfrg/vim-c-cpp-modern'          " Better C++ highlighting
 Plug 'habamax/vim-rst'                " reStructuredtext
 Plug 'luochen1990/rainbow'            " Multicolor parentheses and brackets
@@ -62,7 +62,7 @@ Plug 'vv9k/vim-github-dark'
 " Airline bar and themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Roy-Orbison/airline-colour-splits'
+" Plug 'Roy-Orbison/airline-colour-splits'
 
 " Color color codes
 Plug 'chrisbra/Colorizer'
