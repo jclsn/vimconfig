@@ -101,6 +101,7 @@ Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
 
 " ------------- Go --------------
 Plug 'fatih/vim-go'
+Plug 'charlespascoe/vim-go-syntax'
 
 " ------------ Julia ---------------
 Plug 'JuliaEditorSupport/julia-vim'
