@@ -1,4 +1,4 @@
-let efm = 
+let efm =
 			\ #{name: 'efm-langserver',
 			\   filetype: ['markdown', 'sh', 'json', 'jsonc'],
 			\   path: 'efm-langserver',

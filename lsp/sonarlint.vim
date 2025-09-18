@@ -27,12 +27,12 @@ let sonarlint = #{
             \     platform: 'linux',
             \     architecture: 'x64',
             \     additionalAttributes: #{
-            \       vscode: #{ 
+            \       vscode: #{
             \           isTelemetryEnabled: v:false },
             \     },
             \     sonarlint: #{
             \       pathToCompileCommands: './build/compile_commands.json',
-            \       trace: #{ 
+            \       trace: #{
             \             server: 'verbose' }
             \     }
             \   }

@@ -1,6 +1,6 @@
 let julia =
 			\ #{name: 'julia',
-			\   filetype: 'julia', 
+			\   filetype: 'julia',
 			\   path: 'julia',
 			\   args: ['--startup-file=no', '--history-file=no', '-e', '
 			\       using LanguageServer;
@@ -17,13 +17,13 @@ let julia =
 
 let jetls =
 			\ #{name: 'JETLS',
-			\   filetype: 'julia', 
+			\   filetype: 'julia',
 			\   path: 'julia',
 			\   args: [
 			\       '--sysimage=/home/jan/.julia/dev/JETLS/jetls.so',
-			\       '--startup-file=no', 
+			\       '--startup-file=no',
 			\       '--history-file=no',
 			\       '--project=/home/jan/.julia/dev/JETLS',
-			\       '/home/jan/.julia/dev/JETLS/runserver.jl' 
+			\       '/home/jan/.julia/dev/JETLS/runserver.jl'
 			\   ]
 			\ }

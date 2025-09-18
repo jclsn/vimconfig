@@ -1,4 +1,4 @@
-let clangd =  
+let clangd =
 			\ #{name: 'clangd',
 			\  filetype: ['c', 'cpp'],
 			\  path: 'clangd',
