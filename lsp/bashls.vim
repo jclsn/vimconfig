@@ -1,4 +1,4 @@
-let bash = 
+let bash =
 			\ #{name: 'bashls',
 			\   filetype: 'sh',
 			\   path: 'bash-language-server',
