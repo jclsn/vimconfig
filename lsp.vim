@@ -39,8 +39,8 @@ let lspOpts = #{
 	\   showDiagWithVirtualText: v:false,
 	\   showInlayHints: v:false,
 	\   showSignature: v:true,
-	\   snippetSupport: v:true,
-	\   ultisnipsSupport: v:true,
+	\   snippetSupport: v:false,
+	\   ultisnipsSupport: v:false,
 	\   useBufferCompletion: v:true,
 	\   usePopupInCodeAction: v:true,
 	\   vsnipSupport: v:false,
@@ -60,25 +60,25 @@ endfor
 
 " Enable language servers
 let lspServers = []
-call add(lspServers, bash)
-call add(lspServers, bitbake)
+" call add(lspServers, bash)
+" call add(lspServers, bitbake)
 call add(lspServers, clangd)
-call add(lspServers, cmake)
-call add(lspServers, efm)
-call add(lspServers, ginko)
-call add(lspServers, json)
+" call add(lspServers, cmake)
+" call add(lspServers, efm)
+" call add(lspServers, ginko)
+" call add(lspServers, json)
 " call add(lspServers, julia)
 " call add(lspServers, jetls)
-call add(lspServers, marksman)
-call add(lspServers, pkl)
-call add(lspServers, pyright)
-call add(lspServers, rustanalyzer)
-call add(lspServers, typescript_ls)
+" call add(lspServers, marksman)
+" call add(lspServers, pkl)
+" call add(lspServers, pyright)
+" call add(lspServers, rustanalyzer)
+" call add(lspServers, typescript_ls)
 " call add(lspServers, sonarlint)
-call add(lspServers, vhdl)
-call add(lspServers, vim)
+" call add(lspServers, vhdl)
+" call add(lspServers, vim)
 " Always add cspell last
-call add(lspServers, cspell)
+" call add(lspServers, cspell)
 
 autocmd VimEnter * call LspAddServer(lspServers)
 
