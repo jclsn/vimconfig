@@ -102,7 +102,7 @@ nnoremap <leader>cl :LspCodeLens<CR>
 function! s:SmartHover() abort
 	let result = execute('LspHover')
 	if result =~ 'Error'
-		call feedkeys('K', 'in')
+		call feedkeys('K', 'n')
 	endif
 endfunction
 
