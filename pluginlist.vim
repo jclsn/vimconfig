@@ -5,8 +5,8 @@ Plug 'SirVer/ultisnips'
 " Plug 'hrsh7th/vim-vsnip'
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
-Plug 'yegappan/lsp'
-" Plug 'git@github.com:jclsn/lsp', {'branch': 'custom-request-support'}
+Plug 'yegappan/lsp', { 'do': 'git fetch --unshallow' }
+" Plug 'git@github.com:jclsn/lsp', {'branch': 'fix/autopair-plugin-conflict', 'do': 'git fetch --unshallow' }
 
 
 " ################## Code Formatting ####################
@@ -54,7 +54,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Heorhiy/VisualStudioDark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'gosukiwi/vim-atom-dark'
-Plug 'jclsn/spaceduck', { 'branch': 'dev' }
+Plug 'jclsn/spaceduck', { 'branch': 'dev',  'do': 'git fetch --unshallow'}
 Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vv9k/vim-github-dark'
@@ -147,12 +147,12 @@ Plug 'tpope/vim-sleuth'
 
 " My plugins
 Plug 'git@github.com:jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
-Plug 'git@github.com:jclsn/more-todos.vim'
-Plug 'git@github.com:jclsn/vim-PairTools.git'
-Plug 'git@github.com:jclsn/vim-bitbake.git'
-Plug 'git@github.com:jclsn/vim-templates'
-" Plug 'git@github.com:jclsn/pkl-vim'
-Plug 'git@github.com:jclsn/pkl-neovim', {'branch': 'main'}
+Plug 'git@github.com:jclsn/more-todos.vim', { 'do': 'git fetch --unshallow' }
+Plug 'git@github.com:jclsn/vim-PairTools.git', { 'do': 'git fetch --unshallow' }
+Plug 'git@github.com:jclsn/vim-bitbake.git', { 'do': 'git fetch --unshallow' }
+Plug 'git@github.com:jclsn/vim-templates', { 'do': 'git fetch --unshallow' }
+" Plug 'git@github.com:jclsn/pkl-vim', { 'do': 'git fetch --unshallow' }
+" Plug 'git@github.com:jclsn/pkl-neovim', {'branch': 'main', 'do': 'git fetch --unshallow' }
 
 
 " ################## vim9script plugins #############################
