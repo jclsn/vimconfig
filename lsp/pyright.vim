@@ -16,14 +16,13 @@ function! GetPythonPath() abort
   endif
 endfunction
 
-let pyright =
-			\ #{name: 'pyright',
-			\   filetype: 'python',
-			\   path: 'pyright-langserver',
-			\   args: ['--stdio'],
-			\   settings: #{
-			\     python: #{
-			\       pythonPath: function('GetPythonPath')
-			\     }
-			\   }
-			\ }
+let pyright = #{name: 'pyright',
+  \   filetype: 'python',
+  \   path: 'pyright-langserver',
+  \   args: ['--stdio'],
+  \   workspaceConfig: #{
+  \     python: #{
+  \       pythonPath: GetPythonPath()
+  \     }
+  \   }
+  \ }
