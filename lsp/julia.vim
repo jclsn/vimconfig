@@ -20,7 +20,6 @@ let jetls =
 			\   filetype: 'julia',
 			\   path: 'julia',
 			\   args: [
-			\       '--sysimage=/home/jan/.julia/dev/JETLS/jetls.so',
 			\       '--startup-file=no',
 			\       '--history-file=no',
 			\       '--project=/home/jan/.julia/dev/JETLS',
