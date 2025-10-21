@@ -95,6 +95,7 @@ Plug 'yegappan/disassemble'
 " -------------- C --------------
 Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }
 Plug 'ericcurtin/CurtineIncSw.vim'
+Plug 'gregkh/kernel-coding-style'
 
 " ------------- C++ --------------
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
