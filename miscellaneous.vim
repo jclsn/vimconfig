@@ -2,8 +2,6 @@
 "                Miscellaneous settings
 " ++++++++++++++++++++++++************************
 "
-source $MYVIMDIR/kernel-style.vim
-
 set number
 set relativenumber
 set signcolumn=yes
