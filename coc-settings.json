@@ -51,17 +51,30 @@
         "nasm"
       ]
     },
-    "bitbake": {
-      "command": "bitbake-language-server",
+    "language-server-bitbake": {
+      "command": "language-server-bitbake",
+      "args": ["--stdio"],
       "filetypes": [
         "bitbake"
       ]
     },
-    "ginko_ls": {
-      "command": "ginko_ls",
-      "filetypes": [
-        "dts"
-      ]
+    "devicetree_ls": {
+      "command": "devicetree-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["dts", "dtsi"],
+      "rootPatterns": [".git"],
+      "initializationOptions": {
+        "AutomaticWorkspaceInit": true
+      },
+      "settings": {
+        "devicetree": {
+          "cwd": "/home/jan/Workspace/Kernel/linux",
+          "defaultIncludePaths": ["./include"],
+          "defaultBindingType": "DevicetreeOrg",
+          "contexts": [],
+          "defaultShowFormattingErrorAsDiagnostics": false
+        }
+      }
     },
     "pkl-lsp": {
       "command": "java",
@@ -134,5 +147,9 @@
     "$MYVIMDIR/cSpell.json"
   ],
   "sonarlint.notifyMissingCompileCommands": false,
-  "sonarlint.pathToCompileCommands": "./build/compile_commands.json"
+  "sonarlint.pathToCompileCommands": "./build/compile_commands.json",
+  "cSpell.userWords": [
+    "devicetree",
+    "dtsi"
+  ]
 }
