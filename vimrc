@@ -21,6 +21,9 @@ so $MYVIMDIR/autocommands.vim
 so $MYVIMDIR/folds.vim
 so $MYVIMDIR/commands.vim
 
+if has_key(plugs, 'vim-airline')
+	so $MYVIMDIR/airlinerc.vim
+endif
 if has_key(plugs, 'vimspector')
 	so $MYVIMDIR/vimspectorrc.vim
 endif
