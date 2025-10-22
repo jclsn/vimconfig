@@ -1,7 +1,6 @@
 " #########################################################
 "                       Theme settings
 " #########################################################
-let g:airline_powerline_fonts = 1
 colorscheme spaceduck
 set background=dark
 
