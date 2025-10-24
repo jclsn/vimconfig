@@ -225,17 +225,28 @@ nnoremap <leader>ey :vsplit $MYVIMDIR/ycmrc.vim<CR>
 
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
-function ScrollPopup(up=0)
-  if (len(popup_list()) >= 1)
-    let popid = popup_list()[0]
-    let firstline = popup_getoptions(popid)['firstline']
-    if (a:up)
-      call popup_setoptions(popid, {'firstline': max([1, firstline-1])})
-    else
-      call popup_setoptions(popid, {'firstline': firstline+1})
+function! ScrollPopup(nlines)
+    let winids = popup_list()
+    if len(winids) == 0
+        return
     endif
-  endif
-endfunc
 
-nnoremap <silent> ö :call ScrollPopup()<CR>
-nnoremap <silent> ü :call ScrollPopup(1)<CR>
+    " Ignore hidden popups
+    let prop = popup_getpos(winids[0])
+    if prop.visible != 1
+        return
+    endif
+
+    let firstline = prop.firstline + a:nlines
+    let buf_lastline = str2nr(trim(win_execute(winids[0], "echo line('$')")))
+    if firstline < 1
+        let firstline = 1
+    elseif prop.lastline + a:nlines > buf_lastline
+        let firstline = buf_lastline + prop.firstline - prop.lastline
+    endif
+
+    call popup_setoptions(winids[0], {'firstline': firstline})
+endfunction
+
+nnoremap <silent> ö :call ScrollPopup(3)<CR>
+nnoremap <silent> ü :call ScrollPopup(-3)<CR>
