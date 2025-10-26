@@ -54,7 +54,7 @@ let lspOpts = #{
 autocmd User LspSetup call LspOptionsSet(lspOpts)
 
 " Source all language servers
-for file in split(glob('$MYVIMDIR/lsp/*.vim'), '\n')
+for file in split(glob('$VIMHOME/lsp/*.vim'), '\n')
 	execute 'source' fnameescape(file)
 endfor
 
