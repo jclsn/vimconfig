@@ -69,6 +69,9 @@ endif
 if has_key(plugs, 'ConflictMotions')
 	so $MYVIMDIR/conflictmotions.vim
 endif
+if has_key(plugs, 'lexima.vim')
+	so $MYVIMDIR/leximarc.vim
+endif
 
 " Always apply these settings last
 so $MYVIMDIR/vim9functions.vim
