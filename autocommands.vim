@@ -13,6 +13,7 @@ if has("autocmd")
 	autocmd bufwritepost folds.vim source $MYVIMDIR/folds.vim
 	autocmd bufwritepost fugitiverc.vim source $MYVIMDIR/fugitiverc.vim
 	autocmd bufwritepost kitty.vim source $MYVIMDIR/kitty.vim
+	autocmd bufwritepost leximarc.vim source $MYVIMDIR/leximarc.vim
 	autocmd bufwritepost lsp.vim source $MYVIMDIR/lsp.vim
 	autocmd bufwritepost miscellaneous.vim source $MYVIMDIR/miscellaneous.vim
 	autocmd bufwritepost pluginlist.vim source $MYVIMDIR/pluginlist.vim

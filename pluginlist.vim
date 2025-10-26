@@ -85,6 +85,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'preservim/vim-markdown'
 Plug 'psliwka/vim-smoothie'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'cohama/lexima.vim'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
@@ -149,7 +150,6 @@ Plug 'tpope/vim-sleuth'
 " My plugins
 Plug 'git@github.com:jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
 Plug 'git@github.com:jclsn/more-todos.vim', { 'do': 'git fetch --unshallow' }
-Plug 'git@github.com:jclsn/vim-PairTools.git', { 'do': 'git fetch --unshallow' }
 Plug 'git@github.com:jclsn/vim-bitbake.git', { 'do': 'git fetch --unshallow' }
 Plug 'git@github.com:jclsn/vim-templates', { 'do': 'git fetch --unshallow' }
 " Plug 'git@github.com:jclsn/pkl-vim', { 'do': 'git fetch --unshallow' }
