@@ -1,8 +1,10 @@
 set encoding=utf-8
 set nocompatible
 
-call plug#begin('$MYVIMDIR/plugged')
-	so $MYVIMDIR/pluginlist.vim
+let $VIMHOME = $MYVIMDIR
+
+call plug#begin('$VIMHOME/plugged')
+	so $VIMHOME/pluginlist.vim
 call plug#end()
 
 " ++++++++++++++++++++++++************************
@@ -15,67 +17,65 @@ let g:tmpl_author_name = 'Jan Claussen'
 "               Source large configurations
 " ++++++++++++++++++++++++************************
 
-so $MYVIMDIR/pastes.vim
-so $MYVIMDIR/remaps.vim
-so $MYVIMDIR/autocommands.vim
-so $MYVIMDIR/folds.vim
-so $MYVIMDIR/commands.vim
+so $VIMHOME/pastes.vim
+so $VIMHOME/remaps.vim
+so $VIMHOME/autocommands.vim
+so $VIMHOME/folds.vim
+so $VIMHOME/commands.vim
 
 if has_key(plugs, 'vim-airline')
-	so $MYVIMDIR/airlinerc.vim
+	so $VIMHOME/airlinerc.vim
 endif
 if has_key(plugs, 'vimspector')
-	so $MYVIMDIR/vimspectorrc.vim
+	so $VIMHOME/vimspectorrc.vim
 endif
 if has_key(plugs, 'coc.nvim')
-	so $MYVIMDIR/cocrc.vim
+	so $VIMHOME/cocrc.vim
 endif
 if has_key(plugs, 'lsp')
-	so $MYVIMDIR/lsp.vim
+	so $VIMHOME/lsp.vim
 endif
 if has_key(plugs, 'fern.vim')
-	so $MYVIMDIR/fernrc.vim
+	so $VIMHOME/fernrc.vim
 endif
 if has_key(plugs, 'vim-cmake')
-	so $MYVIMDIR/cmakerc.vim
+	so $VIMHOME/cmakerc.vim
 endif
 if has_key(plugs, 'vim-qt')
-	so $MYVIMDIR/qt.vim
+	so $VIMHOME/qt.vim
 endif
 if has_key(plugs, 'zeavim.vim')
-	so $MYVIMDIR/zeavimrc.vim
+	so $VIMHOME/zeavimrc.vim
 endif
 if has_key(plugs, 'vim-slime')
-	so $MYVIMDIR/slimerc.vim
+	so $VIMHOME/slimerc.vim
 endif
 if has_key(plugs, 'rainbow')
-	so $MYVIMDIR/rainbowrc.vim
+	so $VIMHOME/rainbowrc.vim
 endif
 if has_key(plugs, 'git-lens.vim')
-	so $MYVIMDIR/git-lens.vim
+	so $VIMHOME/git-lens.vim
 endif
 if has_key(plugs, 'vim-fugitive')
-	so $MYVIMDIR/fugitiverc.vim
+	so $VIMHOME/fugitiverc.vim
 endif
 if has_key(plugs, 'vim-doge')
-	so $MYVIMDIR/dogerc.vim
+	so $VIMHOME/dogerc.vim
 endif
-if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('$MYVIMDIR/fugitive-gitlab.vim'))
-	so $MYVIMDIR/fugitive-gitlab.vim
+if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('$VIMHOME/fugitive-gitlab.vim'))
+	so $VIMHOME/fugitive-gitlab.vim
 endif
 if has_key(plugs, 'vim-gitgutter')
-	so $MYVIMDIR/gitgutterrc.vim
+	so $VIMHOME/gitgutterrc.vim
 endif
 if has_key(plugs, 'ConflictMotions')
-	so $MYVIMDIR/conflictmotions.vim
+	so $VIMHOME/conflictmotions.vim
 endif
 if has_key(plugs, 'lexima.vim')
-	so $MYVIMDIR/leximarc.vim
+	so $VIMHOME/leximarc.vim
 endif
 
 " Always apply these settings last
-so $MYVIMDIR/vim9functions.vim
-so $MYVIMDIR/themeconfig.vim
-so $MYVIMDIR/miscellaneous.vim
-
-
+so $VIMHOME/vim9functions.vim
+so $VIMHOME/themeconfig.vim
+so $VIMHOME/miscellaneous.vim
