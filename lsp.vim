@@ -25,7 +25,7 @@ let lspOpts = #{
 	\   keepFocusInReferences: v:true,
 	\   completionTextEdit: v:true,
 	\   diagVirtualTextAlign: 'above',
-	\   noNewlineInCompletion: v:false,
+	\   noNewlineInCompletion: v:true,
 	\   popupBorder: v:true,
 	\	popupBorderSignatureHelp: v:true,
 	\   omniComplete: v:null,
