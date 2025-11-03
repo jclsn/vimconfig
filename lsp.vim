@@ -77,7 +77,8 @@ call add(lspServers, systemd_lsp)
 call add(lspServers, typescript_ls)
 " call add(lspServers, sonarlint)
 call add(lspServers, vhdl)
-call add(lspServers, vim)
+call add(lspServers, vimls)
+
 " Always add cspell last
 call add(lspServers, cspell)
 
