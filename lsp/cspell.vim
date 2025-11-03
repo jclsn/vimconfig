@@ -27,3 +27,32 @@ let cspell =
 			\		   '--config', '/home/jan/.vim/cSpell.json',
 			\   ]
 			\ }
+
+let codebook =
+			\ #{name: 'codebook',
+			\   filetype: [
+			\     'c',
+			\     'cpp',
+			\     'json',
+			\     'vim',
+			\     'css',
+			\     'gitcommit',
+			\     'go',
+			\     'html',
+			\     'js',
+			\     'json',
+			\     'julia',
+			\     'markdown',
+			\     'matlab',
+			\     'pkl',
+			\     'python',
+			\     'rust',
+			\     'ts',
+			\     'vim',
+			\     'yaml',
+			\   ],
+			\   path: 'codebook-lsp',
+			\   args: ['serve'
+			\   ],
+			\   root_markers: [ '.git', 'codebook.toml', '.codebook.toml' ],
+			\ }

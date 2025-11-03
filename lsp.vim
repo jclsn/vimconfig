@@ -81,6 +81,7 @@ call add(lspServers, vimls)
 
 " Always add cspell last
 call add(lspServers, cspell)
+" call add(lspServers, codebook)
 
 autocmd VimEnter * call LspAddServer(lspServers)
 
