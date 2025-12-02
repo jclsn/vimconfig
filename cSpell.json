@@ -1,12 +1,5 @@
 {
   "version": "0.2",
-  "dictionaries": [
-    "german",
-    "russian",
-    "softwareTerms"
-  ],
-  "language": "en, en-Gb, de, ru",
-  "allowCompoundWords": true,
   "words": [
     "ablablalbal",
     "abrt",
@@ -585,8 +578,10 @@
     "zeavim",
     "zeavimrc",
     "zyedidia",
-    "zyiw"
+    "zyiw",
+    "Rereport"
   ],
+  "language": "en, en-Gb, de, ru",
   "userWords": [
     "aclk",
     "adist",
@@ -786,6 +781,13 @@
     "ylabel",
     "ylabelcolor",
     "yuezk",
-    "zhaquirks"
+    "zhaquirks",
+    "Rereport"
+  ],
+  "allowCompoundWords": true,
+  "dictionaries": [
+    "german",
+    "russian",
+    "softwareTerms"
   ]
 }
