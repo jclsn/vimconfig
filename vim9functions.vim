@@ -13,6 +13,10 @@ def MoveCocWordsToCSpell()
     # Extract words from coc-settings.json
     var words = systemlist('jq -r ".\"cSpell.userWords\"[]" ' .. shellescape(coc_json))
 
+    if empty(words)
+        words = systemlist('jq -r ".\"userWords\"[]" ' .. shellescape(coc_json))
+    endif
+
     if v:shell_error != 0 || empty(words)
         echohl WarningMsg | echom "No words found in cSpell.userWords or JSON syntax error." | echohl None
         return
@@ -51,3 +55,45 @@ def MoveCocWordsToCSpell()
 enddef
 
 command! MoveWords call MoveCocWordsToCSpell()
+
+def AddWordToCSpell(file: string)
+    var word = expand('<cword>')
+    if word == ''
+        echo 'No word under cursor.'
+        return
+    endif
+
+    if !filereadable(file)
+        echo 'File not found: ' .. file
+        return
+    endif
+
+    # Read file and parse JSON
+    var json_text = join(readfile(file), "\n")
+    var data = json_decode(json_text)
+
+    # Helper: append if not present
+    def AddUnique(list: list<string>, item: string)
+        if index(list, item) < 0
+            add(list, item)
+        endif
+    enddef
+
+    AddUnique(data.words, word)
+    AddUnique(data.userWords, word)
+
+    # Encode JSON (raw)
+    var new_json = json_encode(data)->split("\n")
+    writefile(new_json, file)
+
+    # Reformat using jq if available
+    if executable('jq')
+        system('jq . ' .. shellescape(file) .. ' > ' .. shellescape(file .. '.tmp'))
+        system('mv ' .. shellescape(file .. '.tmp') .. ' ' .. shellescape(file))
+    endif
+
+    echo 'Added "' .. word .. '" to cSpell dictionary.'
+enddef
+
+command! -nargs=0 CSpellAddWord call AddWordToCSpell('/home/jan/.vim/cSpell.json')
+
