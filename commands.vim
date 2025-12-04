@@ -31,3 +31,17 @@ function! MixxxIssue()
   silent! call system('xdg-open ' .. shellescape(mixxx_issue_url) .. ' &')
 endfun
 command MixxxIssue call MixxxIssue()
+
+function! CloseOtherBuffersKeepFern()
+  let l:cur = bufnr('%')
+  let l:buffers = getbufinfo({'buflisted': 1})
+
+  for l:buf in l:buffers
+    let l:bn = l:buf.bufnr
+    if l:bn != l:cur && getbufvar(l:bn, '&filetype') !=# 'fern'
+      execute 'bd' l:bn
+    endif
+  endfor
+endfunction
+
+command! Bclean call CloseOtherBuffersKeepFern()
