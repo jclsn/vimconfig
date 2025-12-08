@@ -18,11 +18,9 @@ let julia =
 let jetls =
 			\ #{name: 'JETLS',
 			\   filetype: 'julia',
-			\   path: 'julia',
+			\   path: 'jetls',
 			\   args: [
-			\       '--startup-file=no',
-			\       '--history-file=no',
-			\       '--project=/home/jan/.julia/dev/JETLS',
-			\       '/home/jan/.julia/dev/JETLS/runserver.jl'
+			\       '--threads=auto',
+			\       '--'
 			\   ]
 			\ }
