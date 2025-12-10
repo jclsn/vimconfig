@@ -84,7 +84,6 @@ Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'preservim/vim-markdown'
 Plug 'psliwka/vim-smoothie'
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'cohama/lexima.vim'
 
 
@@ -136,7 +135,6 @@ Plug 'voldikss/vim-browser-search'
 Plug 'mhinz/vim-startify'
 
 " Tim Pope's plugins
-" Plug 'github/copilot.vim'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize' " test
 Plug 'tpope/vim-commentary'
