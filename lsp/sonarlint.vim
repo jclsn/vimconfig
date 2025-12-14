@@ -5,7 +5,7 @@ import './handlers/sonarlint.vim' as sonarlint
 
 g:sonarlint = {
   name: 'sonarlint-ls',
-  filetype: ['c', 'cpp'],
+  filetype: ['c', 'cpp', 'java'],
   path: 'sonarlint-ls',
   args: [
     '-stdio',
@@ -45,11 +45,12 @@ g:sonarlint = {
   },
   customNotificationHandlers: {
     'sonarlint/settingsApplied': common.IgnoreMessage,
+    'sonarlint/isOpenInEditor': sonarlint.IsOpenInEditor,
   },
   customRequestHandlers: {
     'sonarlint/NeedCompilationDatabase': sonarlint.NeedCompilationDatabase,
-    'sonarlint/isOpenInEditor': sonarlint.IsOpenInEditor,
     'sonarlint/listFilesInFolder': sonarlint.ListFilesInFolder,
+    'sonarlint/isOpenInEditor': sonarlint.IsOpenInEditor,
     'sonarlint/shouldBeAnalyzed': sonarlint.ShouldBeAnalyzed,
   },
 }

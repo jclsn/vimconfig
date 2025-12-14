@@ -42,10 +42,11 @@ enddef
 
 export def ListFilesInFolder(lspserver: any, message: any): dict<any>
   var folderUri = message.params.folderUri
+  var prefix = 'file://'
 
   var folder = fnamemodify(folderUri, ':p')
-  if folder[ : 6] ==# 'file://'
-    folder = substitute(folder, '^file://', '', '')
+  if folder[ : 6] ==# prefix
+    folder = substitute(folder, '^' .. prefix, '', '')
   endif
 
   if folder[strlen(folder) - 1] !=# '/'
@@ -57,8 +58,9 @@ export def ListFilesInFolder(lspserver: any, message: any): dict<any>
 
   for entry in entries
     if !isdirectory(entry)
+      var file = prefix .. entry
       foundFiles->add({
-        fileName: fnamemodify(entry, ':t'),
+        fileName: file,
         filePath: folder,
       })
     endif

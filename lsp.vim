@@ -61,7 +61,7 @@ endfor
 " Enable language servers
 let lspServers = []
 call add(lspServers, bash)
-call add(lspServers, clangd)
+" call add(lspServers, clangd)
 call add(lspServers, cmake)
 call add(lspServers, devicetree_ls)
 call add(lspServers, efm)
@@ -80,7 +80,7 @@ call add(lspServers, vhdl)
 call add(lspServers, vimls)
 
 " Always add cspell last
-call add(lspServers, cspell)
+" call add(lspServers, cspell)
 " call add(lspServers, codebook)
 
 autocmd VimEnter * call LspAddServer(lspServers)
