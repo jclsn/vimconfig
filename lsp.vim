@@ -75,7 +75,7 @@ call add(lspServers, pyright)
 call add(lspServers, rustanalyzer)
 call add(lspServers, systemd_lsp)
 call add(lspServers, typescript_ls)
-" call add(lspServers, sonarlint)
+call add(lspServers, sonarlint)
 call add(lspServers, vhdl)
 call add(lspServers, vimls)
 
