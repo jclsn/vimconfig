@@ -47,6 +47,7 @@ if has("autocmd")
 	"let g:prettier#autoformat = 0
 	" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
+	autocmd BufEnter * startinsert | stopinsert
 endif
 
 " Stop highlighting after search has finished
