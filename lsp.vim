@@ -64,6 +64,7 @@ let lspServers = []
 call add(lspServers, bash)
 call add(lspServers, clangd)
 call add(lspServers, cmake)
+call add(lspServers, dockerfile_ls)
 call add(lspServers, devicetree_ls)
 call add(lspServers, efm)
 call add(lspServers, gopls)
