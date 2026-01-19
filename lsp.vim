@@ -6,6 +6,7 @@ let lspOpts = #{
 	\   autoPopulateDiags: v:true,
 	\   completionMatcher: 'case',
 	\   completionMatcherValue: 1,
+	\   definitionFallback: v:true,
 	\   diagSignErrorText: '❗',
 	\   diagSignHintText: '💡',
 	\   diagSignInfoText: '💡',
@@ -63,8 +64,10 @@ endfor
 let lspServers = []
 call add(lspServers, bash)
 call add(lspServers, clangd)
+" call add(lspServers, codebook)
 call add(lspServers, cmake)
-call add(lspServers, dockerfile_ls)
+call add(lspServers, cspell)
+call add(lspServers, docker_ls)
 call add(lspServers, devicetree_ls)
 call add(lspServers, efm)
 call add(lspServers, gopls)
@@ -81,12 +84,9 @@ call add(lspServers, typescript_ls)
 " call add(lspServers, sonarlint)
 call add(lspServers, vhdl)
 call add(lspServers, vimls)
+call add(lspServers, yaml_ls)
 
-" Always add cspell last
-call add(lspServers, cspell)
-" call add(lspServers, codebook)
-
-autocmd VimEnter * call LspAddServer(lspServers)
+autocmd User LspSetup call LspAddServer(lspServers)
 
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
