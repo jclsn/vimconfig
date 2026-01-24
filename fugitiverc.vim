@@ -29,7 +29,7 @@ endfunction
 
 let g:git_log_options = '-n 500'
 nnoremap <silent> <leader>bl :call <SID>BlameToggle()<CR>
-command Glog :Git log --oneline --decorate --graph -500 
+command Glog :Gclog -n 500
 command Greview :Gclog @ ^!
 
 augroup FugitiveGclog
@@ -40,4 +40,3 @@ augroup FugitiveGclog
 	  autocmd FileType git highlight link diffRemoved DiffDelete
   endif
 augroup END
-
