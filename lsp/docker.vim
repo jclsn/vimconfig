@@ -1,24 +1,8 @@
-let dockerfile_ls =
-		\ #{name: 'docker-langserver',
-		\   path: 'docker-langserver',
-		\   args: ['--stdio'],
-		\   filetype: ['dockerfile'],
-		\ }
-
-function GetLanguageId()
-	if expand('%:t') =~# 'docker-compose' && &filetype =~# 'yaml'
-		return 'dockercompose'
-	else
-		return &filetype
-	endif
-endfunc
-
+autocmd BufEnter,BufReadPre docker-compose.yaml,docker-compose.yml setf dockercompose
+autocmd BufEnter,BufReadPre docker-compose.yaml,docker-compose.yml set syntax=yaml
 let docker_ls =
-		\ #{name: 'docker-language-server',
-		\   path: 'docker-language-server',
-		\   args: ['start', '--stdio'],
-		\   filetype: ['dockerfile', 'yaml'],
-		\   debug: 'v:true',
-		\   languageId: function('GetLanguageId')
-		\ }
-
+			\ #{name: 'docker-language-server',
+			\   path: 'docker-language-server',
+			\   args: ['start', '--stdio'],
+			\   filetype: ['dockerfile', 'dockercompose'],
+			\ }

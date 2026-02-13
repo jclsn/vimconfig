@@ -1,6 +1,7 @@
 " Autocommands
 if has("autocmd")
 
+
 	" Autosource files on saving
 	"autocmd bufwritepost .vimrc source $MYVIMRC
 	autocmd bufwritepost abolish.vim source $VIMHOME/after/plugin/abolish.vim
@@ -46,7 +47,6 @@ if has("autocmd")
 	" Activate Prettier plugin for various file extensions
 	"let g:prettier#autoformat = 0
 	" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-
 	autocmd BufEnter * startinsert | stopinsert
 endif
 
