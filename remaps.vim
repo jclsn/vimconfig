@@ -251,7 +251,7 @@ endfunction
 nnoremap <silent> ö :call ScrollPopup(3)<CR>
 nnoremap <silent> ü :call ScrollPopup(-3)<CR>
 
-if exists(":Tabularize")
-	nmap <Leader>tc :Tabularize /\/\*<CR>
-	vmap <Leader>tc :Tabularize /\/\*<CR>
+if has_key(plugs, 'tabular')
+	nnoremap <Leader>tc :Tabularize /\/\*<CR>
+	vnoremap <Leader>tc :Tabularize /\/\*<CR>
 endif
