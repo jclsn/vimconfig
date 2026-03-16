@@ -1,5 +1,5 @@
 " ++++++++++++++++++++++++************************
-"                Miscellaneous settings
+"		 Miscellaneous settings
 " ++++++++++++++++++++++++************************
 "
 set number
@@ -99,14 +99,14 @@ let todoKeywords = [
 
 if has('nvim')
 	if has('unix') && !has('win32')
-	    let g:python3_host_prog = '/usr/bin/python3'
+		let g:python3_host_prog = '/usr/bin/python3'
 	endif
 else
-    set pyxversion=3
+	set pyxversion=3
 endif
 
 if $TERM == 'screen-256color' " or w/e your TERM is in tmux
-	  exec "set <S-F11>=\<Esc>[23;2~"
+	exec "set <S-F11>=\<Esc>[23;2~"
 endif
 
 " Always use make -j$(nproc) when using :make
