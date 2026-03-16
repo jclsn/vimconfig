@@ -30,6 +30,11 @@ set listchars=tab:▸·,eol:¬
 set exrc
 set nocursorline
 
+if has ('win32')
+	set noerrorbells
+	set novisualbell
+endif
+
 if has('unix') && !has('win32')
 	set shell=zsh
 endif
