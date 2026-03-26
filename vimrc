@@ -75,6 +75,9 @@ endif
 if has_key(plugs, 'lexima.vim')
 	so $VIMHOME/leximarc.vim
 endif
+if has_key(plugs, 'vim-vsnip')
+	so $VIMHOME/vsniprc.vim
+endif
 
 " Always apply these settings last
 so $VIMHOME/vim9functions.vim
