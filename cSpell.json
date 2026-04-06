@@ -717,6 +717,7 @@
     "MYVIMDIR",
     "MYVIMRC",
     "nargs",
+    "neocmakelsp",
     "nmap",
     "Nmea",
     "noautochdir",
