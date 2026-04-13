@@ -60,3 +60,10 @@ if !has('gui_running')
 	let &t_Ce = "\e[4:0m"
 endif
 
+" Fix undercurl on Windows terminal
+let &t_Us = "\e[4:2m"
+let &t_ds = "\e[4:4m"
+let &t_Ds = "\e[4:5m"
+let &t_Cs = "\e[4:3m"
+let &t_Ce = "\e[4:0m"
+let &t_8u = "\e[58:2::%lu:%lu:%lum"
