@@ -99,6 +99,7 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 
 " ------------- C++ --------------
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
+Plug 'pboettch/vim-cmake-syntax'
 
 " ------------- Go --------------
 Plug 'fatih/vim-go'
