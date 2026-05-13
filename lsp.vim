@@ -121,5 +121,7 @@ nnoremap <silent> gy :LspGotoTypeDef<CR>
 nnoremap <silent> gi :LspGotoImpl<CR>
 nnoremap <silent> gdc :LspGotoDeclaration<CR>
 
-command! -nargs=0 -bar -range=% Format <line1>,<line2>LspFormat
+xnoremap <silent> <leader>f :LspFormat<CR>
+nnoremap <silent> <leader>f :LspFormat<CR>
+
 set formatexpr=lsp#lsp#FormatExpr() " Map LspFormat to the gq command
