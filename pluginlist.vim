@@ -1,12 +1,18 @@
+" Commands for plugins that have hard dependencies
+command! -nargs=+ NodePlug if executable('node') | execute 'Plug ' . <q-args> | endif
+command! -nargs=+ PyPlug if has('python3') | execute 'Plug ' . <q-args> | endif
+command! -nargs=+ Vim9Plug if has('vim9script') | execute 'Plug ' . <q-args> | endif
+
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips'
+PyPlug 'SirVer/ultisnips'
+" NodePlug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'hrsh7th/vim-vsnip'
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
-Plug 'yegappan/lsp', { 'do': 'git fetch --unshallow' }
-" Plug 'https://github.com/jclsn/lsp', {'branch': 'fix/autopair-plugin-conflict', 'do': 'git fetch --unshallow' }
+
+Vim9Plug 'yegappan/lsp', { 'do': 'git fetch --unshallow' }
+" Vim9Plug 'https://github.com/jclsn/lsp', {'branch': 'fix/autopair-plugin-conflict', 'do': 'git fetch --unshallow' }
 
 
 " ################## Code Formatting ####################
@@ -17,10 +23,8 @@ Plug 'vim-autoformat/vim-autoformat'
 Plug 'zeekay/vim-beautify'
 
 
-" ################# Debugging #################
-if has('python3')
-	Plug 'puremourning/vimspector'
-endif
+" ################# Python-dependent #################
+PyPlug 'puremourning/vimspector'
 " Plug 'szw/vim-maximizer'
 
 
@@ -38,7 +42,6 @@ Plug 'vim-scripts/ingo-library'    " Dependency for ConflictMotions
 
 " ############# Look and feel ###############
 " Syntax
-Plug 'bfrg/vim-c-cpp-modern'          " Better C++ highlighting
 Plug 'habamax/vim-rst'                " reStructuredtext
 Plug 'luochen1990/rainbow'            " Multicolor parentheses and brackets
 Plug 'm-pilia/vim-pkgbuild'           " Arch Linux PKGBUILD
@@ -74,15 +77,15 @@ Plug 'andrewstuart/vim-kubernetes'
 Plug 'chrisbra/matchit'
 " Plug 'gergap/vim-ollama'
 Plug 'godlygeek/tabular'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+NodePlug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-peekaboo'
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', { 'for': [ 'tex' ] }
 Plug 'markonm/traces.vim'
 Plug 'mileszs/ack.vim'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'preservim/vim-markdown'
+Plug 'preservim/vim-markdown', { 'for': [ 'markdown' ] }
 Plug 'psliwka/vim-smoothie'
 Plug 'cohama/lexima.vim'
 
@@ -98,18 +101,21 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 " Plug 'gregkh/kernel-coding-style'
 
 " ------------- C++ --------------
+Plug 'bfrg/vim-c-cpp-modern', { 'for': [ 'c', 'cpp' ] }
+
+" ------------- CMake --------------
 Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
-Plug 'pboettch/vim-cmake-syntax'
+Plug 'pboettch/vim-cmake-syntax', { 'for': [ 'cmake' ] }
 
 " ------------- Go --------------
-Plug 'fatih/vim-go'
-Plug 'charlespascoe/vim-go-syntax'
+Plug 'fatih/vim-go', { 'for': [ 'go' ] }
+Plug 'charlespascoe/vim-go-syntax', { 'for': [ 'go' ] }
 
 " ------------ Julia ---------------
-Plug 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/julia-vim', { 'for': [ 'julia' ] }
 
 " ------------ Rust ------------
-Plug 'rust-lang/rust.vim', { 'for': [ 'rs'] }
+Plug 'rust-lang/rust.vim', { 'for': [ 'rust'] }
 
 
 " ################## Tools #############################
@@ -146,10 +152,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-sleuth'
 
-if has('vim9script')
-Plug 'Eliot00/git-lens.vim'
-Plug 'bfrg/vim-fzy'
-endif
+Vim9Plug 'Eliot00/git-lens.vim'
+Vim9Plug 'bfrg/vim-fzy'
 
 " My plugins
 Plug 'https://github.com/jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
@@ -158,9 +162,5 @@ Plug 'https://github.com/jclsn/vim-bitbake.git', { 'do': 'git fetch --unshallow'
 Plug 'https://github.com/jclsn/vim-templates', { 'do': 'git fetch --unshallow' }
 " Plug 'https://github.com/jclsn/pkl-vim', { 'do': 'git fetch --unshallow' }
 " Plug 'https://github.com/jclsn/pkl-neovim', {'branch': 'main', 'do': 'git fetch --unshallow' }
-
-" My vim9script plugins
-if has('vim9script')
-	Plug 'https://github.com/jclsn/vim-qt', { 'do': 'git fetch --unshallow' }
-	Plug 'https://github.com/jclsn/vimspector-templates', { 'do': 'git fetch --unshallow' }
-endif
+Vim9Plug 'https://github.com/jclsn/vim-qt', { 'do': 'git fetch --unshallow' }
+Vim9Plug 'https://github.com/jclsn/vimspector-templates', { 'do': 'git fetch --unshallow' }
