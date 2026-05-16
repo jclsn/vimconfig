@@ -6,7 +6,7 @@ Plug 'SirVer/ultisnips'
 " Plug 'hrsh7th/vim-vsnip-integ'
 " Plug 'rafamadriz/friendly-snippets'
 Plug 'yegappan/lsp', { 'do': 'git fetch --unshallow' }
-" Plug 'git@github.com:jclsn/lsp', {'branch': 'fix/autopair-plugin-conflict', 'do': 'git fetch --unshallow' }
+" Plug 'https://github.com/jclsn/lsp', {'branch': 'fix/autopair-plugin-conflict', 'do': 'git fetch --unshallow' }
 
 
 " ################## Code Formatting ####################
@@ -146,20 +146,21 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-sleuth'
 
-" My plugins
-Plug 'git@github.com:jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
-Plug 'git@github.com:jclsn/more-todos.vim', { 'do': 'git fetch --unshallow' }
-Plug 'git@github.com:jclsn/vim-bitbake.git', { 'do': 'git fetch --unshallow' }
-Plug 'git@github.com:jclsn/vim-templates', { 'do': 'git fetch --unshallow' }
-" Plug 'git@github.com:jclsn/pkl-vim', { 'do': 'git fetch --unshallow' }
-" Plug 'git@github.com:jclsn/pkl-neovim', {'branch': 'main', 'do': 'git fetch --unshallow' }
-
-
-" ################## vim9script plugins #############################
 if has('vim9script')
-	Plug 'Eliot00/git-lens.vim'
-	Plug 'bfrg/vim-fzy'
+Plug 'Eliot00/git-lens.vim'
+Plug 'bfrg/vim-fzy'
+endif
 
-	Plug 'git@github.com:jclsn/vim-qt'
-	Plug 'git@github.com:jclsn/vimspector-templates'
+" My plugins
+Plug 'https://github.com/jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
+Plug 'https://github.com/jclsn/more-todos.vim', { 'do': 'git fetch --unshallow' }
+Plug 'https://github.com/jclsn/vim-bitbake.git', { 'do': 'git fetch --unshallow' }
+Plug 'https://github.com/jclsn/vim-templates', { 'do': 'git fetch --unshallow' }
+" Plug 'https://github.com/jclsn/pkl-vim', { 'do': 'git fetch --unshallow' }
+" Plug 'https://github.com/jclsn/pkl-neovim', {'branch': 'main', 'do': 'git fetch --unshallow' }
+
+" My vim9script plugins
+if has('vim9script')
+	Plug 'https://github.com/jclsn/vim-qt', { 'do': 'git fetch --unshallow' }
+	Plug 'https://github.com/jclsn/vimspector-templates', { 'do': 'git fetch --unshallow' }
 endif
