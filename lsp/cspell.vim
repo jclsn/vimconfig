@@ -1,5 +1,5 @@
-let cspell =
-			\ #{name: 'cspell',
+let cspell_lsp =
+			\ #{name: 'cspell-lsp',
 			\   filetype: [
 			\     'c',
 			\     'cpp',
@@ -9,7 +9,7 @@ let cspell =
 			\     'gitcommit',
 			\     'go',
 			\     'html',
-			\     'js',
+			\     'javascript',
 			\     'json',
 			\     'json',
 			\     'julia',
@@ -40,7 +40,7 @@ let codebook =
 			\     'gitcommit',
 			\     'go',
 			\     'html',
-			\     'js',
+			\     'javascript',
 			\     'json',
 			\     'json',
 			\     'julia',
@@ -57,4 +57,7 @@ let codebook =
 			\   args: ['serve'
 			\   ],
 			\   root_markers: [ '.git', 'codebook.toml', '.codebook.toml' ],
+			\   initializationOptions: #{
+			\		globalConfigPath: $MYVIMDIR .. 'codebook.toml'
+			\   }
 			\ }

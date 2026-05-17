@@ -64,9 +64,9 @@ endfor
 let lspServers = []
 call add(lspServers, bash)
 call add(lspServers, clangd)
-" call add(lspServers, codebook)
+call add(lspServers, codebook)
 " call add(lspServers, cmake_language_server)
-call add(lspServers, cspell)
+" call add(lspServers, cspell_lsp)
 call add(lspServers, docker_ls)
 call add(lspServers, devicetree_ls)
 call add(lspServers, efm)
@@ -103,8 +103,14 @@ nnoremap <silent> <leader>pdc :LspPeekDeclaration<CR>
 nnoremap <silent> <leader>pr :LspPeekReferences<CR>
 nnoremap <silent> <leader>ol :LspOutline<CR>
 nnoremap <silent> <leader>rn :LspRename<CR>
-nnoremap <silent> <leader>ad m0$:LspCodeAction Add<CR>`0
 nnoremap <leader>cl :LspCodeLens<CR>
+
+" Map add to dictionary differently for different cspell clients
+if index(lspServers, cspell_lsp) >= 0
+	nnoremap <silent> <leader>ad m0$:LspCodeAction Add<CR>`0
+elseif index(lspServers, codebook) >= 0
+	nnoremap <silent> <leader>ad :LspCodeAction /global dictionary<CR>
+endif
 
 function! s:SmartHover() abort
 	let result = execute('LspHover')
