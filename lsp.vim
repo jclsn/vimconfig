@@ -4,6 +4,7 @@ let lspOpts = #{
 	\   autoHighlight: v:true,
 	\   autoHighlightDiags: v:true,
 	\   autoPopulateDiags: v:true,
+	\   codeActionPopupStyle: 'full',
 	\   completionMatcher: 'case',
 	\   completionMatcherValue: 1,
 	\   definitionFallback: v:true,
