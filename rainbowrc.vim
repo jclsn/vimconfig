@@ -10,22 +10,22 @@ let g:rainbow_conf = {
 \	'separately': {
 \		'*': {},
 \		'markdown': {
-\			'parentheses_options': 'containedin=markdownCode contained', 
+\			'parentheses_options': 'containedin=markdownCode contained',
 \		},
 \		'lisp': {
-\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'], 
+\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
 \		},
 \		'haskell': {
-\			'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold'], 
+\			'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold'],
 \		},
 \		'vim': {
-\			'parentheses_options': 'containedin=vimFuncBody', 
+\			'parentheses_options': 'containedin=vimFuncBody',
 \		},
 \		'perl': {
-\			'syn_name_prefix': 'perlBlockFoldRainbow', 
+\			'syn_name_prefix': 'perlBlockFoldRainbow',
 \		},
 \		'stylus': {
-\			'parentheses': ['start=/{/ end=/}/ fold contains=@colorableGroup'], 
+\			'parentheses': ['start=/{/ end=/}/ fold contains=@colorableGroup'],
 \		},
 \		'css': 0
 \	}
