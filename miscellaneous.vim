@@ -30,6 +30,10 @@ set listchars=tab:▸·,eol:¬
 set exrc
 set nocursorline
 
+if has_key(plugs, 'vim-smoothie')
+	let g:smoothie_update_interval = 0
+endif
+
 if has ('win32')
 	set noerrorbells
 	set novisualbell
