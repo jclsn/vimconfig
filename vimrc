@@ -2,6 +2,10 @@ set encoding=utf-8
 set termencoding=utf-8
 set nocompatible
 
+if has('QNX')
+	let $MYVIMDIR = '/home/jan/.vim'
+endif
+
 let $VIMHOME = $MYVIMDIR
 
 call plug#begin('$VIMHOME/plugged')
