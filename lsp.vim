@@ -104,6 +104,7 @@ nnoremap <silent> <leader>pdc :LspPeekDeclaration<CR>
 nnoremap <silent> <leader>pr :LspPeekReferences<CR>
 nnoremap <silent> <leader>ol :LspOutline<CR>
 nnoremap <silent> <leader>rn :LspRename<CR>
+nnoremap <silent> <leader>di :LspDiagShow<CR>
 nnoremap <leader>cl :LspCodeLens<CR>
 
 " Map add to dictionary differently for different cspell clients
