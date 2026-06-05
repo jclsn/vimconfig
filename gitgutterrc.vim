@@ -1,4 +1,4 @@
-set updatetime=100
+" set updatetime=100
 
 let g:gitgutter_sign_priority=8
 
