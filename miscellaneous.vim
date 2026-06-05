@@ -39,8 +39,10 @@ if has ('win32')
 	set novisualbell
 endif
 
-if has('unix') && !has('win32')
+if has('unix')
 	set shell=zsh
+elseif has('win32')
+	set shell=powershell
 endif
 
 let g:c_syntax_for_h=1
