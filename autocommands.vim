@@ -47,9 +47,6 @@ if has("autocmd")
 	" Activate Prettier plugin for various file extensions
 	"let g:prettier#autoformat = 0
 	" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-
-	" Fix cursor on entry for Windows terminal or Git Commit messages
-	autocmd BufEnter,BufReadPost,BufNew * startinsert | stopinsert
 endif
 
 " Stop highlighting after search has finished
