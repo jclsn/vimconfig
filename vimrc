@@ -6,7 +6,7 @@ if has('QNX')
 	let $MYVIMDIR = '/home/jan/.vim'
 endif
 
-let $VIMHOME = $MYVIMDIR
+let $VIMHOME = '/home/jan/.vim'
 
 call plug#begin('$VIMHOME/plugged')
 	so $VIMHOME/pluginlist.vim
