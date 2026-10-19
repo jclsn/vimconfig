@@ -164,3 +164,5 @@ Plug 'https://github.com/jclsn/vim-templates', { 'do': 'git fetch --unshallow' }
 " Plug 'https://github.com/jclsn/pkl-neovim', {'branch': 'main', 'do': 'git fetch --unshallow' }
 Vim9Plug 'https://github.com/jclsn/vim-qt', { 'do': 'git fetch --unshallow' }
 Vim9Plug 'https://github.com/jclsn/vimspector-templates', { 'do': 'git fetch --unshallow' }
+Vim9Plug 'jclsn/sonarlint-lsp.vim', {'do': 'git fetch --unshallow'}
+

@@ -1,39 +1,43 @@
-let sonarlint = #{
-            \   name: 'sonarlint-ls',
-            \   filetype: ['c', 'cpp'],
-            \   path: 'sonarlint-ls',
-            \   args: [
-            \     '-stdio',
-            \     '-analyzers',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarcfamily.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonargo.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarhtml.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonariac.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarjava.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarjs.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarlintomnisharp.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarphp.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarpython.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonartext.jar',
-            \     '/usr/share/java/sonarlint-ls/analyzers/sonarxml.jar',
-            \   ],
-            \   debug: v:true,
-            \   syncInit: v:true,
-            \   initializationOptions: #{
-            \     productKey: 'Vim',
-            \     productName: 'Sonarlint Vim',
-            \     telemetryStorage: '~/.cache/sonarlint',
-            \     showVerboseLogs: v:true,
-            \     platform: 'linux',
-            \     architecture: 'x64',
-            \     additionalAttributes: #{
-            \       vscode: #{
-            \           isTelemetryEnabled: v:false },
-            \     },
-            \     sonarlint: #{
-            \       pathToCompileCommands: './build/compile_commands.json',
-            \       trace: #{
-            \             server: 'verbose' }
-            \     }
-            \   }
-            \ }
+vim9script
+
+# Analyzer jars passed to the server
+const analyzerDirs = [
+  expand('~/.local/share/sonarlint-ls/analyzers'),
+  '/usr/share/java/sonarlint-ls/analyzers',
+]
+
+g:sonarlint = {
+  name: 'sonarlint-ls',
+  filetype: [
+    'c', 'cpp', 'go', 'html', 'dockerfile', 'terraform',
+    'yaml', 'java', 'javascript', 'javascriptreact',
+    'typescript', 'typescriptreact', 'cs', 'php', 'python',
+    'text', 'xml',
+  ],
+  path: 'sonarlint-ls',
+  args: ['-stdio', '-analyzers'] + sonarlint#AnalyzerJars(analyzerDirs),
+  syncInit: false, # The JVM takes a while to start, so don't block Vim (and clangd) on it.
+  processDiagHandler: function('sonarlint#ProcessDiags'),
+  customNotificationHandlers: sonarlint#NotificationHandlers(),
+  customRequestHandlers: sonarlint#RequestHandlers(),
+  # compile_commands.json is looked up like clangd does (compiledb#FindDir());
+  # set g:sonarlint_compile_commands to override.
+  workspaceConfig: {sonarlint: sonarlint#WorkspaceSettings()},
+  initializationOptions: {
+    productKey: 'Vim',
+    productName: 'SonarLint Vim',
+    telemetryStorage: expand('~/.cache/sonarlint'),
+    showVerboseLogs: false,
+    platform: 'linux',
+    architecture: 'x64',
+    rules: sonarlint#LoadRules(),
+    connections: get(g:, 'sonarqube_connected_mode', {})->get('connections', {}),
+    additionalAttributes: {
+      vscode: {isTelemetryEnabled: false},
+    },
+    sonarlint: {
+      trace: {server: 'off'},
+    },
+  },
+  debug: true
+}
