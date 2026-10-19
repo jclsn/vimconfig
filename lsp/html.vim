@@ -1,6 +1,10 @@
-let superhtml =
-			\ #{name: 'superhtml',
-			\   filetype: 'html',
-			\   path: 'superhtml',
-			\   args: ['lsp'],
-			\ }
+vim9script
+
+g:superhtml = {
+  name: 'superhtml',
+  filetype: [
+    'html',
+  ],
+  path: 'superhtml',
+  args: ['lsp'],
+}

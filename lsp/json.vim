@@ -1,6 +1,11 @@
-let json =
-			\ #{name: 'vscode-json-languageserver',
-			\   filetype: ['json', 'jsonc'],
-			\   path: 'vscode-json-languageserver',
-			\   args: ['--stdio']
-			\ }
+vim9script
+
+g:json = {
+  name: 'vscode-json-languageserver',
+  filetype: [
+    'json',
+    'jsonc',
+  ],
+  path: 'vscode-json-languageserver',
+  args: ['--stdio'],
+}

@@ -9,10 +9,23 @@ const analyzerDirs = [
 g:sonarlint = {
   name: 'sonarlint-ls',
   filetype: [
-    'c', 'cpp', 'go', 'html', 'dockerfile', 'terraform',
-    'yaml', 'java', 'javascript', 'javascriptreact',
-    'typescript', 'typescriptreact', 'cs', 'php', 'python',
-    'text', 'xml',
+    'c',
+    'cpp',
+    'go',
+    'html',
+    'dockerfile',
+    'terraform',
+    'yaml',
+    'java',
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
+    'cs',
+    'php',
+    'python',
+    'text',
+    'xml',
   ],
   path: 'sonarlint-ls',
   args: ['-stdio', '-analyzers'] + sonarlint#AnalyzerJars(analyzerDirs),
@@ -20,8 +33,6 @@ g:sonarlint = {
   processDiagHandler: function('sonarlint#ProcessDiags'),
   customNotificationHandlers: sonarlint#NotificationHandlers(),
   customRequestHandlers: sonarlint#RequestHandlers(),
-  # compile_commands.json is looked up like clangd does (compiledb#FindDir());
-  # set g:sonarlint_compile_commands to override.
   workspaceConfig: {sonarlint: sonarlint#WorkspaceSettings()},
   initializationOptions: {
     productKey: 'Vim',

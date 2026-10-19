@@ -1,14 +1,21 @@
-let efm =
-			\ #{name: 'efm-langserver',
-			\   filetype: ['markdown', 'sh', 'json', 'jsonc'],
-			\   path: 'efm-langserver',
-			\   args: [],
-			\	initializationOptions: #{
-			\	  documentFormatting: v:true,
-			\	  documentRangeFormatting: v:true,
-			\	  hover: v:true,
-			\	  documentSymbol: v:true,
-			\	  codeAction: v:true,
-			\	  completion: v:true,
-			\	}
-			\ }
+vim9script
+
+g:efm = {
+  name: 'efm-langserver',
+  filetype: [
+    'markdown',
+    'sh',
+    'json',
+    'jsonc',
+  ],
+  path: 'efm-langserver',
+  args: [],
+  initializationOptions: {
+    documentFormatting: true,
+    documentRangeFormatting: true,
+    hover: true,
+    documentSymbol: true,
+    codeAction: true,
+    completion: true,
+  },
+}

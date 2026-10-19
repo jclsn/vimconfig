@@ -1,6 +1,10 @@
-let marksman =
-			\ #{name: 'marksman',
-			\   filetype: 'markdown',
-			\   path: 'marksman',
-			\   args: [],
-			\ }
+vim9script
+
+g:marksman = {
+  name: 'marksman',
+  filetype: [
+    'markdown',
+  ],
+  path: 'marksman',
+  args: [],
+}

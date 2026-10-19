@@ -1,28 +1,33 @@
+vim9script
 
-" Detect Python path for Pyright
-function! GetPythonPath() abort
+# Detect Python path for Pyright
+def GetPythonPath(): string
+  var venv_python: string
   if has('win32') || has('win64')
-    let l:venv_python = expand('.\venv\Scripts\python.exe')
+    venv_python = expand('.\venv\Scripts\python.exe')
   else
-    let l:venv_python = expand('./venv/bin/python')
+    venv_python = expand('./venv/bin/python')
   endif
 
-  " Check if venv exists
-  if filereadable(l:venv_python)
-    return l:venv_python
+  # Check if venv exists
+  if filereadable(venv_python)
+    return venv_python
   else
-    " fallback to system Python
+    # fallback to system Python
     return 'python3'
   endif
-endfunction
+enddef
 
-let pyright = #{name: 'pyright',
-  \   filetype: 'python',
-  \   path: 'pyright-langserver',
-  \   args: ['--stdio'],
-  \   workspaceConfig: #{
-  \     python: #{
-  \       pythonPath: GetPythonPath()
-  \     }
-  \   }
-  \ }
+g:pyright = {
+  name: 'pyright',
+  filetype: [
+    'python',
+  ],
+  path: 'pyright-langserver',
+  args: ['--stdio'],
+  workspaceConfig: {
+    python: {
+      pythonPath: GetPythonPath(),
+    },
+  },
+}

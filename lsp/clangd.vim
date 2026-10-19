@@ -1,30 +1,32 @@
-" Return the directory that contains the first existing
-" compile_commands.json, or a default if none is found.
-function! s:FindCompileCommandsDir(candidates) abort
-  let l:default    = './build/'
+vim9script
 
-  for l:dir in a:candidates
-    let l:json = l:dir . '/compile_commands.json'
-    if filereadable(l:json)
-      " Return just the directory part
-      return fnamemodify(l:json, ':h')
+# Locate the compilation database shared by clangd
+const CANDIDATES = ['.', 'build/Release', 'build/Debug']
+
+def FindCompileDB(candidates: list<string> = CANDIDATES): string
+  for dir in candidates
+    var json = $'{dir}/compile_commands.json'
+    if json->filereadable()
+      return json->fnamemodify(':p:h')
     endif
   endfor
+  return ''
+enddef
 
-  return l:default
-endfunction
+# Without a database clangd searches the parent directories of each file.
+const compileCommandsDir = FindCompileDB()
 
-let s:candidates = ['build/Release', 'build/Debug']
-
-let clangd = {
-      \ 'name': 'clangd',
-      \ 'filetype': ['c', 'cpp'],
-      \ 'path': 'clangd',
-      \ 'args': [
-      \           '--background-index',
-      \           '--clang-tidy',
-      \           '--completion-style=detailed',
-      \           '--header-insertion=never',
-      \           '--compile-commands-dir=' . s:FindCompileCommandsDir(s:candidates),
-      \         ]
-      \ }
+g:clangd = {
+  name: 'clangd',
+  filetype: [
+    'c',
+    'cpp',
+  ],
+  path: 'clangd',
+  args: [
+    '--background-index',
+    '--clang-tidy',
+    '--completion-style=detailed',
+    '--header-insertion=never',
+  ] + (compileCommandsDir->empty() ? [] : [$'--compile-commands-dir={compileCommandsDir}']),
+}
