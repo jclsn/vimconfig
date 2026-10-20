@@ -10,9 +10,6 @@ g:pkl = {
     '-jar',
     '/usr/local/share/pkl/pkl-lsp.jar',
   ],
-  initializationOptions: {
-    pkl_cli_path: '/usr/bin/pkl',
-  },
   syncInit: true,
   debug: false,
 }
