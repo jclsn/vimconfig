@@ -89,6 +89,7 @@ Plug 'preservim/vim-markdown', { 'for': [ 'markdown' ] }
 Plug 'psliwka/vim-smoothie'
 Plug 'cohama/lexima.vim'
 Vim9Plug 'jclsn/kitty-scrollback.vim'
+Vim9Plug 'jclsn/wt-scrollback.vim'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
