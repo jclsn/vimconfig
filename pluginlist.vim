@@ -88,6 +88,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'preservim/vim-markdown', { 'for': [ 'markdown' ] }
 Plug 'psliwka/vim-smoothie'
 Plug 'cohama/lexima.vim'
+Vim9Plug 'jclsn/kitty-scrollback.vim'
 
 
 " ################# PROGRAMMING LANGUAGES ####################
