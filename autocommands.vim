@@ -19,12 +19,12 @@ if has("autocmd")
   "
   augroup vimrc-filetypes
     autocmd!
-    autocmd BufReadPost *.patch setlocal ft=diff
-    autocmd BufReadPost *.conf setlocal ft=conf
+    autocmd BufReadPost *.patch setlocal filetype=diff
+    autocmd BufReadPost *.conf setlocal filetype=conf
     autocmd BufReadPost *.its setlocal syntax=dts
     autocmd BufReadPost *.scr setlocal syntax=bash
     autocmd BufReadPost *_defconfig setlocal syntax=config
-    autocmd FileType json set filetype=jsonc
+    autocmd FileType json setlocal filetype=jsonc
   augroup END
   "au BufReadPost * :ColorHighlight<CR>
 
