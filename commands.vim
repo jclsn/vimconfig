@@ -1,11 +1,11 @@
 function! AnonymizeFunction()
-	:%s/jan/user/g
-	:%s/AERQ/Somecompany/g
-	:%s/aerq/somecompany/g
-	:%s/ISD/Device/g
-	:%s/isd/device/g
-	:%s/In Seat Display/Device/g
-	:%s/in seat display/device/g
+  :%s/jan/user/g
+  :%s/AERQ/Somecompany/g
+  :%s/aerq/somecompany/g
+  :%s/ISD/Device/g
+  :%s/isd/device/g
+  :%s/In Seat Display/Device/g
+  :%s/in seat display/device/g
 endfunction
 
 function! SynStack()
@@ -16,8 +16,8 @@ function! SynStack()
 endfunction
 
 function! SynGroup()
-    let l:s = synID(line('.'), col('.'), 1)
-    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+  let l:s = synID(line('.'), col('.'), 1)
+  echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
 endfunction
 
 command Anonymize silent! call AnonymizeFunction()

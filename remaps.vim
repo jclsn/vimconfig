@@ -39,7 +39,7 @@ vmap <silent> <Leader>w <Plug>SearchVisual<CR>
 
 "     " If no terminal buffer is found, show a message and return
 "     if empty(terminal_buffers)
-" 	terminal
+"       terminal
 "         return
 "     endif
 
@@ -58,20 +58,20 @@ vmap <silent> <Leader>w <Plug>SearchVisual<CR>
 " endfunction
 
 " if has('nvim')
-" 	tnoremap <esc> <C-\><C-n>
-" 	nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
+"       tnoremap <esc> <C-\><C-n>
+"       nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
 " else
-" 	nnoremap <silent><Leader>tt :call SwitchToTerminalBuffer()<CR>
+"       nnoremap <silent><Leader>tt :call SwitchToTerminalBuffer()<CR>
 " endif
 
 if has('nvim')
-	tnoremap <esc> <C-\><C-n>
-	nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
+  tnoremap <esc> <C-\><C-n>
+  nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
 elseif has('win32')
-	let s:term_shell = executable('pwsh') ? 'pwsh' : 'powershell'
-	execute 'nnoremap <silent><Leader>tt :ter ++close ' . s:term_shell . '<CR>'
+  let s:term_shell = executable('pwsh') ? 'pwsh' : 'powershell'
+  execute 'nnoremap <silent><Leader>tt :ter ++close ' . s:term_shell . '<CR>'
 else
-	nnoremap <silent><Leader>tt :ter<CR>
+  nnoremap <silent><Leader>tt :ter<CR>
 endif
 
 
@@ -82,11 +82,11 @@ endif
 "               Build mappings
 " ++++++++++++++++++++++++************************
 augroup vimrc-filetype-maps
-	autocmd!
-	au FileType c,cpp nnoremap <buffer> <leader>cm :CMake<CR>
-	au FileType c,cpp nnoremap <buffer> <leader>ma :Make<CR>
-	au FileType rust nnoremap <buffer> <leader>ru :RustRun <CR>
-	au FileType diff nnoremap <buffer> <leader>ct :ConflictTake<CR>
+  autocmd!
+  au FileType c,cpp nnoremap <buffer> <leader>cm :CMake<CR>
+  au FileType c,cpp nnoremap <buffer> <leader>ma :Make<CR>
+  au FileType rust nnoremap <buffer> <leader>ru :RustRun <CR>
+  au FileType diff nnoremap <buffer> <leader>ct :ConflictTake<CR>
 augroup END
 
 nnoremap <leader>as :Disassemble
@@ -122,30 +122,30 @@ inoremap <c-d> <esc>ddi
 
 " Swap lines beautifully
 function! s:swap_lines(n1, n2)
-    let line1 = getline(a:n1)
-    let line2 = getline(a:n2)
-    call setline(a:n1, line2)
-    call setline(a:n2, line1)
+  let line1 = getline(a:n1)
+  let line2 = getline(a:n2)
+  call setline(a:n1, line2)
+  call setline(a:n2, line1)
 endfunction
 
 function! s:swap_up()
-    let n = line('.')
-    if n == 1
-        return
-    endif
+  let n = line('.')
+  if n == 1
+    return
+  endif
 
-    call s:swap_lines(n, n - 1)
-    exec n - 1
+  call s:swap_lines(n, n - 1)
+  exec n - 1
 endfunction
 
 function! s:swap_down()
-    let n = line('.')
-    if n == line('$')
-        return
-    endif
+  let n = line('.')
+  if n == line('$')
+    return
+  endif
 
-    call s:swap_lines(n, n + 1)
-    exec n + 1
+  call s:swap_lines(n, n + 1)
+  exec n + 1
 endfunction
 
 nnoremap <silent> <C-k> :call <SID>swap_up()<CR>
@@ -162,11 +162,11 @@ vnoremap <silent> <C-l> >gv
 " Use same mapping as navigation in the quickfix list. These buffer-local
 " mappings take precedence over the line swapping above
 augroup vimrc-qf-maps
-	autocmd!
-	if has_key(plugs, 'vim-unimpaired')
-		autocmd FileType git,qf nnoremap <buffer> <silent> <C-j> :cnext<CR>
-		autocmd FileType git,qf nnoremap <buffer> <silent> <C-k> :cprevious<CR>
-	endif
+  autocmd!
+  if has_key(plugs, 'vim-unimpaired')
+    autocmd FileType git,qf nnoremap <buffer> <silent> <C-j> :cnext<CR>
+    autocmd FileType git,qf nnoremap <buffer> <silent> <C-k> :cprevious<CR>
+  endif
 augroup END
 
 "Easily add quotes
@@ -209,32 +209,32 @@ nnoremap <leader>es :vsplit $VIMHOME/cSpell.json<CR>
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
 function! ScrollPopup(nlines)
-    let winids = popup_list()
-    if len(winids) == 0
-        return
-    endif
+  let winids = popup_list()
+  if len(winids) == 0
+    return
+  endif
 
-    " Ignore hidden popups
-    let prop = popup_getpos(winids[0])
-    if prop.visible != 1
-        return
-    endif
+  " Ignore hidden popups
+  let prop = popup_getpos(winids[0])
+  if prop.visible != 1
+    return
+  endif
 
-    let firstline = prop.firstline + a:nlines
-    let buf_lastline = str2nr(trim(win_execute(winids[0], "echo line('$')")))
-    if firstline < 1
-        let firstline = 1
-    elseif prop.lastline + a:nlines > buf_lastline
-        let firstline = buf_lastline + prop.firstline - prop.lastline
-    endif
+  let firstline = prop.firstline + a:nlines
+  let buf_lastline = str2nr(trim(win_execute(winids[0], "echo line('$')")))
+  if firstline < 1
+    let firstline = 1
+  elseif prop.lastline + a:nlines > buf_lastline
+    let firstline = buf_lastline + prop.firstline - prop.lastline
+  endif
 
-    call popup_setoptions(winids[0], {'firstline': firstline})
+  call popup_setoptions(winids[0], {'firstline': firstline})
 endfunction
 
 nnoremap <silent> ö :call ScrollPopup(3)<CR>
 nnoremap <silent> ü :call ScrollPopup(-3)<CR>
 
 if has_key(plugs, 'tabular')
-	nnoremap <Leader>tc :Tabularize /\/\*<CR>
-	vnoremap <Leader>tc :Tabularize /\/\*<CR>
+  nnoremap <Leader>tc :Tabularize /\/\*<CR>
+  vnoremap <Leader>tc :Tabularize /\/\*<CR>
 endif

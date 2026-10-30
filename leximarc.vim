@@ -43,20 +43,20 @@ function! s:dts_pairs(ft, pairs)
     call lexima#add_rule({'char': close, 'at': '\%#' .. close, 'leave': 1, 'filetype': a:ft})
     call lexima#add_rule({'char': ';', 'at': '\%#;', 'leave': 1, 'filetype': a:ft})
     call lexima#add_rule({'char': '<BS>', 'at': open .. '\%#' .. close .. ';', 'delete': 3, 'filetype': a:ft})
- endfor
+  endfor
 endfunction
 
 " Common pair sets
 let s:default_parens = [
-      \ ['(', ')'],
-      \ ['{', '}'],
-      \ ['[', ']'],
+      \   ['(', ')'],
+      \   ['{', '}'],
+      \   ['[', ']'],
       \ ]
 
 let s:default_quotes = [
-      \ ['"', '"'],
-      \ ["'", "'"],
-      \ ["`", "`"],
+      \   ['"', '"'],
+      \   ["'", "'"],
+      \   ["`", "`"],
       \ ]
 
 

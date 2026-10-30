@@ -3,24 +3,24 @@ set termencoding=utf-8
 set nocompatible
 
 if has('QNX')
-	let $MYVIMDIR = '/home/jan/.vim'
+  let $MYVIMDIR = '/home/jan/.vim'
 endif
 
 " Directory of this config. Resolve symlinks like ~/.vimrc -> ~/.vim/vimrc and
 " fall back to my home when the vimrc was copied, e.g. to /root/.vimrc
 if empty($VIMHOME)
-	let $VIMHOME = fnamemodify(resolve(expand('<sfile>:p')), ':h')
-	if !filereadable($VIMHOME . '/pluginlist.vim')
-		let $VIMHOME = has('win32') ? expand('~/vimfiles') : '/home/jan/.vim'
-	endif
+  let $VIMHOME = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+  if !filereadable($VIMHOME . '/pluginlist.vim')
+    let $VIMHOME = has('win32') ? expand('~/vimfiles') : '/home/jan/.vim'
+  endif
 endif
 
 call plug#begin('$VIMHOME/plugged')
-	so $VIMHOME/pluginlist.vim
+so $VIMHOME/pluginlist.vim
 call plug#end()
 
 " ++++++++++++++++++++++++************************
-"						User
+"                                               User
 " ++++++++++++++++++++++++************************
 let g:tmpl_author_email = 'jan.claussen10@web.de'
 let g:tmpl_author_name = 'Jan Claussen'
@@ -36,58 +36,58 @@ so $VIMHOME/folds.vim
 so $VIMHOME/commands.vim
 
 if has_key(plugs, 'vim-airline')
-	so $VIMHOME/airlinerc.vim
+  so $VIMHOME/airlinerc.vim
 endif
 if has_key(plugs, 'vimspector')
-	so $VIMHOME/vimspectorrc.vim
+  so $VIMHOME/vimspectorrc.vim
 endif
 if has_key(plugs, 'coc.nvim')
-	so $VIMHOME/cocrc.vim
+  so $VIMHOME/cocrc.vim
 endif
 if has_key(plugs, 'lsp')
-	so $VIMHOME/lsp.vim
+  so $VIMHOME/lsp.vim
 endif
 if has_key(plugs, 'fern.vim')
-	so $VIMHOME/fernrc.vim
+  so $VIMHOME/fernrc.vim
 endif
 if has_key(plugs, 'vim-cmake')
-	so $VIMHOME/cmakerc.vim
+  so $VIMHOME/cmakerc.vim
 endif
 if has_key(plugs, 'vim-qt')
-	so $VIMHOME/qt.vim
+  so $VIMHOME/qt.vim
 endif
 if has_key(plugs, 'zeavim.vim')
-	so $VIMHOME/zeavimrc.vim
+  so $VIMHOME/zeavimrc.vim
 endif
 if has_key(plugs, 'vim-slime')
-	so $VIMHOME/slimerc.vim
+  so $VIMHOME/slimerc.vim
 endif
 if has_key(plugs, 'rainbow')
-	so $VIMHOME/rainbowrc.vim
+  so $VIMHOME/rainbowrc.vim
 endif
 if has_key(plugs, 'git-lens.vim')
-	so $VIMHOME/git-lens.vim
+  so $VIMHOME/git-lens.vim
 endif
 if has_key(plugs, 'vim-fugitive')
-	so $VIMHOME/fugitiverc.vim
+  so $VIMHOME/fugitiverc.vim
 endif
 if has_key(plugs, 'vim-doge')
-	so $VIMHOME/dogerc.vim
+  so $VIMHOME/dogerc.vim
 endif
 if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('$VIMHOME/fugitive-gitlab.vim'))
-	so $VIMHOME/fugitive-gitlab.vim
+  so $VIMHOME/fugitive-gitlab.vim
 endif
 if has_key(plugs, 'vim-gitgutter')
-	so $VIMHOME/gitgutterrc.vim
+  so $VIMHOME/gitgutterrc.vim
 endif
 if has_key(plugs, 'ConflictMotions')
-	so $VIMHOME/conflictmotions.vim
+  so $VIMHOME/conflictmotions.vim
 endif
 if has_key(plugs, 'lexima.vim')
-	so $VIMHOME/leximarc.vim
+  so $VIMHOME/leximarc.vim
 endif
 if has_key(plugs, 'vim-vsnip')
-	so $VIMHOME/vsniprc.vim
+  so $VIMHOME/vsniprc.vim
 endif
 
 " Always apply these settings last

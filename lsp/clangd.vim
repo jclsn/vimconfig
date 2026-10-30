@@ -17,14 +17,14 @@ endfunction
 let s:candidates = ['build/Release', 'build/Debug']
 
 let clangd = {
-      \ 'name': 'clangd',
-      \ 'filetype': ['c', 'cpp'],
-      \ 'path': 'clangd',
-      \ 'args': [
-      \           '--background-index',
-      \           '--clang-tidy',
-      \           '--completion-style=detailed',
-      \           '--header-insertion=never',
-      \           '--compile-commands-dir=' . s:FindCompileCommandsDir(s:candidates),
-      \         ]
+      \   'name': 'clangd',
+      \   'filetype': ['c', 'cpp'],
+      \   'path': 'clangd',
+      \   'args': [
+      \     '--background-index',
+      \     '--clang-tidy',
+      \     '--completion-style=detailed',
+      \     '--header-insertion=never',
+      \     '--compile-commands-dir=' . s:FindCompileCommandsDir(s:candidates),
+      \   ]
       \ }

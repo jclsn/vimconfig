@@ -1,16 +1,16 @@
 " Upload the lines to a pastebin and copy the returned URL to the clipboard
 function! s:Paste(cmd) range abort
-	let l:url = trim(system(a:cmd, getline(a:firstline, a:lastline)))
-	if v:shell_error
-		echohl ErrorMsg | echom 'Paste failed: ' . l:url | echohl None
-		return
-	endif
-	if has('clipboard')
-		let @+ = l:url
-	elseif executable('xsel')
-		call system('xsel -ib', l:url)
-	endif
-	echo l:url
+  let l:url = trim(system(a:cmd, getline(a:firstline, a:lastline)))
+  if v:shell_error
+    echohl ErrorMsg | echom 'Paste failed: ' . l:url | echohl None
+    return
+  endif
+  if has('clipboard')
+    let @+ = l:url
+  elseif executable('xsel')
+    call system('xsel -ib', l:url)
+  endif
+  echo l:url
 endfunction
 
 command! -range=% SP <line1>,<line2>call <SID>Paste('curl -sF "sprunge=<-" http://sprunge.us')

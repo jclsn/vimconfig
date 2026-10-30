@@ -1,67 +1,67 @@
 let lspOpts = #{
-	\   aleSupport: v:false,
-	\   autoComplete: v:true,
-	\   autoHighlight: v:true,
-	\   autoHighlightDiags: v:true,
-	\   autoPopulateDiags: v:true,
-	\   codeActionPopupStyle: 'full',
-	\   completionMatcher: 'case',
-	\   completionMatcherValue: 1,
-	\   definitionFallback: v:true,
-	\   diagSignErrorText: '❗',
-	\   diagSignHintText: '💡',
-	\   diagSignInfoText: '💡',
-	\   diagSignWarningText: '💡',
-	\   diagSignPriority: {
-	\       'Error': 100,
-	\       'Warning': 99,
-	\       'Information': 98,
-	\       'Hint': 97
-	\   },
-	\   echoSignature: v:false,
-	\   hideDisabledCodeActions: v:false,
-	\   highlightDiagInline: v:true,
-	\   hoverInPreview: v:false,
-	\   hoverFallback: v:true,
-	\   ignoreMissingServer: v:true,
-	\   keepFocusInDiags: v:true,
-	\   keepFocusInReferences: v:true,
-	\   completionTextEdit: v:true,
-	\   diagVirtualTextAlign: 'above',
-	\   noNewlineInCompletion: v:true,
-	\   popupBorder: v:true,
-	\	popupBorderSignatureHelp: v:true,
-	\   omniComplete: v:null,
-	\   outlineOnRight: v:true,
-	\   outlineWinSize: 50,
-	\   semanticHighlight: v:true,
-	\   showDiagInBalloon: v:false,
-	\   showDiagInPopup: v:true,
-	\   showDiagOnStatusLine: v:false,
-	\   showDiagWithSign: v:true,
-	\   showDiagWithVirtualText: v:false,
-	\   showInlayHints: v:false,
-	\   showSignature: v:true,
-	\   snippetSupport: v:true,
-	\   ultisnipsSupport: v:true,
-	\   useBufferCompletion: v:false,
-	\   usePopupInCodeAction: v:true,
-	\   vsnipSupport: v:false,
-	\   useQuickfixForLocations: v:false,
-	\   bufferCompletionTimeout: 100,
-	\   customCompletionKinds: v:false,
-	\   completionKinds: {},
-	\   filterCompletionDuplicates: v:true,
-	\ }
+      \   aleSupport: v:false,
+      \   autoComplete: v:true,
+      \   autoHighlight: v:true,
+      \   autoHighlightDiags: v:true,
+      \   autoPopulateDiags: v:true,
+      \   codeActionPopupStyle: 'full',
+      \   completionMatcher: 'case',
+      \   completionMatcherValue: 1,
+      \   definitionFallback: v:true,
+      \   diagSignErrorText: '❗',
+      \   diagSignHintText: '💡',
+      \   diagSignInfoText: '💡',
+      \   diagSignWarningText: '💡',
+      \   diagSignPriority: {
+      \     'Error': 100,
+      \     'Warning': 99,
+      \     'Information': 98,
+      \     'Hint': 97
+      \   },
+      \   echoSignature: v:false,
+      \   hideDisabledCodeActions: v:false,
+      \   highlightDiagInline: v:true,
+      \   hoverInPreview: v:false,
+      \   hoverFallback: v:true,
+      \   ignoreMissingServer: v:true,
+      \   keepFocusInDiags: v:true,
+      \   keepFocusInReferences: v:true,
+      \   completionTextEdit: v:true,
+      \   diagVirtualTextAlign: 'above',
+      \   noNewlineInCompletion: v:true,
+      \   popupBorder: v:true,
+      \   popupBorderSignatureHelp: v:true,
+      \   omniComplete: v:null,
+      \   outlineOnRight: v:true,
+      \   outlineWinSize: 50,
+      \   semanticHighlight: v:true,
+      \   showDiagInBalloon: v:false,
+      \   showDiagInPopup: v:true,
+      \   showDiagOnStatusLine: v:false,
+      \   showDiagWithSign: v:true,
+      \   showDiagWithVirtualText: v:false,
+      \   showInlayHints: v:false,
+      \   showSignature: v:true,
+      \   snippetSupport: v:true,
+      \   ultisnipsSupport: v:true,
+      \   useBufferCompletion: v:false,
+      \   usePopupInCodeAction: v:true,
+      \   vsnipSupport: v:false,
+      \   useQuickfixForLocations: v:false,
+      \   bufferCompletionTimeout: 100,
+      \   customCompletionKinds: v:false,
+      \   completionKinds: {},
+      \   filterCompletionDuplicates: v:true,
+      \ }
 
 augroup LspConfig
-	autocmd!
-	autocmd User LspSetup call LspOptionsSet(lspOpts)
+  autocmd!
+  autocmd User LspSetup call LspOptionsSet(lspOpts)
 augroup END
 
 " Source all language servers
 for file in split(glob('$VIMHOME/lsp/*.vim'), '\n')
-	execute 'source' fnameescape(file)
+  execute 'source' fnameescape(file)
 endfor
 
 " Enable language servers
@@ -113,16 +113,16 @@ nnoremap <leader>cl :LspCodeLens<CR>
 
 " Map add to dictionary differently for different cspell clients
 if index(lspServers, cspell_lsp) >= 0
-	nnoremap <silent> <leader>ad m0$:LspCodeAction Add<CR>`0
+  nnoremap <silent> <leader>ad m0$:LspCodeAction Add<CR>`0
 elseif index(lspServers, codebook) >= 0
-	nnoremap <silent> <leader>ad :LspCodeAction /global dictionary<CR>
+  nnoremap <silent> <leader>ad :LspCodeAction /global dictionary<CR>
 endif
 
 function! s:SmartHover() abort
-	let result = execute('LspHover')
-	if result =~ 'Error'
-		call feedkeys('K', 'n')
-	endif
+  let result = execute('LspHover')
+  if result =~ 'Error'
+    call feedkeys('K', 'n')
+  endif
 endfunction
 
 nnoremap <silent> K :call <SID>SmartHover()<CR>

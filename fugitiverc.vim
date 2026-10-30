@@ -35,8 +35,8 @@ command Greview :Gclog @ ^!
 augroup FugitiveGclog
   autocmd!
   if (has_key(plugs, "spaceduck"))
-	  autocmd FileType git highlight link diffAdded DiffAdd
-	  autocmd FileType git highlight link diffChanged DiffChange
-	  autocmd FileType git highlight link diffRemoved DiffDelete
+    autocmd FileType git highlight link diffAdded DiffAdd
+    autocmd FileType git highlight link diffChanged DiffChange
+    autocmd FileType git highlight link diffRemoved DiffDelete
   endif
 augroup END

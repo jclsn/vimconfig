@@ -1,5 +1,5 @@
 " ++++++++++++++++++++++++************************
-"		 Miscellaneous settings
+"                Miscellaneous settings
 " ++++++++++++++++++++++++************************
 "
 set number
@@ -31,18 +31,18 @@ set exrc
 set nocursorline
 
 if has_key(plugs, 'vim-smoothie')
-	let g:smoothie_update_interval = 0
+  let g:smoothie_update_interval = 0
 endif
 
 if has ('win32')
-	set noerrorbells
-	set novisualbell
+  set noerrorbells
+  set novisualbell
 endif
 
 " Keep cmd.exe on Windows: powershell is slow to start for every system() call
 " and needs different shell options. :terminal uses powershell (see remaps.vim)
 if has('unix') && executable('zsh')
-	set shell=zsh
+  set shell=zsh
 endif
 
 let g:c_syntax_for_h=1
@@ -51,13 +51,13 @@ let filetype_asm = 'nasm'
 
 
 if has ('nvim')
-	set undodir=~/.config/nvim/undodir
+  set undodir=~/.config/nvim/undodir
 else
-	set undodir=$VIMHOME/undodir
+  set undodir=$VIMHOME/undodir
 end
 
 if !isdirectory(expand(&undodir))
-	call mkdir(expand(&undodir), 'p')
+  call mkdir(expand(&undodir), 'p')
 endif
 
 let g:better_whitespace_ctermcolor=178
@@ -71,64 +71,64 @@ let g:startify_change_to_dir = 0
 
 
 if exists('$TMUX')
-	let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
-	let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
-	let &t_SI = "\e[5 q" | let &t_EI = "\e[2 q"
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+  let &t_SI = "\e[5 q" | let &t_EI = "\e[2 q"
 else
-	let &t_SI = "\e[5 q"
-	let &t_EI = "\e[2 q"
+  let &t_SI = "\e[5 q"
+  let &t_EI = "\e[2 q"
 endif
 
 
 let todoKeywords = [
-			\ "dummy",
-			\ "DUMMY",
-			\ "IMPORTANT NOTE",
-			\ "Important Note",
-			\ "important note",
-			\ "NOTE",
-			\ "Note",
-			\ "note",
-			\ "NOTES",
-			\ "Notes",
-			\ "notes",
-			\ "Todo",
-			\ "ToDo",
-			\ "todo",
-			\ "FIXME",
-			\ "FixMe",
-			\ "Fixme",
-			\ "fixme",
-			\ "IMPROVEME",
-			\ "ImproveMe",
-			\ "Improveme",
-			\ "improveme",
-			\ ]
+      \   "dummy",
+      \   "DUMMY",
+      \   "IMPORTANT NOTE",
+      \   "Important Note",
+      \   "important note",
+      \   "NOTE",
+      \   "Note",
+      \   "note",
+      \   "NOTES",
+      \   "Notes",
+      \   "notes",
+      \   "Todo",
+      \   "ToDo",
+      \   "todo",
+      \   "FIXME",
+      \   "FixMe",
+      \   "Fixme",
+      \   "fixme",
+      \   "IMPROVEME",
+      \   "ImproveMe",
+      \   "Improveme",
+      \   "improveme",
+      \ ]
 
 
 if has('nvim')
-	if has('unix') && !has('win32')
-		let g:python3_host_prog = '/usr/bin/python3'
-	endif
+  if has('unix') && !has('win32')
+    let g:python3_host_prog = '/usr/bin/python3'
+  endif
 else
-	set pyxversion=3
+  set pyxversion=3
 endif
 
 if $TERM == 'screen-256color' " or w/e your TERM is in tmux
-	exec "set <S-F11>=\<Esc>[23;2~"
+  exec "set <S-F11>=\<Esc>[23;2~"
 endif
 
 " Always use make -j$(nproc) when using :make
 if has('unix') && !has('win32')
-	let &makeprg = 'make -j' . trim(system('nproc'))
+  let &makeprg = 'make -j' . trim(system('nproc'))
 endif
 
 " Fix cursor on Windows
 if exists('$WT_SESSION') || $TERM_PROGRAM ==# 'Windows_Terminal'
-	"set t_SI=[5 q  " Insert mode: blinking beam
-	"set t_EI=[1 q  " Normal mode: blinking block
-	"set t_SR=[3 q  " Replace mode: blinking underscore
-	let &t_SI = "\e[5 q"
-	let &t_EI = "\e[1 q"
-	let &t_SR = "\e[3 q"
+  "set t_SI=[5 q  " Insert mode: blinking beam
+  "set t_EI=[1 q  " Normal mode: blinking block
+  "set t_SR=[3 q  " Replace mode: blinking underscore
+  let &t_SI = "\e[5 q"
+  let &t_EI = "\e[1 q"
+  let &t_SR = "\e[3 q"
 endif

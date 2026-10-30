@@ -1,9 +1,9 @@
-let g:vimspector_install_gadgets = [ 
-	\ 'debugpy', 
-	\ 'vscode-cpptools', 
-	\ 'CodeLLDB', 
-	\ 'vscode-bash-debug'
-\ ]
+let g:vimspector_install_gadgets = [
+      \   'debugpy',
+      \   'vscode-cpptools',
+      \   'CodeLLDB',
+      \   'vscode-bash-debug'
+      \ ]
 
 " let g:vimspector_terminal_minheight = 75
 
@@ -26,21 +26,21 @@ nnoremap <S-F5> :RebuildAndDebug<CR>
 let g:vimspector_enable_mappings = 'HUMAN'
 
 augroup VimspectorJump
-	autocmd!
-	autocmd User VimspectorJumpedToFrame normal zz
+  autocmd!
+  autocmd User VimspectorJumpedToFrame normal zz
 augroup END
- function! AddToWatch()
-   let word = expand("<cexpr>")
-   call vimspector#AddWatch(word)
- endfunction
+function! AddToWatch()
+  let word = expand("<cexpr>")
+  call vimspector#AddWatch(word)
+endfunction
 
 let g:vimspector_sign_priority = {
-  \    'vimspectorBP':         101,
-  \    'vimspectorBPCond':     102,
-  \    'vimspectorBPLog':      103,
-  \    'vimspectorBPDisabled': 104,
-  \    'vimspectorPC':         105,
-  \ }
+      \   'vimspectorBP':         101,
+      \   'vimspectorBPCond':     102,
+      \   'vimspectorBPLog':      103,
+      \   'vimspectorBPDisabled': 104,
+      \   'vimspectorPC':         105,
+      \ }
 
 " Creates a function to run :Make
 function! RebuildAndDebug()
@@ -53,7 +53,7 @@ endfunction
 function! RunVimspectorIfBuilt()
   let status = +readfile(dispatch#request().file . '.complete', 1)[0]
   if status == 0
-	call vimspector#Launch()
+    call vimspector#Launch()
   endif
 endfunction
 
@@ -61,10 +61,10 @@ endfunction
 command! RebuildAndDebug call RebuildAndDebug()
 
 if has_key(plugs, 'vim-smoothie')
-	augroup MyVimspectorUICustomisation
-	  autocmd!
-	  autocmd User VimspectorUICreated let g:smoothie_enabled=0
-	  autocmd User VimspectorTerminalOpened let g:smoothie_enabled=0
-	  autocmd User VimspectorDebugEnded let g:smoothie_enabled=1
-	augroup END
+  augroup MyVimspectorUICustomisation
+    autocmd!
+    autocmd User VimspectorUICreated let g:smoothie_enabled=0
+    autocmd User VimspectorTerminalOpened let g:smoothie_enabled=0
+    autocmd User VimspectorDebugEnded let g:smoothie_enabled=1
+  augroup END
 endif
