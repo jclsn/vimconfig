@@ -10,5 +10,3 @@ nnoremap <leader>vh <Plug>(GitGutterPreviewHunk)
 nnoremap <leader>uh <Plug>(GitGutterUndoHunk)
 
 nnoremap <leader>sh <Plug>(GitGutterStageHunk)
-
-autocmd BufEnter * GitGutter
