@@ -6,7 +6,14 @@ if has('QNX')
 	let $MYVIMDIR = '/home/jan/.vim'
 endif
 
-let $VIMHOME = '/home/jan/.vim'
+" Directory of this config. Resolve symlinks like ~/.vimrc -> ~/.vim/vimrc and
+" fall back to my home when the vimrc was copied, e.g. to /root/.vimrc
+if empty($VIMHOME)
+	let $VIMHOME = fnamemodify(resolve(expand('<sfile>:p')), ':h')
+	if !filereadable($VIMHOME . '/pluginlist.vim')
+		let $VIMHOME = has('win32') ? expand('~/vimfiles') : '/home/jan/.vim'
+	endif
+endif
 
 call plug#begin('$VIMHOME/plugged')
 	so $VIMHOME/pluginlist.vim
