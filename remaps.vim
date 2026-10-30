@@ -67,6 +67,9 @@ vmap <silent> <Leader>w <Plug>SearchVisual<CR>
 if has('nvim')
 	tnoremap <esc> <C-\><C-n>
 	nmap <leader>tt :sp <CR> :term<CR> :set nonu<CR> :set nornu<CR> i
+elseif has('win32')
+	let s:term_shell = executable('pwsh') ? 'pwsh' : 'powershell'
+	execute 'nnoremap <silent><Leader>tt :ter ++close ' . s:term_shell . '<CR>'
 else
 	nnoremap <silent><Leader>tt :ter<CR>
 endif

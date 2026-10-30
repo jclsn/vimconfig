@@ -39,10 +39,10 @@ if has ('win32')
 	set novisualbell
 endif
 
-if has('unix')
+" Keep cmd.exe on Windows: powershell is slow to start for every system() call
+" and needs different shell options. :terminal uses powershell (see remaps.vim)
+if has('unix') && executable('zsh')
 	set shell=zsh
-elseif has('win32')
-	set shell=powershell
 endif
 
 let g:c_syntax_for_h=1
