@@ -1,6 +1,6 @@
-set tabstop=4
-set shiftwidth=4
-set noexpandtab 
+setlocal tabstop=4
+setlocal shiftwidth=4
+setlocal noexpandtab 
 
 function! PreserveCursor(cmd)
     let l:save_pos = getpos(".")  " Save cursor position
