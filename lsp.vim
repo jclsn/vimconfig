@@ -24,6 +24,7 @@ let lspOpts = #{
       \   hoverInPreview: v:false,
       \   hoverFallback: v:true,
       \   ignoreMissingServer: v:true,
+      \   incrementalSync: v:true,
       \   keepFocusInDiags: v:true,
       \   keepFocusInReferences: v:true,
       \   completionTextEdit: v:true,
