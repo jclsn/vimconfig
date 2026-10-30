@@ -9,6 +9,8 @@
 !templates
 !vimrc
 
+!after/
+!after/syntax/
 !ftplugin/
 !lsp/
 
