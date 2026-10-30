@@ -30,7 +30,7 @@ function! s:init_fern() abort
 	nnoremap <buffer> v <Plug>(fern-action-open:side)
 endfunction
 
-function UpdateIfTerm()
+function! UpdateIfTerm()
     const bufnr = str2nr(expand('<abuf>'))
     if getbufvar(bufnr, '&buftype') != 'terminal'
         return

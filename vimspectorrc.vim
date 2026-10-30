@@ -29,7 +29,7 @@ augroup VimspectorJump
 	autocmd!
 	autocmd User VimspectorJumpedToFrame normal zz
 augroup END
- func! AddToWatch()
+ function! AddToWatch()
    let word = expand("<cexpr>")
    call vimspector#AddWatch(word)
  endfunction

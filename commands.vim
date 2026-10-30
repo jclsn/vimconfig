@@ -1,4 +1,4 @@
-function AnonymizeFunction()
+function! AnonymizeFunction()
 	:%s/jan/user/g
 	:%s/AERQ/Somecompany/g
 	:%s/aerq/somecompany/g
@@ -13,12 +13,12 @@ function! SynStack()
     return
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+endfunction
 
 function! SynGroup()
     let l:s = synID(line('.'), col('.'), 1)
     echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
-endfun
+endfunction
 
 command Anonymize silent! call AnonymizeFunction()
 command DeleteNonAscii :g/[^\x00-\x7f]/d
@@ -29,7 +29,7 @@ function! MixxxIssue()
   let l:issue = expand('<cword>')
   let l:mixxx_issue_url = "https://github.com/mixxxdj/mixxx/issues/" .. l:issue
   call dist#vim9#Open(l:mixxx_issue_url)
-endfun
+endfunction
 command MixxxIssue call MixxxIssue()
 
 function! CloseOtherBuffersKeepFern()

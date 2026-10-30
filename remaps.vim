@@ -101,12 +101,12 @@ nnoremap <leader>do :windo diffoff <CR>
 " ++++++++++++++++++++++++************************
 "               Man mappings
 " ++++++++++++++++++++++++************************
-func! GetSelectedText()
+function! GetSelectedText()
   normal gv"xy
   let result = getreg("x")
   normal gv
   return result
-endfunc
+endfunction
 
 nnoremap <leader>m <Plug>(Man)
 nnoremap <leader>v <Plug>(Vman)
