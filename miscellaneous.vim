@@ -54,7 +54,7 @@ if has ('nvim')
   set undodir=~/.config/nvim/undodir
 else
   set undodir=$VIMHOME/undodir
-end
+endif
 
 if !isdirectory(expand(&undodir))
   call mkdir(expand(&undodir), 'p')
@@ -115,7 +115,7 @@ else
 endif
 
 if $TERM == 'screen-256color' " or w/e your TERM is in tmux
-  exec "set <S-F11>=\<Esc>[23;2~"
+  execute "set <S-F11>=\<Esc>[23;2~"
 endif
 
 " Always use make -j$(nproc) when using :make

@@ -33,7 +33,7 @@ let g:rainbow_conf = {
 
 augroup RainbowFiletypes
   autocmd!
-  au FileType * RainbowToggleOff
-  au FileType json RainbowToggleOn
-  au FileType jsonc RainbowToggleOn
+  autocmd FileType * RainbowToggleOff
+  autocmd FileType json RainbowToggleOn
+  autocmd FileType jsonc RainbowToggleOn
 augroup END

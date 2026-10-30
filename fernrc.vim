@@ -35,7 +35,7 @@ function! UpdateIfTerm()
   if getbufvar(bufnr, '&buftype') != 'terminal'
     return
   endif
-  exec 'FernDo e -drawer -stay'
+  execute 'FernDo e -drawer -stay'
 endfunction
 
 " Update the fern buffer under a set of conditions

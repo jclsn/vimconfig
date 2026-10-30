@@ -83,10 +83,10 @@ endif
 " ++++++++++++++++++++++++************************
 augroup vimrc-filetype-maps
   autocmd!
-  au FileType c,cpp nnoremap <buffer> <leader>cm :CMake<CR>
-  au FileType c,cpp nnoremap <buffer> <leader>ma :Make<CR>
-  au FileType rust nnoremap <buffer> <leader>ru :RustRun <CR>
-  au FileType diff nnoremap <buffer> <leader>ct :ConflictTake<CR>
+  autocmd FileType c,cpp nnoremap <buffer> <leader>cm :CMake<CR>
+  autocmd FileType c,cpp nnoremap <buffer> <leader>ma :Make<CR>
+  autocmd FileType rust nnoremap <buffer> <leader>ru :RustRun <CR>
+  autocmd FileType diff nnoremap <buffer> <leader>ct :ConflictTake<CR>
 augroup END
 
 nnoremap <leader>as :Disassemble
@@ -135,7 +135,7 @@ function! s:swap_up()
   endif
 
   call s:swap_lines(n, n - 1)
-  exec n - 1
+  execute n - 1
 endfunction
 
 function! s:swap_down()
@@ -145,7 +145,7 @@ function! s:swap_down()
   endif
 
   call s:swap_lines(n, n + 1)
-  exec n + 1
+  execute n + 1
 endfunction
 
 nnoremap <silent> <C-k> :call <SID>swap_up()<CR>

@@ -16,7 +16,7 @@ if empty($VIMHOME)
 endif
 
 call plug#begin('$VIMHOME/plugged')
-so $VIMHOME/pluginlist.vim
+source $VIMHOME/pluginlist.vim
 call plug#end()
 
 " ++++++++++++++++++++++++************************
@@ -29,68 +29,68 @@ let g:tmpl_author_name = 'Jan Claussen'
 "               Source large configurations
 " ++++++++++++++++++++++++************************
 
-so $VIMHOME/pastes.vim
-so $VIMHOME/remaps.vim
-so $VIMHOME/autocommands.vim
-so $VIMHOME/folds.vim
-so $VIMHOME/commands.vim
+source $VIMHOME/pastes.vim
+source $VIMHOME/remaps.vim
+source $VIMHOME/autocommands.vim
+source $VIMHOME/folds.vim
+source $VIMHOME/commands.vim
 
 if has_key(plugs, 'vim-airline')
-  so $VIMHOME/airlinerc.vim
+  source $VIMHOME/airlinerc.vim
 endif
 if has_key(plugs, 'vimspector')
-  so $VIMHOME/vimspectorrc.vim
+  source $VIMHOME/vimspectorrc.vim
 endif
 if has_key(plugs, 'coc.nvim')
-  so $VIMHOME/cocrc.vim
+  source $VIMHOME/cocrc.vim
 endif
 if has_key(plugs, 'lsp')
-  so $VIMHOME/lsp.vim
+  source $VIMHOME/lsp.vim
 endif
 if has_key(plugs, 'fern.vim')
-  so $VIMHOME/fernrc.vim
+  source $VIMHOME/fernrc.vim
 endif
 if has_key(plugs, 'vim-cmake')
-  so $VIMHOME/cmakerc.vim
+  source $VIMHOME/cmakerc.vim
 endif
 if has_key(plugs, 'vim-qt')
-  so $VIMHOME/qt.vim
+  source $VIMHOME/qt.vim
 endif
 if has_key(plugs, 'zeavim.vim')
-  so $VIMHOME/zeavimrc.vim
+  source $VIMHOME/zeavimrc.vim
 endif
 if has_key(plugs, 'vim-slime')
-  so $VIMHOME/slimerc.vim
+  source $VIMHOME/slimerc.vim
 endif
 if has_key(plugs, 'rainbow')
-  so $VIMHOME/rainbowrc.vim
+  source $VIMHOME/rainbowrc.vim
 endif
 if has_key(plugs, 'git-lens.vim')
-  so $VIMHOME/git-lens.vim
+  source $VIMHOME/git-lens.vim
 endif
 if has_key(plugs, 'vim-fugitive')
-  so $VIMHOME/fugitiverc.vim
+  source $VIMHOME/fugitiverc.vim
 endif
 if has_key(plugs, 'vim-doge')
-  so $VIMHOME/dogerc.vim
+  source $VIMHOME/dogerc.vim
 endif
 if has_key(plugs, 'fugitive-gitlab.vim') && !empty(glob('$VIMHOME/fugitive-gitlab.vim'))
-  so $VIMHOME/fugitive-gitlab.vim
+  source $VIMHOME/fugitive-gitlab.vim
 endif
 if has_key(plugs, 'vim-gitgutter')
-  so $VIMHOME/gitgutterrc.vim
+  source $VIMHOME/gitgutterrc.vim
 endif
 if has_key(plugs, 'ConflictMotions')
-  so $VIMHOME/conflictmotions.vim
+  source $VIMHOME/conflictmotions.vim
 endif
 if has_key(plugs, 'lexima.vim')
-  so $VIMHOME/leximarc.vim
+  source $VIMHOME/leximarc.vim
 endif
 if has_key(plugs, 'vim-vsnip')
-  so $VIMHOME/vsniprc.vim
+  source $VIMHOME/vsniprc.vim
 endif
 
 " Always apply these settings last
-so $VIMHOME/vim9functions.vim
-so $VIMHOME/themeconfig.vim
-so $VIMHOME/miscellaneous.vim
+source $VIMHOME/vim9functions.vim
+source $VIMHOME/themeconfig.vim
+source $VIMHOME/miscellaneous.vim
