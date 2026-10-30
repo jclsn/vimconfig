@@ -27,8 +27,8 @@ command HighlightGroup call SynGroup()
 
 function! MixxxIssue()
   let l:issue = expand('<cword>')
-  let l:mixxx_issue_url = "https://github.com/mixxxdj/mixxx/issues/" .. issue
-  silent! call system('xdg-open ' .. shellescape(mixxx_issue_url) .. ' &')
+  let l:mixxx_issue_url = "https://github.com/mixxxdj/mixxx/issues/" .. l:issue
+  call dist#vim9#Open(l:mixxx_issue_url)
 endfun
 command MixxxIssue call MixxxIssue()
 
