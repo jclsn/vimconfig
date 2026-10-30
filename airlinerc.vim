@@ -1,3 +1,21 @@
+" Name the theme and extensions to skip searching for them on startup
+let g:airline_theme = 'spaceduck'
+let g:airline_extensions = [
+      \   'branch',
+      \   'fern',
+      \   'fugitiveline',
+      \   'fzf',
+      \   'hunks',
+      \   'keymap',
+      \   'nerdfont',
+      \   'quickfix',
+      \   'searchcount',
+      \   'tabline',
+      \   'term',
+      \   'whitespace',
+      \   'wordcount',
+      \ ]
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
