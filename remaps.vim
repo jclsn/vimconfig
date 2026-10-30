@@ -119,21 +119,6 @@ vnoremap <leader>m :call man#get_page('horizontal',   GetSelectedText())<CR>
 " Easily delete LINES IN INSERT MODE
 inoremap <c-d> <esc>ddi
 
-" Quick editing of config files
-nnoremap <leader>ec :vsplit $VIMHOME/commands.vim<cr>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>er :vsplit $VIMHOME/remaps.vim<cr>
-nnoremap <leader>em :vsplit $VIMHOME/miscellaneous.vim<cr>
-nnoremap <leader>ep :vsplit $VIMHOME/pluginlist.vim<cr>
-nnoremap <leader>et :vsplit $VIMHOME/themeconfig.vim<cr>
-nnoremap <leader>ec :vsplit $VIMHOME/commands.vim<cr>
-nnoremap <leader>ea :vsplit $VIMHOME/autocommands.vim<cr>
-nnoremap <leader>ef :vsplit $VIMHOME/fernrc.vim<cr>
-nnoremap <leader>ey :vsplit $VIMHOME/ycmrc.vim<cr>
-nnoremap <leader>ed :vsplit $VIMHOME/vimspectorrc.vim<cr>
-nnoremap <leader>el :vsplit $VIMHOME/lsp.vim<cr>
-nnoremap <leader>elp :vsplit $VIMHOME/lsp<cr>
-nnoremap <leader>es :vsplit $VIMHOME/cSpell.json<cr>
 
 " Swap lines beautifully
 function! s:swap_lines(n1, n2)
@@ -219,7 +204,7 @@ nnoremap <leader>ep :vsplit $VIMHOME/pluginlist.vim<CR>
 nnoremap <leader>er :vsplit $VIMHOME/remaps.vim<CR>
 nnoremap <leader>et :vsplit $VIMHOME/themeconfig.vim<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>ey :vsplit $VIMHOME/ycmrc.vim<CR>
+nnoremap <leader>es :vsplit $VIMHOME/cSpell.json<CR>
 
 ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
 
