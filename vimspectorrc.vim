@@ -21,7 +21,7 @@ nnoremap <LocalLeader>D     <Plug>VimspectorDisassemble
 nnoremap <LocalLeader>K <Plug>VimspectorBalloonEval
 xnoremap <LocalLeader>K <Plug>VimspectorBalloonEval
 " Run make and start debugger
-nnoremap <S-F5>> :RebuildAndDebug<CR>
+nnoremap <S-F5> :RebuildAndDebug<CR>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
