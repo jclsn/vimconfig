@@ -22,7 +22,6 @@ if has("autocmd")
 	au BufReadPost *.its setlocal syntax=dts
 	au BufReadPost *.scr setlocal syntax=bash
 	au BufReadPost *_defconfig setlocal syntax=config
-	au BufReadPost *.h setlocal filetype=c
 	"au BufReadPost * :ColorHighlight<CR>
 
 	" Run retab on saving files
@@ -49,6 +48,14 @@ augroup END
 " JSON settings
 au FileType json set filetype=jsonc
 
+" :setf does nothing after the filetype detection already ran, so set it
+" directly. Only change it when needed to not run FileType autocmds again
+function! s:SetFiletype(ft) abort
+  if &filetype !=# a:ft
+    let &l:filetype = a:ft
+  endif
+endfunction
+
 " Deduce header file type for C/C++
 function! GuessHeaderFiletype() abort
 
@@ -56,10 +63,10 @@ function! GuessHeaderFiletype() abort
 
   if filereadable(base . '.cpp') || filereadable(base . '.cc') ||
         \ filereadable(base . '.cxx')
-    setf cpp
+    call s:SetFiletype('cpp')
     return
   elseif filereadable(base . '.c')
-    setf c
+    call s:SetFiletype('c')
     return
   endif
 
@@ -100,7 +107,7 @@ function! GuessHeaderFiletype() abort
   " Check word-based keywords
   for kw in l:word_keywords
     if l:content =~# '\<' . kw . '\>'
-      setf cpp
+      call s:SetFiletype('cpp')
       return
     endif
   endfor
@@ -108,15 +115,15 @@ function! GuessHeaderFiletype() abort
   " Check pattern-based keywords
   for kw in l:pattern_keywords
     if l:content =~# kw
-      setf cpp
+      call s:SetFiletype('cpp')
       return
     endif
   endfor
 
-  setf c
+  call s:SetFiletype('c')
 endfunction
 
 augroup HeaderGuess
   autocmd!
-  autocmd BufRead,BufNewFile,BufEnter *.h call GuessHeaderFiletype()
+  autocmd BufRead,BufNewFile *.h call GuessHeaderFiletype()
 augroup END
