@@ -93,7 +93,8 @@ if has_key(plugs, 'ConflictMotions')
   source $VIMHOME/conflictmotions.vim
 endif
 if has_key(plugs, 'lexima.vim')
-  source $VIMHOME/leximarc.vim
+  " Adding the rules loads lexima and takes ~150ms
+  autocmd vimrc-lazy InsertEnter * ++once source $VIMHOME/leximarc.vim
 endif
 if has_key(plugs, 'vim-vsnip')
   source $VIMHOME/vsniprc.vim
