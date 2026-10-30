@@ -197,7 +197,7 @@ nnoremap <leader>ea :vsplit $VIMHOME/autocommands.vim<CR>
 nnoremap <leader>ec :vsplit $VIMHOME/commands.vim<CR>
 nnoremap <leader>ed :vsplit $VIMHOME/vimspectorrc.vim<CR>
 nnoremap <leader>ef :vsplit $VIMHOME/fernrc.vim<CR>
-nnoremap <leader>elc :vsplit $VIMHOME/lsp.vim<CR>
+nnoremap <leader>el :vsplit $VIMHOME/lsp.vim<CR>
 nnoremap <leader>elp :vsplit $VIMHOME/lsp<CR>
 nnoremap <leader>em :vsplit $VIMHOME/miscellaneous.vim<CR>
 nnoremap <leader>ep :vsplit $VIMHOME/pluginlist.vim<CR>
