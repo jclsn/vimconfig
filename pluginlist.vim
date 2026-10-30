@@ -12,6 +12,7 @@ PyPlug 'SirVer/ultisnips', { 'on': [] }
 " Plug 'rafamadriz/friendly-snippets'
 
 Vim9Plug 'yegappan/lsp', { 'do': 'git fetch --unshallow' }
+Vim9Plug 'jclsn/sonarlint-lsp.vim'
 " Vim9Plug 'https://github.com/jclsn/lsp', {'branch': 'fix/autopair-plugin-conflict', 'do': 'git fetch --unshallow' }
 
 

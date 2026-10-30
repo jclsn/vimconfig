@@ -1,39 +1,50 @@
-let sonarlint = #{
-      \   name: 'sonarlint-ls',
-      \   filetype: ['c', 'cpp'],
-      \   path: 'sonarlint-ls',
-      \   args: [
-      \     '-stdio',
-      \     '-analyzers',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarcfamily.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonargo.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarhtml.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonariac.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarjava.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarjs.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarlintomnisharp.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarphp.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarpython.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonartext.jar',
-      \     '/usr/share/java/sonarlint-ls/analyzers/sonarxml.jar',
-      \   ],
-      \   debug: v:true,
-      \   syncInit: v:true,
-      \   initializationOptions: #{
-      \     productKey: 'Vim',
-      \     productName: 'Sonarlint Vim',
-      \     telemetryStorage: '~/.cache/sonarlint',
-      \     showVerboseLogs: v:true,
-      \     platform: 'linux',
-      \     architecture: 'x64',
-      \     additionalAttributes: #{
-      \       vscode: #{
-      \         isTelemetryEnabled: v:false },
-      \     },
-      \     sonarlint: #{
-      \       pathToCompileCommands: './build/compile_commands.json',
-      \       trace: #{
-      \         server: 'verbose' }
-      \     }
-      \   }
-      \ }
+vim9script
+
+const analyzerDirs = [
+  expand('~/.local/share/sonarlint-ls/analyzers'),
+  '/usr/share/java/sonarlint-ls/analyzers',
+]
+
+g:sonarlint = {
+  name: 'sonarlint-ls',
+  path: 'sonarlint-ls',
+  filetype: [
+    'c',
+    'cpp',
+    'go',
+    'html',
+    'dockerfile',
+    'terraform',
+    'yaml',
+    'java',
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
+    'cs',
+    'php',
+    'python',
+    'text',
+    'xml',
+  ],
+  syncInit: v:false,
+  debug: v:false,
+}
+
+if has_key(g:plugs, 'sonarlint-lsp.vim')
+  extend(g:sonarlint, {
+      args: ['-stdio', '-analyzers'] + sonarlint#AnalyzerJars(analyzerDirs),
+      processDiagHandler: function('sonarlint#ProcessDiags'),
+      customNotificationHandlers: sonarlint#NotificationHandlers(),
+      customRequestHandlers: sonarlint#RequestHandlers(),
+      workspaceConfig: {sonarlint: sonarlint#WorkspaceSettings()},
+      initializationOptions: {
+        productKey: 'vim',
+        productName: 'SonarLint Vim',
+        rules: sonarlint#LoadRules(),
+        additionalAttributes: {vscode: {isTelemetryEnabled: v:false}},
+        connections: get(g:, 'sonarqube_connected_mode', {})->get('connections', {}),
+      },
+    }
+  )
+endif
