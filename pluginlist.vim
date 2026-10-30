@@ -5,7 +5,7 @@ command! -nargs=+ Vim9Plug if has('vim9script') | execute 'Plug ' . <q-args> | e
 
 " ################# Code completion #################
 Plug 'honza/vim-snippets'
-PyPlug 'SirVer/ultisnips'
+PyPlug 'SirVer/ultisnips', { 'on': [] }
 " NodePlug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'hrsh7th/vim-vsnip'
 " Plug 'hrsh7th/vim-vsnip-integ'

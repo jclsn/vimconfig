@@ -19,6 +19,15 @@ call plug#begin('$VIMHOME/plugged')
 source $VIMHOME/pluginlist.vim
 call plug#end()
 
+" Set up things only needed in insert mode when entering it the first time
+augroup vimrc-lazy
+  autocmd!
+  " Starting Python for UltiSnips takes ~150ms
+  if has_key(plugs, 'ultisnips')
+    autocmd InsertEnter * ++once call plug#load('ultisnips')
+  endif
+augroup END
+
 " ++++++++++++++++++++++++************************
 "                                               User
 " ++++++++++++++++++++++++************************
