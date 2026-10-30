@@ -1,53 +1,56 @@
 vim9script
 
+# Write JSON and pretty print it with jq if available. Do the rest in Vim, the
+# shell commands for it differ between Linux and Windows
+def WriteJson(file: string, data: dict<any>): bool
+    if writefile([json_encode(data)], file) != 0
+        return false
+    endif
+    if executable('jq')
+        var formatted = systemlist('jq --indent 2 . ' .. shellescape(file))
+        if v:shell_error == 0
+            writefile(formatted, file)
+        endif
+    endif
+    return true
+enddef
+
 def MoveCocWordsToCSpell()
     var coc_json = expand("$VIMHOME/coc-settings.json")
     var cspell_json = expand("$VIMHOME/cSpell.json")
 
-    # Check if jq is installed
-    if system('command -v jq') == ""
-        echohl ErrorMsg | echom "jq not found. Please install jq first." | echohl None
+    var coc: dict<any>
+    try
+        coc = json_decode(join(readfile(coc_json), "\n"))
+    catch
+        echohl ErrorMsg | echom "Could not parse " .. coc_json | echohl None
         return
-    endif
+    endtry
 
     # Extract words from coc-settings.json
-    var words = systemlist('jq -r ".\"cSpell.userWords\"[]" ' .. shellescape(coc_json))
-
+    var words: list<string> = get(coc, 'cSpell.userWords', get(coc, 'userWords', []))
     if empty(words)
-        words = systemlist('jq -r ".\"userWords\"[]" ' .. shellescape(coc_json))
-    endif
-
-    if v:shell_error != 0 || empty(words)
-        echohl WarningMsg | echom "No words found in cSpell.userWords or JSON syntax error." | echohl None
+        echohl WarningMsg | echom "No words found in cSpell.userWords." | echohl None
         return
-    endif
-
-    # Ensure cSpell.json exists
-    if !filereadable(cspell_json)
-        writefile(['{ "words": [] }'], cspell_json)
     endif
 
     # Merge words into cSpell.json
-    var add_words_cmd = 'jq --indent 2 --argjson newWords ' .. shellescape(json_encode(words)) ..
-        ' ''.words += $newWords | .words |= unique'' ' ..
-        shellescape(cspell_json) .. ' > ' .. shellescape(cspell_json .. ".tmp") .. ' && mv ' ..
-        shellescape(cspell_json .. ".tmp") .. ' ' .. shellescape(cspell_json)
+    var cspell: dict<any> = filereadable(cspell_json)
+        ? json_decode(join(readfile(cspell_json), "\n"))
+        : {words: []}
+    cspell.words = sort(get(cspell, 'words', []) + words)->uniq()
 
-    system(add_words_cmd)
-
-    if v:shell_error != 0
+    if !WriteJson(cspell_json, cspell)
         echohl ErrorMsg | echom "Failed to update cSpell.json" | echohl None
         return
     endif
 
     # Remove cSpell.userWords from coc-settings.json
-    var remove_words_cmd = 'jq "del(.\"cSpell.userWords\")" ' ..
-        shellescape(coc_json) .. ' > ' .. shellescape(coc_json .. ".tmp") .. ' && mv ' ..
-        shellescape(coc_json .. ".tmp") .. ' ' .. shellescape(coc_json)
+    if has_key(coc, 'cSpell.userWords')
+        remove(coc, 'cSpell.userWords')
+    endif
 
-    system(remove_words_cmd)
-
-    if v:shell_error == 0
+    if WriteJson(coc_json, coc)
         echom "Moved words to cSpell.json and cleaned coc-settings.json!"
     else
         echohl ErrorMsg | echom "Error cleaning coc-settings.json" | echohl None
@@ -73,24 +76,17 @@ def AddWordToCSpell(file: string)
     var data = json_decode(json_text)
 
     # Helper: append if not present
-    def AddUnique(list: list<string>, item: string)
+    def AddUnique(dict: dict<any>, key: string, item: string)
+        var list = get(dict, key, [])
         if index(list, item) < 0
-            add(list, item)
+            dict[key] = add(list, item)
         endif
     enddef
 
-    AddUnique(data.words, word)
-    AddUnique(data.userWords, word)
+    AddUnique(data, 'words', word)
+    AddUnique(data, 'userWords', word)
 
-    # Encode JSON (raw)
-    var new_json = json_encode(data)->split("\n")
-    writefile(new_json, file)
-
-    # Reformat using jq if available
-    if executable('jq')
-        system('jq . ' .. shellescape(file) .. ' > ' .. shellescape(file .. '.tmp'))
-        system('mv ' .. shellescape(file .. '.tmp') .. ' ' .. shellescape(file))
-    endif
+    WriteJson(file, data)
 
     echo 'Added "' .. word .. '" to cSpell dictionary.'
 enddef
