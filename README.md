@@ -11,8 +11,10 @@ ln -s ~/.vim/vimrc ~/.vimrc
 Windows:
 ```powershell
 git clone git@github.com:jclsn/vimconfig.git $HOME\vimfiles
-New-Item -ItemType SymbolicLink -Path $HOME\_vimrc -Target $HOME\vimfiles\vimrc
 ```
+
+Vim reads `~/vimfiles/vimrc` by itself. Make sure there is no `~/_vimrc`, it
+takes precedence.
 
 ## Install vim-plug
 
@@ -37,10 +39,10 @@ sudo cp ~/.vim/vimrc /root/.vimrc
 sudo mkdir -p /root/.vim/undodir
 ```
 
-Set the custom $VIMHOME environment variable to the user's $MYVIMDIR
+A copied vimrc falls back to `/home/jan/.vim`. Point it to your own config
 
 ```bash
-me=$(whoami); sudo sed -i "s|let \$VIMHOME = \$MYVIMDIR|let \$VIMHOME = \"/home/${me}/.vim\"|g" /root/.vimrc
+me=$(whoami); sudo sed -i "s|'/home/jan/.vim'|'/home/${me}/.vim'|" /root/.vimrc
 ```
 
 Then install vim-plug as root
