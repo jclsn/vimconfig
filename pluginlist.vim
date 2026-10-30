@@ -18,7 +18,7 @@ Vim9Plug 'jclsn/sonarlint-lsp.vim'
 
 " ################## Code Formatting ####################
 Plug 'ambv/black', { 'for': [ 'python' ] }
-Plug 'bigfish/vim-stylelint'
+Plug 'bigfish/vim-stylelint', { 'for': ['css', 'scss'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c', 'cpp'] }
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'zeekay/vim-beautify'
@@ -33,7 +33,7 @@ PyPlug 'puremourning/vimspector'
 Plug 'airblade/vim-gitgutter'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
+Plug 'tpope/vim-git', { 'for': ['git', 'gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail'] }
 
 " Conflict handling
 Plug 'vim-scripts/ConflictMotions'
@@ -43,13 +43,13 @@ Plug 'vim-scripts/ingo-library'    " Dependency for ConflictMotions
 
 " ############# Look and feel ###############
 " Syntax
-Plug 'habamax/vim-rst'                " reStructuredtext
-Plug 'luochen1990/rainbow'            " Multicolor parentheses and brackets
-Plug 'm-pilia/vim-pkgbuild'           " Arch Linux PKGBUILD
-Plug 'martinlroth/vim-devicetree'     " Linux devicetree
-Plug 'westeri/asl-vim'                " ACPI source language
-Plug 'wgwoods/vim-systemd-syntax'     " Systemd unit files
-Plug 'yuezk/vim-js'                   " Javascript
+Plug 'habamax/vim-rst', { 'for': ['rst'] }                                 " reStructuredtext
+Plug 'luochen1990/rainbow'                                                 " Multicolor parentheses and brackets
+Plug 'm-pilia/vim-pkgbuild'                                                " Arch Linux PKGBUILD
+Plug 'martinlroth/vim-devicetree', { 'for': ['devicetree'] }               " Linux devicetree
+Plug 'westeri/asl-vim', { 'for': ['asl'] }                                 " ACPI source language
+Plug 'wgwoods/vim-systemd-syntax', { 'for': ['systemd'] }                  " Systemd unit files
+Plug 'yuezk/vim-js', { 'for': ['javascript'] }                             " Javascript
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
@@ -74,11 +74,11 @@ Plug 'ap/vim-css-color'
 
 
 " ################## Miscellaneous #############################
-Plug 'andrewstuart/vim-kubernetes'
+Plug 'andrewstuart/vim-kubernetes', { 'for': ['yaml', 'yaml.gotexttmpl'] }
 Plug 'chrisbra/matchit'
 " Plug 'gergap/vim-ollama'
 Plug 'godlygeek/tabular'
-NodePlug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+NodePlug 'iamcco/markdown-preview.nvim', { 'for': ['markdown'], 'do': 'cd app && npx --yes yarn install' }
 Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'jpalardy/vim-slime'
 Plug 'junegunn/vim-peekaboo'
@@ -96,18 +96,18 @@ Vim9Plug 'jclsn/wt-scrollback.vim'
 " ################# PROGRAMMING LANGUAGES ####################
 
 " ----------- Assembly --------------
-Plug 'yegappan/disassemble'
+Plug 'yegappan/disassemble', { 'for': ['c', 'cpp'] }
 
 " -------------- C --------------
 Plug 'pulkomandy/c.vim', { 'for': [ 'c' ] }
-Plug 'ericcurtin/CurtineIncSw.vim'
+Plug 'ericcurtin/CurtineIncSw.vim', { 'for': ['c', 'cpp'] }
 " Plug 'gregkh/kernel-coding-style'
 
 " ------------- C++ --------------
 Plug 'bfrg/vim-c-cpp-modern', { 'for': [ 'c', 'cpp' ] }
 
 " ------------- CMake --------------
-Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp' ] }
+Plug 'ReverentEngineer/vim-cmake', { 'for': [ 'c', 'cpp', 'cmake' ] }
 Plug 'pboettch/vim-cmake-syntax', { 'for': [ 'cmake' ] }
 
 " ------------- Go --------------
