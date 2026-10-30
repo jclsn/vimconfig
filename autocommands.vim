@@ -1,6 +1,13 @@
 " Autocommands
 if has("autocmd")
 
+    autocmd BufReadPost *
+      \ let line = line("'\"")
+      \ | if line >= 1 && line <= line("$") && &filetype !~# 'commit'
+      \      && index(['xxd', 'gitrebase', 'tutor'], &filetype) == -1
+      \      && !&diff
+      \ |   execute "normal! g`\""
+      \ | endif
 
   " Autosource config files on saving. pluginlist.vim only works between
   " plug#begin() and plug#end()
