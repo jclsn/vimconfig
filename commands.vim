@@ -1,11 +1,5 @@
 function! AnonymizeFunction()
   :%s/jan/user/g
-  :%s/AERQ/Somecompany/g
-  :%s/aerq/somecompany/g
-  :%s/ISD/Device/g
-  :%s/isd/device/g
-  :%s/In Seat Display/Device/g
-  :%s/in seat display/device/g
 endfunction
 
 function! SynStack()
