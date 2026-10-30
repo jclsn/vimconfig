@@ -158,6 +158,7 @@ Vim9Plug 'Eliot00/git-lens.vim'
 Vim9Plug 'bfrg/vim-fzy'
 
 " My plugins
+Plug 'https://github.com/jclsn/cpp-header-detect.vim'
 Plug 'https://github.com/jclsn/glow.vim', { 'for': ['markdown.pandoc', 'markdown'] }
 Plug 'https://github.com/jclsn/more-todos.vim', { 'do': 'git fetch --unshallow' }
 Plug 'https://github.com/jclsn/vim-bitbake.git', { 'do': 'git fetch --unshallow' }
