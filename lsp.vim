@@ -93,7 +93,7 @@ call add(lspServers, tombi)
 call add(lspServers, typescript_ls)
 call add(lspServers, sonarlint)
 call add(lspServers, vhdl)
-call add(lspServers, vimls_go)
+call add(lspServers, vimls)
 call add(lspServers, yaml_ls)
 
 autocmd LspConfig User LspSetup call LspAddServer(lspServers)
