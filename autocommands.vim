@@ -2,29 +2,13 @@
 if has("autocmd")
 
 
-	" Autosource files on saving
-	"autocmd bufwritepost .vimrc source $MYVIMRC
-	autocmd bufwritepost abolish.vim source $VIMHOME/after/plugin/abolish.vim
-	autocmd bufwritepost autocommands.vim source $VIMHOME/autocommands.vim
-	autocmd bufwritepost cmakerc.vim source $VIMHOME/cmakerc.vim
-	autocmd bufwritepost cocrc.vim source $VIMHOME/cocrc.vim
-	autocmd bufwritepost commands.vim source $VIMHOME/commands.vim
-	autocmd bufwritepost ctags.vim source $VIMHOME/ctags.vim
-	autocmd bufwritepost fernrc.vim source $VIMHOME/fernrc.vim
-	autocmd bufwritepost folds.vim source $VIMHOME/folds.vim
-	autocmd bufwritepost fugitiverc.vim source $VIMHOME/fugitiverc.vim
-	autocmd bufwritepost kitty.vim source $VIMHOME/kitty.vim
-	autocmd bufwritepost leximarc.vim source $VIMHOME/leximarc.vim
-	autocmd bufwritepost lsp.vim source $VIMHOME/lsp.vim
-	autocmd bufwritepost miscellaneous.vim source $VIMHOME/miscellaneous.vim
-	autocmd bufwritepost pluginlist.vim source $VIMHOME/pluginlist.vim
-	autocmd bufwritepost remaps.vim source $VIMHOME/remaps.vim
-	autocmd bufwritepost themeconfig.vim source $VIMHOME/themeconfig.vim
-	autocmd bufwritepost ultisnipsrc.vim source $VIMHOME/ultisnipsrc.vim
-	autocmd bufwritepost urlhandler.vim source $VIMHOME/urlhandler.vim
-	autocmd bufwritepost vimspectorrc.vim source $VIMHOME/vimspectorrc.vim
-	autocmd bufwritepost vimtexrc.vim source $VIMHOME/vimtexrc.vim
-	autocmd bufwritepost ycmrc.vim source $VIMHOME/ycmrc.vim
+	" Autosource config files on saving. pluginlist.vim only works between
+	" plug#begin() and plug#end()
+	augroup vimrc-autosource
+		autocmd!
+		autocmd BufWritePost $VIMHOME/*.vim
+					\ if expand('<afile>:t') !=# 'pluginlist.vim' | source <afile> | endif
+	augroup END
 
 	" Autoformatting
 	" autocmd bufwritepost *.ts :Prettier <CR>
