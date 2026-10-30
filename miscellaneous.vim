@@ -56,6 +56,10 @@ else
 	set undodir=$VIMHOME/undodir
 end
 
+if !isdirectory(expand(&undodir))
+	call mkdir(expand(&undodir), 'p')
+endif
+
 let g:better_whitespace_ctermcolor=178
 let g:better_whitespace_guicolor='firebrick4'
 let g:better_whitespace_enabled=1
