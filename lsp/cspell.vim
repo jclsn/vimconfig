@@ -26,7 +26,7 @@ let cspell_lsp =
 			\   path: 'cspell-lsp',
 			\   args: ['--stdio',
 			\		   '--sortWords',
-			\		   '--config', '/home/jan/.vim/cSpell.json',
+			\		   '--config', $VIMHOME .. '/cSpell.json',
 			\   ]
 			\ }
 
@@ -60,6 +60,6 @@ let codebook =
 			\   ],
 			\   root_markers: [ '.git', 'codebook.toml', '.codebook.toml' ],
 			\   initializationOptions: #{
-			\		globalConfigPath: $MYVIMDIR .. 'codebook.toml'
+			\		globalConfigPath: $VIMHOME .. '/codebook.toml'
 			\   }
 			\ }

@@ -1,2 +1,2 @@
-let g:doge_install_path = '/home/jan/.doge'
+let g:doge_install_path = expand('~/.doge')
 

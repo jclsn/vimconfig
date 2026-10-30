@@ -1,8 +1,8 @@
 vim9script
 
 def MoveCocWordsToCSpell()
-    var coc_json = expand("$MYVIMDIR/coc-settings.json")
-    var cspell_json = expand("$MYVIMDIR/cSpell.json")
+    var coc_json = expand("$VIMHOME/coc-settings.json")
+    var cspell_json = expand("$VIMHOME/cSpell.json")
 
     # Check if jq is installed
     if system('command -v jq') == ""
@@ -95,5 +95,5 @@ def AddWordToCSpell(file: string)
     echo 'Added "' .. word .. '" to cSpell dictionary.'
 enddef
 
-command! -nargs=0 CSpellAddWord call AddWordToCSpell('/home/jan/.vim/cSpell.json')
+command! -nargs=0 CSpellAddWord call AddWordToCSpell(expand('$VIMHOME/cSpell.json'))
 

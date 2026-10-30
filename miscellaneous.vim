@@ -49,12 +49,11 @@ let g:c_syntax_for_h=1
 let g:asmsyntax = 'nasm'
 let filetype_asm = 'nasm'
 
-let g:pairtools_samplefile_path='$MYVIMDIR/plugged/vim-PairTools/ftplugin'
 
 if has ('nvim')
 	set undodir=~/.config/nvim/undodir
 else
-	set undodir=$MYVIMDIR/undodir
+	set undodir=$VIMHOME/undodir
 end
 
 let g:better_whitespace_ctermcolor=178
