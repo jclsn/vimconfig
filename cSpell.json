@@ -840,6 +840,7 @@
     "xgridcolor",
     "xlabel",
     "xlabelcolor",
+    "xnoremap",
     "Xoshiro",
     "ygridcolor",
     "ylabel",
