@@ -25,7 +25,10 @@ nnoremap <S-F5>> :RebuildAndDebug<CR>
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
-autocmd User VimspectorJumpedToFrame normal zz
+augroup VimspectorJump
+	autocmd!
+	autocmd User VimspectorJumpedToFrame normal zz
+augroup END
  func! AddToWatch()
    let word = expand("<cexpr>")
    call vimspector#AddWatch(word)

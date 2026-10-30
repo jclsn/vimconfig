@@ -17,11 +17,15 @@ if has("autocmd")
 	" autocmd BufWritePost *.py call CocAction('format')
 	" Manually load syntax highlighting for some file extensions
 	"
-	au BufReadPost *.patch setlocal ft=diff
-	au BufReadPost *.conf setlocal ft=conf
-	au BufReadPost *.its setlocal syntax=dts
-	au BufReadPost *.scr setlocal syntax=bash
-	au BufReadPost *_defconfig setlocal syntax=config
+	augroup vimrc-filetypes
+		autocmd!
+		au BufReadPost *.patch setlocal ft=diff
+		au BufReadPost *.conf setlocal ft=conf
+		au BufReadPost *.its setlocal syntax=dts
+		au BufReadPost *.scr setlocal syntax=bash
+		au BufReadPost *_defconfig setlocal syntax=config
+		au FileType json set filetype=jsonc
+	augroup END
 	"au BufReadPost * :ColorHighlight<CR>
 
 	" Run retab on saving files
@@ -44,9 +48,6 @@ augroup END
 " autocmd FileType cpp ClangFormatAutoEnable
 " autocmd FileType hpp ClangFormatAutoEnable
 
-
-" JSON settings
-au FileType json set filetype=jsonc
 
 " :setf does nothing after the filetype detection already ran, so set it
 " directly. Only change it when needed to not run FileType autocmds again

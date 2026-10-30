@@ -39,12 +39,12 @@ function UpdateIfTerm()
 endfunction
 
 " Update the fern buffer under a set of conditions
-autocmd BufWritePost * ++nested :FernDo e -drawer -stay
-if has_key(plugs, 'vim-fugitive')
-	autocmd User FugitiveCommit ++nested :FernDo e -drawer -stay
-endif
 augroup FernUpdateGroup
 	autocmd!
+	autocmd BufWritePost * ++nested :FernDo e -drawer -stay
+	if has_key(plugs, 'vim-fugitive')
+		autocmd User FugitiveCommit ++nested :FernDo e -drawer -stay
+	endif
 	autocmd BufWipeOut * ++nested call UpdateIfTerm()
 augroup END
 

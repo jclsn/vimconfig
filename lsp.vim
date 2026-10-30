@@ -54,7 +54,10 @@ let lspOpts = #{
 	\   filterCompletionDuplicates: v:true,
 	\ }
 
-autocmd User LspSetup call LspOptionsSet(lspOpts)
+augroup LspConfig
+	autocmd!
+	autocmd User LspSetup call LspOptionsSet(lspOpts)
+augroup END
 
 " Source all language servers
 for file in split(glob('$VIMHOME/lsp/*.vim'), '\n')
@@ -92,7 +95,7 @@ call add(lspServers, vhdl)
 call add(lspServers, vimls_go)
 call add(lspServers, yaml_ls)
 
-autocmd User LspSetup call LspAddServer(lspServers)
+autocmd LspConfig User LspSetup call LspAddServer(lspServers)
 
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"

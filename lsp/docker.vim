@@ -1,5 +1,7 @@
-autocmd BufEnter,BufReadPre docker-compose.yaml,docker-compose.yml setf dockercompose
-autocmd BufEnter,BufReadPre docker-compose.yaml,docker-compose.yml set syntax=yaml
+augroup DockerCompose
+	autocmd!
+	autocmd BufRead,BufNewFile docker-compose.yaml,docker-compose.yml setlocal filetype=dockercompose syntax=yaml
+augroup END
 let docker_ls =
 			\ #{name: 'docker-language-server',
 			\   path: 'docker-language-server',
