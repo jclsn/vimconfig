@@ -116,7 +116,7 @@ endif
 
 " Always use make -j$(nproc) when using :make
 if has('unix') && !has('win32')
-	let &makeprg = "make -j" . system('nproc')
+	let &makeprg = 'make -j' . trim(system('nproc'))
 endif
 
 " Fix cursor on Windows
