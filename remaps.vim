@@ -81,11 +81,13 @@ endif
 " ++++++++++++++++++++++++************************
 "               Build mappings
 " ++++++++++++++++++++++++************************
-au FileType c nnoremap <leader>cm :CMake<CR>
-au FileType cpp nnoremap <leader>cm :CMake<CR>
-au FileType c nnoremap <leader>ma :Make<CR>
-au FileType cpp nnoremap <leader>ma :Make<CR>
-au FileType rust nnoremap <leader>ru :RustRun <CR>
+augroup vimrc-filetype-maps
+	autocmd!
+	au FileType c,cpp nnoremap <buffer> <leader>cm :CMake<CR>
+	au FileType c,cpp nnoremap <buffer> <leader>ma :Make<CR>
+	au FileType rust nnoremap <buffer> <leader>ru :RustRun <CR>
+	au FileType diff nnoremap <buffer> <leader>ct :ConflictTake<CR>
+augroup END
 
 nnoremap <leader>as :Disassemble
 
@@ -94,7 +96,6 @@ nnoremap <leader>as :Disassemble
 " ++++++++++++++++++++++++************************
 nnoremap <leader>dt :windo diffthis <CR>
 nnoremap <leader>do :windo diffoff <CR>
-au FileType diff nnoremap <leader>ct :ConflictTake<CR>
 
 
 " ++++++++++++++++++++++++************************
@@ -162,32 +163,26 @@ function! s:swap_down()
     exec n + 1
 endfunction
 
-function ActivateBlockNavigation()
-	" Don't activate in these filetypes
-	if &ft =~ 'git|qf'
-		return
+nnoremap <silent> <C-k> :call <SID>swap_up()<CR>
+nnoremap <silent> <C-j> :call <SID>swap_down()<CR>
+nnoremap <silent> <C-h> <<
+nnoremap <silent> <C-l> >>
+
+" Move visual blocks in all directions
+vnoremap <silent> <C-j> :m '>+1<CR>gv
+vnoremap <silent> <C-k> :m '<-2<CR>gv
+vnoremap <silent> <C-h> <gv
+vnoremap <silent> <C-l> >gv
+
+" Use same mapping as navigation in the quickfix list. These buffer-local
+" mappings take precedence over the line swapping above
+augroup vimrc-qf-maps
+	autocmd!
+	if has_key(plugs, 'vim-unimpaired')
+		autocmd FileType git,qf nnoremap <buffer> <silent> <C-j> :cnext<CR>
+		autocmd FileType git,qf nnoremap <buffer> <silent> <C-k> :cprevious<CR>
 	endif
-	nnoremap <silent> <C-k> :call <SID>swap_up()<CR>
-	nnoremap <silent> <C-j> :call <SID>swap_down()<CR>
-	nnoremap <silent> <C-h> <<
-	nnoremap <silent> <C-l> >>
-
-	" Move visual blocks in all directions
-	vnoremap <silent> <C-j> :m '>+1<CR>gv
-	vnoremap <silent> <C-k> :m '<-2<CR>gv
-	vnoremap <silent> <C-h> <gv
-	vnoremap <silent> <C-l> >gv
-endfun
-
-autocmd filetype * call ActivateBlockNavigation()
-
-" Use same mapping as navigation in the quickfix list
-if has_key(plugs, 'vim-unimpaired')
-	autocmd filetype git nnoremap <buffer> <silent> <C-j> :cnext<CR>
-	autocmd filetype git nnoremap <buffer> <silent> <C-k> :cprevious<CR>
-	autocmd filetype qf nnoremap <buffer> <silent> <C-j> :cnext<CR>
-	autocmd filetype qf nnoremap <buffer> <silent> <C-k> :cprevious<CR>
-endif
+augroup END
 
 "Easily add quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
