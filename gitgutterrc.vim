@@ -9,7 +9,7 @@ nnoremap <leader>ph <Plug>(GitGutterPrevHunk)
 nnoremap <leader>vh <Plug>(GitGutterPreviewHunk)
 nnoremap <leader>uh <Plug>(GitGutterUndoHunk)
 
-nnoremap <leader>sh :w<CR> <Plug>(GitGutterStageHunk)
+nnoremap <leader>sh <Plug>(GitGutterStageHunk) | :w<CR>
 
 " On Windows system() runs every command with cmd.exe in Vim's console. That
 " is slow, changes the title of the terminal tab and gitgutter even calls it
