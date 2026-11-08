@@ -1917,6 +1917,20 @@
   "dictionaries": [
     "german",
     "russian",
-    "softwareTerms"
+    "softwareTerms",
+    "software-tools",
+    "computing-acronyms",
+    "coding-compound-terms",
+    "networking-terms",
+    "cpp",
+    "cpp-refined",
+    "cpp-legacy",
+    "kernel"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "kernel",
+      "path": "./spell/kernel.utf-8.add"
+    }
   ]
 }

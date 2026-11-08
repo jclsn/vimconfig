@@ -19,6 +19,8 @@ set nocursorbind
 set incsearch
 set scrolloff=5
 set tags=./tags;,tags;./.tags;,.tags;
+" zg adds to the first file, the others are generated word lists
+set spellfile=$VIMHOME/spell/en.utf-8.add,$VIMHOME/spell/software.utf-8.add,$VIMHOME/spell/cpp.utf-8.add,$VIMHOME/spell/kernel.utf-8.add
 set cursorline
 set foldmethod=syntax
 set foldnestmax=99
