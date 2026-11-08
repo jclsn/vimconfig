@@ -15,3 +15,6 @@
 !lsp/
 
 fugitive-gitlab.vim
+
+!spell/
+!spell/*.add
